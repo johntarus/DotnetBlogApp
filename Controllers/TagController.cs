@@ -24,7 +24,7 @@ public class TagController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateTag(AddTagDto tagDto)
+    public async Task<IActionResult> CreateTag([FromBody] AddTagDto tagDto)
     {
         if(ModelState.IsValid == false)
             return BadRequest(ModelState);
@@ -38,7 +38,7 @@ public class TagController : Controller
     }
 
     [HttpPost("{id}")]
-    public async Task<IActionResult> UpdateTag(int id, UpdateTagDto updateTag)
+    public async Task<IActionResult> UpdateTag(int id, [FromBody] UpdateTagDto updateTag)
     {
         var tag = await _context.Tags.FindAsync(id);
         if (tag == null)
@@ -49,5 +49,29 @@ public class TagController : Controller
             tag.Name = updateTag.Name;
         await _context.SaveChangesAsync();
         return Ok(tag);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetTagById(int id)
+    {
+        var tag = await _context.Tags.FindAsync(id);
+        if (tag == null)
+        {
+            return NotFound();
+        }
+        return Ok(tag);  
+    }
+    
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteTag(int id)
+    {
+        var tag = await _context.Tags.FindAsync(id);
+        if (tag == null)
+        {
+            return NotFound();
+        }
+        _context.Tags.Remove(tag);
+        await _context.SaveChangesAsync();
+        return NoContent();   
     }
 }
