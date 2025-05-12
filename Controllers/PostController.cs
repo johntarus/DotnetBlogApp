@@ -73,7 +73,7 @@ public class PostController : ControllerBase
             return Ok(blog);
     }
 
-    [HttpDelete("Id")]
+    [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteBlog(Guid id)
     {
         var blog = await _context.Posts.FindAsync(id);
