@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogApp.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20250512112425_Initial")]
+    [Migration("20250512120941_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -39,7 +39,7 @@ namespace BlogApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("BlogApp.Models.Entities.Comment", b =>
@@ -72,7 +72,7 @@ namespace BlogApp.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Comment");
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("BlogApp.Models.Entities.Like", b =>
@@ -133,7 +133,7 @@ namespace BlogApp.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Posts");
                 });
 
             modelBuilder.Entity("BlogApp.Models.Entities.Tag", b =>
@@ -150,7 +150,7 @@ namespace BlogApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tag");
+                    b.ToTable("Tags");
                 });
 
             modelBuilder.Entity("BlogApp.Models.Entities.User", b =>
@@ -248,7 +248,7 @@ namespace BlogApp.Migrations
 
             modelBuilder.Entity("BlogApp.Models.Entities.Post", b =>
                 {
-                    b.HasOne("BlogApp.Models.Entities.Category", "Category")
+                    b.HasOne("BlogApp.Models.Entities.Category", "Categories")
                         .WithMany("Posts")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -260,7 +260,7 @@ namespace BlogApp.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Category");
+                    b.Navigation("Categories");
 
                     b.Navigation("User");
                 });

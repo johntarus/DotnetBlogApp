@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/posts")]
 [ApiController]
 public class PostController : ControllerBase
 {
@@ -21,7 +21,7 @@ public class PostController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        var blogs = await _context.Blogs.ToListAsync();
+        var blogs = await _context.Posts.ToListAsync();
         return Ok(blogs);
     }
 
@@ -36,7 +36,7 @@ public class PostController : ControllerBase
             CreatedAt = DateTime.Now,
             UpdatedAt = DateTime.Now
         };
-        _context.Blogs.Add(blogEntity);
+        _context.Posts.Add(blogEntity);
         await _context.SaveChangesAsync();
         return Ok(blogEntity);
     }
@@ -44,7 +44,7 @@ public class PostController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(Guid id)
     {
-        var blog = await _context.Blogs.FindAsync(id);
+        var blog = await _context.Posts.FindAsync(id);
         if (blog == null)
         {
             return NotFound();
@@ -57,7 +57,7 @@ public class PostController : ControllerBase
     {
         if(ModelState.IsValid == false)
             return BadRequest(ModelState);
-        var blog = await _context.Blogs.FindAsync(id);
+        var blog = await _context.Posts.FindAsync(id);
         if (blog == null)
         {
             return NotFound();
@@ -76,12 +76,12 @@ public class PostController : ControllerBase
     [HttpDelete("Id")]
     public async Task<IActionResult> DeleteBlog(Guid id)
     {
-        var blog = await _context.Blogs.FindAsync(id);
+        var blog = await _context.Posts.FindAsync(id);
         if (blog == null)
         {
             return NotFound();
         }
-        _context.Blogs.Remove(blog);
+        _context.Posts.Remove(blog);
         await _context.SaveChangesAsync();
         return NoContent();
     }

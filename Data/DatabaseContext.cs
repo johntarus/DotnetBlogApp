@@ -6,9 +6,12 @@ namespace BlogApp.Data;
 public class DatabaseContext : DbContext
 {
     public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options){}
-    public DbSet<Post> Blogs { get; set; }
+    public DbSet<Post> Posts { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<Like> Likes { get; set; }
+    public DbSet<Comment> Comments { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Tag> Tags { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -37,7 +40,7 @@ public class DatabaseContext : DbContext
             .HasForeignKey(c => c.UserId)
             .OnDelete(DeleteBehavior.Restrict);
         
-        modelBuilder.Entity<Post>().HasOne(p => p.Category)
+        modelBuilder.Entity<Post>().HasOne(p => p.Categories)
             .WithMany(c => c.Posts)
             .HasForeignKey(p => p.CategoryId);
 

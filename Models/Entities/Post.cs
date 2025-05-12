@@ -11,7 +11,7 @@ public class Post
     public Guid UserId { get; set; }
     public User User { get; set; }
     public int CategoryId { get; set; }
-    public Category Category { get; set; }
+    public Category Categories { get; set; }
     public List<Like> Likes { get; set; } = new List<Like>();
     public List<Comment> Comments { get; set; } = new List<Comment>();
     public List<Tag> Tags { get; set; } = new List<Tag>();
