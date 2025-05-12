@@ -19,19 +19,23 @@ public class DatabaseContext : DbContext
 
         modelBuilder.Entity<Like>().HasOne(l => l.Post)
             .WithMany(p => p.Likes)
-            .HasForeignKey(l => l.PostId);
+            .HasForeignKey(l => l.PostId)
+            .OnDelete(DeleteBehavior.Cascade);
         
         modelBuilder.Entity<Like>().HasOne(l => l.User)
             .WithMany(u=>u.Likes)
-            .HasForeignKey(l => l.UserId);
+            .HasForeignKey(l => l.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
         
         modelBuilder.Entity<Comment>().HasOne(c => c.Post)
             .WithMany(p => p.Comments)
-            .HasForeignKey(c => c.PostId);
-        
+            .HasForeignKey(c => c.PostId)
+            .OnDelete(DeleteBehavior.Cascade);
+
         modelBuilder.Entity<Comment>().HasOne(c => c.User)
             .WithMany(u => u.Comments)
-            .HasForeignKey(c => c.UserId);
+            .HasForeignKey(c => c.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
         
         modelBuilder.Entity<Post>().HasOne(p => p.Category)
             .WithMany(c => c.Posts)
