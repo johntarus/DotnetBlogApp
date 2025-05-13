@@ -21,24 +21,32 @@ public class PostController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        var blogs = await _context.Posts.ToListAsync();
-        return Ok(blogs);
+        var posts = await _context.Posts.ToListAsync();
+        return Ok(posts);
     }
 
     [HttpPost]
     public async Task<IActionResult> CreateBlog(AddPostDto postDto)
     {
-        var blogEntity = new Post()
+        var category = await _context.Categories.FirstOrDefaultAsync(c => c.Id == postDto.CategoryId);
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == postDto.UserId);
+        if(category == null)
+            return NotFound("Category not found");
+        if(user == null)
+            return NotFound("User not found");
+        var post = new Post()
         {
             Title = postDto.Title,
             Content = postDto.Content,
             Slug = SlugHelper.GenerateSlug(postDto.Title),
+            CategoryId = postDto.CategoryId,
+            UserId = postDto.UserId,
             CreatedAt = DateTime.Now,
             UpdatedAt = DateTime.Now
         };
-        _context.Posts.Add(blogEntity);
+        _context.Posts.Add(post);
         await _context.SaveChangesAsync();
-        return Ok(blogEntity);
+        return Ok(post);
     }
 
     [HttpGet("{id}")]
