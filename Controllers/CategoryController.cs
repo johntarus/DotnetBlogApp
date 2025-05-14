@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace BlogApp.Controllers;
 
 [Route("api/categories")]
-public class CategoryController : Controller
+public class CategoryController : ControllerBase
 {
     private readonly DatabaseContext _context;
 
