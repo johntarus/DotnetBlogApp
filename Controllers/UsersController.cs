@@ -74,7 +74,7 @@ public class UsersController : ControllerBase
 
     [Authorize]
     [HttpGet("profile")]
-    public async Task<ActionResult<UserResponseDto>> GetProfile()
+    public async Task<ActionResult<ProfileResponseDto>> GetProfile()
     {
         var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
         var user = await _context.Users.FindAsync(userId);
@@ -87,6 +87,7 @@ public class UsersController : ControllerBase
             Bio = user.Bio,
             Avatar = user.Avatar,
             CreatedAt = user.CreatedAt,
+            UpdatedAt = user.UpdatedAt,
         });
     }
 
@@ -103,6 +104,7 @@ public class UsersController : ControllerBase
             user.Bio = request.Bio;
         if(request.Avatar != null)
             user.Avatar = request.Avatar;
+        user.UpdatedAt = DateTime.Now;
         await _context.SaveChangesAsync();
         
         return Ok(new ProfileResponseDto
@@ -113,6 +115,7 @@ public class UsersController : ControllerBase
             Bio = user.Bio,
             Avatar = user.Avatar,
             CreatedAt = user.CreatedAt,
+            UpdatedAt = user.UpdatedAt,
         });
     }
     
