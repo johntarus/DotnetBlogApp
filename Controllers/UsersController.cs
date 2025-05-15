@@ -89,4 +89,29 @@ public class UsersController : ControllerBase
             CreatedAt = user.CreatedAt,
         });
     }
+
+    [HttpPatch("update")]
+    public async Task<ActionResult<UpdateProfileRequestDto>> UpdateProfile(UpdateProfileRequestDto request)
+    {
+        var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+        var user = await _context.Users.FindAsync(userId);
+        if (user == null) return NotFound();
+        if(ModelState.IsValid == false)
+            return BadRequest(ModelState);
+        if(request.Bio != null)
+            user.Bio = request.Bio;
+        if(request.Avatar != null)
+            user.Avatar = request.Avatar;
+        await _context.SaveChangesAsync();
+        
+        return Ok(new ProfileResponseDto
+        {
+            Id = user.Id,
+            Username = user.Username,
+            Email = user.Email,
+            Bio = user.Bio,
+            Avatar = user.Avatar,
+            CreatedAt = user.CreatedAt,
+        });
+    }
 }
