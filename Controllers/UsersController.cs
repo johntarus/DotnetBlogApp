@@ -90,6 +90,7 @@ public class UsersController : ControllerBase
         });
     }
 
+    [Authorize]
     [HttpPatch("update")]
     public async Task<ActionResult<UpdateProfileRequestDto>> UpdateProfile(UpdateProfileRequestDto request)
     {
