@@ -1,7 +1,9 @@
+using System.Security.Claims;
 using BlogApp.Data;
 using BlogApp.Helpers;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -48,9 +50,9 @@ public class UsersController : ControllerBase
     [HttpPost("login")]
     public async Task<ActionResult<UserResponseDto>> Login([FromBody] LoginRequestDto request)
     {
-        var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == request.Username ||
-                                                                 u.Email == request.Username);
-        if(string.IsNullOrWhiteSpace(request.Email) && string.IsNullOrWhiteSpace(request.Username))
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == request.UsernameOrEmail ||
+                                                                 u.Email == request.UsernameOrEmail);
+        if(string.IsNullOrWhiteSpace(request.UsernameOrEmail) && string.IsNullOrWhiteSpace(request.UsernameOrEmail))
             return BadRequest("Username or Email is required");
         if(string.IsNullOrWhiteSpace(request.Password))
             return BadRequest("Password is required");
@@ -67,6 +69,24 @@ public class UsersController : ControllerBase
             Avatar = user.Avatar,
             CreatedAt = user.CreatedAt,
             Token = JwtHelper.GenerateToken(user, _config)
+        });
+    }
+
+    [Authorize]
+    [HttpGet("profile")]
+    public async Task<ActionResult<UserResponseDto>> GetProfile()
+    {
+        var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+        var user = await _context.Users.FindAsync(userId);
+        if (user == null) return NotFound();
+        return Ok(new ProfileResponseDto()
+        {
+            Id = user.Id,
+            Username = user.Username,
+            Email = user.Email,
+            Bio = user.Bio,
+            Avatar = user.Avatar,
+            CreatedAt = user.CreatedAt,
         });
     }
 }
