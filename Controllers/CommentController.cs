@@ -69,4 +69,26 @@ public class CommentController : ControllerBase
         var comment = await _context.Comments.FindAsync(id);
         return Ok(comment);
     }
+    
+    [HttpPatch("{id}")]
+    public async Task<ActionResult<CommentResponseDto>> UpdateComment(int id, [FromBody] CommentDto request)
+    {
+        var comment = await _context.Comments.FindAsync(id);
+        if (comment == null) return NotFound();
+        if(ModelState.IsValid == false) return BadRequest(ModelState);
+        if(request.Content != null)
+            comment.Content = request.Content;
+        comment.UpdatedAt = DateTime.Now;
+        await _context.SaveChangesAsync();
+        
+        return Ok(comment);
+    }
+    
+    [HttpDelete("{id}")]
+    public async Task<ActionResult<CommentResponseDto>> DeleteComment(int id)
+    {
+        var comment = await _context.Comments.FindAsync(id);
+        if (comment == null) return NotFound();
+        return NoContent();
+    }
 }
