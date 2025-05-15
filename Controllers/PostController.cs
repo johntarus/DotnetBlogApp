@@ -7,8 +7,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Controllers;
 
-[Route("api/posts")]
 [ApiController]
+
+[Route("api/posts")]
 public class PostController : ControllerBase
 {
     private readonly DatabaseContext _context;
@@ -21,7 +22,21 @@ public class PostController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        var posts = await _context.Posts.ToListAsync();
+        var posts = await _context.Posts
+            .Include(p=>p.User)
+            .Include(p=>p.Categories)
+            .Include(p=>p.Tags)
+            .Select(p=> new PostDto
+            {
+                Id = p.Id,
+                Title = p.Title,
+                Slug = p.Slug,
+                Content = p.Content,
+                CreatedAt = p.CreatedAt,
+                Username = p.User.Username,
+                CategoryName = p.Categories.Name,
+            })
+            .ToListAsync();
         return Ok(posts);
     }
 
@@ -46,18 +61,31 @@ public class PostController : ControllerBase
         };
         _context.Posts.Add(post);
         await _context.SaveChangesAsync();
-        return Ok(post);
+
+        var postDtoResponse = new PostDto
+        {
+            Id = post.Id,
+            Title = post.Title,
+            Slug = post.Slug,
+            Content = post.Content,
+            CategoryId = post.CategoryId,
+            CategoryName = category.Name,
+            UserId = user.Id,
+            Username = user.Username,
+            CreatedAt = post.CreatedAt
+        };
+        return CreatedAtAction(nameof(GetPostById), new {id = post.Id}, postDtoResponse);
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetById(Guid id)
+    public async Task<IActionResult> GetPostById(Guid id)
     {
-        var blog = await _context.Posts.FindAsync(id);
-        if (blog == null)
+        var post = await _context.Posts.FindAsync(id);
+        if (post == null)
         {
             return NotFound();
         }
-        return Ok(blog);
+        return Ok(post);
     }
 
     [HttpPatch("{id}")]

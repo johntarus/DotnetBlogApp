@@ -44,4 +44,29 @@ public class UsersController : ControllerBase
             Token = JwtHelper.GenerateToken(user, _config)
         });
     }
+
+    [HttpPost("login")]
+    public async Task<ActionResult<UserResponseDto>> Login([FromBody] LoginRequestDto request)
+    {
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == request.Username ||
+                                                                 u.Email == request.Username);
+        if(string.IsNullOrWhiteSpace(request.Email) && string.IsNullOrWhiteSpace(request.Username))
+            return BadRequest("Username or Email is required");
+        if(string.IsNullOrWhiteSpace(request.Password))
+            return BadRequest("Password is required");
+        if (user == null || !PasswordHelper.VerifyPassword(request.Password, user.PasswordHash))
+        {
+            return Unauthorized("Invalid Credentials");
+        }
+        return Ok(new UserResponseDto
+        {
+            Id = user.Id,
+            Username = user.Username,
+            Email = user.Email,
+            Bio = user.Bio,
+            Avatar = user.Avatar,
+            CreatedAt = user.CreatedAt,
+            Token = JwtHelper.GenerateToken(user, _config)
+        });
+    }
 }
