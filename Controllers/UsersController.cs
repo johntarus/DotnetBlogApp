@@ -115,4 +115,11 @@ public class UsersController : ControllerBase
             CreatedAt = user.CreatedAt,
         });
     }
+    
+    [Authorize]
+    [HttpPost("logout")]
+    public ActionResult Logout()
+    {
+        return Ok("Logged out successfuly");
+    }
 }
