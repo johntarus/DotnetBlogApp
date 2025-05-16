@@ -28,7 +28,8 @@ public class CommentController : ControllerBase
                 UserId = c.UserId,
                 Username = c.User.Username,
                 CreatedAt = c.CreatedAt,
-                UpdatedAt = c.UpdatedAt
+                UpdatedAt = c.UpdatedAt,
+                IsEdited = c.IsEdited
             })
             .ToListAsync();
         return Ok(comments);
@@ -47,6 +48,7 @@ public class CommentController : ControllerBase
             Content = request.Content,
             PostId = request.PostId,
             UserId = request.UserId,
+            IsEdited = false,
             CreatedAt = DateTime.Now,
             UpdatedAt = DateTime.Now
         };
@@ -58,6 +60,7 @@ public class CommentController : ControllerBase
             Content = comment.Content,
             PostId = comment.PostId,
             UserId = comment.UserId,
+            IsEdited = comment.IsEdited,
             Username = user.Username,
             CreatedAt = comment.CreatedAt
         };
@@ -67,22 +70,44 @@ public class CommentController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<CommentResponseDto>> GetCommentById(int id)
     {
-        var comment = await _context.Comments.FindAsync(id);
+        var comment = await _context.Comments.Where(c => c.Id == id)
+            .Select(c => new CommentResponseDto
+            {
+                Id = c.Id,
+                Content = c.Content,
+                PostId = c.PostId,
+                UserId = c.UserId,
+                Username = c.User.Username,
+                CreatedAt = c.CreatedAt,
+                UpdatedAt = c.UpdatedAt,
+                IsEdited = c.IsEdited
+            }).ToListAsync();
         return Ok(comment);
     }
     
     [HttpPatch("{id}")]
     public async Task<ActionResult<CommentResponseDto>> UpdateComment(int id, [FromBody] UpdateCommentDto request)
     {
-        var comment = await _context.Comments.FindAsync(id);
+        var comment = await _context.Comments.Include(c=>c.User).FirstOrDefaultAsync(c => c.Id == id);
         if (comment == null) return NotFound();
         if(ModelState.IsValid == false) return BadRequest(ModelState);
         if(request.Content != null)
             comment.Content = request.Content;
         comment.UpdatedAt = DateTime.Now;
+        comment.IsEdited = true;
         await _context.SaveChangesAsync();
         
-        return Ok(comment);
+        return Ok(new CommentResponseDto
+        {
+            Id = comment.Id,
+            Content = comment.Content,
+            PostId = comment.PostId,
+            UserId = comment.UserId,
+            Username = comment.User.Username,
+            CreatedAt = comment.CreatedAt,
+            UpdatedAt = comment.UpdatedAt,
+            IsEdited = comment.IsEdited
+        });
     }
     
     [HttpDelete("{id}")]
