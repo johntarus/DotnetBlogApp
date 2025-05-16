@@ -1,3 +1,5 @@
+using BlogApp.Models.Entities;
+
 namespace BlogApp.Models.Dtos;
 
 public class PostDto
@@ -11,4 +13,5 @@ public class PostDto
     public Guid UserId { get; set; }
     public string Username { get; set; }
     public DateTime CreatedAt { get; set; }
+    public List<string> Tags { get; set; } = new();
 }

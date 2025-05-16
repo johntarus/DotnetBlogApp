@@ -118,11 +118,4 @@ public class UsersController : ControllerBase
             UpdatedAt = user.UpdatedAt,
         });
     }
-    
-    [Authorize]
-    [HttpPost("logout")]
-    public ActionResult Logout()
-    {
-        return Ok("Logged out successfuly");
-    }
 }

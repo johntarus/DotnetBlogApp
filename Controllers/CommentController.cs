@@ -47,7 +47,8 @@ public class CommentController : ControllerBase
             Content = request.Content,
             PostId = request.PostId,
             UserId = request.UserId,
-            CreatedAt = DateTime.Now
+            CreatedAt = DateTime.Now,
+            UpdatedAt = DateTime.Now
         };
         _context.Comments.Add(comment);
         await _context.SaveChangesAsync();
@@ -71,7 +72,7 @@ public class CommentController : ControllerBase
     }
     
     [HttpPatch("{id}")]
-    public async Task<ActionResult<CommentResponseDto>> UpdateComment(int id, [FromBody] CommentDto request)
+    public async Task<ActionResult<CommentResponseDto>> UpdateComment(int id, [FromBody] UpdateCommentDto request)
     {
         var comment = await _context.Comments.FindAsync(id);
         if (comment == null) return NotFound();

@@ -33,8 +33,11 @@ public class PostController : ControllerBase
                 Slug = p.Slug,
                 Content = p.Content,
                 CreatedAt = p.CreatedAt,
+                UserId = p.User.Id,
                 Username = p.User.Username,
+                CategoryId = p.CategoryId,
                 CategoryName = p.Categories.Name,
+                Tags = p.Tags.Select(t => t.Name).ToList(),
             })
             .ToListAsync();
         return Ok(posts);
@@ -59,6 +62,11 @@ public class PostController : ControllerBase
             CreatedAt = DateTime.Now,
             UpdatedAt = DateTime.Now
         };
+        if (postDto.TagIds != null && postDto.TagIds.Any())
+        {
+            var tags = await _context.Tags.Where(t => postDto.TagIds.Contains(t.Id)).ToListAsync();
+            post.Tags = tags;
+        }
         _context.Posts.Add(post);
         await _context.SaveChangesAsync();
 
@@ -80,7 +88,23 @@ public class PostController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetPostById(Guid id)
     {
-        var post = await _context.Posts.FindAsync(id);
+        var post = await _context.Posts.Where(p => p.Id == id)
+            .Select(p => new PostResponseDto
+            {
+                Id = p.Id,
+                Title = p.Title,
+                Content = p.Content,
+                CreatedAt = p.CreatedAt,
+                UpdatedAt = p.UpdatedAt,
+                CategoryId = p.CategoryId,
+                CategoryName = p.Categories.Name,
+                UserId = p.UserId,
+                Username = p.User.Username,
+                LikesCount = p.Likes.Count,
+                CommentsCount = p.Comments.Count,
+                Tags = p.Tags.Select(t => t.Name).ToList(),
+            })
+            .FirstOrDefaultAsync();
         if (post == null)
         {
             return NotFound();
