@@ -7,19 +7,12 @@ using Microsoft.EntityFrameworkCore;
 namespace BlogApp.Controllers;
 
 [Route("api/tags")]
-public class TagController : Controller
+public class TagController(DatabaseContext context) : Controller
 {
-    private readonly DatabaseContext _context;
-    
-    public TagController(DatabaseContext context)
-    {
-        _context = context;
-    }
-    
     [HttpGet]
     public async Task<IActionResult> GetTags()
     {
-        var tags = await _context.Tags
+        var tags = await context.Tags
             .Include(t => t.Posts)
             .Select(t => new TagResponseDto
         {
@@ -57,29 +50,30 @@ public class TagController : Controller
             CreatedAt = DateTime.Now,
             UpdatedAt = DateTime.Now,
         };
-            await _context.Tags.AddAsync(createTag);
-            await _context.SaveChangesAsync();
+            await context.Tags.AddAsync(createTag);
+            await context.SaveChangesAsync();
             return Ok(createTag);
     }
 
-    [HttpPost("{id}")]
+    [HttpPatch("{id}")]
     public async Task<IActionResult> UpdateTag(int id, [FromBody] UpdateTagDto updateTag)
     {
-        var tag = await _context.Tags.FindAsync(id);
+        var tag = await context.Tags.FindAsync(id);
         if (tag == null)
         {
             return NotFound();
         }
         if(updateTag.Name != null)
             tag.Name = updateTag.Name;
-        await _context.SaveChangesAsync();
+        tag.UpdatedAt = DateTime.Now;
+        await context.SaveChangesAsync();
         return Ok(tag);
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetTagById(int id)
     {
-        var tag = await _context.Tags.Where(t=>t.Id == id).Include(t=>t.Posts).Select(t=> new TagResponseDto
+        var tag = await context.Tags.Where(t=>t.Id == id).Include(t=>t.Posts).Select(t=> new TagResponseDto
         {
             Id = t.Id,
             Name = t.Name,
@@ -107,13 +101,13 @@ public class TagController : Controller
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteTag(int id)
     {
-        var tag = await _context.Tags.FindAsync(id);
+        var tag = await context.Tags.FindAsync(id);
         if (tag == null)
         {
             return NotFound();
         }
-        _context.Tags.Remove(tag);
-        await _context.SaveChangesAsync();
+        context.Tags.Remove(tag);
+        await context.SaveChangesAsync();
         return NoContent();   
     }
 }

@@ -10,19 +10,12 @@ namespace BlogApp.Controllers;
 [ApiController]
 
 [Route("api/posts")]
-public class PostController : ControllerBase
+public class PostController(DatabaseContext context) : ControllerBase
 {
-    private readonly DatabaseContext _context;
-
-    public PostController(DatabaseContext context)
-    {
-        _context = context;
-    }
-
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        var posts = await _context.Posts
+        var posts = await context.Posts
             .Select(p=> new PostResponseDto
             {
                 Id = p.Id,
@@ -45,8 +38,8 @@ public class PostController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> CreateBlog(AddPostDto postDto)
     {
-        var category = await _context.Categories.FirstOrDefaultAsync(c => c.Id == postDto.CategoryId);
-        var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == postDto.UserId);
+        var category = await context.Categories.FirstOrDefaultAsync(c => c.Id == postDto.CategoryId);
+        var user = await context.Users.FirstOrDefaultAsync(u => u.Id == postDto.UserId);
         if(category == null)
             return NotFound("Category not found");
         if(user == null)
@@ -63,11 +56,11 @@ public class PostController : ControllerBase
         };
         if (postDto.TagIds != null && postDto.TagIds.Any())
         {
-            var tags = await _context.Tags.Where(t => postDto.TagIds.Contains(t.Id)).ToListAsync();
+            var tags = await context.Tags.Where(t => postDto.TagIds.Contains(t.Id)).ToListAsync();
             post.Tags = tags;
         }
-        _context.Posts.Add(post);
-        await _context.SaveChangesAsync();
+        context.Posts.Add(post);
+        await context.SaveChangesAsync();
 
         var postDtoResponse = new PostDto
         {
@@ -87,7 +80,7 @@ public class PostController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetPostById(Guid id)
     {
-        var post = await _context.Posts.Where(p => p.Id == id)
+        var post = await context.Posts.Where(p => p.Id == id)
             .Select(p => new PostResponseDto
             {
                 Id = p.Id,
@@ -116,7 +109,7 @@ public class PostController : ControllerBase
     {
         if(ModelState.IsValid == false)
             return BadRequest(ModelState);
-        var post = await _context.Posts.Include(p=>p.User)
+        var post = await context.Posts.Include(p=>p.User)
             .Include(p=>p.Categories).FirstOrDefaultAsync(p => p.Id == id);
         if (post == null)
         {
@@ -129,7 +122,7 @@ public class PostController : ControllerBase
             post.Content = updatePostDto.Content;
         post.UpdatedAt = DateTime.Now;
         
-            await _context.SaveChangesAsync();
+            await context.SaveChangesAsync();
             return Ok(new PostResponseDto
             {
                 Id = post.Id,
@@ -147,13 +140,13 @@ public class PostController : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteBlog(Guid id)
     {
-        var blog = await _context.Posts.FindAsync(id);
+        var blog = await context.Posts.FindAsync(id);
         if (blog == null)
         {
             return NotFound();
         }
-        _context.Posts.Remove(blog);
-        await _context.SaveChangesAsync();
+        context.Posts.Remove(blog);
+        await context.SaveChangesAsync();
         return NoContent();
     }
 }
