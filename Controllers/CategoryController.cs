@@ -92,7 +92,7 @@ public class CategoryController : ControllerBase
     }
 
     [HttpPatch("{id}")]
-    public async Task<IActionResult> UpdateCategory(int id, UpdateCategoryDto updateCategory)
+    public async Task<IActionResult> UpdateCategory(int id, [FromBody] UpdateCategoryDto updateCategory)
     {
         var category = await _context.Categories.FindAsync(id);
         if (category == null)
