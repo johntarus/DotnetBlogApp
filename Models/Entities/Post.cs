@@ -12,7 +12,7 @@ public class Post
     public User User { get; set; }
     public int CategoryId { get; set; }
     public Category Categories { get; set; }
-    public List<Like> Likes { get; set; } = new List<Like>();
-    public List<Comment> Comments { get; set; } = new List<Comment>();
-    public List<Tag> Tags { get; set; } = new List<Tag>();
+    public List<Like> Likes { get; set; } = new();
+    public List<Comment> Comments { get; set; } = new();
+    public List<Tag> Tags { get; set; } = new();
 }
