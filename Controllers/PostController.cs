@@ -26,17 +26,19 @@ public class PostController : ControllerBase
             .Include(p=>p.User)
             .Include(p=>p.Categories)
             .Include(p=>p.Tags)
-            .Select(p=> new PostDto
+            .Select(p=> new PostResponseDto
             {
                 Id = p.Id,
                 Title = p.Title,
-                Slug = p.Slug,
                 Content = p.Content,
                 CreatedAt = p.CreatedAt,
-                UserId = p.User.Id,
-                Username = p.User.Username,
+                UpdatedAt = p.UpdatedAt,
                 CategoryId = p.CategoryId,
                 CategoryName = p.Categories.Name,
+                UserId = p.UserId,
+                Username = p.User.Username,
+                LikesCount = p.Likes.Count,
+                CommentsCount = p.Comments.Count,
                 Tags = p.Tags.Select(t => t.Name).ToList(),
             })
             .ToListAsync();
