@@ -19,7 +19,13 @@ public class TagController : Controller
     [HttpGet]
     public async Task<IActionResult> GetTags()
     {
-        var tags = await _context.Tags.ToListAsync();
+        var tags = await _context.Tags
+            .Select(t => new TagResponseDto
+        {
+            Id = t.Id,
+            Name = t.Name,
+            Posts = t.Posts.ToList()
+        }).ToListAsync();
         return Ok(tags);
     }
 

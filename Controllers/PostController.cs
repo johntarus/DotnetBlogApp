@@ -23,9 +23,6 @@ public class PostController : ControllerBase
     public async Task<IActionResult> GetAll()
     {
         var posts = await _context.Posts
-            .Include(p=>p.User)
-            .Include(p=>p.Categories)
-            .Include(p=>p.Tags)
             .Select(p=> new PostResponseDto
             {
                 Id = p.Id,
