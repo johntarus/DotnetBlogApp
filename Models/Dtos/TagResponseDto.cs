@@ -6,5 +6,7 @@ public class TagResponseDto
 {
     public int Id { get; set; }
     public string Name { get; set; }
-    public List<Post> Posts { get; set; } = new List<Post>();
+    public DateTime CreateAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+    public List<PostResponseDto> Posts { get; set; } = new List<PostResponseDto>();
 }
