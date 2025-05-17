@@ -1,6 +1,7 @@
 using BlogApp.Data;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

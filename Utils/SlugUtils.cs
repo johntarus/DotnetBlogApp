@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 
 namespace BlogApp.Helpers;
 
-public class SlugHelper
+public class SlugUtils
 {
     public static string GenerateSlug(string title)
     {

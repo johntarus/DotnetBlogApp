@@ -48,7 +48,7 @@ public class PostController(DatabaseContext context) : ControllerBase
         {
             Title = postDto.Title,
             Content = postDto.Content,
-            Slug = SlugHelper.GenerateSlug(postDto.Title),
+            Slug = SlugUtils.GenerateSlug(postDto.Title),
             CategoryId = postDto.CategoryId,
             UserId = postDto.UserId,
             CreatedAt = DateTime.Now,

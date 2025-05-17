@@ -29,7 +29,7 @@ public class LikesController(DatabaseContext context, ILogger<LikesController> l
     {
         try
         {
-            var existingLike = await context.Likes.Include(l=>l.User)
+            var existingLike = await context.Likes
                 .FirstOrDefaultAsync(l => l.PostId == likeDto.PostId && l.UserId == likeDto.UserId);
             
             var user = await context.Users.FindAsync(likeDto.UserId);
