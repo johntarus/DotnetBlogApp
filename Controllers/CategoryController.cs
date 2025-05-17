@@ -8,19 +8,12 @@ using Microsoft.EntityFrameworkCore;
 namespace BlogApp.Controllers;
 
 [Route("api/categories")]
-public class CategoryController : ControllerBase
+public class CategoryController(DatabaseContext context) : ControllerBase
 {
-    private readonly DatabaseContext _context;
-
-    public CategoryController(DatabaseContext context)
-    {
-        _context = context;
-    }
-
     [HttpGet]
     public async Task<IActionResult> GetCategories()
     {
-        var categories = await _context.Categories
+        var categories = await context.Categories
             .Select(c => new CategoryResponseDto
             {
                 Id = c.Id,
@@ -56,15 +49,15 @@ public class CategoryController : ControllerBase
         {
             Name = categoryDto.Name
         };
-        _context.Categories.Add(createCategory);
-        await _context.SaveChangesAsync();
+        context.Categories.Add(createCategory);
+        await context.SaveChangesAsync();
         return Ok(createCategory);
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetCategoryById(int id)
     {
-        var category = await _context.Categories.Where(c=>c.Id == id)
+        var category = await context.Categories.Where(c=>c.Id == id)
             .Select(c => new CategoryResponseDto
         {
             Id = c.Id,
@@ -95,7 +88,7 @@ public class CategoryController : ControllerBase
     [HttpPatch("{id}")]
     public async Task<IActionResult> UpdateCategory(int id, [FromBody] UpdateCategoryDto updateCategory)
     {
-        var category = await _context.Categories.FindAsync(id);
+        var category = await context.Categories.FindAsync(id);
         if (category == null)
         {
             return NotFound();
@@ -103,20 +96,20 @@ public class CategoryController : ControllerBase
         }
         if(updateCategory.Name != null)
             category.Name = updateCategory.Name;
-        await _context.SaveChangesAsync();
+        await context.SaveChangesAsync();
         return Ok(category);
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteCategory(int id)
     {
-        var category = await _context.Categories.FindAsync((id));
+        var category = await context.Categories.FindAsync((id));
         if (category == null)
         {
             return NotFound();
         }
-        _context.Categories.Remove(category);
-        await _context.SaveChangesAsync();
+        context.Categories.Remove(category);
+        await context.SaveChangesAsync();
         return NoContent();   
     }
 }
