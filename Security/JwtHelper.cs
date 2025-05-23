@@ -1,5 +1,6 @@
 using BlogApp.Models.Entities;
-namespace BlogApp.Helpers;
+
+namespace BlogApp.Security;
 
 public class JwtHelper
 {

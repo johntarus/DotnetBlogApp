@@ -1,4 +1,4 @@
-namespace BlogApp.Helpers;
+namespace BlogApp.Security;
 
 public class PasswordHelper
 {

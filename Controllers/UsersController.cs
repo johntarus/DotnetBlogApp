@@ -3,6 +3,7 @@ using BlogApp.Data;
 using BlogApp.Helpers;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
+using BlogApp.Security;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
