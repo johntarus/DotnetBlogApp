@@ -2,13 +2,14 @@ using BlogApp.Data;
 using BlogApp.Interfaces;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
+using BlogApp.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Controllers;
 
 [Route("api/categories")]
-public class CategoryController(DatabaseContext context, ICategoryRepository categoryRepository) : ControllerBase
+public class CategoryController(DatabaseContext context, ICategoryRepository categoryRepository, ICategoryService categoryService) : ControllerBase
 {
     [HttpGet]
     public async Task<IActionResult> GetCategories()
@@ -33,34 +34,10 @@ public class CategoryController(DatabaseContext context, ICategoryRepository cat
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetCategoryById(int id)
+    public async Task<CategoryResponseDto> GetCategoryById(int id)
     {
-        var category = await context.Categories.Where(c=>c.Id == id)
-            .Select(c => new CategoryResponseDto
-        {
-            Id = c.Id,
-            Name = c.Name,
-            Posts = c.Posts.Select(p => new PostResponseDto
-            {
-                Id = p.Id,
-                Title = p.Title,
-                Content = p.Content,
-                CreatedAt = p.CreatedAt,
-                UpdatedAt = p.UpdatedAt,
-                CategoryId = p.CategoryId,
-                CategoryName = p.Categories.Name,
-                UserId = p.UserId,
-                Username = p.User.Username,
-                LikesCount = p.Likes.Count,
-                CommentsCount = p.Comments.Count,
-                Tags = p.Tags.Select(t => t.Name).ToList()
-            }).ToList()
-        }).ToListAsync();
-        if (category == null)
-        {
-            return NotFound();
-        }
-        return Ok(category);   
+        var category = await categoryService.GetCategoryById(id);
+        return category;
     }
 
     [HttpPatch("{id}")]
