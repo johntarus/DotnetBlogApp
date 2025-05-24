@@ -1,41 +1,19 @@
 using BlogApp.Data;
+using BlogApp.Interfaces;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Controllers;
 
 [Route("api/categories")]
-public class CategoryController(DatabaseContext context) : ControllerBase
+public class CategoryController(DatabaseContext context, ICategoryRepository categoryRepository) : ControllerBase
 {
     [HttpGet]
     public async Task<IActionResult> GetCategories()
     {
-        var categories = await context.Categories
-            .Select(c => new CategoryResponseDto
-            {
-                Id = c.Id,
-                Name = c.Name,
-                Posts = c.Posts.Select(p => new PostResponseDto
-                {
-                    Id = p.Id,
-                    Title = p.Title,
-                    Content = p.Content,
-                    CreatedAt = p.CreatedAt,
-                    UpdatedAt = p.UpdatedAt,
-                    CategoryId = p.CategoryId,
-                    CategoryName = p.Categories.Name,
-                    UserId = p.UserId,
-                    Username = p.User.Username,
-                    LikesCount = p.Likes.Count,
-                    CommentsCount = p.Comments.Count,
-                    Tags = p.Tags.Select(t => t.Name).ToList()
-                }).ToList()
-            })
-            .ToListAsync();
-
+        var categories = await categoryRepository.GetCategoriesAsync();
         return Ok(categories);
     }
 
