@@ -30,37 +30,33 @@ public class CategoryController(DatabaseContext context, ICategoryService catego
     }
 
     [HttpGet("{id}")]
-    public async Task<CategoryResponseDto> GetCategoryById(int id)
+    public async Task<IActionResult> GetCategoryById(int id)
     {
         var category = await categoryService.GetCategoryById(id);
-        return category;
+        if (category == null) return NotFound();
+        return Ok(category);
     }
 
     [HttpPatch("{id}")]
     public async Task<IActionResult> UpdateCategory(int id, [FromBody] UpdateCategoryDto updateCategory)
     {
-        var category = await context.Categories.FindAsync(id);
+        if(ModelState.IsValid == false) return BadRequest(ModelState);
+        var category = await categoryService.UpdateCategoryAsync(id, updateCategory);
         if (category == null)
         {
             return NotFound();
-            
         }
-        if(updateCategory.Name != null)
-            category.Name = updateCategory.Name;
-        await context.SaveChangesAsync();
-        return Ok(category);
+        return Ok(category);  
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteCategory(int id)
     {
-        var category = await context.Categories.FindAsync((id));
-        if (category == null)
+        var deleted = await categoryService.DeleteCategoryAsync(id);
+        if (deleted == false)
         {
             return NotFound();
         }
-        context.Categories.Remove(category);
-        await context.SaveChangesAsync();
-        return NoContent();   
+        return NoContent(); 
     }
 }

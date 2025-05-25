@@ -8,5 +8,5 @@ public interface ICategoryRepository
     Task<Category> GetCategoryByIdAsync(int id);
     Task<Category> CreateCategoryAsync(Category category);
     Task<Category> UpdateCategoryAsync(Category category);
-    Task<Category> DeleteCategoryAsync(int id);
+    Task DeleteCategoryAsync(Category category);
 }

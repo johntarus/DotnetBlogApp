@@ -44,13 +44,16 @@ public class CategoryRepository(DatabaseContext context) : ICategoryRepository
         return category;
     }
 
-    public Task<Category> UpdateCategoryAsync(Category category)
+    public async Task<Category> UpdateCategoryAsync(Category category)
     {
-        throw new NotImplementedException();
+        context.Update(category);
+        await context.SaveChangesAsync();
+        return category;
     }
 
-    public Task<Category> DeleteCategoryAsync(int id)
+    public async Task DeleteCategoryAsync(Category category)
     {
-        throw new NotImplementedException();
+        context.Categories.Remove(category);
+        await context.SaveChangesAsync();
     }
 }
