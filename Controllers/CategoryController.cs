@@ -25,13 +25,8 @@ public class CategoryController(DatabaseContext context, ICategoryService catego
     {
         if(ModelState.IsValid == false)
             return BadRequest(ModelState);
-        var createCategory = new Category()
-        {
-            Name = categoryDto.Name
-        };
-        context.Categories.Add(createCategory);
-        await context.SaveChangesAsync();
-        return Ok(createCategory);
+        var category = await categoryService.AddCategoryAsync(categoryDto);
+        return Ok(category);
     }
 
     [HttpGet("{id}")]

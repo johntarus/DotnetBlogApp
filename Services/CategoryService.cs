@@ -59,4 +59,23 @@ public class CategoryService(ICategoryRepository categoryRepository) : ICategory
             }).ToList()
         };
     }
+
+    public async Task<Category> AddCategoryAsync(AddCategoryDto categoryDto)
+    {
+        var category = new Category()
+        {
+            Name = categoryDto.Name
+        };
+        return await categoryRepository.CreateCategoryAsync(category);
+    }
+
+    public Task<CategoryResponseDto> UpdateCategoryAsync(int id, UpdateCategoryDto categoryDto)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<bool> DeleteCategoryAsync(int id)
+    {
+        throw new NotImplementedException();
+    }
 }

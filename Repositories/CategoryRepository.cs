@@ -37,9 +37,11 @@ public class CategoryRepository(DatabaseContext context) : ICategoryRepository
         return category;
     }
 
-    public Task<Category> CreateCategoryAsync(Category category)
+    public async Task<Category> CreateCategoryAsync(Category category)
     {
-        throw new NotImplementedException();
+        context.Add(category);
+        await context.SaveChangesAsync();
+        return category;
     }
 
     public Task<Category> UpdateCategoryAsync(Category category)
