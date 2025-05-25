@@ -8,32 +8,18 @@ namespace BlogApp.Repositories;
 
 public class CategoryRepository(DatabaseContext context) : ICategoryRepository
 {
-    public async Task<List<CategoryResponseDto>> GetCategoriesAsync()
+    public async Task<List<Category>> GetCategoriesAsync()
     {
-        var categories = await context.Categories
-            .Select(c => new CategoryResponseDto
-            {
-                Id = c.Id,
-                Name = c.Name,
-                Posts = c.Posts.Select(p => new PostResponseDto
-                {
-                    Id = p.Id,
-                    Title = p.Title,
-                    Content = p.Content,
-                    CreatedAt = p.CreatedAt,
-                    UpdatedAt = p.UpdatedAt,
-                    CategoryId = p.CategoryId,
-                    CategoryName = p.Categories.Name,
-                    UserId = p.UserId,
-                    Username = p.User.Username,
-                    LikesCount = p.Likes.Count,
-                    CommentsCount = p.Comments.Count,
-                    Tags = p.Tags.Select(t => t.Name).ToList()
-                }).ToList()
-            })
+        return await context.Categories
+            .Include(c => c.Posts)
+            .ThenInclude(p => p.User)
+            .Include(c => c.Posts)
+            .ThenInclude(p => p.Tags)
+            .Include(c => c.Posts)
+            .ThenInclude(p => p.Likes)
+            .Include(c => c.Posts)
+            .ThenInclude(p => p.Comments)
             .ToListAsync();
-
-        return categories;
     }
 
     public async Task<Category> GetCategoryByIdAsync(int id)

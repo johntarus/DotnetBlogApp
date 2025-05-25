@@ -1,5 +1,6 @@
 using BlogApp.Data;
 using BlogApp.Interfaces;
+using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
 using BlogApp.Services;
@@ -9,12 +10,12 @@ using Microsoft.EntityFrameworkCore;
 namespace BlogApp.Controllers;
 
 [Route("api/categories")]
-public class CategoryController(DatabaseContext context, ICategoryRepository categoryRepository, ICategoryService categoryService) : ControllerBase
+public class CategoryController(DatabaseContext context, ICategoryService categoryService) : ControllerBase
 {
     [HttpGet]
     public async Task<IActionResult> GetCategories()
     {
-        var categories = await categoryRepository.GetCategoriesAsync();
+        var categories = await categoryService.GetCategoriesAsync();
         return Ok(categories);
     }
 

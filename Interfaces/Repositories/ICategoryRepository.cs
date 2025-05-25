@@ -4,7 +4,7 @@ namespace BlogApp.Interfaces;
 
 public interface ICategoryRepository
 {
-    Task<List<CategoryResponseDto>> GetCategoriesAsync();
+    Task<List<Category>> GetCategoriesAsync();
     Task<Category> GetCategoryByIdAsync(int id);
     Task<Category> CreateCategoryAsync(Category category);
     Task<Category> UpdateCategoryAsync(Category category);
