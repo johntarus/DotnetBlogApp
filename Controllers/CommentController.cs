@@ -37,14 +37,9 @@ public class CommentController(DatabaseContext context, ICommentsService comment
     [HttpPatch("{id}")]
     public async Task<ActionResult<CommentResponseDto>> UpdateComment(int id, [FromBody] UpdateCommentDto request)
     {
-        var comment = await context.Comments.Include(c=>c.User).FirstOrDefaultAsync(c => c.Id == id);
-        if (comment == null) return NotFound();
         if(ModelState.IsValid == false) return BadRequest(ModelState);
-        if(request.Content != null)
-            comment.Content = request.Content;
-        comment.UpdatedAt = DateTime.Now;
-        comment.IsEdited = true;
-        await context.SaveChangesAsync();
+        var comment = await commentsService.UpdateCommentAsync(id, request);
+        if (comment == null) return NotFound();
         
         return Ok(new CommentResponseDto
         {

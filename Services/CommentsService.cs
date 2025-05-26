@@ -7,7 +7,6 @@ namespace BlogApp.Services;
 
 public class CommentsService(ICommentRepository commentRepository) : ICommentsService
 {
-
     public async Task<List<CommentResponseDto>> GetCommentsAsync()
     {
         var comments = await commentRepository.GetCommentsAsync();
@@ -23,7 +22,7 @@ public class CommentsService(ICommentRepository commentRepository) : ICommentsSe
             Username = c.User.Username,
         }).ToList();
     }
-    
+
     public async Task<CommentResponseDto> CreateCommentAsync(CommentDto commentDto)
     {
         var comment = new Comment
@@ -44,10 +43,9 @@ public class CommentsService(ICommentRepository commentRepository) : ICommentsSe
             CreatedAt = createdComment.CreatedAt,
             UpdatedAt = createdComment.UpdatedAt,
             IsEdited = createdComment.IsEdited,
-            Username = createdComment.User.Username 
+            Username = createdComment.User.Username
         };
     }
-
 
     public async Task<CommentResponseDto> GetCommentsByIdAsync(int id)
     {
@@ -66,13 +64,18 @@ public class CommentsService(ICommentRepository commentRepository) : ICommentsSe
         };
     }
 
-    public Task<Comment> UpdateCommentAsync(Comment comment)
+    public async Task<Comment> UpdateCommentAsync(int id, UpdateCommentDto commentDto)
     {
-        throw new NotImplementedException();
+        var updatedComment = await commentRepository.GetCommentByIdAsync(id);
+        if (updatedComment == null) return null;
+        if (!string.IsNullOrWhiteSpace(commentDto.Content))
+            updatedComment.Content = commentDto.Content;
+        updatedComment.UpdatedAt = DateTime.Now;
+        updatedComment.IsEdited = true;
+        return await commentRepository.UpdateCommentAsync(updatedComment);
     }
 
-    public Task DeleteCommentAsync(Comment comment)
+    public async Task DeleteCommentAsync(Comment comment)
     {
-        throw new NotImplementedException();
     }
 }
