@@ -19,35 +19,11 @@ public class CommentController(DatabaseContext context, ICommentsService comment
     }
     
     [HttpPost]
-    public async Task<ActionResult<CommentResponseDto>> CreateComment([FromBody] CommentDto request)
+    public async Task<ActionResult<CommentResponseDto>> CreateComment([FromBody] CommentDto commentDto)
     {
-        var post = await context.Posts.FirstOrDefaultAsync(p => p.Id == request.PostId);
-        var user = await context.Users.FirstOrDefaultAsync(u => u.Id == request.UserId);
-        if (ModelState.IsValid == false) return BadRequest(ModelState);
-        if(post == null) return NotFound("Post not found");
-        if(user == null) return NotFound("User not found");
-        var comment = new Comment
-        {
-            Content = request.Content,
-            PostId = request.PostId,
-            UserId = request.UserId,
-            IsEdited = false,
-            CreatedAt = DateTime.Now,
-            UpdatedAt = DateTime.Now
-        };
-        context.Comments.Add(comment);
-        await context.SaveChangesAsync();
-        var comentResponse = new CommentResponseDto
-        {
-            Id = comment.Id,
-            Content = comment.Content,
-            PostId = comment.PostId,
-            UserId = comment.UserId,
-            IsEdited = comment.IsEdited,
-            Username = user.Username,
-            CreatedAt = comment.CreatedAt
-        };
-        return CreatedAtAction(nameof(GetCommentById), new {id = comment.Id}, comentResponse);
+        if(ModelState.IsValid == false) return BadRequest(ModelState);
+        var comment = await commentsService.CreateCommentAsync(commentDto);
+        return Ok(comment);
     }
 
     [HttpGet("{id}")]

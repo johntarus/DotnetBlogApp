@@ -14,6 +14,15 @@ public class CommentRepository(DatabaseContext context) : ICommentRepository
             .Include(c => c.User)
             .ToListAsync();
     }
+    
+    public async Task<Comment> CreateCommentAsync(Comment comment)
+    {
+        context.Add(comment);
+        await context.SaveChangesAsync();
+        // Load the User so you can safely access User.Username later
+        await context.Entry(comment).Reference(c => c.User).LoadAsync();
+        return comment;
+    }
 
     public async Task<Comment> GetCommentByIdAsync(int id)
     {
@@ -24,14 +33,11 @@ public class CommentRepository(DatabaseContext context) : ICommentRepository
        return comment;
     }
 
-    public Task<Comment> CreateCommentAsync(Comment comment)
+    public async Task<Comment> UpdateCommentAsync(Comment comment)
     {
-        throw new NotImplementedException();
-    }
-
-    public Task<Comment> UpdateCommentAsync(Comment comment)
-    {
-        throw new NotImplementedException();
+        context.Update(comment);
+        await context.SaveChangesAsync();
+        return comment;
     }
 
     public Task DeleteCommentAsync(Comment comment)
