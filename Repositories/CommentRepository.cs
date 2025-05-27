@@ -1,6 +1,8 @@
 using BlogApp.Data;
 using BlogApp.Interfaces;
 using BlogApp.Models.Entities;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Repositories;
@@ -23,9 +25,11 @@ public class CommentRepository(DatabaseContext context) : ICommentRepository
             .FirstOrDefaultAsync();
     }
 
-    public Task<Comment> CreateCommentAsync(Comment comment)
+    public async Task<Comment> CreateCommentAsync(Comment comment)
     {
-        throw new NotImplementedException();
+        context.Add(comment);
+        await context.SaveChangesAsync();
+        return await context.Comments.Include(c=>c.User).FirstOrDefaultAsync(c => c.Id == comment.Id);
     }
 
     public async Task<Comment> UpdateCommentAsync(Comment comment)

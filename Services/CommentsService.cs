@@ -25,7 +25,7 @@ public class CommentsService(ICommentRepository commentRepository) : ICommentsSe
 
     public async Task<CommentResponseDto> CreateCommentAsync(CommentDto commentDto)
     {
-        var comment = new Comment
+        var comment = new Comment()
         {
             Content = commentDto.Content,
             PostId = commentDto.PostId,
