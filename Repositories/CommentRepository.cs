@@ -1,8 +1,6 @@
 using BlogApp.Data;
 using BlogApp.Interfaces;
 using BlogApp.Models.Entities;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Repositories;
