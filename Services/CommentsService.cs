@@ -75,7 +75,11 @@ public class CommentsService(ICommentRepository commentRepository) : ICommentsSe
         return await commentRepository.UpdateCommentAsync(updatedComment);
     }
 
-    public async Task DeleteCommentAsync(Comment comment)
+    public async Task<bool> DeleteCommentAsync(int id)
     {
+        var comment = await commentRepository.GetCommentByIdAsync(id);
+        if (comment == null) return false;
+        await commentRepository.DeleteCommentAsync(comment);
+        return true;
     }
 }

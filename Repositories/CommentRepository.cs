@@ -35,8 +35,9 @@ public class CommentRepository(DatabaseContext context) : ICommentRepository
         return comment;
     }
 
-    public Task DeleteCommentAsync(Comment comment)
+    public async Task DeleteCommentAsync(Comment comment)
     {
-        throw new NotImplementedException();
+        context.Comments.Remove(comment);
+        await context.SaveChangesAsync();
     }
 }

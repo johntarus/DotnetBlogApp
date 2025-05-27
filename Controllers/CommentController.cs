@@ -57,8 +57,8 @@ public class CommentController(DatabaseContext context, ICommentsService comment
     [HttpDelete("{id}")]
     public async Task<ActionResult<CommentResponseDto>> DeleteComment(int id)
     {
-        var comment = await context.Comments.FindAsync(id);
-        if (comment == null) return NotFound();
+        var deleted = await commentsService.DeleteCommentAsync(id);
+        if (deleted == false) return NotFound();
         return NoContent();
     }
 }
