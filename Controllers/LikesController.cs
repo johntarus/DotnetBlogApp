@@ -17,6 +17,13 @@ public class LikesController(DatabaseContext context, ILikeService likeService, 
         var likes = await likeService.GetLikesAsync();
         return Ok(likes);
     }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetLikeById(int id)
+    {
+        var like = await likeService.GetLikeByIdAsync(id);
+        return Ok(like);
+    }
     
     [HttpPost("like")]
     public async Task<IActionResult> AddLike([FromBody] LikeDto likeDto)

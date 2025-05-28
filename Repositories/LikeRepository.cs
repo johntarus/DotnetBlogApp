@@ -9,13 +9,12 @@ public class LikeRepository(DatabaseContext context) : ILikeRepository
 {
     public async Task<IEnumerable<Like>> GetLikesAsync()
     {
-        var likes = await context.Likes.Include(l=>l.User).ToListAsync();
-        return likes;
+        return await context.Likes.Include(l=>l.User).ToListAsync();
     }
 
-    public Task<Like> GetLikeByIdAsync(int id)
+    public async Task<Like> GetLikeByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        return await context.Likes.Include(l=>l.User).FirstOrDefaultAsync(l => l.Id == id);
     }
 
     public Task<Like> CreateLikeAsync(Like like)

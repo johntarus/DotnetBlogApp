@@ -19,9 +19,17 @@ public class LikeService(ILikeRepository likeRepository) : ILikeService
        }).ToList();
     }
 
-    public Task<LikeResponseDto> GetLikeByIdAsync(int id)
+    public async Task<LikeResponseDto> GetLikeByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        var like = await likeRepository.GetLikeByIdAsync(id);
+        return new LikeResponseDto
+        {
+            Id = like.Id,
+            UserId = like.UserId,
+            PostId = like.PostId,
+            Username = like.User?.Username,
+            CreatedAt = like.CreateAt
+        };
     }
 
     public Task<LikeResponseDto> CreateLikeAsync(LikeDto likeDto)
