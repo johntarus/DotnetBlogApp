@@ -1,4 +1,5 @@
 using BlogApp.Data;
+using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -8,19 +9,12 @@ namespace BlogApp.Controllers;
 
 [ApiController]
 [Route("api/likes")]
-public class LikesController(DatabaseContext context, ILogger<LikesController> logger) : ControllerBase
+public class LikesController(DatabaseContext context, ILikeService likeService, ILogger<LikesController> logger) : ControllerBase
 {
     [HttpGet]
     public async Task<IActionResult> GetLikes()
     {
-        var likes = await context.Likes.Select(l=>new LikeResponseDto
-        {
-            Id = l.Id,
-            PostId = l.PostId,
-            UserId = l.UserId,
-            Username = l.User.Username,
-            CreatedAt = l.CreateAt
-        }).ToListAsync();
+        var likes = await likeService.GetLikesAsync();
         return Ok(likes);
     }
     
