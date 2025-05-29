@@ -29,9 +29,11 @@ public class PostRepository(DatabaseContext context) : IPostRepository
             .FirstOrDefaultAsync(p => p.Id == id);
     }
 
-    public Task<Post> CreatePostAsync(Post post)
+    public async Task<Post> CreatePostAsync(Post post)
     {
-        throw new NotImplementedException();
+        context.Add(post);
+        await context.SaveChangesAsync();
+        return post;
     }
 
     public Task<Post> UpdatePostAsync(Post post)

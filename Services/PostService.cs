@@ -1,6 +1,8 @@
+using BlogApp.Helpers;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
+using BlogApp.Models.Entities;
 
 namespace BlogApp.Services;
 
@@ -47,9 +49,32 @@ public class PostService(IPostRepository postRepository) : IPostService
         };
     }
 
-    public Task<PostResponseDto?> CreatePostAsync(PostDto dto)
+    public async Task<PostDto?> CreatePostAsync(AddPostDto postDto)
     {
-        throw new NotImplementedException();
+        var post = new Post
+        {
+            Title = postDto.Title,
+            Content = postDto.Content,
+            Slug = SlugUtils.GenerateSlug(postDto.Title),
+            CategoryId = postDto.CategoryId,
+            UserId = postDto.UserId,
+            CreatedAt = DateTime.Now,
+            UpdatedAt = DateTime.Now
+        };
+        var createdPost = await postRepository.CreatePostAsync(post);
+        return new PostDto()
+        {
+            Id = createdPost.Id,
+            Title = createdPost.Title,
+            CreatedAt = createdPost.CreatedAt,
+            Content = createdPost.Content,
+            Slug = createdPost.Slug,
+            CategoryId = createdPost.CategoryId,
+            CategoryName = createdPost.Categories?.Name,
+            UserId = createdPost.UserId,
+            Username = createdPost.User?.Username,
+            Tags = createdPost.Tags.Select(t => t.Name).ToList()
+        };
     }
 
     public Task<PostResponseDto?> UpdatePostAsync(int id, PostDto dto)

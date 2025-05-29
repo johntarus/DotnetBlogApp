@@ -22,44 +22,10 @@ public class PostController(DatabaseContext context, IPostService postService) :
 
     [HttpPost]
     public async Task<IActionResult> CreateBlog(AddPostDto postDto)
-    {
-        var category = await context.Categories.FirstOrDefaultAsync(c => c.Id == postDto.CategoryId);
-        var user = await context.Users.FirstOrDefaultAsync(u => u.Id == postDto.UserId);
-        if(category == null)
-            return NotFound("Category not found");
-        if(user == null)
-            return NotFound("User not found");
-        var post = new Post()
-        {
-            Title = postDto.Title,
-            Content = postDto.Content,
-            Slug = SlugUtils.GenerateSlug(postDto.Title),
-            CategoryId = postDto.CategoryId,
-            UserId = postDto.UserId,
-            CreatedAt = DateTime.Now,
-            UpdatedAt = DateTime.Now
-        };
-        if (postDto.TagIds != null && postDto.TagIds.Any())
-        {
-            var tags = await context.Tags.Where(t => postDto.TagIds.Contains(t.Id)).ToListAsync();
-            post.Tags = tags;
-        }
-        context.Posts.Add(post);
-        await context.SaveChangesAsync();
-
-        var postDtoResponse = new PostDto
-        {
-            Id = post.Id,
-            Title = post.Title,
-            Slug = post.Slug,
-            Content = post.Content,
-            CategoryId = post.CategoryId,
-            CategoryName = category.Name,
-            UserId = user.Id,
-            Username = user.Username,
-            CreatedAt = post.CreatedAt
-        };
-        return CreatedAtAction(nameof(GetPostById), new {id = post.Id}, postDtoResponse);
+    { 
+        if(ModelState.IsValid == false) return BadRequest(ModelState);
+       var post = await postService.CreatePostAsync(postDto);
+       return CreatedAtAction(nameof(GetPostById), new { id = post.Id }, post);
     }
 
     [HttpGet("{id}")]
