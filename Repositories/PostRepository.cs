@@ -1,6 +1,7 @@
 using BlogApp.Data;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Models.Entities;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Repositories;
@@ -36,13 +37,16 @@ public class PostRepository(DatabaseContext context) : IPostRepository
         return post;
     }
 
-    public Task<Post> UpdatePostAsync(Post post)
+    public async Task<Post> UpdatePostAsync(Post post)
     {
-        throw new NotImplementedException();
+        context.Update(post);
+        await context.SaveChangesAsync();
+        return post;
     }
 
-    public Task DeletePostAsync(Post post)
+    public async Task DeletePostAsync(Post post)
     {
-        throw new NotImplementedException();
+        context.Posts.Remove(post);
+        await context.SaveChangesAsync();
     }
 }

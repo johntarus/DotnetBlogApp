@@ -1,3 +1,5 @@
+using BlogApp.Entities;
+
 namespace BlogApp.Models.Entities;
 
 public class Post

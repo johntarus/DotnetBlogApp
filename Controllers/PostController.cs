@@ -41,44 +41,15 @@ public class PostController(DatabaseContext context, IPostService postService) :
     {
         if(ModelState.IsValid == false)
             return BadRequest(ModelState);
-        var post = await context.Posts.Include(p=>p.User)
-            .Include(p=>p.Categories).FirstOrDefaultAsync(p => p.Id == id);
-        if (post == null)
-        {
-            return NotFound();
-        }
-        
-        if(updatePostDto.Title != null)
-            post.Title = updatePostDto.Title;
-        if(updatePostDto.Content != null)
-            post.Content = updatePostDto.Content;
-        post.UpdatedAt = DateTime.Now;
-        
-            await context.SaveChangesAsync();
-            return Ok(new PostResponseDto
-            {
-                Id = post.Id,
-                Title = post.Title,
-                Content = post.Content,
-                CreatedAt = post.CreatedAt,
-                UpdatedAt = post.UpdatedAt,
-                CategoryId = post.CategoryId,
-                CategoryName = post.Categories.Name,
-                UserId = post.UserId,
-                Username = post.User.Username,
-            });
+        var post = await postService.UpdatePostAsync(id, updatePostDto);
+        return Ok(post);
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteBlog(Guid id)
     {
-        var blog = await context.Posts.FindAsync(id);
-        if (blog == null)
-        {
-            return NotFound();
-        }
-        context.Posts.Remove(blog);
-        await context.SaveChangesAsync();
+        var isPostDeleted = await postService.DeletePostAsync(id);
+        if(isPostDeleted == false) return NotFound();
         return NoContent();
     }
 }

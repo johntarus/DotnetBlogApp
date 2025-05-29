@@ -1,4 +1,6 @@
-namespace BlogApp.Models.Entities;
+using BlogApp.Models.Entities;
+
+namespace BlogApp.Entities;
 
 public class Tag
 {

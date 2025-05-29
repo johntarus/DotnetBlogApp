@@ -3,6 +3,7 @@ using BlogApp.Interfaces.Repositories;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace BlogApp.Services;
 
@@ -77,13 +78,36 @@ public class PostService(IPostRepository postRepository) : IPostService
         };
     }
 
-    public Task<PostResponseDto?> UpdatePostAsync(int id, PostDto dto)
+    public async Task<PostResponseDto?> UpdatePostAsync(Guid id, UpdatePostDto dto)
     {
-        throw new NotImplementedException();
+        var post = await postRepository.GetPostByIdAsync(id);
+        if (post == null) return null;
+        if(!string.IsNullOrEmpty(dto.Title))
+            post.Title = dto.Title;
+        if(!string.IsNullOrEmpty(dto.Content))
+            post.Content = dto.Content;
+        var updatedPost = await postRepository.UpdatePostAsync(post);
+        return new PostResponseDto()
+        {
+            Id = updatedPost.Id,
+            Title = updatedPost.Title,
+            CreatedAt = updatedPost.CreatedAt,
+            UpdatedAt = updatedPost.UpdatedAt,
+            Content = updatedPost.Content,
+            CategoryId = updatedPost.CategoryId,
+            CategoryName = updatedPost.Categories?.Name,
+            UserId = updatedPost.UserId,
+            Username = updatedPost.User?.Username,
+            Tags = updatedPost.Tags.Select(t => t.Name).ToList()
+        };
+
     }
 
-    public Task<bool> DeletePostAsync(int id)
+    public async Task<bool> DeletePostAsync(Guid id)
     {
-        throw new NotImplementedException();
+        var post = await postRepository.GetPostByIdAsync(id);
+        if (post == null) return false;
+        await postRepository.DeletePostAsync(post);
+        return true;
     }
 }
