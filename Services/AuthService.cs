@@ -30,9 +30,23 @@ public class AuthService(IAuthRepository authRepository, IConfiguration config) 
         };
     }
 
-    public Task<UserResponseDto> LoginAsync(LoginRequestDto request)
+    public async Task<UserResponseDto> LoginAsync(LoginRequestDto request)
     {
-        throw new NotImplementedException();
+        var user = await authRepository.GetByUsernameOrEmailAsync(request.UsernameOrEmail);
+        if (string.IsNullOrWhiteSpace(request.UsernameOrEmail))
+            throw new ArgumentException("Username or Email is required");
+        if(string.IsNullOrWhiteSpace(request.Password))
+            throw new ArgumentException("Password is required");
+        if(user==null || !PasswordHelper.VerifyPassword(request.Password, user.PasswordHash))
+            throw new UnauthorizedAccessException("Invalid Credentials");
+        return new UserResponseDto
+        {
+            Id = user.Id,
+            Username = user.Username,
+            Email = user.Email,
+            CreatedAt = user.CreatedAt,
+            Token = JwtHelper.GenerateToken(user, config)
+        };
     }
 
     public Task<ProfileResponseDto> GetProfileAsync(Guid userId)

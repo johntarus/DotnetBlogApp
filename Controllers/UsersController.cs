@@ -26,26 +26,16 @@ public class UsersController(DatabaseContext context, IAuthService authService, 
     [HttpPost("login")]
     public async Task<ActionResult<UserResponseDto>> Login([FromBody] LoginRequestDto request)
     {
-        var user = await context.Users.FirstOrDefaultAsync(u => u.Username == request.UsernameOrEmail ||
-                                                                 u.Email == request.UsernameOrEmail);
-        if(string.IsNullOrWhiteSpace(request.UsernameOrEmail) && string.IsNullOrWhiteSpace(request.UsernameOrEmail))
-            return BadRequest("Username or Email is required");
-        if(string.IsNullOrWhiteSpace(request.Password))
-            return BadRequest("Password is required");
-        if (user == null || !PasswordHelper.VerifyPassword(request.Password, user.PasswordHash))
+        try
         {
-            return Unauthorized("Invalid Credentials");
+            var user = await authService.LoginAsync(request);
+            if (ModelState.IsValid == false) return BadRequest(ModelState);
+            return Ok(user);
         }
-        return Ok(new UserResponseDto
+        catch (Exception e)
         {
-            Id = user.Id,
-            Username = user.Username,
-            Email = user.Email,
-            Bio = user.Bio,
-            Avatar = user.Avatar,
-            CreatedAt = user.CreatedAt,
-            Token = JwtHelper.GenerateToken(user, config)
-        });
+            return Unauthorized(e.Message);
+        }
     }
 
     [Authorize]
