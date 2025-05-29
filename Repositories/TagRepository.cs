@@ -33,8 +33,9 @@ public class TagRepository(DatabaseContext context) : ITagRepository
         return tag;
     }
 
-    public Task DeleteTag(Tag tag)
+    public async Task DeleteTag(Tag tag)
     {
-        throw new NotImplementedException();
+        context.Tags.Remove(tag);
+        await context.SaveChangesAsync();
     }
 }

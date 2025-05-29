@@ -47,13 +47,11 @@ public class TagController(DatabaseContext context, ITagService tagService) : Co
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteTag(int id)
     {
-        var tag = await context.Tags.FindAsync(id);
-        if (tag == null)
+        var deleted = await tagService.DeleteTag(id);
+        if (deleted == false)
         {
             return NotFound();
         }
-        context.Tags.Remove(tag);
-        await context.SaveChangesAsync();
-        return NoContent();   
+        return NoContent(); 
     }
 }

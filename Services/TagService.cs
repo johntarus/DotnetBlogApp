@@ -93,8 +93,11 @@ public class TagService(ITagRepository tagRepository) : ITagService
         };
     }
 
-    public Task<bool> DeleteTag(int id)
+    public async Task<bool> DeleteTag(int id)
     {
-        throw new NotImplementedException();
+        var tag = await tagRepository.GetTagById(id);
+        if(tag == null) return false;
+        await tagRepository.DeleteTag(tag);
+        return true;
     }
 }
