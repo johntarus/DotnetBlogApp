@@ -18,9 +18,16 @@ public class UsersController(DatabaseContext context, IAuthService authService, 
     [HttpPost("register")]
     public async Task<ActionResult<UserResponseDto>> Register([FromBody] RegisterRequestDto request)
     {
-        var user = await authService.RegisterAsync(request);
-        if(ModelState.IsValid == false) return BadRequest(ModelState);
-        return Ok(user);
+        try
+        {
+            var user = await authService.RegisterAsync(request);
+            if (ModelState.IsValid == false) return BadRequest(ModelState);
+            return Ok(user);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
 
     [HttpPost("login")]
@@ -42,19 +49,17 @@ public class UsersController(DatabaseContext context, IAuthService authService, 
     [HttpGet("profile")]
     public async Task<ActionResult<ProfileResponseDto>> GetProfile()
     {
-        var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-        var user = await context.Users.FindAsync(userId);
-        if (user == null) return NotFound();
-        return Ok(new ProfileResponseDto()
+        try
         {
-            Id = user.Id,
-            Username = user.Username,
-            Email = user.Email,
-            Bio = user.Bio,
-            Avatar = user.Avatar,
-            CreatedAt = user.CreatedAt,
-            UpdatedAt = user.UpdatedAt,
-        });
+            var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var user = await authService.GetProfileAsync(userId);
+            if (user == null) return NotFound();
+            return Ok(user);
+        }
+        catch (Exception e)
+        {
+            return NotFound(e.Message);
+        }
     }
 
     [Authorize]

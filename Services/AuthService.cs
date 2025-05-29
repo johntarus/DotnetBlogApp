@@ -49,9 +49,20 @@ public class AuthService(IAuthRepository authRepository, IConfiguration config) 
         };
     }
 
-    public Task<ProfileResponseDto> GetProfileAsync(Guid userId)
+    public async Task<ProfileResponseDto> GetProfileAsync(Guid userId)
     {
-        throw new NotImplementedException();
+        var user = await authRepository.GetByIdAsync(userId);
+        if (user == null) throw new ApplicationException("User not found");
+        return new ProfileResponseDto
+        {
+            Id = user.Id,
+            Username = user.Username,
+            Email = user.Email,
+            Bio = user.Bio,
+            Avatar = user.Avatar,
+            CreatedAt = user.CreatedAt,
+            UpdatedAt = user.UpdatedAt
+        };
     }
 
     public Task<UpdateProfileRequestDto> UpdatePrifileAsync(Guid id, UpdateProfileRequestDto request)
