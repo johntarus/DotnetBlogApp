@@ -23,30 +23,18 @@ public class TagController(DatabaseContext context, ITagService tagService) : Co
     {
         if(ModelState.IsValid == false)
             return BadRequest(ModelState);
-        var createTag = new Tag()
-        {
-            Name = tagDto.Name,
-            CreatedAt = DateTime.Now,
-            UpdatedAt = DateTime.Now,
-        };
-            await context.Tags.AddAsync(createTag);
-            await context.SaveChangesAsync();
-            return Ok(createTag);
+        var tag = await tagService.AddTag(tagDto);
+        return Ok(tag);
     }
 
     [HttpPatch("{id}")]
     public async Task<IActionResult> UpdateTag(int id, [FromBody] UpdateTagDto updateTag)
     {
-        var tag = await context.Tags.FindAsync(id);
-        if (tag == null)
-        {
-            return NotFound();
-        }
-        if(updateTag.Name != null)
-            tag.Name = updateTag.Name;
-        tag.UpdatedAt = DateTime.Now;
-        await context.SaveChangesAsync();
-        return Ok(tag);
+        if(ModelState.IsValid == false) return BadRequest(ModelState);
+        var tag = await tagService.UpdateTag(id, updateTag);
+        if (tag == null) return NotFound();
+        
+        return Ok(tag); 
     }
 
     [HttpGet("{id}")]

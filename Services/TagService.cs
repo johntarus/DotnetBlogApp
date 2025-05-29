@@ -1,3 +1,4 @@
+using BlogApp.Entities;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
@@ -57,14 +58,39 @@ public class TagService(ITagRepository tagRepository) : ITagService
         };
     }
 
-    public Task<TagResponseDto> AddTag(TagResponseDto tag)
+    public async Task<TagResponseDto> AddTag(AddTagDto addTag)
     {
-        throw new NotImplementedException();
+        var createTag = new Tag()
+        {
+            Name = addTag.Name,
+            CreatedAt = DateTime.Now,
+            UpdatedAt = DateTime.Now,
+        };
+        if (createTag == null) return null;
+        var tag = await tagRepository.AddTag(createTag);
+        return new TagResponseDto()
+        {
+            Id = tag.Id,
+            Name = tag.Name,
+            CreateAt = tag.CreatedAt,
+            UpdatedAt = tag.UpdatedAt
+        };
     }
 
-    public Task<TagResponseDto> UpdateTag(TagResponseDto tag)
+    public async Task<TagResponseDto> UpdateTag(int id, UpdateTagDto updateTag)
     {
-        throw new NotImplementedException();
+        var tag = await tagRepository.GetTagById(id);
+        if(tag == null) return null;
+        if(!string.IsNullOrWhiteSpace(updateTag.Name))
+            tag.Name = updateTag.Name;
+        var updatedTag = await tagRepository.UpdateTag(tag);
+        return new TagResponseDto()
+        {
+            Id = updatedTag.Id,
+            Name = updatedTag.Name,
+            CreateAt = updatedTag.CreatedAt,
+            UpdatedAt = updatedTag.UpdatedAt
+        };
     }
 
     public Task<bool> DeleteTag(int id)

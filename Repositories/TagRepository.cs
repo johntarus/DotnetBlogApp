@@ -19,14 +19,18 @@ public class TagRepository(DatabaseContext context) : ITagRepository
       return tag;
     }
 
-    public Task<Tag> AddTag(Tag tag)
+    public async Task<Tag> AddTag(Tag tag)
     {
-        throw new NotImplementedException();
+        context.Tags.Add(tag);
+        await context.SaveChangesAsync();
+        return tag;
     }
 
-    public Task<Tag> UpdateTag(Tag tag)
+    public async Task<Tag> UpdateTag(Tag tag)
     {
-        throw new NotImplementedException();
+        context.Tags.Update(tag);
+        await context.SaveChangesAsync();
+        return tag;
     }
 
     public Task DeleteTag(Tag tag)

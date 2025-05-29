@@ -1,3 +1,4 @@
+using BlogApp.Entities;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
 
@@ -7,7 +8,7 @@ public interface ITagService
 {
     Task<IEnumerable<TagResponseDto>> GetAllTags();
     Task<TagResponseDto> GetTagById(int id);
-    Task<TagResponseDto> AddTag(TagResponseDto tag);
-    Task<TagResponseDto> UpdateTag(TagResponseDto tag);
+    Task<TagResponseDto> AddTag(AddTagDto addTag);
+    Task<TagResponseDto> UpdateTag(int id, UpdateTagDto tag);
     Task<bool> DeleteTag(int id);
 }

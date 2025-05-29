@@ -8,5 +8,5 @@ public class TagResponseDto
     public string Name { get; set; }
     public DateTime CreateAt { get; set; }
     public DateTime UpdatedAt { get; set; }
-    public List<PostResponseDto> Posts { get; set; } = new List<PostResponseDto>();
+    public List<PostResponseDto> Posts { get; set; } = new();
 }
