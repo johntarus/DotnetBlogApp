@@ -21,16 +21,16 @@ public class LikesController(ILikeService likeService, ILogger<LikesController> 
     [HttpPost("like")]
     public async Task<IActionResult> AddLike([FromBody] LikeDto dto)
     {
-        try
-        {
+        // try
+        // {
             var createdLike = await likeService.CreateLikeAsync(dto);
             return createdLike == null ? Conflict("Already liked") : Ok(createdLike);
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, "Error adding like");
-            return StatusCode(500, "An error occurred");
-        }
+        // }
+        // catch (Exception ex)
+        // {
+        //     logger.LogError(ex, "Error adding like");
+        //     return StatusCode(500, "An error occurred");
+        // }
     }
 
     [HttpDelete("unlike")]

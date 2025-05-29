@@ -3,6 +3,7 @@ using BlogApp.Data;
 using BlogApp.Interfaces;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Interfaces.Services;
+using BlogApp.Middlewares;
 using BlogApp.Repositories;
 using BlogApp.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -86,6 +87,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
