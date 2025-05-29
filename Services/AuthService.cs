@@ -65,8 +65,25 @@ public class AuthService(IAuthRepository authRepository, IConfiguration config) 
         };
     }
 
-    public Task<UpdateProfileRequestDto> UpdatePrifileAsync(Guid id, UpdateProfileRequestDto request)
+    public async Task<ProfileResponseDto> UpdatePrifileAsync(Guid id, UpdateProfileRequestDto request)
     {
-        throw new NotImplementedException();
+        var user = await authRepository.GetByIdAsync(id);
+        if (user == null) return null;
+        if(request.Bio != null)
+            user.Bio = request.Bio;
+        if(request.Avatar != null)
+            user.Avatar = request.Avatar;
+        user.UpdatedAt = DateTime.Now;
+        var updatedUser = await authRepository.UpdateAsync(user);
+        return new ProfileResponseDto
+        {
+            Id = user.Id,
+            Username = user.Username,
+            Email = user.Email,
+            Bio = user.Bio,
+            Avatar = user.Avatar,
+            CreatedAt = user.CreatedAt,
+            UpdatedAt = user.UpdatedAt,
+        };
     }
 }

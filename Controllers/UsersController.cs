@@ -64,29 +64,13 @@ public class UsersController(DatabaseContext context, IAuthService authService, 
 
     [Authorize]
     [HttpPatch("update")]
-    public async Task<ActionResult<UpdateProfileRequestDto>> UpdateProfile(UpdateProfileRequestDto request)
+    public async Task<ActionResult<UpdateProfileRequestDto>> UpdateProfile(Guid id, UpdateProfileRequestDto request)
     {
         var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-        var user = await context.Users.FindAsync(userId);
+        var user = await authService.UpdatePrifileAsync(id, request);
         if (user == null) return NotFound();
         if(ModelState.IsValid == false)
             return BadRequest(ModelState);
-        if(request.Bio != null)
-            user.Bio = request.Bio;
-        if(request.Avatar != null)
-            user.Avatar = request.Avatar;
-        user.UpdatedAt = DateTime.Now;
-        await context.SaveChangesAsync();
-        
-        return Ok(new ProfileResponseDto
-        {
-            Id = user.Id,
-            Username = user.Username,
-            Email = user.Email,
-            Bio = user.Bio,
-            Avatar = user.Avatar,
-            CreatedAt = user.CreatedAt,
-            UpdatedAt = user.UpdatedAt,
-        });
+        return Ok(user);
     }
 }
