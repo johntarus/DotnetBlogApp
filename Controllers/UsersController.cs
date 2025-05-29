@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using BlogApp.Data;
 using BlogApp.Helpers;
+using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
 using BlogApp.Security;
@@ -12,31 +13,14 @@ namespace BlogApp.Controllers;
 
 [ApiController]
 [Route("api/users")]
-public class UsersController(DatabaseContext context, IConfiguration config) : ControllerBase
+public class UsersController(DatabaseContext context, IAuthService authService, IConfiguration config) : ControllerBase
 {
     [HttpPost("register")]
     public async Task<ActionResult<UserResponseDto>> Register([FromBody] RegisterRequestDto request)
     {
-        if (await context.Users.AnyAsync(u => u.Email == request.Email))
-            return BadRequest("Email already exists");
-
-        var user = new User
-        {
-            Username = request.Username,
-            Email = request.Email,
-            PasswordHash = PasswordHelper.HashPassword(request.Password),
-        };
-
-        context.Add((user));
-        await context.SaveChangesAsync();
-        return Ok(new UserResponseDto
-        {
-            Id = user.Id,
-            Username = user.Username,
-            Email = user.Email,
-            CreatedAt = user.CreatedAt,
-            Token = JwtHelper.GenerateToken(user, config)
-        });
+        var user = await authService.RegisterAsync(request);
+        if(ModelState.IsValid == false) return BadRequest(ModelState);
+        return Ok(user);
     }
 
     [HttpPost("login")]
