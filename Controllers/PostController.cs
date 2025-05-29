@@ -1,5 +1,6 @@
 using BlogApp.Data;
 using BlogApp.Helpers;
+using BlogApp.Interfaces.Services;
 using BlogApp.Models.Entities;
 using BlogApp.Models.Dtos;
 using Microsoft.AspNetCore.Mvc;
@@ -10,28 +11,12 @@ namespace BlogApp.Controllers;
 [ApiController]
 
 [Route("api/posts")]
-public class PostController(DatabaseContext context) : ControllerBase
+public class PostController(DatabaseContext context, IPostService postService) : ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> GetAll()
+    public async Task<IActionResult> GetAllPosts()
     {
-        var posts = await context.Posts
-            .Select(p=> new PostResponseDto
-            {
-                Id = p.Id,
-                Title = p.Title,
-                Content = p.Content,
-                CreatedAt = p.CreatedAt,
-                UpdatedAt = p.UpdatedAt,
-                CategoryId = p.CategoryId,
-                CategoryName = p.Categories.Name,
-                UserId = p.UserId,
-                Username = p.User.Username,
-                LikesCount = p.Likes.Count,
-                CommentsCount = p.Comments.Count,
-                Tags = p.Tags.Select(t => t.Name).ToList(),
-            })
-            .ToListAsync();
+        var posts = await postService.GetPostsAsync();
         return Ok(posts);
     }
 

@@ -1,11 +1,7 @@
 using BlogApp.Data;
-using BlogApp.Interfaces;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
-using BlogApp.Models.Entities;
-using BlogApp.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Controllers;
 
