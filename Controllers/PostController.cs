@@ -65,27 +65,8 @@ public class PostController(DatabaseContext context, IPostService postService) :
     [HttpGet("{id}")]
     public async Task<IActionResult> GetPostById(Guid id)
     {
-        var post = await context.Posts.Where(p => p.Id == id)
-            .Select(p => new PostResponseDto
-            {
-                Id = p.Id,
-                Title = p.Title,
-                Content = p.Content,
-                CreatedAt = p.CreatedAt,
-                UpdatedAt = p.UpdatedAt,
-                CategoryId = p.CategoryId,
-                CategoryName = p.Categories.Name,
-                UserId = p.UserId,
-                Username = p.User.Username,
-                LikesCount = p.Likes.Count,
-                CommentsCount = p.Comments.Count,
-                Tags = p.Tags.Select(t => t.Name).ToList(),
-            })
-            .FirstOrDefaultAsync();
-        if (post == null)
-        {
-            return NotFound();
-        }
+        var post = await postService.GetPostByIdAsync(id);
+        if (post == null) return NotFound();
         return Ok(post);
     }
 

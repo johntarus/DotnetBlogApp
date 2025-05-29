@@ -18,9 +18,15 @@ public class PostRepository(DatabaseContext context) : IPostRepository
            .ToListAsync();
     }
 
-    public Task<Post?> GetPostByIdAsync(int id)
+    public async Task<Post?> GetPostByIdAsync(Guid id)
     {
-        throw new NotImplementedException();
+        return await context.Posts
+            .Include(p => p.User)
+            .Include(p => p.Categories)
+            .Include(p => p.Comments)
+            .Include(p => p.Likes)
+            .Include(p => p.Tags)
+            .FirstOrDefaultAsync(p => p.Id == id);
     }
 
     public Task<Post> CreatePostAsync(Post post)

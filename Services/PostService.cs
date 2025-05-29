@@ -26,9 +26,25 @@ public class PostService(IPostRepository postRepository) : IPostService
         }).ToList();
     }
 
-    public Task<PostResponseDto?> GetPostByIdAsync(int id)
+    public async Task<PostResponseDto?> GetPostByIdAsync(Guid id)
     {
-        throw new NotImplementedException();
+        var post = await postRepository.GetPostByIdAsync(id);
+        if (post == null) return null;
+        return new PostResponseDto
+        {
+            Id = post.Id,
+            Title = post.Title,
+            CreatedAt = post.CreatedAt,
+            UpdatedAt = post.UpdatedAt,
+            Content = post.Content,
+            CategoryId = post.CategoryId,
+            CategoryName = post.Categories?.Name,
+            UserId = post.UserId,
+            Username = post.User?.Username,
+            LikesCount = post.Likes?.Count ?? 0,
+            CommentsCount = post.Comments?.Count ?? 0,
+            Tags = post.Tags.Select(t => t.Name).ToList()
+        };
     }
 
     public Task<PostResponseDto?> CreatePostAsync(PostDto dto)
