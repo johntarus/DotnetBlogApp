@@ -33,7 +33,7 @@ public class PostRepository(DatabaseContext context) : IPostRepository
     {
         context.Add(post);
         await context.SaveChangesAsync();
-        return post;
+        return await context.Posts.Include(p=>p.User).Include(p=>p.Categories).FirstOrDefaultAsync(p => p.Id == post.Id);
     }
 
     public async Task<Post> UpdatePostAsync(Post post)

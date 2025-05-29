@@ -6,5 +6,5 @@ public class AddPostDto
     public string? Content { get; set; }
     public Guid UserId { get; set; }
     public int CategoryId { get; set; }
-    public List<int>? TagIds { get; set; }
+    public IEnumerable<int>? TagIds { get; set; }
 }

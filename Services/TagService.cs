@@ -9,7 +9,7 @@ public class TagService(ITagRepository tagRepository) : ITagService
 {
     public async Task<IEnumerable<TagResponseDto>> GetAllTags()
     {
-        var tags = await tagRepository.GetTags();
+        var tags = await tagRepository.GetAllTags();
         var tagsResponse = tags.Select(t => new TagResponseDto
         {
             Id = t.Id,

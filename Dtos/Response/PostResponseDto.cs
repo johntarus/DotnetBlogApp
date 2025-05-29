@@ -4,6 +4,7 @@ public class PostResponseDto
 {
     public Guid Id { get; set; }
     public required string Title { get; set; }
+    public string Slug { get; set; }
     public string? Content { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }

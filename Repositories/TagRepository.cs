@@ -7,7 +7,7 @@ namespace BlogApp.Repositories;
 
 public class TagRepository(DatabaseContext context) : ITagRepository
 {
-    public async Task<IEnumerable<Tag>> GetTags()
+    public async Task<IEnumerable<Tag>> GetAllTags()
     {
         return await context.Tags.Include(t=>t.Posts).ToListAsync();
     }

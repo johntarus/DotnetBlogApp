@@ -16,5 +16,5 @@ public class Post
     public Category Categories { get; set; }
     public List<Like> Likes { get; set; } = new();
     public List<Comment> Comments { get; set; } = new();
-    public List<Tag> Tags { get; set; } = new();
+    public IEnumerable<Tag> Tags { get; set; } = new List<Tag>();
 }

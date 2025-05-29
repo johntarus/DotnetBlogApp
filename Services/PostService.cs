@@ -6,7 +6,7 @@ using BlogApp.Models.Entities;
 
 namespace BlogApp.Services;
 
-public class PostService(IPostRepository postRepository) : IPostService
+public class PostService(IPostRepository postRepository, ITagRepository tagRepository) : IPostService
 {
     public async Task<IEnumerable<PostResponseDto>> GetPostsAsync()
     {
@@ -15,9 +15,10 @@ public class PostService(IPostRepository postRepository) : IPostService
         {
             Id = p.Id,
             Title = p.Title,
+            Content = p.Content,
+            Slug = p.Slug,
             CreatedAt = p.CreatedAt,
             UpdatedAt = p.UpdatedAt,
-            Content = p.Content,
             CategoryId = p.CategoryId,
             CategoryName = p.Categories?.Name,
             UserId = p.UserId,
@@ -49,7 +50,7 @@ public class PostService(IPostRepository postRepository) : IPostService
         };
     }
 
-    public async Task<PostDto?> CreatePostAsync(AddPostDto postDto)
+    public async Task<PostResponseDto?> CreatePostAsync(AddPostDto postDto)
     {
         var post = new Post
         {
@@ -61,18 +62,27 @@ public class PostService(IPostRepository postRepository) : IPostService
             CreatedAt = DateTime.Now,
             UpdatedAt = DateTime.Now
         };
+        if (postDto.TagIds != null && postDto.TagIds.Any())
+        {
+            var allTags = await tagRepository.GetAllTags();
+            var tags = allTags.Where(t => postDto.TagIds.Contains(t.Id)).ToList();
+            post.Tags = tags;
+        }
         var createdPost = await postRepository.CreatePostAsync(post);
-        return new PostDto()
+        return new PostResponseDto
         {
             Id = createdPost.Id,
             Title = createdPost.Title,
-            CreatedAt = createdPost.CreatedAt,
             Content = createdPost.Content,
             Slug = createdPost.Slug,
+            CreatedAt = createdPost.CreatedAt,
+            UpdatedAt = createdPost.UpdatedAt,
             CategoryId = createdPost.CategoryId,
             CategoryName = createdPost.Categories?.Name,
             UserId = createdPost.UserId,
             Username = createdPost.User?.Username,
+            LikesCount = createdPost.Likes?.Count ?? 0,
+            CommentsCount = createdPost.Comments?.Count ?? 0,
             Tags = createdPost.Tags.Select(t => t.Name).ToList()
         };
     }
