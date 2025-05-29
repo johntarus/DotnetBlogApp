@@ -1,5 +1,7 @@
 using BlogApp.Models.Dtos;
 
+namespace BlogApp.Interfaces.Services;
+
 public interface ILikeService
 {
     Task<List<LikeResponseDto>> GetLikesAsync();

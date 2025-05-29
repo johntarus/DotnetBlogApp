@@ -1,5 +1,7 @@
 using BlogApp.Models.Entities;
 
+namespace BlogApp.Interfaces.Repositories;
+
 public interface ILikeRepository
 {
     Task<List<Like>> GetLikesAsync();
