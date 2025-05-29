@@ -1,6 +1,5 @@
 using BlogApp.Data;
 using BlogApp.Interfaces.Repositories;
-using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 

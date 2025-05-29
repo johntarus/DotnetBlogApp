@@ -1,7 +1,6 @@
 using BlogApp.Data;
 using BlogApp.Entities;
 using BlogApp.Interfaces.Repositories;
-using BlogApp.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Repositories;

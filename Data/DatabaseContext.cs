@@ -1,5 +1,4 @@
 using BlogApp.Entities;
-using BlogApp.Models;
 using Microsoft.EntityFrameworkCore;
 using BlogApp.Models.Entities;
 namespace BlogApp.Data;

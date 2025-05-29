@@ -1,6 +1,4 @@
-using BlogApp.Entities;
 using BlogApp.Models.Dtos;
-using BlogApp.Models.Entities;
 
 namespace BlogApp.Interfaces.Services;
 
