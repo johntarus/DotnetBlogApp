@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BlogApp.Models.Dtos;
+namespace BlogApp.Dtos.Response;
 
 public class UserResponseDto
 {

@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using BlogApp.Dtos.Response;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
 using Microsoft.AspNetCore.Authorization;
@@ -8,7 +9,7 @@ namespace BlogApp.Controllers;
 
 [ApiController]
 [Route("api/users")]
-public class UsersController(IAuthService authService, IConfiguration config) : ControllerBase
+public class UsersController(IAuthService authService) : ControllerBase
 {
     [HttpPost("register")]
     public async Task<ActionResult<UserResponseDto>> Register([FromBody] RegisterRequestDto request)
@@ -16,6 +17,14 @@ public class UsersController(IAuthService authService, IConfiguration config) : 
             var user = await authService.RegisterAsync(request);
             if (ModelState.IsValid == false) return BadRequest(ModelState);
             return Ok(user);
+    }
+
+    [HttpGet("verify-email")]
+    public async Task<ActionResult<UserResponseDto>> VerifyEmail([FromQuery] string token, [FromQuery] string email)
+    {
+        var result = await authService.VerifyEmailAsync(token, email);
+        if (result == false) return BadRequest("Invalid token");
+        return Ok(new { message = "Email verified successfully" });
     }
 
     [HttpPost("login")]
