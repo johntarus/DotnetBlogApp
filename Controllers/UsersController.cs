@@ -1,5 +1,4 @@
 using System.Security.Claims;
-using BlogApp.Data;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
 using Microsoft.AspNetCore.Authorization;

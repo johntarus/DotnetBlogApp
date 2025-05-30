@@ -1,6 +1,6 @@
 using BlogApp.Models.Entities;
 
-namespace BlogApp.Interfaces;
+namespace BlogApp.Interfaces.Repositories;
 
 public interface ICategoryRepository
 {
