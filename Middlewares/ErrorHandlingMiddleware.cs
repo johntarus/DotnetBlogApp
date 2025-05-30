@@ -4,37 +4,70 @@ using System.Text.Json;
 namespace BlogApp.Middlewares;
 
 public class ErrorHandlingMiddleware
+{
+    private readonly RequestDelegate _next;
+    private readonly ILogger<ErrorHandlingMiddleware> _logger;
+    private readonly IHostEnvironment _env;
+
+    public ErrorHandlingMiddleware(RequestDelegate next, ILogger<ErrorHandlingMiddleware> logger, IHostEnvironment env)
     {
-        private readonly RequestDelegate _next;
-        private readonly ILogger<ErrorHandlingMiddleware> _logger;
+        _next = next;
+        _logger = logger;
+        _env = env;
+    }
 
-        public ErrorHandlingMiddleware(RequestDelegate next, ILogger<ErrorHandlingMiddleware> logger)
+    public async Task Invoke(HttpContext context)
+    {
+        try
         {
-            _next = next;
-            _logger = logger;
+            await _next(context);
         }
-
-        public async Task Invoke(HttpContext context)
+        catch (Exception ex)
         {
-            try
+            var response = context.Response;
+            response.ContentType = "application/json";
+
+            int statusCode;
+            string errorMessage;
+
+            switch (ex)
             {
-                await _next(context);
+                case ApplicationException:
+                    statusCode = (int)HttpStatusCode.BadRequest;
+                    errorMessage = ex.Message;
+                    break;
+
+                case UnauthorizedAccessException:
+                    statusCode = (int)HttpStatusCode.Unauthorized;
+                    errorMessage = "Unauthorized";
+                    break;
+
+                case KeyNotFoundException:
+                    statusCode = (int)HttpStatusCode.NotFound;
+                    errorMessage = "Resource not found";
+                    break;
+
+                default:
+                    statusCode = (int)HttpStatusCode.InternalServerError;
+                    errorMessage = "An unexpected error occurred.";
+                    break;
             }
-            catch (Exception ex)
+
+            _logger.LogError(ex, "An error occurred while processing the request: {Message}", ex.Message);
+            response.StatusCode = statusCode;
+
+            var errorResponse = new
             {
-                _logger.LogError(ex, ex.Message);
+                statusCode,
+                message = errorMessage,
+                // Only show full exception details in development
+                details = _env.IsDevelopment() ? ex.ToString() : null
+            };
 
-                context.Response.ContentType = "application/json";
-                context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+            var json = JsonSerializer.Serialize(errorResponse,
+                new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
 
-                var result = JsonSerializer.Serialize(new
-                {
-                    statusCode = context.Response.StatusCode,
-                    message = "An unexpected error occurred.",
-                    details = ex.Message // Remove this in production
-                });
-
-                await context.Response.WriteAsync(result);
-            }
+            await response.WriteAsync(json);
         }
+    }
 }

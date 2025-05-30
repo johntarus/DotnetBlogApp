@@ -1,10 +1,9 @@
 using System.Net;
 using BlogApp.Interfaces.Services;
-using BlogApp.Models.Entities;
 
 namespace BlogApp.Utils;
 
-public class EmailVerificationUtils(IConfiguration config, ILogger logger, IEmailService emailService)
+public abstract class EmailVerificationUtils(IConfiguration config, ILogger logger, IEmailService emailService)
 {
     public static string GenerateVerificationToken()
     {

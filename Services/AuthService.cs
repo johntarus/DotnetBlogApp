@@ -68,7 +68,7 @@ public class AuthService(IAuthRepository authRepository, IConfiguration config, 
 
     public async Task<bool> VerifyEmailAsync(string email, string token)
     {
-        var user = await authRepository.GetByEmailAsync(email);
+        var user = await authRepository.GetByEmailAsync(email.Trim().ToLower());
         if (user == null) throw new ApplicationException("User not found");
         if(user.IsEmailVerified)
             throw new ApplicationException("Email already verified");
