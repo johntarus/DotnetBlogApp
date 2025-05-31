@@ -14,8 +14,14 @@ public class AuthRepository(DatabaseContext context) : IAuthRepository
 
     public async Task<User?> GetByEmailAsync(string email)
     {
-        return await context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        var normalizedEmail = email.ToLower().Trim();
+        Console.WriteLine($"Searching for user with email: '{normalizedEmail}'");
+        var user = await context.Users
+            .FirstOrDefaultAsync(u => u.Email.ToLower().Trim() == normalizedEmail);
+        Console.WriteLine(user != null ? "User found" : "User not found");
+        return user;
     }
+
 
     public async Task<User?> GetByUsernameOrEmailAsync(string usernameOrEmail)
     {

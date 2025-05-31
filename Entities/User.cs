@@ -10,7 +10,7 @@ public class User
     public byte[] PasswordHash { get; set; }
     public bool IsActive { get; set; }
     public bool IsEmailVerified { get; set; }
-    public string EmailVerificationToken { get; set; }
+    public string? EmailVerificationToken { get; set; }
     public DateTime? EmailVerificationTokenExpiresAt { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; }

@@ -1,9 +1,8 @@
 using System.Net;
-using BlogApp.Interfaces.Services;
 
 namespace BlogApp.Utils;
 
-public abstract class EmailVerificationUtils(IConfiguration config, ILogger logger, IEmailService emailService)
+public static class EmailVerificationUtils
 {
     public static string GenerateVerificationToken()
     {
@@ -15,7 +14,8 @@ public abstract class EmailVerificationUtils(IConfiguration config, ILogger logg
         return $"{baseUrl}/verify-email?token={WebUtility.UrlEncode(token)}&email={WebUtility.UrlEncode(email)}";
     }
 
-    public static DateTime GetTokenExpiration(int hoursValid = 24) => DateTime.UtcNow.AddHours(hoursValid);
-
-    
+    public static DateTime GetTokenExpiration(int hoursValid = 24)
+    {
+        return DateTime.UtcNow.AddHours(hoursValid);
+    }
 }

@@ -1,3 +1,4 @@
+using System.Net;
 using System.Security.Claims;
 using BlogApp.Dtos.Response;
 using BlogApp.Interfaces.Services;
@@ -22,6 +23,7 @@ public class UsersController(IAuthService authService) : ControllerBase
     [HttpGet("verify-email")]
     public async Task<ActionResult<UserResponseDto>> VerifyEmail([FromQuery] string token, [FromQuery] string email)
     {
+        email = WebUtility.UrlDecode(email);
         var result = await authService.VerifyEmailAsync(token, email);
         if (result == false) return BadRequest("Invalid token");
         return Ok(new { message = "Email verified successfully" });

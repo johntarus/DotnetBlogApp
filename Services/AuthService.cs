@@ -21,6 +21,7 @@ public class AuthService(IAuthRepository authRepository, IConfiguration config, 
             PasswordHash = PasswordHelper.HashPassword(request.Password),
             EmailVerificationToken = EmailVerificationUtils.GenerateVerificationToken(),
             EmailVerificationTokenExpiresAt = EmailVerificationUtils.GetTokenExpiration(),
+            IsActive = false,
             IsEmailVerified = false,
             CreatedAt = DateTime.Now
         };
@@ -66,9 +67,9 @@ public class AuthService(IAuthRepository authRepository, IConfiguration config, 
     }
 
 
-    public async Task<bool> VerifyEmailAsync(string email, string token)
+    public async Task<bool> VerifyEmailAsync(string token, string email)
     {
-        var user = await authRepository.GetByEmailAsync(email.Trim().ToLower());
+        var user = await authRepository.GetByEmailAsync(email);
         if (user == null) throw new ApplicationException("User not found");
         if(user.IsEmailVerified)
             throw new ApplicationException("Email already verified");
@@ -77,6 +78,7 @@ public class AuthService(IAuthRepository authRepository, IConfiguration config, 
         {
             throw new ApplicationException("Invalid or expired verification token");
         }
+        user.IsActive = true;
         user.IsEmailVerified = true;
         user.EmailVerificationToken = null;
         user.EmailVerificationTokenExpiresAt = null;
