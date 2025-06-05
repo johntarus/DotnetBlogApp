@@ -1,3 +1,4 @@
+using AutoMapper;
 using BlogApp.Interfaces;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
@@ -5,74 +6,39 @@ using BlogApp.Models.Entities;
 
 namespace BlogApp.Services;
 
-public class CommentsService(ICommentRepository commentRepository) : ICommentsService
+public class CommentsService(ICommentRepository commentRepository, IMapper mapper) : ICommentsService
 {
     public async Task<List<CommentResponseDto>> GetCommentsAsync()
     {
         var comments = await commentRepository.GetCommentsAsync();
-        return comments.Select(c => new CommentResponseDto
-        {
-            Id = c.Id,
-            Content = c.Content,
-            PostId = c.PostId,
-            UserId = c.UserId,
-            CreatedAt = c.CreatedAt,
-            UpdatedAt = c.UpdatedAt,
-            IsEdited = c.IsEdited,
-            Username = c.User.Username,
-        }).ToList();
+        return mapper.Map<List<CommentResponseDto>>(comments);
     }
 
     public async Task<CommentResponseDto> CreateCommentAsync(CommentDto commentDto)
     {
-        var comment = new Comment()
-        {
-            Content = commentDto.Content,
-            PostId = commentDto.PostId,
-            UserId = commentDto.UserId,
-        };
+        var comment = mapper.Map<Comment>(commentDto);
 
         var createdComment = await commentRepository.CreateCommentAsync(comment);
 
-        return new CommentResponseDto
-        {
-            Id = createdComment.Id,
-            Content = createdComment.Content,
-            PostId = createdComment.PostId,
-            UserId = createdComment.UserId,
-            CreatedAt = createdComment.CreatedAt,
-            UpdatedAt = createdComment.UpdatedAt,
-            IsEdited = createdComment.IsEdited,
-            Username = createdComment.User.Username
-        };
+        return mapper.Map<CommentResponseDto>(createdComment);
     }
 
     public async Task<CommentResponseDto> GetCommentsByIdAsync(int id)
     {
         var comment = await commentRepository.GetCommentByIdAsync(id);
         if (comment == null) return null;
-        return new CommentResponseDto
-        {
-            Id = comment.Id,
-            Content = comment.Content,
-            PostId = comment.PostId,
-            UserId = comment.UserId,
-            CreatedAt = comment.CreatedAt,
-            UpdatedAt = comment.UpdatedAt,
-            IsEdited = comment.IsEdited,
-            Username = comment.User.Username,
-        };
+        return mapper.Map<CommentResponseDto>(comment);
     }
 
-    public async Task<Comment> UpdateCommentAsync(int id, UpdateCommentDto commentDto)
+    public async Task<CommentResponseDto> UpdateCommentAsync(int id, UpdateCommentDto commentDto)
     {
-        var updatedComment = await commentRepository.GetCommentByIdAsync(id);
-        if (updatedComment == null) return null;
-        if (!string.IsNullOrWhiteSpace(commentDto.Content))
-            updatedComment.Content = commentDto.Content;
-        updatedComment.UpdatedAt = DateTime.Now;
-        updatedComment.IsEdited = true;
-        return await commentRepository.UpdateCommentAsync(updatedComment);
+        var commentToUpdate = await commentRepository.GetCommentByIdAsync(id);
+        if (commentToUpdate == null) return null;
+        mapper.Map(commentDto, commentToUpdate);
+        commentToUpdate.UpdatedAt = DateTime.Now;
+        commentToUpdate.IsEdited = true;
+        var updatedComment = await commentRepository.UpdateCommentAsync(commentToUpdate);
+        return mapper.Map<CommentResponseDto>(updatedComment);
     }
 
     public async Task<bool> DeleteCommentAsync(int id)

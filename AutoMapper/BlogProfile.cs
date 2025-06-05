@@ -8,11 +8,19 @@ public class BlogProfile : Profile
 {
     public BlogProfile()
     {
+        //Category Mappers
         CreateMap<Category, CategoryResponseDto>()
             .ForMember(dest => dest.Posts, 
                 opt => opt.MapFrom(src => src.Posts));
         CreateMap<AddCategoryDto, Category>();
         CreateMap<UpdateCategoryDto, Category>();
+        
+        //Comments Mapper
+        CreateMap<Comment, CommentResponseDto>()
+            .ForMember(dest => dest.Username,
+                opt => opt.MapFrom(src => src.User.Username));
+        CreateMap<CommentDto, Comment>();
+        CreateMap<UpdateCommentDto, Comment>();
 
         CreateMap<Post, PostResponseDto>()
             .ForMember(dest => dest.CategoryName,

@@ -38,18 +38,8 @@ public class CommentController(DatabaseContext context, ICommentsService comment
         if(ModelState.IsValid == false) return BadRequest(ModelState);
         var comment = await commentsService.UpdateCommentAsync(id, request);
         if (comment == null) return NotFound();
-        
-        return Ok(new CommentResponseDto
-        {
-            Id = comment.Id,
-            Content = comment.Content,
-            PostId = comment.PostId,
-            UserId = comment.UserId,
-            Username = comment.User.Username,
-            CreatedAt = comment.CreatedAt,
-            UpdatedAt = comment.UpdatedAt,
-            IsEdited = comment.IsEdited
-        });
+
+        return Ok(comment);
     }
     
     [HttpDelete("{id}")]
