@@ -1,4 +1,5 @@
 using System.Text;
+using BlogApp.AutoMapper;
 using BlogApp.Data;
 using BlogApp.Interfaces;
 using BlogApp.Interfaces.Repositories;
@@ -19,7 +20,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(BlogProfile));
 
+var db = builder.Configuration.GetConnectionString("DefaultConnection");
+Console.WriteLine(db, "This is the dab data");
 builder.Services.AddDbContext<DatabaseContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();

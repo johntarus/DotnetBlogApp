@@ -24,7 +24,7 @@ public class TagService(ITagRepository tagRepository) : ITagService
                 UpdatedAt = p.UpdatedAt,
                 Content = p.Content,
                 CategoryId = p.CategoryId,
-                CategoryName = p.Categories?.Name,
+                CategoryName = p.Category?.Name,
                 UserId = p.UserId,
                 Username = p.User?.Username,
                 Tags = p.Tags.Select(t => t.Name).ToList()
@@ -50,7 +50,7 @@ public class TagService(ITagRepository tagRepository) : ITagService
                 CreatedAt = p.CreatedAt,
                 UpdatedAt = p.UpdatedAt,
                 Username = p.User?.Username,
-                CategoryName = p.Categories?.Name,
+                CategoryName = p.Category?.Name,
                 LikesCount = p.Likes?.Count() ?? 0,
                 CommentsCount = p.Comments?.Count() ?? 0,
                 Tags = p.Tags.Select(t => t.Name).ToList()

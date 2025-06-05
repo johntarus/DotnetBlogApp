@@ -1,3 +1,4 @@
+using AutoMapper;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
@@ -5,32 +6,13 @@ using BlogApp.Models.Entities;
 
 namespace BlogApp.Services;
 
-public class CategoryService(ICategoryRepository categoryRepository) : ICategoryService
+public class CategoryService(ICategoryRepository categoryRepository, IMapper mapper) : ICategoryService
 {
     public async Task<List<CategoryResponseDto>> GetCategoriesAsync()
     {
         var categories = await categoryRepository.GetCategoriesAsync();
 
-        return categories.Select(c => new CategoryResponseDto
-        {
-            Id = c.Id,
-            Name = c.Name,
-            Posts = c.Posts.Select(p => new PostResponseDto
-            {
-                Id = p.Id,
-                Title = p.Title,
-                Content = p.Content,
-                CreatedAt = p.CreatedAt,
-                UpdatedAt = p.UpdatedAt,
-                CategoryId = p.CategoryId,
-                CategoryName = c.Name,
-                UserId = p.UserId,
-                Username = p.User.Username,  
-                LikesCount = p.Likes.Count,
-                CommentsCount = p.Comments.Count,
-                Tags = p.Tags.Select(t => t.Name).ToList()
-            }).ToList()
-        }).ToList();
+        return mapper.Map<List<CategoryResponseDto>>(categories);
     }
 
 
@@ -38,48 +20,25 @@ public class CategoryService(ICategoryRepository categoryRepository) : ICategory
     {
         var category = await categoryRepository.GetCategoryByIdAsync(id);
         if (category == null) return null;
-        return new CategoryResponseDto
-        {
-            Id = category.Id,
-            Name = category.Name,
-            Posts = category.Posts.Select(p => new PostResponseDto
-            {
-                Id = p.Id,
-                Title = p.Title,
-                Content = p.Content,
-                CreatedAt = p.CreatedAt,
-                UpdatedAt = p.UpdatedAt,
-                CategoryId = p.CategoryId,
-                CategoryName = p.Categories.Name,
-                UserId = p.UserId,
-                Username = p.User.Username,
-                LikesCount = p.Likes.Count,
-                CommentsCount = p.Comments.Count,
-                Tags = p.Tags.Select(t => t.Name).ToList()
-            }).ToList()
-        };
+        return mapper.Map<CategoryResponseDto>(category);
+        
     }
 
-    public async Task<Category> AddCategoryAsync(AddCategoryDto categoryDto)
+    public async Task<CategoryResponseDto> AddCategoryAsync(AddCategoryDto categoryDto)
     {
-        var category = new Category()
-        {
-            Name = categoryDto.Name
-        };
-        return await categoryRepository.CreateCategoryAsync(category);
+        var category = mapper.Map<Category>(categoryDto);
+        var createdCategory = await categoryRepository.CreateCategoryAsync(category);
+        return mapper.Map<CategoryResponseDto>(createdCategory);
     }
 
-    public async Task<Category> UpdateCategoryAsync(int id, UpdateCategoryDto categoryDto)
+    public async Task<CategoryResponseDto> UpdateCategoryAsync(int id, UpdateCategoryDto categoryDto)
     {
         var category = await categoryRepository.GetCategoryByIdAsync(id);
         if (category == null)
             return null;
-
-        if (!string.IsNullOrWhiteSpace(categoryDto.Name))
-            category.Name = categoryDto.Name;
-
-        return await categoryRepository.UpdateCategoryAsync(category);
-
+        mapper.Map(categoryDto, category);
+        var updatedCategory = await categoryRepository.UpdateCategoryAsync(category);
+        return mapper.Map<CategoryResponseDto>(updatedCategory);
     }
 
     public async Task<bool> DeleteCategoryAsync(int id)

@@ -40,7 +40,7 @@ public class DatabaseContext : DbContext
             .HasForeignKey(c => c.UserId)
             .OnDelete(DeleteBehavior.Restrict);
         
-        modelBuilder.Entity<Post>().HasOne(p => p.Categories)
+        modelBuilder.Entity<Post>().HasOne(p => p.Category)
             .WithMany(c => c.Posts)
             .HasForeignKey(p => p.CategoryId);
 

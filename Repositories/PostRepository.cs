@@ -11,7 +11,7 @@ public class PostRepository(DatabaseContext context) : IPostRepository
     public async Task<IEnumerable<Post>> GetPostsAsync()
     {
        return await context.Posts.Include(p=>p.User)
-           .Include(p=>p.Categories)
+           .Include(p=>p.Category)
            .Include(p=>p.Comments)
            .Include(p=>p.Likes)
            .Include(p=>p.Tags)
@@ -22,7 +22,7 @@ public class PostRepository(DatabaseContext context) : IPostRepository
     {
         return await context.Posts
             .Include(p => p.User)
-            .Include(p => p.Categories)
+            .Include(p => p.Category)
             .Include(p => p.Comments)
             .Include(p => p.Likes)
             .Include(p => p.Tags)
@@ -33,7 +33,7 @@ public class PostRepository(DatabaseContext context) : IPostRepository
     {
         context.Add(post);
         await context.SaveChangesAsync();
-        return await context.Posts.Include(p=>p.User).Include(p=>p.Categories).FirstOrDefaultAsync(p => p.Id == post.Id);
+        return await context.Posts.Include(p=>p.User).Include(p=>p.Category).FirstOrDefaultAsync(p => p.Id == post.Id);
     }
 
     public async Task<Post> UpdatePostAsync(Post post)
