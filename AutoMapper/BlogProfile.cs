@@ -40,5 +40,7 @@ public class BlogProfile : Profile
                 opt => opt.MapFrom(src => src.Comments.Count))
             .ForMember(dest => dest.Tags,
                 opt => opt.MapFrom(src => src.Tags.Select(t => t.Name).ToList()));
+        CreateMap<AddPostDto, Post>();
+        CreateMap<UpdatePostDto, Post>();
     }
 }
