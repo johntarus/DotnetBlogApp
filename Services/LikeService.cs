@@ -1,3 +1,5 @@
+using AutoMapper;
+using BlogApp.Dtos.Response;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
@@ -5,32 +7,18 @@ using BlogApp.Models.Entities;
 
 namespace BlogApp.Services;
 
-public class LikeService(ILikeRepository likeRepo, IAuthRepository authRepository, IPostRepository postRepository) : ILikeService
+public class LikeService(ILikeRepository likeRepo, IAuthRepository authRepository, IPostRepository postRepository, IMapper mapper) : ILikeService
 {
     public async Task<List<LikeResponseDto>> GetLikesAsync()
     {
         var likes = await likeRepo.GetLikesAsync();
-        return likes.Select(l => new LikeResponseDto
-        {
-            Id = l.Id,
-            UserId = l.UserId,
-            PostId = l.PostId,
-            Username = l.User?.Username,
-            CreatedAt = l.CreateAt
-        }).ToList();
+        return mapper.Map<List<LikeResponseDto>>(likes);
     }
 
     public async Task<LikeResponseDto?> GetLikeByIdAsync(int id)
     {
         var like = await likeRepo.GetLikeByIdAsync(id);
-        return like == null ? null : new LikeResponseDto
-        {
-            Id = like.Id,
-            PostId = like.PostId,
-            UserId = like.UserId,
-            Username = like.User?.Username,
-            CreatedAt = like.CreateAt
-        };
+        return mapper.Map<LikeResponseDto>(like);
     }
 
     public async Task<LikeResponseDto?> CreateLikeAsync(LikeDto dto)
@@ -43,17 +31,10 @@ public class LikeService(ILikeRepository likeRepo, IAuthRepository authRepositor
         var post = await postRepository.GetPostByIdAsync(dto.PostId);
         if (post == null) throw new KeyNotFoundException("Post not found");
         
-        var like = new Like { PostId = dto.PostId, UserId = dto.UserId };
+        var like = mapper.Map<Like>(dto);
         var created = await likeRepo.AddLikeAsync(like);
 
-        return new LikeResponseDto
-        {
-            Id = created.Id,
-            PostId = created.PostId,
-            UserId = created.UserId,
-            Username = created.User?.Username,
-            CreatedAt = created.CreateAt
-        };
+        return mapper.Map<LikeResponseDto>(created);
     }
 
     public async Task<bool> RemoveLikeAsync(LikeDto dto) =>

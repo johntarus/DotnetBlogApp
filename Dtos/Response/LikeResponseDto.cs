@@ -1,4 +1,4 @@
-namespace BlogApp.Models.Dtos;
+namespace BlogApp.Dtos.Response;
 
 public class LikeResponseDto
 {
