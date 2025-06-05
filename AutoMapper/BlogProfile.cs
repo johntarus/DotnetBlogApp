@@ -1,5 +1,6 @@
 using AutoMapper;
 using BlogApp.Dtos.Response;
+using BlogApp.Entities;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
 
@@ -28,6 +29,11 @@ public class BlogProfile : Profile
             .ForMember(dest=>dest.Username,
                 opt=>opt.MapFrom(src=>src.User.Username));
         CreateMap<LikeDto, Like>();
+        
+        //Tags Mapper
+        CreateMap<Tag, TagResponseDto>();
+        CreateMap<AddTagDto, Tag>();
+        CreateMap<UpdateTagDto, Tag>();
 
         CreateMap<Post, PostResponseDto>()
             .ForMember(dest => dest.CategoryName,

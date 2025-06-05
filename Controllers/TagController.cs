@@ -38,6 +38,10 @@ public class TagController(DatabaseContext context, ITagService tagService) : Co
     public async Task<IActionResult> GetTagById(int id)
     {
         var tag = await tagService.GetTagById(id);
+        if (tag==null) return NotFound();
+        {
+            
+        }
         return Ok(tag);
     }
     
