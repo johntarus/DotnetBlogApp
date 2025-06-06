@@ -3,6 +3,8 @@ using BlogApp.Dtos.Response;
 using BlogApp.Entities;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
+using BlogApp.Security;
+using BlogApp.Utils;
 
 namespace BlogApp.AutoMapper;
 
@@ -34,7 +36,29 @@ public class BlogProfile : Profile
         CreateMap<Tag, TagResponseDto>();
         CreateMap<AddTagDto, Tag>();
         CreateMap<UpdateTagDto, Tag>();
+        
+        //User Mapper
+        CreateMap<RegisterRequestDto, User>()
+            .ForMember(dest => dest.PasswordHash,
+                opt => opt.MapFrom(src => PasswordHelper.HashPassword(src.Password)))
+            .ForMember(dest => dest.EmailVerificationToken,
+                opt => opt.MapFrom(src => EmailVerificationUtils.GenerateVerificationToken()))
+            .ForMember(dest => dest.EmailVerificationTokenExpiresAt,
+                opt => opt.MapFrom(src=>EmailVerificationUtils.GetTokenExpiration(24)))
+            .ForMember(dest => dest.IsActive,
+                opt => opt.MapFrom(_ => false))
+            .ForMember(dest => dest.IsEmailVerified,
+                opt => opt.MapFrom(_ => false))
+            .ForMember(dest => dest.CreatedAt,
+                opt => opt.MapFrom(_ => DateTime.Now));
+        CreateMap<User, UserResponseDto>()
+            .ForMember(dest => dest.Token,
+                opt => opt.MapFrom(_ => "Pending verification - Check your email for verification link"));
+        CreateMap<LoginRequestDto, User>();
+        CreateMap<User, ProfileResponseDto>();
+        CreateMap<UpdateProfileRequestDto, User>();
 
+        //Post Mapper
         CreateMap<Post, PostResponseDto>()
             .ForMember(dest => dest.CategoryName,
                 opt => opt.MapFrom(src => src.Category.Name))

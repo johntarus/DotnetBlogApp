@@ -52,7 +52,7 @@ public class UsersController(IAuthService authService) : ControllerBase
     public async Task<ActionResult<UpdateProfileRequestDto>> UpdateProfile(Guid id, UpdateProfileRequestDto request)
     {
         var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-        var user = await authService.UpdatePrifileAsync(id, request);
+        var user = await authService.UpdateProfileAsync(id, request);
         if (user == null) return NotFound();
         if(ModelState.IsValid == false)
             return BadRequest(ModelState);

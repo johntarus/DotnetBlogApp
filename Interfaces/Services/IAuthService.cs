@@ -9,5 +9,5 @@ public interface IAuthService
     Task<bool> VerifyEmailAsync(string userId, string token);
     Task<UserResponseDto> LoginAsync(LoginRequestDto request);
     Task<ProfileResponseDto> GetProfileAsync(Guid userId);
-    Task<ProfileResponseDto> UpdatePrifileAsync(Guid id, UpdateProfileRequestDto request);
+    Task<ProfileResponseDto> UpdateProfileAsync(Guid id, UpdateProfileRequestDto request);
 }

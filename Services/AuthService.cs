@@ -1,3 +1,4 @@
+using AutoMapper;
 using BlogApp.Dtos.Response;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Interfaces.Services;
@@ -8,34 +9,17 @@ using BlogApp.Utils;
 
 namespace BlogApp.Services;
 
-public class AuthService(IAuthRepository authRepository, IConfiguration config, IEmailService emailService, ILogger<AuthService> logger) : IAuthService
+public class AuthService(IAuthRepository authRepository, IConfiguration config, IEmailService emailService, ILogger<AuthService> logger, IMapper mapper) : IAuthService
 {
     public async Task<UserResponseDto> RegisterAsync(RegisterRequestDto request)
     {
         if(await authRepository.ExistsByEmailAsync(request.Email))
             throw new ApplicationException("Email already exists");
-        var registerUser = new User()
-        {
-            Username = request.Username,
-            Email = request.Email,
-            PasswordHash = PasswordHelper.HashPassword(request.Password),
-            EmailVerificationToken = EmailVerificationUtils.GenerateVerificationToken(),
-            EmailVerificationTokenExpiresAt = EmailVerificationUtils.GetTokenExpiration(),
-            IsActive = false,
-            IsEmailVerified = false,
-            CreatedAt = DateTime.Now
-        };
+        var registerUser = mapper.Map<User>(request);
 
         var user = await authRepository.CreateAsync(registerUser);
         await SendVerificationEmailAsync(user);
-        return new UserResponseDto
-        {
-            Id = user.Id,
-            Username = user.Username,
-            Email = user.Email,
-            CreatedAt = user.CreatedAt,
-            Token = "Pending verification - Check your email for verification link"
-        };
+        return mapper.Map<UserResponseDto>(user);
     }
 
     private async Task SendVerificationEmailAsync(User user)
@@ -96,51 +80,24 @@ public class AuthService(IAuthRepository authRepository, IConfiguration config, 
         if(user==null || !PasswordHelper.VerifyPassword(request.Password, user.PasswordHash))
             throw new UnauthorizedAccessException("Invalid Credentials");
         if(!user.IsEmailVerified) throw new UnauthorizedAccessException("Email not verified. Please check your inbox.");
-        return new UserResponseDto
-        {
-            Id = user.Id,
-            Username = user.Username,
-            Email = user.Email,
-            CreatedAt = user.CreatedAt,
-            Token = JwtHelper.GenerateToken(user, config)
-        };
+        var loginUser = mapper.Map<UserResponseDto>(user);
+        loginUser.Token = JwtHelper.GenerateToken(user, config);
+        return loginUser;
     }
 
     public async Task<ProfileResponseDto> GetProfileAsync(Guid userId)
     {
         var user = await authRepository.GetByIdAsync(userId);
         if (user == null) throw new ApplicationException("User not found");
-        return new ProfileResponseDto
-        {
-            Id = user.Id,
-            Username = user.Username,
-            Email = user.Email,
-            Bio = user.Bio,
-            Avatar = user.Avatar,
-            CreatedAt = user.CreatedAt,
-            UpdatedAt = user.UpdatedAt
-        };
+        return mapper.Map<ProfileResponseDto>(user);
     }
 
-    public async Task<ProfileResponseDto> UpdatePrifileAsync(Guid id, UpdateProfileRequestDto request)
+    public async Task<ProfileResponseDto> UpdateProfileAsync(Guid id, UpdateProfileRequestDto request)
     {
         var user = await authRepository.GetByIdAsync(id);
         if (user == null) return null;
-        if(request.Bio != null)
-            user.Bio = request.Bio;
-        if(request.Avatar != null)
-            user.Avatar = request.Avatar;
-        user.UpdatedAt = DateTime.Now;
+        mapper.Map(request, user);
         var updatedUser = await authRepository.UpdateAsync(user);
-        return new ProfileResponseDto
-        {
-            Id = user.Id,
-            Username = user.Username,
-            Email = user.Email,
-            Bio = user.Bio,
-            Avatar = user.Avatar,
-            CreatedAt = user.CreatedAt,
-            UpdatedAt = user.UpdatedAt,
-        };
+        return mapper.Map<ProfileResponseDto>(updatedUser);
     }
 }
