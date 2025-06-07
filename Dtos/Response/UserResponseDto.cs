@@ -11,5 +11,6 @@ public class UserResponseDto
     public string Bio { get; set; } = "";
     public string Avatar { get; set; } = "";
     public DateTime CreatedAt { get; set; }
-    public string Token { get; set; } = "";
+    public string AccessToken { get; set; } = "";
+    public string RefreshToken { get; set; } = "";
 }

@@ -1,4 +1,6 @@
+using System.Security.Claims;
 using AutoMapper;
+using BlogApp.Dtos.Request;
 using BlogApp.Dtos.Response;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Interfaces.Services;
@@ -6,6 +8,7 @@ using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
 using BlogApp.Security;
 using BlogApp.Utils;
+using Microsoft.IdentityModel.Tokens;
 
 namespace BlogApp.Services;
 
@@ -80,21 +83,59 @@ public class AuthService(IAuthRepository authRepository, IConfiguration config, 
         if(user==null || !PasswordHelper.VerifyPassword(request.Password, user.PasswordHash))
             throw new UnauthorizedAccessException("Invalid Credentials");
         if(!user.IsEmailVerified) throw new UnauthorizedAccessException("Email not verified. Please check your inbox.");
+        
+        //Generate Tokens
+        var accessToken = JwtHelper.GenerateAccessToken(user, config);
+        var refreshToken = JwtHelper.GenerateRefreshToken();
+        
+        // Save refresh token and expiry to DB
+        user.RefreshToken = refreshToken;
+        user.RefreshTokenExpiresAt = DateTime.UtcNow.AddDays(7);
+        await authRepository.UpdateAsync(user);
+        
         var loginUser = mapper.Map<UserResponseDto>(user);
-        loginUser.Token = JwtHelper.GenerateToken(user, config);
+        loginUser.AccessToken = accessToken;
+        loginUser.RefreshToken = refreshToken;
         return loginUser;
+    }
+
+    public async Task<UserResponseDto> RefreshTokenAsync(RefreshTokenRequestDto request)
+    {
+        if(string.IsNullOrWhiteSpace(request.AccessToken))
+            throw new ArgumentException("Access token is required");
+        if(string.IsNullOrEmpty(request.RefreshToken))
+            throw new ArgumentException("Refresh token is required");
+
+        var principle = JwtHelper.GetPrincipleFromExpiredToken(request.AccessToken, config);
+        var userId = Guid.Parse(principle.FindFirst(ClaimTypes.NameIdentifier).Value);
+
+        var user = await authRepository.GetUserByIdAsync(userId);
+        if (user == null || user.RefreshToken != request.RefreshToken || user.RefreshTokenExpiresAt < DateTime.UtcNow)
+            throw new SecurityTokenException("Invalid Refresh Token");
+        
+        var loginResponse = mapper.Map<UserResponseDto>(user);
+        
+        //Generate New Tokens
+        loginResponse.AccessToken = JwtHelper.GenerateAccessToken(user, config);
+        loginResponse.RefreshToken = JwtHelper.GenerateRefreshToken();
+        
+        //Update the Database
+        user.RefreshToken = loginResponse.RefreshToken;
+        user.RefreshTokenExpiresAt = DateTime.UtcNow.AddDays(7);
+        await authRepository.UpdateAsync(user);
+        return loginResponse;
     }
 
     public async Task<ProfileResponseDto> GetProfileAsync(Guid userId)
     {
-        var user = await authRepository.GetByIdAsync(userId);
+        var user = await authRepository.GetUserByIdAsync(userId);
         if (user == null) throw new ApplicationException("User not found");
         return mapper.Map<ProfileResponseDto>(user);
     }
 
     public async Task<ProfileResponseDto> UpdateProfileAsync(Guid id, UpdateProfileRequestDto request)
     {
-        var user = await authRepository.GetByIdAsync(id);
+        var user = await authRepository.GetUserByIdAsync(id);
         if (user == null) return null;
         mapper.Map(request, user);
         var updatedUser = await authRepository.UpdateAsync(user);

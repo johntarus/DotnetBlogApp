@@ -8,9 +8,9 @@ namespace BlogApp.Repositories;
 public class PostRepository(DatabaseContext context) : IPostRepository
 {
 
-    public async Task<IEnumerable<Post>> GetPostsAsync()
+    public async Task<IEnumerable<Post>> GetPostsAsync(Guid userId)
     {
-       return await context.Posts.Include(p=>p.User)
+       return await context.Posts.Where(p=>p.UserId == userId).Include(p=>p.User)
            .Include(p=>p.Category)
            .Include(p=>p.Comments)
            .Include(p=>p.Likes)

@@ -4,7 +4,7 @@ namespace BlogApp.Interfaces.Repositories;
 
 public interface IAuthRepository
 {
-    Task<User> GetByIdAsync(Guid id);
+    Task<User> GetUserByIdAsync(Guid id);
     Task<User> GetByEmailAsync(string email);
     
     Task<User> GetByUsernameOrEmailAsync(string usernameOrEmail);

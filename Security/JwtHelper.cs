@@ -1,30 +1,61 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Text;
 using BlogApp.Models.Entities;
+using Microsoft.IdentityModel.Tokens;
 
 namespace BlogApp.Security;
 
 public class JwtHelper
 {
-    public static string GenerateToken(User user, IConfiguration config)
+    public static string GenerateAccessToken(User user, IConfiguration config)
     {
-        var key = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(
-            System.Text.Encoding.UTF8.GetBytes(config["Jwt:Key"]));
+        var key = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(config["Jwt:Key"]));
         
-        var creds = new Microsoft.IdentityModel.Tokens.SigningCredentials(
-            key, Microsoft.IdentityModel.Tokens.SecurityAlgorithms.HmacSha256);
+        var creds = new SigningCredentials(
+            key, SecurityAlgorithms.HmacSha256);
 
         var claims = new[]
         {
-            new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.NameIdentifier, user.Id.ToString()),
-            new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Email, user.Email)
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new Claim(ClaimTypes.Email, user.Email)
         };
 
-        var token = new System.IdentityModel.Tokens.Jwt.JwtSecurityToken(
+        var token = new JwtSecurityToken(
             issuer: config["Jwt:Issuer"],
             audience: config["Jwt:Audience"],
             claims: claims,
-            expires: DateTime.UtcNow.AddDays(7),
+            expires: DateTime.UtcNow.AddMinutes(5),
             signingCredentials: creds);
 
-        return new System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler().WriteToken(token);
+        return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+
+    public static string GenerateRefreshToken()
+    {
+        var randomNumber = new byte[32];
+        using var rng = RandomNumberGenerator.Create();
+        rng.GetBytes(randomNumber);
+        return Convert.ToBase64String(randomNumber);
+    }
+
+    public static  ClaimsPrincipal GetPrincipleFromExpiredToken(string token, IConfiguration config)
+    {
+        var tokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateAudience = false,
+            ValidateIssuer = false,
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"])),
+            ValidateLifetime = false
+        };
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var principal = tokenHandler.ValidateToken(token, tokenValidationParameters, out var securityToken);
+        if(securityToken is not JwtSecurityToken jwtSecurityToken || !jwtSecurityToken.Header.Alg.Equals
+           (SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
+            throw new SecurityTokenException("Invalid Token"); 
+        return principal;
     }
 }

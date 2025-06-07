@@ -9,9 +9,9 @@ namespace BlogApp.Services;
 
 public class PostService(IPostRepository postRepository, ITagRepository tagRepository, IMapper mapper) : IPostService
 {
-    public async Task<IEnumerable<PostResponseDto>> GetPostsAsync()
+    public async Task<IEnumerable<PostResponseDto>> GetPostsAsync(Guid userId)
     {
-        var posts = await postRepository.GetPostsAsync();
+        var posts = await postRepository.GetPostsAsync(userId);
         return mapper.Map<IEnumerable<PostResponseDto>>(posts);
     }
 

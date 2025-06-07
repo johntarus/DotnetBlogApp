@@ -1,5 +1,6 @@
 using System.Net;
 using System.Security.Claims;
+using BlogApp.Dtos.Request;
 using BlogApp.Dtos.Response;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
@@ -35,6 +36,13 @@ public class UsersController(IAuthService authService) : ControllerBase
             var user = await authService.LoginAsync(request);
             if (ModelState.IsValid == false) return BadRequest(ModelState);
             return Ok(user);
+    }
+
+    [HttpPost("refresh-token")]
+    public async Task<ActionResult<UserResponseDto>> RefreshToken([FromBody] RefreshTokenRequestDto request)
+    {
+        var response = await authService.RefreshTokenAsync(request);
+        return Ok(response);
     }
 
     [Authorize]

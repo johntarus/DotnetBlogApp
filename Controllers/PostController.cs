@@ -1,6 +1,8 @@
+using System.Security.Claims;
 using BlogApp.Data;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.Controllers;
@@ -10,10 +12,12 @@ namespace BlogApp.Controllers;
 [Route("api/posts")]
 public class PostController(DatabaseContext context, IPostService postService) : ControllerBase
 {
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> GetAllPosts()
     {
-        var posts = await postService.GetPostsAsync();
+        var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+        var posts = await postService.GetPostsAsync(userId);
         return Ok(posts);
     }
 

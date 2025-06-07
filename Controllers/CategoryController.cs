@@ -1,6 +1,7 @@
 using BlogApp.Data;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.Controllers;
@@ -8,6 +9,7 @@ namespace BlogApp.Controllers;
 [Route("api/categories")]
 public class CategoryController(DatabaseContext context, ICategoryService categoryService) : ControllerBase
 {
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> GetCategories()
     {

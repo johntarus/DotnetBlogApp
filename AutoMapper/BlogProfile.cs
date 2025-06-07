@@ -52,7 +52,7 @@ public class BlogProfile : Profile
             .ForMember(dest => dest.CreatedAt,
                 opt => opt.MapFrom(_ => DateTime.Now));
         CreateMap<User, UserResponseDto>()
-            .ForMember(dest => dest.Token,
+            .ForMember(dest => dest.AccessToken,
                 opt => opt.MapFrom(_ => "Pending verification - Check your email for verification link"));
         CreateMap<LoginRequestDto, User>();
         CreateMap<User, ProfileResponseDto>();

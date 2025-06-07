@@ -7,7 +7,7 @@ namespace BlogApp.Repositories;
 
 public class AuthRepository(DatabaseContext context) : IAuthRepository
 {
-    public async Task<User?> GetByIdAsync(Guid id)
+    public async Task<User?> GetUserByIdAsync(Guid id)
     {
         return await context.Users.FindAsync(id);
     }

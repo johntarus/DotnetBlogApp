@@ -26,7 +26,7 @@ public class LikeService(ILikeRepository likeRepo, IAuthRepository authRepositor
         var existingLike = await likeRepo.GetLikeAsync(dto.PostId, dto.UserId);
         if (existingLike != null) return null;
 
-        var user = await authRepository.GetByIdAsync(dto.UserId);
+        var user = await authRepository.GetUserByIdAsync(dto.UserId);
         if (user == null) throw new KeyNotFoundException("User not found");
         var post = await postRepository.GetPostByIdAsync(dto.PostId);
         if (post == null) throw new KeyNotFoundException("Post not found");
