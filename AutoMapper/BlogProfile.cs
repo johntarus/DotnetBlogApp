@@ -1,4 +1,5 @@
 using AutoMapper;
+using BlogApp.Dtos.Request;
 using BlogApp.Dtos.Response;
 using BlogApp.Entities;
 using BlogApp.Models.Dtos;
@@ -70,7 +71,11 @@ public class BlogProfile : Profile
                 opt => opt.MapFrom(src => src.Comments.Count))
             .ForMember(dest => dest.Tags,
                 opt => opt.MapFrom(src => src.Tags.Select(t => t.Name).ToList()));
-        CreateMap<AddPostDto, Post>();
-        CreateMap<UpdatePostDto, Post>();
+        CreateMap<AddPostDto, Post>()
+            .ForMember(dest => dest.CreatedAt,
+                opt => opt.MapFrom(_ => DateTime.Now));
+        CreateMap<UpdatePostDto, Post>()
+            .ForMember(dest=>dest.UpdatedAt,
+                opt=>opt.MapFrom(_ => DateTime.Now));
     }
 }

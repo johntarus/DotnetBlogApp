@@ -1,4 +1,5 @@
 using AutoMapper;
+using BlogApp.Dtos.Request;
 using BlogApp.Helpers;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Interfaces.Services;
@@ -9,9 +10,12 @@ namespace BlogApp.Services;
 
 public class PostService(IPostRepository postRepository, ITagRepository tagRepository, IMapper mapper) : IPostService
 {
-    public async Task<IEnumerable<PostResponseDto>> GetPostsAsync(Guid userId)
+    public async Task<IEnumerable<PostResponseDto>> GetPostsAsync(Guid userId, bool isAdmin)
     {
-        var posts = await postRepository.GetPostsAsync(userId);
+        var posts = isAdmin 
+            ? await postRepository.GetPostsAsync() 
+            : await postRepository.GetPostsByUserIdAsync(userId);
+        
         return mapper.Map<IEnumerable<PostResponseDto>>(posts);
     }
 
@@ -22,9 +26,10 @@ public class PostService(IPostRepository postRepository, ITagRepository tagRepos
         return mapper.Map<PostResponseDto>(post);
     }
 
-    public async Task<PostResponseDto?> CreatePostAsync(AddPostDto postDto)
+    public async Task<PostResponseDto?> CreatePostAsync(AddPostDto postDto, Guid userId)
     {
         var post = mapper.Map<Post>(postDto);
+        post.UserId = userId;
         post.Slug = SlugUtils.GenerateSlug(postDto.Title);
         if (postDto.TagIds != null && postDto.TagIds.Any())
         {

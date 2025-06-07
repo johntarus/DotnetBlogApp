@@ -13,6 +13,7 @@ public class User
     public string? EmailVerificationToken { get; set; }
     public DateTime? EmailVerificationTokenExpiresAt { get; set; }
     public string? RefreshToken { get; set; }
+    public string Role { get; set; } = "User";
     public DateTime? RefreshTokenExpiresAt { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; }

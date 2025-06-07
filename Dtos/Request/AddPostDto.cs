@@ -1,10 +1,10 @@
-namespace BlogApp.Models.Dtos;
+namespace BlogApp.Dtos.Request;
 
 public class AddPostDto
 {
     public required string Title { get; set; }
     public string? Content { get; set; }
-    public Guid UserId { get; set; }
+    // public Guid UserId { get; set; } Get the user id from logged in user
     public int CategoryId { get; set; }
     public IEnumerable<int>? TagIds { get; set; }
 }

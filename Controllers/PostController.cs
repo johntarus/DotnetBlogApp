@@ -1,5 +1,5 @@
 using System.Security.Claims;
-using BlogApp.Data;
+using BlogApp.Dtos.Request;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
 using Microsoft.AspNetCore.Authorization;
@@ -10,14 +10,17 @@ namespace BlogApp.Controllers;
 [ApiController]
 
 [Route("api/posts")]
-public class PostController(DatabaseContext context, IPostService postService) : ControllerBase
+public class PostController(IPostService postService) : ControllerBase
 {
     [Authorize]
     [HttpGet]
     public async Task<IActionResult> GetAllPosts()
     {
         var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
-        var posts = await postService.GetPostsAsync(userId);
+        var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
+        Console.WriteLine($"user Role: {userRole}");
+        var isAdmin = userRole?.Equals("Admin", StringComparison.OrdinalIgnoreCase) == true;
+        var posts = await postService.GetPostsAsync(userId, isAdmin);
         return Ok(posts);
     }
 
@@ -25,8 +28,14 @@ public class PostController(DatabaseContext context, IPostService postService) :
     public async Task<IActionResult> CreateBlog(AddPostDto postDto)
     { 
         if(ModelState.IsValid == false) return BadRequest(ModelState);
-       var post = await postService.CreatePostAsync(postDto);
-       return CreatedAtAction(nameof(GetPostById), new { id = post.Id }, post);
+        // var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+        var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+        if (userIdClaim == null || !Guid.TryParse(userIdClaim.Value, out Guid userId))
+        {
+            return Unauthorized("Invalid user identification. Please sign in again.");
+        }
+        var post = await postService.CreatePostAsync(postDto, userId);
+        return CreatedAtAction(nameof(GetPostById), new { id = post.Id }, post);
     }
 
     [HttpGet("{id}")]
