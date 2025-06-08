@@ -55,8 +55,8 @@ public class PostController(IPostService postService) : ControllerBase
         var userClaim = User.FindFirst(ClaimTypes.NameIdentifier);
         if(userClaim == null || !Guid.TryParse(userClaim.Value, out Guid userId))
             return Unauthorized("Invalid user identification. Please sign in again.");
-        var roleClaim = User.FindFirst(ClaimTypes.Role);
-        var post = await postService.UpdatePostAsync(id, updatePostDto, userId, roleClaim.Value);
+        var role = User.FindFirst(ClaimTypes.Role)?.Value;
+        var post = await postService.UpdatePostAsync(id, updatePostDto, userId, role);
         return Ok(post);
     }
 

@@ -1,5 +1,6 @@
 using System.Net;
 using System.Text.Json;
+using BlogApp.Exceptions;
 
 namespace BlogApp.Middlewares;
 
@@ -40,6 +41,11 @@ public class ErrorHandlingMiddleware
                 case UnauthorizedAccessException:
                     statusCode = (int)HttpStatusCode.Unauthorized;
                     errorMessage = "Unauthorized";
+                    break;
+                
+                case ForbiddenAccessException:
+                    statusCode = (int)HttpStatusCode.Forbidden;
+                    errorMessage = "Forbidden resource";
                     break;
 
                 case KeyNotFoundException:

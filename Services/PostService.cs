@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using AutoMapper;
 using BlogApp.Dtos.Request;
+using BlogApp.Exceptions;
 using BlogApp.Helpers;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Interfaces.Services;
@@ -43,14 +44,14 @@ public class PostService(IPostRepository postRepository, ITagRepository tagRepos
     }
 
     public async Task<PostResponseDto?> UpdatePostAsync(Guid id, UpdatePostDto updatePost, Guid userId,
-        string roleClaimValue)
+        string role)
     {
         var post = await postRepository.GetPostByIdAsync(id);
         if (post == null) return null;
         mapper.Map(updatePost, post);
         bool isPostOwner = post.UserId == userId;
-        bool isAdmin = Guid.TryParse(ClaimTypes.Role, out Guid role);
-        if(!isAdmin && !isPostOwner) throw new UnauthorizedAccessException("You don't have permission to edit this post.");
+        bool isAdmin = role == "Admin";
+        if(!isAdmin && !isPostOwner) throw new ForbiddenAccessException();
         var updatedPost = await postRepository.UpdatePostAsync(post);
         return mapper.Map<PostResponseDto>(updatedPost);
 
