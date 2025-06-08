@@ -20,9 +20,12 @@ public class PostService(IPostRepository postRepository, ITagRepository tagRepos
         return mapper.Map<IEnumerable<PostResponseDto>>(posts);
     }
 
-    public async Task<PostResponseDto?> GetPostByIdAsync(Guid id)
+    public async Task<PostResponseDto?> GetPostByIdAsync(Guid id, Guid userId, string role)
     {
         var post = await postRepository.GetPostByIdAsync(id);
+        bool isPostOwner = post.UserId == userId;
+        bool isAdmin = role == "Admin";
+        if(!isAdmin && !isPostOwner) throw new ForbiddenAccessException();
         if (post == null) return null;
         return mapper.Map<PostResponseDto>(post);
     }

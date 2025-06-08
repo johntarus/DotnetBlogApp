@@ -8,17 +8,16 @@ using Microsoft.AspNetCore.Mvc;
 namespace BlogApp.Controllers;
 
 [ApiController]
-
+[Authorize]
 [Route("api/posts")]
 public class PostController(IPostService postService) : ControllerBase
 {
-    [Authorize]
     [HttpGet]
     public async Task<IActionResult> GetAllPosts()
     {
         var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
         var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
-        Console.WriteLine($"user Role: {userRole}");
+        if(userId == null || userRole == null) return Unauthorized();
         var isAdmin = userRole?.Equals("Admin", StringComparison.OrdinalIgnoreCase) == true;
         var posts = await postService.GetPostsAsync(userId, isAdmin);
         return Ok(posts);
@@ -28,7 +27,6 @@ public class PostController(IPostService postService) : ControllerBase
     public async Task<IActionResult> CreateBlog(AddPostDto postDto)
     { 
         if(ModelState.IsValid == false) return BadRequest(ModelState);
-        // var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
         var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
         if (userIdClaim == null || !Guid.TryParse(userIdClaim.Value, out Guid userId))
         {
@@ -41,7 +39,13 @@ public class PostController(IPostService postService) : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetPostById(Guid id)
     {
-        var post = await postService.GetPostByIdAsync(id);
+        var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+        var role = User.FindFirst(ClaimTypes.Role)?.Value;
+        if (userIdClaim == null || !Guid.TryParse(userIdClaim.Value, out Guid userId))
+        {
+            return Unauthorized("Invalid user identification. Please sign in again.");
+        }
+        var post = await postService.GetPostByIdAsync(id, userId, role);
         if (post == null) return NotFound();
         return Ok(post);
     }
@@ -53,8 +57,7 @@ public class PostController(IPostService postService) : ControllerBase
         if(ModelState.IsValid == false)
             return BadRequest(ModelState);
         var userClaim = User.FindFirst(ClaimTypes.NameIdentifier);
-        if(userClaim == null || !Guid.TryParse(userClaim.Value, out Guid userId))
-            return Unauthorized("Invalid user identification. Please sign in again.");
+        var userId = Guid.Parse(userClaim?.Value);
         var role = User.FindFirst(ClaimTypes.Role)?.Value;
         var post = await postService.UpdatePostAsync(id, updatePostDto, userId, role);
         return Ok(post);
