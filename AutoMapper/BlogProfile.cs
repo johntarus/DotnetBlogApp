@@ -2,6 +2,7 @@ using AutoMapper;
 using BlogApp.Dtos.Request;
 using BlogApp.Dtos.Response;
 using BlogApp.Entities;
+using BlogApp.Helpers;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
 using BlogApp.Security;
@@ -75,6 +76,8 @@ public class BlogProfile : Profile
             .ForMember(dest => dest.CreatedAt,
                 opt => opt.MapFrom(_ => DateTime.Now));
         CreateMap<UpdatePostDto, Post>()
+            .ForMember(dest=>dest.Slug,
+                opt=> opt.MapFrom(src=>SlugUtils.GenerateSlug(src.Title)))
             .ForMember(dest=>dest.UpdatedAt,
                 opt=>opt.MapFrom(_ => DateTime.Now));
     }
