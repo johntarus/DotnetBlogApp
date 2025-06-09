@@ -1,12 +1,15 @@
 using BlogApp.Data;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.Controllers;
 
+[ApiController]
+[Authorize(Roles = "Admin")]
 [Route("api/tags")]
-public class TagController(DatabaseContext context, ITagService tagService) : Controller
+public class TagController(ITagService tagService) : Controller
 {
     [HttpGet]
     public async Task<IActionResult> GetTags()

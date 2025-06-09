@@ -66,7 +66,10 @@ public class PostController(IPostService postService) : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteBlog(Guid id)
     {
-        var isPostDeleted = await postService.DeletePostAsync(id);
+        var userClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+        var userId = Guid.Parse(userClaim?.Value);
+        var role = User.FindFirst(ClaimTypes.Role)?.Value;
+        var isPostDeleted = await postService.DeletePostAsync(id, userId, role);
         if(isPostDeleted == false) return NotFound();
         return NoContent();
     }

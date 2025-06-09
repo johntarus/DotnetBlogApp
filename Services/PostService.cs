@@ -59,10 +59,13 @@ public class PostService(IPostRepository postRepository, ITagRepository tagRepos
 
     }
 
-    public async Task<bool> DeletePostAsync(Guid id)
+    public async Task<bool> DeletePostAsync(Guid id, Guid userId, string role)
     {
         var post = await postRepository.GetPostByIdAsync(id);
         if (post == null) return false;
+        bool isPostOwner = post.UserId == userId;
+        bool isAdmin = role == "Admin";
+        if(!isAdmin && !isPostOwner) throw new ForbiddenAccessException();
         await postRepository.DeletePostAsync(post);
         return true;
     }
