@@ -14,6 +14,7 @@ public class TagController(ITagService tagService) : Controller
     [HttpGet]
     public async Task<IActionResult> GetTags(int pageNumber = 1, int pageSize = 5)
     {
+        if(pageNumber <= 0 || pageSize <= 0) return BadRequest("Page Number and Page Size must be greater than zero");
         var tags = await tagService.GetAllTags(pageNumber, pageSize);
         return Ok(tags);
     }

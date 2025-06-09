@@ -11,9 +11,10 @@ public class CategoryController(DatabaseContext context, ICategoryService catego
 {
     [Authorize]
     [HttpGet]
-    public async Task<IActionResult> GetCategories()
+    public async Task<IActionResult> GetCategories(int pageNumber, int pageSize)
     {
-        var categories = await categoryService.GetCategoriesAsync();
+        if(pageNumber <= 0 || pageSize <= 0) return BadRequest("Page Number and Page Size must be greater than zero");
+        var categories = await categoryService.GetCategoriesAsync(pageNumber, pageSize );
         return Ok(categories);
     }
 

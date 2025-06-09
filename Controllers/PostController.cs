@@ -15,6 +15,7 @@ public class PostController(IPostService postService) : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAllPosts(int pageNumber = 1, int pageSize = 5)
     {
+        if(pageNumber <= 0 || pageSize <= 0) return BadRequest("Page Number and Page Size must be greater than zero");
         var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
         var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
         if(userId == null || userRole == null) return Unauthorized();

@@ -1,18 +1,21 @@
 using AutoMapper;
+using BlogApp.Entities;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.Services;
 
 public class CategoryService(ICategoryRepository categoryRepository, IMapper mapper) : ICategoryService
 {
-    public async Task<List<CategoryResponseDto>> GetCategoriesAsync()
+    public async Task<PaginatedList<CategoryResponseDto>> GetCategoriesAsync([FromQuery]int pageNumber, [FromQuery]int pageSize)
     {
-        var categories = await categoryRepository.GetCategoriesAsync();
-
-        return mapper.Map<List<CategoryResponseDto>>(categories);
+        var paginatedCategories = await categoryRepository.GetCategoriesAsync(pageNumber, pageSize);
+        var categories =  mapper.Map<List<CategoryResponseDto>>(paginatedCategories.Items);
+        return new PaginatedList<CategoryResponseDto>(categories, paginatedCategories.PageNumber, 
+            paginatedCategories.PageSize, paginatedCategories.TotalCount, paginatedCategories.TotalPages);
     }
 
 

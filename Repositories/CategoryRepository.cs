@@ -1,4 +1,5 @@
 using BlogApp.Data;
+using BlogApp.Entities;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Models.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -6,9 +7,9 @@ namespace BlogApp.Repositories;
 
 public class CategoryRepository(DatabaseContext context) : ICategoryRepository
 {
-    public async Task<List<Category>> GetCategoriesAsync()
+    public async Task<PaginatedList<Category>> GetCategoriesAsync(int pageNumber, int pageSize)
     {
-        return await context.Categories
+        var query = context.Categories
             .Include(c => c.Posts)
             .ThenInclude(p => p.User)
             .Include(c => c.Posts)
@@ -17,7 +18,11 @@ public class CategoryRepository(DatabaseContext context) : ICategoryRepository
             .ThenInclude(p => p.Likes)
             .Include(c => c.Posts)
             .ThenInclude(p => p.Comments)
-            .ToListAsync();
+            .AsQueryable();
+        var totalCount = await query.CountAsync();
+        var totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+        var posts = await query.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
+        return new PaginatedList<Category>(posts, pageNumber, pageSize, totalCount, totalPages);
     }
 
     public async Task<Category> GetCategoryByIdAsync(int id)
