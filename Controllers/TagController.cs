@@ -12,9 +12,9 @@ namespace BlogApp.Controllers;
 public class TagController(ITagService tagService) : Controller
 {
     [HttpGet]
-    public async Task<IActionResult> GetTags()
+    public async Task<IActionResult> GetTags(int pageNumber = 1, int pageSize = 5)
     {
-        var tags = await tagService.GetAllTags();
+        var tags = await tagService.GetAllTags(pageNumber, pageSize);
         return Ok(tags);
     }
 

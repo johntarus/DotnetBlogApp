@@ -8,10 +8,17 @@ namespace BlogApp.Services;
 
 public class TagService(ITagRepository tagRepository, IMapper mapper) : ITagService
 {
-    public async Task<IEnumerable<TagResponseDto>> GetAllTags()
+    public async Task<PaginatedList<TagResponseDto>> GetAllTags(int pageNumber, int pageSize)
     {
-        var tags = await tagRepository.GetAllTags();
-        return mapper.Map<IEnumerable<TagResponseDto>>(tags);
+        var paginatedTags = await tagRepository.GetAllTags(pageNumber, pageSize);
+        var tags =  mapper.Map<List<TagResponseDto>>(paginatedTags.Items);
+        return new PaginatedList<TagResponseDto>(
+            tags,
+            paginatedTags.PageNumber,
+            paginatedTags.PageSize,
+            paginatedTags.TotalCount,
+            paginatedTags.TotalPages
+        );
     }
 
     public async Task<TagResponseDto> GetTagById(int id)

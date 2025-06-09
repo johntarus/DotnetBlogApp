@@ -7,9 +7,17 @@ namespace BlogApp.Repositories;
 
 public class TagRepository(DatabaseContext context) : ITagRepository
 {
-    public async Task<IEnumerable<Tag>> GetAllTags()
+    public async Task<PaginatedList<Tag>> GetAllTags(int pageNumber, int pageSize)
     {
-        return await context.Tags.Include(t=>t.Posts).ToListAsync();
+        var query = context.Tags.Include(t => t.Posts).AsQueryable();
+        var totalCount = await query.CountAsync();
+        var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
+        var tags = await query
+            .OrderByDescending(t => t.CreatedAt)
+            .Skip((pageNumber - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+        return new PaginatedList<Tag>(tags, pageNumber, pageSize, totalCount, totalPages);
     }
 
     public async Task<Tag> GetTagById(int id)

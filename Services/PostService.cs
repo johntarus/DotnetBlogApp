@@ -14,11 +14,18 @@ public class PostService(IPostRepository postRepository, ITagRepository tagRepos
 {
     public async Task<PaginatedList<PostResponseDto>> GetPostsAsync(Guid userId, bool isAdmin, int pageNumber, int pageSize)
     {
-        var posts = isAdmin 
+        var paginatedPosts = isAdmin 
             ? await postRepository.GetPostsAsync(pageNumber, pageSize) 
             : await postRepository.GetPostsByUserIdAsync(userId, pageNumber, pageSize);
         
-        return mapper.Map<PaginatedList<PostResponseDto>>(posts);
+        var posts = mapper.Map<List<PostResponseDto>>(paginatedPosts.Items);
+        return new PaginatedList<PostResponseDto>(
+            posts,
+            paginatedPosts.PageNumber,
+            paginatedPosts.PageSize,
+            paginatedPosts.TotalCount,
+            paginatedPosts.TotalPages
+        );
     }
 
     public async Task<PostResponseDto?> GetPostByIdAsync(Guid id, Guid userId, string role)
@@ -38,8 +45,8 @@ public class PostService(IPostRepository postRepository, ITagRepository tagRepos
         post.Slug = SlugUtils.GenerateSlug(postDto.Title);
         if (postDto.TagIds != null && postDto.TagIds.Any())
         {
-            var allTags = await tagRepository.GetAllTags();
-            var tags = allTags.Where(t => postDto.TagIds.Contains(t.Id)).ToList();
+            var allTags = await tagRepository.GetAllTags(1, 5);
+            var tags = allTags.Items.Where(t => postDto.TagIds.Contains(t.Id)).ToList();
             post.Tags = tags;
         }
         var createdPost = await postRepository.CreatePostAsync(post);
