@@ -13,13 +13,13 @@ namespace BlogApp.Controllers;
 public class PostController(IPostService postService) : ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> GetAllPosts()
+    public async Task<IActionResult> GetAllPosts(int pageNumber = 1, int pageSize = 5)
     {
         var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
         var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
         if(userId == null || userRole == null) return Unauthorized();
         var isAdmin = userRole?.Equals("Admin", StringComparison.OrdinalIgnoreCase) == true;
-        var posts = await postService.GetPostsAsync(userId, isAdmin);
+        var posts = await postService.GetPostsAsync(userId, isAdmin, pageNumber, pageSize);
         return Ok(posts);
     }
 

@@ -1,5 +1,6 @@
 using AutoMapper;
 using BlogApp.Dtos.Request;
+using BlogApp.Entities;
 using BlogApp.Exceptions;
 using BlogApp.Helpers;
 using BlogApp.Interfaces.Repositories;
@@ -11,13 +12,13 @@ namespace BlogApp.Services;
 
 public class PostService(IPostRepository postRepository, ITagRepository tagRepository, IMapper mapper) : IPostService
 {
-    public async Task<IEnumerable<PostResponseDto>> GetPostsAsync(Guid userId, bool isAdmin)
+    public async Task<PaginatedList<PostResponseDto>> GetPostsAsync(Guid userId, bool isAdmin, int pageNumber, int pageSize)
     {
         var posts = isAdmin 
-            ? await postRepository.GetPostsAsync() 
-            : await postRepository.GetPostsByUserIdAsync(userId);
+            ? await postRepository.GetPostsAsync(pageNumber, pageSize) 
+            : await postRepository.GetPostsByUserIdAsync(userId, pageNumber, pageSize);
         
-        return mapper.Map<IEnumerable<PostResponseDto>>(posts);
+        return mapper.Map<PaginatedList<PostResponseDto>>(posts);
     }
 
     public async Task<PostResponseDto?> GetPostByIdAsync(Guid id, Guid userId, string role)

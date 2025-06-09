@@ -1,4 +1,5 @@
 using BlogApp.Data;
+using BlogApp.Entities;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Models.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -8,24 +9,40 @@ namespace BlogApp.Repositories;
 public class PostRepository(DatabaseContext context) : IPostRepository
 {
 
-    public async Task<IEnumerable<Post>> GetPostsAsync()
+    public async Task<PaginatedList<Post>> GetPostsAsync(int pageNumber, int pageSize)
     {
-       return await context.Posts.Include(p=>p.User)
+       var query =  context.Posts.Include(p=>p.User)
            .Include(p=>p.Category)
            .Include(p=>p.Comments)
            .Include(p=>p.Likes)
            .Include(p=>p.Tags)
+           .AsQueryable();
+       
+       var totalItems = await context.Posts.CountAsync();
+       var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+       var posts = await query.OrderByDescending(p=>p.CreatedAt)
+           .Skip((pageNumber - 1) * pageSize)
+           .Take(pageSize)
            .ToListAsync();
+       return new PaginatedList<Post>(posts, pageNumber, pageSize, totalItems, totalPages);
     }
 
-    public async Task<IEnumerable<Post>> GetPostsByUserIdAsync(Guid userId)
+    public async Task<PaginatedList<Post>> GetPostsByUserIdAsync(Guid userId, int pageNumber, int pageSize)
     {
-        return await context.Posts.Where(p => p.UserId == userId).Include(p => p.User)
+        var query = context.Posts.Where(p => p.UserId == userId).Include(p => p.User)
             .Include(p => p.Category)
             .Include(p => p.Comments)
             .Include(p => p.Likes)
             .Include(p => p.Tags)
+            .AsQueryable();
+        
+        var totalItems = await context.Posts.CountAsync();
+        var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+        var posts = await query.OrderByDescending(p=>p.CreatedAt)
+            .Skip((pageNumber - 1) * pageSize)
+            .Take(pageSize)
             .ToListAsync();
+        return new PaginatedList<Post>(posts, pageNumber, pageSize, totalItems, totalPages);
     }
 
     public async Task<Post?> GetPostByIdAsync(Guid id)

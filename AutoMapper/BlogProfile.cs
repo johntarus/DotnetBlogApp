@@ -59,6 +59,8 @@ public class BlogProfile : Profile
         CreateMap<LoginRequestDto, User>();
         CreateMap<User, ProfileResponseDto>();
         CreateMap<UpdateProfileRequestDto, User>();
+        CreateMap(typeof(PaginatedList<>), typeof(PaginatedList<>));
+
 
         //Post Mapper
         CreateMap<Post, PostResponseDto>()
