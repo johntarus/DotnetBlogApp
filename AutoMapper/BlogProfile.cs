@@ -14,7 +14,6 @@ public class BlogProfile : Profile
 {
     public BlogProfile()
     {
-        CreateMap(typeof(PaginatedList<>), typeof(PagedResponseDto<>));
         //Category Mappers
         CreateMap<Category, CategoryResponseDto>()
             .ForMember(dest => dest.Posts, 

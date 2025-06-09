@@ -1,11 +1,12 @@
 using BlogApp.Dtos.Response;
+using BlogApp.Entities;
 using BlogApp.Models.Dtos;
 
 namespace BlogApp.Interfaces.Services;
 
 public interface ILikeService
 {
-    Task<List<LikeResponseDto>> GetLikesAsync();
+    Task<PaginatedList<LikeResponseDto>> GetLikesAsync(int pageNumber, int pageSize);
     Task<LikeResponseDto?> GetLikeByIdAsync(int id);
     Task<LikeResponseDto?> CreateLikeAsync(LikeDto dto);
     Task<bool> RemoveLikeAsync(LikeDto dto);

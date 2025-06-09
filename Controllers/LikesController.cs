@@ -9,7 +9,8 @@ namespace BlogApp.Controllers;
 public class LikesController(ILikeService likeService, ILogger<LikesController> logger) : ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> GetLikes() => Ok(await likeService.GetLikesAsync());
+    public async Task<IActionResult> GetLikes([FromQuery] int pageNumber, [FromQuery] int pageSize) =>
+        Ok(await likeService.GetLikesAsync(pageNumber, pageSize));
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetLikeById(int id)
