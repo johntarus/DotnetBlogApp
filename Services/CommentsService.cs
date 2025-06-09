@@ -1,4 +1,5 @@
 using AutoMapper;
+using BlogApp.Entities;
 using BlogApp.Interfaces;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
@@ -8,10 +9,17 @@ namespace BlogApp.Services;
 
 public class CommentsService(ICommentRepository commentRepository, IMapper mapper) : ICommentsService
 {
-    public async Task<List<CommentResponseDto>> GetCommentsAsync()
+    public async Task<PaginatedList<CommentResponseDto>> GetCommentsAsync(int pageNumber, int pageSize)
     {
-        var comments = await commentRepository.GetCommentsAsync();
-        return mapper.Map<List<CommentResponseDto>>(comments);
+        var paginatedComments = await commentRepository.GetCommentsAsync(pageNumber, pageSize);
+        var comments = mapper.Map<List<CommentResponseDto>>(paginatedComments.Items);
+        return new PaginatedList<CommentResponseDto>(
+            comments,
+            paginatedComments.PageNumber,
+            paginatedComments.PageSize,
+            paginatedComments.TotalCount,
+            paginatedComments.TotalPages
+            );
     }
 
     public async Task<CommentResponseDto> CreateCommentAsync(CommentDto commentDto)

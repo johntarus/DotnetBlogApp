@@ -1,5 +1,7 @@
 using BlogApp.Data;
+using BlogApp.Entities;
 using BlogApp.Interfaces;
+using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,12 +9,19 @@ namespace BlogApp.Repositories;
 
 public class CommentRepository(DatabaseContext context) : ICommentRepository
 {
-    public async Task<List<Comment>> GetCommentsAsync()
+    public async Task<PaginatedList<Comment>> GetCommentsAsync(int pageNumber, int pageSize)
     {
-        return await context.Comments
+        var query = context.Comments
             .Include(c => c.Post)
             .Include(c => c.User)
+            .AsQueryable();
+        var totalCount = await query.CountAsync();
+        var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
+        var comments = await query.OrderByDescending(p=>p.CreatedAt)
+            .Skip((pageNumber - 1) * pageSize)
+            .Take(pageSize)
             .ToListAsync();
+        return new PaginatedList<Comment>(comments, pageNumber, pageSize, totalCount, totalPages);
     }
 
     public async Task<Comment> GetCommentByIdAsync(int id)

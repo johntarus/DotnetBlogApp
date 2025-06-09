@@ -1,18 +1,20 @@
 using BlogApp.Data;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("api/comments")]
 public class CommentController(DatabaseContext context, ICommentsService commentsService) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult> GetComments()
+    public async Task<ActionResult> GetComments([FromQuery] int pageNumber, [FromQuery] int pageSize)
     {
-      var comments = await commentsService.GetCommentsAsync();
+      var comments = await commentsService.GetCommentsAsync(pageNumber, pageSize);
       return Ok(comments); 
     }
     
