@@ -1,16 +1,22 @@
+using BlogApp.Dtos.Request;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("api/likes")]
 public class LikesController(ILikeService likeService, ILogger<LikesController> logger) : ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> GetLikes([FromQuery] int pageNumber, [FromQuery] int pageSize) =>
-        Ok(await likeService.GetLikesAsync(pageNumber, pageSize));
+    public async Task<IActionResult> GetLikes([FromQuery] PagedRequestDto request)
+    {
+        if(request.PageNumber < 1 || request.PageSize < 1) return BadRequest("Page Number and Page Size must be greater than or equal to 1.");
+        return Ok(await likeService.GetLikesAsync(request));
+    }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetLikeById(int id)

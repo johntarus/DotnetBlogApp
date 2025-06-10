@@ -1,21 +1,26 @@
 using BlogApp.Data;
+using BlogApp.Dtos.Request;
 using BlogApp.Entities;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Models.Entities;
+using BlogApp.Utils;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Repositories;
 
 public class LikeRepository(DatabaseContext context) : ILikeRepository
 {
-    public async Task<PaginatedList<Like>> GetLikesAsync(int pageNumber, int pageSize)
+    public async Task<PaginatedList<Like>> GetLikesAsync(PagedRequestDto request)
     {
         var query = context.Likes.Include(l => l.User).AsQueryable();
-        var totalCount = await query.CountAsync();
-        var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
-        var likes = await query.OrderByDescending(l=>l.CreateAt)
-            .Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
-        return new PaginatedList<Like>(likes, pageNumber, pageSize, totalCount, totalPages);
+        if (!string.IsNullOrWhiteSpace(request.SearchQuery))
+        {
+            var searchQuery = request.SearchQuery.Trim().ToLower();
+            query = query.Where(l=>l.User.Username.ToLower().Contains(searchQuery));
+        }
+        query = query.OrderByDescending(l => l.Id);
+    
+        return await PaginationUtils.CreateAsync(query, request.PageNumber, request.PageSize);
     }
         
 

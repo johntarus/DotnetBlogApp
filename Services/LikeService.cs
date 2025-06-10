@@ -1,4 +1,5 @@
 using AutoMapper;
+using BlogApp.Dtos.Request;
 using BlogApp.Dtos.Response;
 using BlogApp.Entities;
 using BlogApp.Interfaces.Repositories;
@@ -10,9 +11,9 @@ namespace BlogApp.Services;
 
 public class LikeService(ILikeRepository likeRepo, IAuthRepository authRepository, IPostRepository postRepository, IMapper mapper) : ILikeService
 {
-    public async Task<PaginatedList<LikeResponseDto>> GetLikesAsync(int pageNumber, int pageSize)
+    public async Task<PaginatedList<LikeResponseDto>> GetLikesAsync(PagedRequestDto request)
     {
-        var paginatedLikes = await likeRepo.GetLikesAsync(pageNumber, pageSize);
+        var paginatedLikes = await likeRepo.GetLikesAsync(request);
         var likes = mapper.Map<List<LikeResponseDto>>(paginatedLikes.Items);
         return new PaginatedList<LikeResponseDto>(likes, paginatedLikes.PageNumber, paginatedLikes.PageSize,
             paginatedLikes.TotalCount, paginatedLikes.TotalPages);

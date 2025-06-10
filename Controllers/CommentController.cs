@@ -14,6 +14,7 @@ public class CommentController(DatabaseContext context, ICommentsService comment
     [HttpGet]
     public async Task<ActionResult> GetComments([FromQuery] int pageNumber, [FromQuery] int pageSize)
     {
+        if(pageNumber < 1 || pageSize < 1) return BadRequest("Page number must be greater than or equal to 1");
       var comments = await commentsService.GetCommentsAsync(pageNumber, pageSize);
       return Ok(comments); 
     }
