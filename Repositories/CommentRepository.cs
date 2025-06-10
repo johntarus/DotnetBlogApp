@@ -1,26 +1,42 @@
 using BlogApp.Data;
+using BlogApp.Dtos.PagedFilters;
 using BlogApp.Entities;
 using BlogApp.Interfaces;
 using BlogApp.Models.Entities;
+using BlogApp.Utils;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Repositories;
 
 public class CommentRepository(DatabaseContext context) : ICommentRepository
 {
-    public async Task<PaginatedList<Comment>> GetCommentsAsync(int pageNumber, int pageSize)
+    public async Task<PaginatedList<Comment>> GetCommentsAsync(CommentPagedRequest request)
     {
         var query = context.Comments
             .Include(c => c.Post)
             .Include(c => c.User)
             .AsQueryable();
-        var totalCount = await query.CountAsync();
-        var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
-        var comments = await query.OrderByDescending(p=>p.CreatedAt)
-            .Skip((pageNumber - 1) * pageSize)
-            .Take(pageSize)
-            .ToListAsync();
-        return new PaginatedList<Comment>(comments, pageNumber, pageSize, totalCount, totalPages);
+        if (!string.IsNullOrWhiteSpace(request.SearchQuery))
+        {
+            query = query.Where(c=>c.Content.ToLower().Contains(request.SearchQuery.ToLower()));
+        }
+
+        if (request.IsEdited.HasValue)
+        {
+            query = query.Where(c => c.IsEdited == request.IsEdited.Value);
+        }
+
+        if (request.UserId.HasValue)
+        {
+            query = query.Where(c => c.UserId == request.UserId);
+        }
+
+        if (request.PostId.HasValue)
+        {
+            query = query.Where(c => c.PostId == request.PostId);
+        }
+
+        return await PaginationUtils.CreateAsync(query, request.PageNumber, request.PageSize);
     }
 
     public async Task<Comment> GetCommentByIdAsync(int id)

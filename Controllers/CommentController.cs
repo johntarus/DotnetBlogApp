@@ -1,4 +1,5 @@
 using BlogApp.Data;
+using BlogApp.Dtos.PagedFilters;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
 using Microsoft.AspNetCore.Authorization;
@@ -12,10 +13,10 @@ namespace BlogApp.Controllers;
 public class CommentController(DatabaseContext context, ICommentsService commentsService) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult> GetComments([FromQuery] int pageNumber, [FromQuery] int pageSize)
+    public async Task<ActionResult> GetComments([FromQuery] CommentPagedRequest request)
     {
-        if(pageNumber < 1 || pageSize < 1) return BadRequest("Page number must be greater than or equal to 1");
-      var comments = await commentsService.GetCommentsAsync(pageNumber, pageSize);
+        if(request.PageNumber < 1 || request.PageSize < 1) return BadRequest("Page number must be greater than or equal to 1");
+      var comments = await commentsService.GetCommentsAsync(request);
       return Ok(comments); 
     }
     
