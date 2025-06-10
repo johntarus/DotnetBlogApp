@@ -161,3 +161,78 @@ ORDER BY [s].[Id], [s].[Id0], [s].[Id1], [c0].[Id], [l].[Id], [s0].[PostsId], [s
 [2025-06-10 12:58:21 INF] Executed endpoint 'BlogApp.Controllers.PostController.GetPostById (BlogApp)'
 [2025-06-10 12:58:21 INF] HTTP GET /api/posts/4a276107-419e-4978-271a-08dda5b90cfe responded 200 in 165.2457 ms
 [2025-06-10 12:58:21 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/posts/4a276107-419e-4978-271a-08dda5b90cfe - 200 null application/json; charset=utf-8 165.8464ms
+[2025-06-10 13:05:01 INF] Application is shutting down...
+[2025-06-10 13:05:04 INF] User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-10 13:05:04 INF] Now listening on: http://localhost:5263
+[2025-06-10 13:05:04 INF] Application started. Press Ctrl+C to shut down.
+[2025-06-10 13:05:04 INF] Hosting environment: Development
+[2025-06-10 13:05:04 INF] Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-10 13:05:05 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-10 13:05:05 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 200.1654ms
+[2025-06-10 13:05:05 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-10 13:05:06 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 222.1644ms
+[2025-06-10 13:05:16 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/tags - null null
+[2025-06-10 13:05:16 WRN] Failed to determine the https port for redirect.
+[2025-06-10 13:05:16 INF] Executing endpoint 'BlogApp.Controllers.TagController.GetTags (BlogApp)'
+[2025-06-10 13:05:16 INF] Route matched with {action = "GetTags", controller = "Tag"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTags(BlogApp.Dtos.PagedFilters.TagPagedRequest) on controller BlogApp.Controllers.TagController (BlogApp).
+[2025-06-10 13:05:17 INF] Executing action method BlogApp.Controllers.TagController.GetTags (BlogApp) - Validation state: "Valid"
+[2025-06-10 13:05:17 INF] [GET] GetTags called with request: {"Id":null,"SearchQuery":null,"PageNumber":1,"PageSize":5}
+[2025-06-10 13:05:17 INF] Fetching all tags with request: {"Id":null,"SearchQuery":null,"PageNumber":1,"PageSize":5}
+[2025-06-10 13:05:19 INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Tags] AS [t]
+[2025-06-10 13:05:19 WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 13:05:19 WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 13:05:20 INF] Executed DbCommand (36ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], [t0].[CreatedAt], [t0].[Name], [t0].[UpdatedAt], [s].[PostsId], [s].[TagsId], [s].[Id], [s].[CategoryId], [s].[Content], [s].[CreatedAt], [s].[Slug], [s].[Title], [s].[UpdatedAt], [s].[UserId]
+FROM (
+    SELECT [t].[Id], [t].[CreatedAt], [t].[Name], [t].[UpdatedAt]
+    FROM [Tags] AS [t]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t0]
+LEFT JOIN (
+    SELECT [p].[PostsId], [p].[TagsId], [p0].[Id], [p0].[CategoryId], [p0].[Content], [p0].[CreatedAt], [p0].[Slug], [p0].[Title], [p0].[UpdatedAt], [p0].[UserId]
+    FROM [PostTags] AS [p]
+    INNER JOIN [Posts] AS [p0] ON [p].[PostsId] = [p0].[Id]
+) AS [s] ON [t0].[Id] = [s].[TagsId]
+ORDER BY [t0].[Id], [s].[PostsId], [s].[TagsId]
+[2025-06-10 13:05:20 INF] Fetched 5 tags
+[2025-06-10 13:05:20 INF] Returning 5 tags
+[2025-06-10 13:05:20 INF] Executed action method BlogApp.Controllers.TagController.GetTags (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3176.458ms.
+[2025-06-10 13:05:20 INF] Executing OkObjectResult, writing value of type 'BlogApp.Entities.PaginatedList`1[[BlogApp.Models.Dtos.TagResponseDto, BlogApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2025-06-10 13:05:20 INF] Executed action BlogApp.Controllers.TagController.GetTags (BlogApp) in 3715.8173ms
+[2025-06-10 13:05:20 INF] Executed endpoint 'BlogApp.Controllers.TagController.GetTags (BlogApp)'
+[2025-06-10 13:05:20 INF] HTTP GET /api/tags responded 200 in 3902.8848 ms
+[2025-06-10 13:05:20 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/tags - 200 null application/json; charset=utf-8 3934.2179ms
+[2025-06-10 13:05:42 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/tags - null null
+[2025-06-10 13:05:42 INF] Executing endpoint 'BlogApp.Controllers.TagController.GetTags (BlogApp)'
+[2025-06-10 13:05:42 INF] Route matched with {action = "GetTags", controller = "Tag"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTags(BlogApp.Dtos.PagedFilters.TagPagedRequest) on controller BlogApp.Controllers.TagController (BlogApp).
+[2025-06-10 13:05:42 INF] Executing action method BlogApp.Controllers.TagController.GetTags (BlogApp) - Validation state: "Valid"
+[2025-06-10 13:05:42 INF] [GET] GetTags called with request: {"Id":null,"SearchQuery":null,"PageNumber":1,"PageSize":5}
+[2025-06-10 13:05:42 INF] Fetching all tags with request: {"Id":null,"SearchQuery":null,"PageNumber":1,"PageSize":5}
+[2025-06-10 13:05:42 INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Tags] AS [t]
+[2025-06-10 13:05:42 INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t0].[Id], [t0].[CreatedAt], [t0].[Name], [t0].[UpdatedAt], [s].[PostsId], [s].[TagsId], [s].[Id], [s].[CategoryId], [s].[Content], [s].[CreatedAt], [s].[Slug], [s].[Title], [s].[UpdatedAt], [s].[UserId]
+FROM (
+    SELECT [t].[Id], [t].[CreatedAt], [t].[Name], [t].[UpdatedAt]
+    FROM [Tags] AS [t]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t0]
+LEFT JOIN (
+    SELECT [p].[PostsId], [p].[TagsId], [p0].[Id], [p0].[CategoryId], [p0].[Content], [p0].[CreatedAt], [p0].[Slug], [p0].[Title], [p0].[UpdatedAt], [p0].[UserId]
+    FROM [PostTags] AS [p]
+    INNER JOIN [Posts] AS [p0] ON [p].[PostsId] = [p0].[Id]
+) AS [s] ON [t0].[Id] = [s].[TagsId]
+ORDER BY [t0].[Id], [s].[PostsId], [s].[TagsId]
+[2025-06-10 13:05:42 INF] Fetched 5 tags
+[2025-06-10 13:05:42 INF] Returning 5 tags
+[2025-06-10 13:05:42 INF] Executed action method BlogApp.Controllers.TagController.GetTags (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 59.2579ms.
+[2025-06-10 13:05:42 INF] Executing OkObjectResult, writing value of type 'BlogApp.Entities.PaginatedList`1[[BlogApp.Models.Dtos.TagResponseDto, BlogApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2025-06-10 13:05:42 INF] Executed action BlogApp.Controllers.TagController.GetTags (BlogApp) in 62.6293ms
+[2025-06-10 13:05:42 INF] Executed endpoint 'BlogApp.Controllers.TagController.GetTags (BlogApp)'
+[2025-06-10 13:05:42 INF] HTTP GET /api/tags responded 200 in 68.7683 ms
+[2025-06-10 13:05:42 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/tags - 200 null application/json; charset=utf-8 69.6257ms

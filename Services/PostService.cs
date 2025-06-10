@@ -9,7 +9,6 @@ using BlogApp.Helpers;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
-using Microsoft.Extensions.Logging;
 
 namespace BlogApp.Services;
 

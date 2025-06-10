@@ -7,7 +7,6 @@ using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace BlogApp.Controllers;
 
