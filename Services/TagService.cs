@@ -1,4 +1,3 @@
-// Service: TagService.cs
 using System.Text.Json;
 using AutoMapper;
 using BlogApp.Dtos.PagedFilters;
