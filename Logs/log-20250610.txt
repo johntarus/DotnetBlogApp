@@ -40,3 +40,74 @@ ORDER BY [c1].[Id], [s0].[Id], [s0].[Id0], [s0].[PostsId], [s0].[TagsId], [s0].[
 [2025-06-10 12:22:22 INF] Executed endpoint 'BlogApp.Controllers.CategoryController.GetCategoryById (BlogApp)'
 [2025-06-10 12:22:22 INF] HTTP GET /api/categories/5 responded 200 in 3806.5924 ms
 [2025-06-10 12:22:22 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/categories/5 - 200 null application/json; charset=utf-8 3844.2554ms
+[2025-06-10 12:31:50 INF] Application is shutting down...
+[2025-06-10 12:31:56 INF] User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-10 12:31:56 INF] Now listening on: http://localhost:5263
+[2025-06-10 12:31:56 INF] Application started. Press Ctrl+C to shut down.
+[2025-06-10 12:31:56 INF] Hosting environment: Development
+[2025-06-10 12:31:56 INF] Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-10 12:31:57 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-10 12:31:57 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 198.2804ms
+[2025-06-10 12:31:58 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-10 12:31:58 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 184.3436ms
+[2025-06-10 12:32:06 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/comments - null null
+[2025-06-10 12:32:06 WRN] Failed to determine the https port for redirect.
+[2025-06-10 12:32:06 INF] Executing endpoint 'BlogApp.Controllers.CommentController.GetComments (BlogApp)'
+[2025-06-10 12:32:06 INF] Route matched with {action = "GetComments", controller = "Comment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetComments(BlogApp.Dtos.PagedFilters.CommentPagedRequest) on controller BlogApp.Controllers.CommentController (BlogApp).
+[2025-06-10 12:32:06 INF] Executing action method BlogApp.Controllers.CommentController.GetComments (BlogApp) - Validation state: "Valid"
+[2025-06-10 12:32:06 INF] Fetching comments with PageNumber: 1, PageSize: 5
+[2025-06-10 12:32:06 INF] Service: Retrieving comments with PageNumber: 1, PageSize: 5
+[2025-06-10 12:32:09 INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Comments] AS [c]
+[2025-06-10 12:32:09 WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 12:32:09 WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 12:32:09 INF] Executed DbCommand (37ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[Id], [c0].[Content], [c0].[CreatedAt], [c0].[IsEdited], [c0].[PostId], [c0].[UpdatedAt], [c0].[UserId], [p].[Id], [p].[CategoryId], [p].[Content], [p].[CreatedAt], [p].[Slug], [p].[Title], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[Avatar], [u].[Bio], [u].[CreatedAt], [u].[Email], [u].[EmailVerificationToken], [u].[EmailVerificationTokenExpiresAt], [u].[IsActive], [u].[IsEmailVerified], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiresAt], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM (
+    SELECT [c].[Id], [c].[Content], [c].[CreatedAt], [c].[IsEdited], [c].[PostId], [c].[UpdatedAt], [c].[UserId]
+    FROM [Comments] AS [c]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [c0]
+INNER JOIN [Posts] AS [p] ON [c0].[PostId] = [p].[Id]
+INNER JOIN [Users] AS [u] ON [c0].[UserId] = [u].[Id]
+[2025-06-10 12:32:09 INF] Service: Retrieved 5 comments
+[2025-06-10 12:32:09 INF] Successfully fetched 5 comments
+[2025-06-10 12:32:09 INF] Executed action method BlogApp.Controllers.CommentController.GetComments (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3138.0949ms.
+[2025-06-10 12:32:09 INF] Executing OkObjectResult, writing value of type 'BlogApp.Entities.PaginatedList`1[[BlogApp.Models.Dtos.CommentResponseDto, BlogApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2025-06-10 12:32:10 INF] Executed action BlogApp.Controllers.CommentController.GetComments (BlogApp) in 3757.1663ms
+[2025-06-10 12:32:10 INF] Executed endpoint 'BlogApp.Controllers.CommentController.GetComments (BlogApp)'
+[2025-06-10 12:32:10 INF] HTTP GET /api/comments responded 200 in 3952.6574 ms
+[2025-06-10 12:32:10 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/comments - 200 null application/json; charset=utf-8 3997.8737ms
+[2025-06-10 12:32:28 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/comments?IsEdited=true - null null
+[2025-06-10 12:32:28 INF] Executing endpoint 'BlogApp.Controllers.CommentController.GetComments (BlogApp)'
+[2025-06-10 12:32:28 INF] Route matched with {action = "GetComments", controller = "Comment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetComments(BlogApp.Dtos.PagedFilters.CommentPagedRequest) on controller BlogApp.Controllers.CommentController (BlogApp).
+[2025-06-10 12:32:28 INF] Executing action method BlogApp.Controllers.CommentController.GetComments (BlogApp) - Validation state: "Valid"
+[2025-06-10 12:32:28 INF] Fetching comments with PageNumber: 1, PageSize: 5
+[2025-06-10 12:32:28 INF] Service: Retrieving comments with PageNumber: 1, PageSize: 5
+[2025-06-10 12:32:28 INF] Executed DbCommand (4ms) [Parameters=[@__request_IsEdited_Value_0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Comments] AS [c]
+WHERE [c].[IsEdited] = @__request_IsEdited_Value_0
+[2025-06-10 12:32:28 WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 12:32:28 WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 12:32:28 INF] Executed DbCommand (8ms) [Parameters=[@__request_IsEdited_Value_0='?' (DbType = Boolean), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[Id], [c0].[Content], [c0].[CreatedAt], [c0].[IsEdited], [c0].[PostId], [c0].[UpdatedAt], [c0].[UserId], [p].[Id], [p].[CategoryId], [p].[Content], [p].[CreatedAt], [p].[Slug], [p].[Title], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[Avatar], [u].[Bio], [u].[CreatedAt], [u].[Email], [u].[EmailVerificationToken], [u].[EmailVerificationTokenExpiresAt], [u].[IsActive], [u].[IsEmailVerified], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiresAt], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM (
+    SELECT [c].[Id], [c].[Content], [c].[CreatedAt], [c].[IsEdited], [c].[PostId], [c].[UpdatedAt], [c].[UserId]
+    FROM [Comments] AS [c]
+    WHERE [c].[IsEdited] = @__request_IsEdited_Value_0
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [c0]
+INNER JOIN [Posts] AS [p] ON [c0].[PostId] = [p].[Id]
+INNER JOIN [Users] AS [u] ON [c0].[UserId] = [u].[Id]
+[2025-06-10 12:32:28 INF] Service: Retrieved 0 comments
+[2025-06-10 12:32:28 INF] Successfully fetched 0 comments
+[2025-06-10 12:32:28 INF] Executed action method BlogApp.Controllers.CommentController.GetComments (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 99.4037ms.
+[2025-06-10 12:32:28 INF] Executing OkObjectResult, writing value of type 'BlogApp.Entities.PaginatedList`1[[BlogApp.Models.Dtos.CommentResponseDto, BlogApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2025-06-10 12:32:28 INF] Executed action BlogApp.Controllers.CommentController.GetComments (BlogApp) in 113.2483ms
+[2025-06-10 12:32:28 INF] Executed endpoint 'BlogApp.Controllers.CommentController.GetComments (BlogApp)'
+[2025-06-10 12:32:28 INF] HTTP GET /api/comments responded 200 in 119.2515 ms
+[2025-06-10 12:32:28 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/comments?IsEdited=true - 200 null application/json; charset=utf-8 119.9541ms
