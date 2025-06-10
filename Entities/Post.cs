@@ -1,6 +1,6 @@
-using BlogApp.Entities;
+using BlogApp.Models.Entities;
 
-namespace BlogApp.Models.Entities;
+namespace BlogApp.Entities;
 
 public class Post
 {

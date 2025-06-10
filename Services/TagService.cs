@@ -1,4 +1,5 @@
 using AutoMapper;
+using BlogApp.Dtos.PagedFilters;
 using BlogApp.Entities;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Interfaces.Services;
@@ -8,9 +9,9 @@ namespace BlogApp.Services;
 
 public class TagService(ITagRepository tagRepository, IMapper mapper) : ITagService
 {
-    public async Task<PaginatedList<TagResponseDto>> GetAllTags(int pageNumber, int pageSize)
+    public async Task<PaginatedList<TagResponseDto>> GetAllTags(TagPagedRequest request)
     {
-        var paginatedTags = await tagRepository.GetAllTags(pageNumber, pageSize);
+        var paginatedTags = await tagRepository.GetAllTags(request);
         var tags =  mapper.Map<List<TagResponseDto>>(paginatedTags.Items);
         return new PaginatedList<TagResponseDto>(
             tags,

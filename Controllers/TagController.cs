@@ -1,3 +1,4 @@
+using BlogApp.Dtos.PagedFilters;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
 using Microsoft.AspNetCore.Authorization;
@@ -11,10 +12,10 @@ namespace BlogApp.Controllers;
 public class TagController(ITagService tagService) : Controller
 {
     [HttpGet]
-    public async Task<IActionResult> GetTags(int pageNumber = 1, int pageSize = 5)
+    public async Task<IActionResult> GetTags([FromQuery] TagPagedRequest request)
     {
-        if(pageNumber <= 0 || pageSize <= 0) return BadRequest("Page Number and Page Size must be greater than zero");
-        var tags = await tagService.GetAllTags(pageNumber, pageSize);
+        if(request.PageNumber <= 0 || request.PageSize <= 0) return BadRequest("Page Number and Page Size must be greater than zero");
+        var tags = await tagService.GetAllTags(request);
         return Ok(tags);
     }
 

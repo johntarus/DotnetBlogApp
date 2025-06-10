@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using BlogApp.Dtos.PagedFilters;
 using BlogApp.Dtos.Request;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
@@ -13,14 +14,14 @@ namespace BlogApp.Controllers;
 public class PostController(IPostService postService) : ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> GetAllPosts(int pageNumber = 1, int pageSize = 5)
+    public async Task<IActionResult> GetAllPosts([FromQuery] PostPagedRequest request)
     {
-        if(pageNumber <= 0 || pageSize <= 0) return BadRequest("Page Number and Page Size must be greater than zero");
+        if(request.PageNumber <= 0 || request.PageSize <= 0) return BadRequest("Page Number and Page Size must be greater than zero");
         var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
         var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
         if(userId == null || userRole == null) return Unauthorized();
         var isAdmin = userRole?.Equals("Admin", StringComparison.OrdinalIgnoreCase) == true;
-        var posts = await postService.GetPostsAsync(userId, isAdmin, pageNumber, pageSize);
+        var posts = await postService.GetPostsAsync(userId, isAdmin, request);
         return Ok(posts);
     }
 

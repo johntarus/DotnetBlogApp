@@ -1,4 +1,5 @@
 using AutoMapper;
+using BlogApp.Dtos.PagedFilters;
 using BlogApp.Dtos.Request;
 using BlogApp.Entities;
 using BlogApp.Exceptions;
@@ -12,11 +13,11 @@ namespace BlogApp.Services;
 
 public class PostService(IPostRepository postRepository, ITagRepository tagRepository, IMapper mapper) : IPostService
 {
-    public async Task<PaginatedList<PostResponseDto>> GetPostsAsync(Guid userId, bool isAdmin, int pageNumber, int pageSize)
+    public async Task<PaginatedList<PostResponseDto>> GetPostsAsync(Guid userId, bool isAdmin, PostPagedRequest request)
     {
         var paginatedPosts = isAdmin 
-            ? await postRepository.GetPostsAsync(pageNumber, pageSize) 
-            : await postRepository.GetPostsByUserIdAsync(userId, pageNumber, pageSize);
+            ? await postRepository.GetPostsAsync(request) 
+            : await postRepository.GetPostsByUserIdAsync(userId, request.PageNumber, request.PageSize);
         
         var posts = mapper.Map<List<PostResponseDto>>(paginatedPosts.Items);
         return new PaginatedList<PostResponseDto>(
@@ -45,8 +46,8 @@ public class PostService(IPostRepository postRepository, ITagRepository tagRepos
         post.Slug = SlugUtils.GenerateSlug(postDto.Title);
         if (postDto.TagIds != null && postDto.TagIds.Any())
         {
-            var allTags = await tagRepository.GetAllTags(1, 5);
-            var tags = allTags.Items.Where(t => postDto.TagIds.Contains(t.Id)).ToList();
+            var allTags = await tagRepository.GetTagsByIds(postDto.TagIds);
+            var tags = allTags.Where(t => postDto.TagIds.Contains(t.Id)).ToList();
             post.Tags = tags;
         }
         var createdPost = await postRepository.CreatePostAsync(post);

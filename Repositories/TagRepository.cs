@@ -1,23 +1,32 @@
 using BlogApp.Data;
+using BlogApp.Dtos.PagedFilters;
 using BlogApp.Entities;
 using BlogApp.Interfaces.Repositories;
+using BlogApp.Utils;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Repositories;
 
 public class TagRepository(DatabaseContext context) : ITagRepository
 {
-    public async Task<PaginatedList<Tag>> GetAllTags(int pageNumber, int pageSize)
+    public async Task<PaginatedList<Tag>> GetAllTags(TagPagedRequest request)
     {
         var query = context.Tags.Include(t => t.Posts).AsQueryable();
-        var totalCount = await query.CountAsync();
-        var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
-        var tags = await query
-            .OrderByDescending(t => t.CreatedAt)
-            .Skip((pageNumber - 1) * pageSize)
-            .Take(pageSize)
-            .ToListAsync();
-        return new PaginatedList<Tag>(tags, pageNumber, pageSize, totalCount, totalPages);
+        if (!string.IsNullOrWhiteSpace(request.SearchQuery))
+        {
+            query = query.Where(t => t.Name.Contains(request.SearchQuery));
+        }
+
+        if (request.Id.HasValue)
+        {
+            query = query.Where(t => t.Id == request.Id);
+        }
+        return await PaginationUtils.CreateAsync(query, request.PageNumber, request.PageSize);
+    }
+
+    public async Task<List<Tag>> GetTagsByIds(List<int> tagIds)
+    {
+        return await context.Tags.Where(t => tagIds.Contains(t.Id)).ToListAsync();
     }
 
     public async Task<Tag> GetTagById(int id)
