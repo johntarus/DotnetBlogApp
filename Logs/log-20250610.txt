@@ -375,3 +375,20 @@ WHERE [Id] = @p14;
 [2025-06-10 13:36:44 INF] BlogApp.Services.AuthService Login successful for user: tarusjohn96@gmail.com
 [2025-06-10 13:36:44 INF] BlogApp.Controllers.UsersController Login successful for userId: "50a22b64-7731-4357-b4b4-08dda5a9b977"
 [2025-06-10 13:36:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /api/users/login responded 200 in 351.2688 ms
+[2025-06-10 13:41:48 INF] BlogApp.Controllers.UsersController Login attempt for: tarus
+[2025-06-10 13:41:48 INF] BlogApp.Services.AuthService User attempting login: tarus
+[2025-06-10 13:41:49 INF] BlogApp.Services.AuthService Login successful for user: tarusjohn96@gmail.com
+[2025-06-10 13:41:49 INF] BlogApp.Controllers.UsersController Login successful for userId: "50a22b64-7731-4357-b4b4-08dda5a9b977"
+[2025-06-10 13:41:49 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /api/users/login responded 200 in 133.2161 ms
+[2025-06-10 13:43:53 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-10 13:43:54 INF] BlogApp.Controllers.UsersController Login attempt for: tarus
+[2025-06-10 13:43:54 INF] BlogApp.Services.AuthService User attempting login: tarus
+[2025-06-10 13:43:57 INF] BlogApp.Services.AuthService Login successful for user: tarusjohn96@gmail.com
+[2025-06-10 13:43:57 INF] BlogApp.Controllers.UsersController Login successful for userId: "50a22b64-7731-4357-b4b4-08dda5a9b977"
+[2025-06-10 13:43:57 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /api/users/login responded 200 in 3631.8056 ms
+[2025-06-10 13:46:45 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-10 13:46:46 INF] BlogApp.Controllers.UsersController Login attempt for: tarus
+[2025-06-10 13:46:46 INF] BlogApp.Services.AuthService User attempting login: tarus
+[2025-06-10 13:46:49 INF] BlogApp.Services.AuthService Login successful for user: tarusjohn96@gmail.com
+[2025-06-10 13:46:49 INF] BlogApp.Controllers.UsersController Login successful for userId: "50a22b64-7731-4357-b4b4-08dda5a9b977"
+[2025-06-10 13:46:49 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /api/users/login responded 200 in 4488.9646 ms
