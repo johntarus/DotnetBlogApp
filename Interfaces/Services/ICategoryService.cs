@@ -1,3 +1,4 @@
+using BlogApp.Dtos.PagedFilters;
 using BlogApp.Entities;
 using BlogApp.Models.Dtos;
 
@@ -5,7 +6,7 @@ namespace BlogApp.Interfaces.Services;
 
 public interface ICategoryService
 {
-    Task<PaginatedList<CategoryResponseDto>> GetCategoriesAsync(int pageNumber, int pageSize);
+    Task<PaginatedList<CategoryResponseDto>> GetCategoriesAsync(CategoryPagedRequest request);
     Task<CategoryResponseDto?> GetCategoryById(int id);
     Task<CategoryResponseDto> AddCategoryAsync(AddCategoryDto categoryDto);
     Task<CategoryResponseDto> UpdateCategoryAsync(int id, UpdateCategoryDto categoryDto);

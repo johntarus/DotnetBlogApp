@@ -1,13 +1,15 @@
 using BlogApp.Data;
+using BlogApp.Dtos.PagedFilters;
 using BlogApp.Entities;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Models.Entities;
+using BlogApp.Utils;
 using Microsoft.EntityFrameworkCore;
 namespace BlogApp.Repositories;
 
 public class CategoryRepository(DatabaseContext context) : ICategoryRepository
 {
-    public async Task<PaginatedList<Category>> GetCategoriesAsync(int pageNumber, int pageSize)
+    public async Task<PaginatedList<Category>> GetCategoriesAsync(CategoryPagedRequest request)
     {
         var query = context.Categories
             .Include(c => c.Posts)
@@ -19,10 +21,16 @@ public class CategoryRepository(DatabaseContext context) : ICategoryRepository
             .Include(c => c.Posts)
             .ThenInclude(p => p.Comments)
             .AsQueryable();
-        var totalCount = await query.CountAsync();
-        var totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
-        var posts = await query.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
-        return new PaginatedList<Category>(posts, pageNumber, pageSize, totalCount, totalPages);
+        if (!string.IsNullOrWhiteSpace(request.SearchQuery))
+        {
+            query = query.Where(c=>c.Name.Contains(request.SearchQuery.ToLower()));
+        }
+
+        if (request.Id.HasValue)
+        {
+            query = query.Where(c=>c.Id == request.Id);
+        }
+        return await PaginationUtils.CreateAsync(query, request.PageNumber, request.PageSize);
     }
 
     public async Task<Category> GetCategoryByIdAsync(int id)

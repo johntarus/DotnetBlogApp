@@ -1,4 +1,5 @@
 using BlogApp.Data;
+using BlogApp.Dtos.PagedFilters;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
 using Microsoft.AspNetCore.Authorization;
@@ -11,10 +12,10 @@ public class CategoryController(DatabaseContext context, ICategoryService catego
 {
     [Authorize]
     [HttpGet]
-    public async Task<IActionResult> GetCategories(int pageNumber, int pageSize)
+    public async Task<IActionResult> GetCategories(CategoryPagedRequest request)
     {
-        if(pageNumber <= 0 || pageSize <= 0) return BadRequest("Page Number and Page Size must be greater than zero");
-        var categories = await categoryService.GetCategoriesAsync(pageNumber, pageSize );
+        if(request.PageNumber <= 0 || request.PageSize <= 0) return BadRequest("Page Number and Page Size must be greater than zero");
+        var categories = await categoryService.GetCategoriesAsync(request);
         return Ok(categories);
     }
 
