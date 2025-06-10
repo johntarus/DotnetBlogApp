@@ -1,7 +1,6 @@
 using BlogApp.Data;
 using BlogApp.Entities;
 using BlogApp.Interfaces;
-using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 

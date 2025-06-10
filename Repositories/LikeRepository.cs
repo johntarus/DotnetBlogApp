@@ -1,5 +1,5 @@
 using BlogApp.Data;
-using BlogApp.Dtos.Request;
+using BlogApp.Dtos.PagedFilters;
 using BlogApp.Entities;
 using BlogApp.Interfaces.Repositories;
 using BlogApp.Models.Entities;
@@ -10,13 +10,22 @@ namespace BlogApp.Repositories;
 
 public class LikeRepository(DatabaseContext context) : ILikeRepository
 {
-    public async Task<PaginatedList<Like>> GetLikesAsync(PagedRequestDto request)
+    public async Task<PaginatedList<Like>> GetLikesAsync(LikesPagedRequest request)
     {
         var query = context.Likes.Include(l => l.User).AsQueryable();
         if (!string.IsNullOrWhiteSpace(request.SearchQuery))
         {
-            var searchQuery = request.SearchQuery.Trim().ToLower();
-            query = query.Where(l=>l.User.Username.ToLower().Contains(searchQuery));
+            query = query.Where(l=>l.User.Username.ToLower().Contains(request.SearchQuery.ToLower()));
+        }
+
+        if (request.UserId.HasValue)
+        {
+            query = query.Where(l => l.UserId == request.UserId.Value);
+        }
+
+        if (request.PostId.HasValue)
+        {
+            query = query.Where(l => l.PostId == request.PostId.Value);
         }
         query = query.OrderByDescending(l => l.Id);
     

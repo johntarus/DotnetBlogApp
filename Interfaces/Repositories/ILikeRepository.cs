@@ -1,4 +1,4 @@
-using BlogApp.Dtos.Request;
+using BlogApp.Dtos.PagedFilters;
 using BlogApp.Entities;
 using BlogApp.Models.Entities;
 
@@ -6,7 +6,7 @@ namespace BlogApp.Interfaces.Repositories;
 
 public interface ILikeRepository
 {
-    Task<PaginatedList<Like>> GetLikesAsync(PagedRequestDto request);
+    Task<PaginatedList<Like>> GetLikesAsync(LikesPagedRequest request);
     Task<Like?> GetLikeByIdAsync(int id);
     Task<Like?> GetLikeAsync(Guid postId, Guid userId);
     Task<Like> AddLikeAsync(Like like);
