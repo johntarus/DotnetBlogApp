@@ -2,7 +2,6 @@ using BlogApp.Data;
 using BlogApp.Dtos.PagedFilters;
 using BlogApp.Entities;
 using BlogApp.Interfaces.Repositories;
-using BlogApp.Models.Entities;
 using BlogApp.Utils;
 using Microsoft.EntityFrameworkCore;
 

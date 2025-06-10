@@ -5,7 +5,6 @@ using BlogApp.Interfaces;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
-using Microsoft.Extensions.Logging;
 
 namespace BlogApp.Services;
 

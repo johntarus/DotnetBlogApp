@@ -111,3 +111,60 @@ INNER JOIN [Users] AS [u] ON [c0].[UserId] = [u].[Id]
 [2025-06-10 12:32:28 INF] Executed endpoint 'BlogApp.Controllers.CommentController.GetComments (BlogApp)'
 [2025-06-10 12:32:28 INF] HTTP GET /api/comments responded 200 in 119.2515 ms
 [2025-06-10 12:32:28 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/comments?IsEdited=true - 200 null application/json; charset=utf-8 119.9541ms
+[2025-06-10 12:38:12 INF] Application is shutting down...
+[2025-06-10 12:38:16 INF] User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-10 12:38:17 INF] Now listening on: http://localhost:5263
+[2025-06-10 12:38:17 INF] Application started. Press Ctrl+C to shut down.
+[2025-06-10 12:38:17 INF] Hosting environment: Development
+[2025-06-10 12:38:17 INF] Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-10 12:38:17 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-10 12:38:17 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 205.5854ms
+[2025-06-10 12:38:18 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-10 12:38:18 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 227.2047ms
+[2025-06-10 12:38:27 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/likes - null null
+[2025-06-10 12:38:27 WRN] Failed to determine the https port for redirect.
+[2025-06-10 12:38:27 INF] Executing endpoint 'BlogApp.Controllers.LikesController.GetLikes (BlogApp)'
+[2025-06-10 12:38:27 INF] Route matched with {action = "GetLikes", controller = "Likes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLikes(BlogApp.Dtos.PagedFilters.LikesPagedRequest) on controller BlogApp.Controllers.LikesController (BlogApp).
+[2025-06-10 12:38:27 INF] Executing action method BlogApp.Controllers.LikesController.GetLikes (BlogApp) - Validation state: "Valid"
+[2025-06-10 12:38:27 INF] Getting likes with request: {"PostId":null,"UserId":null,"SearchQuery":null,"PageNumber":1,"PageSize":5}
+[2025-06-10 12:38:27 INF] Fetching likes: {"PostId":null,"UserId":null,"SearchQuery":null,"PageNumber":1,"PageSize":5}
+[2025-06-10 12:38:30 INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Likes] AS [l]
+[2025-06-10 12:38:30 INF] Executed DbCommand (25ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l0].[Id], [l0].[CreateAt], [l0].[PostId], [l0].[UserId], [u].[Id], [u].[Avatar], [u].[Bio], [u].[CreatedAt], [u].[Email], [u].[EmailVerificationToken], [u].[EmailVerificationTokenExpiresAt], [u].[IsActive], [u].[IsEmailVerified], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiresAt], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM (
+    SELECT [l].[Id], [l].[CreateAt], [l].[PostId], [l].[UserId]
+    FROM [Likes] AS [l]
+    ORDER BY [l].[Id] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [l0]
+INNER JOIN [Users] AS [u] ON [l0].[UserId] = [u].[Id]
+ORDER BY [l0].[Id] DESC
+[2025-06-10 12:38:30 INF] Likes fetched: {"PageNumber":1,"PageSize":5,"TotalCount":5,"TotalPages":1,"Items":[{"Id":22,"PostId":"92619535-7ef5-4616-6165-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":21,"PostId":"6f6a1c55-e40d-4c9d-6166-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":20,"PostId":"7583ed5a-6958-403b-6167-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":19,"PostId":"c3a490e5-a6c7-4734-6168-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":18,"PostId":"805bc2ff-f817-468e-6169-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"}],"HasPreviousPage":false,"HasNextPage":false}
+[2025-06-10 12:38:30 INF] Likes fetched: {"PageNumber":1,"PageSize":5,"TotalCount":5,"TotalPages":1,"Items":[{"Id":22,"PostId":"92619535-7ef5-4616-6165-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":21,"PostId":"6f6a1c55-e40d-4c9d-6166-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":20,"PostId":"7583ed5a-6958-403b-6167-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":19,"PostId":"c3a490e5-a6c7-4734-6168-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":18,"PostId":"805bc2ff-f817-468e-6169-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"}],"HasPreviousPage":false,"HasNextPage":false}
+[2025-06-10 12:38:30 INF] Executed action method BlogApp.Controllers.LikesController.GetLikes (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2900.4801ms.
+[2025-06-10 12:38:30 INF] Executing OkObjectResult, writing value of type 'BlogApp.Entities.PaginatedList`1[[BlogApp.Dtos.Response.LikeResponseDto, BlogApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2025-06-10 12:38:30 INF] Executed action BlogApp.Controllers.LikesController.GetLikes (BlogApp) in 3333.7744ms
+[2025-06-10 12:38:30 INF] Executed endpoint 'BlogApp.Controllers.LikesController.GetLikes (BlogApp)'
+[2025-06-10 12:38:30 INF] HTTP GET /api/likes responded 200 in 3508.8034 ms
+[2025-06-10 12:38:30 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/likes - 200 null application/json; charset=utf-8 3540.1987ms
+[2025-06-10 12:39:14 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/likes/21 - null null
+[2025-06-10 12:39:14 INF] Executing endpoint 'BlogApp.Controllers.LikesController.GetLikeById (BlogApp)'
+[2025-06-10 12:39:14 INF] Route matched with {action = "GetLikeById", controller = "Likes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLikeById(Int32) on controller BlogApp.Controllers.LikesController (BlogApp).
+[2025-06-10 12:39:14 INF] Executing action method BlogApp.Controllers.LikesController.GetLikeById (BlogApp) - Validation state: "Valid"
+[2025-06-10 12:39:14 INF] Getting like by ID: 21
+[2025-06-10 12:39:14 INF] Fetching like by ID: 21
+[2025-06-10 12:39:14 INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[CreateAt], [l].[PostId], [l].[UserId], [u].[Id], [u].[Avatar], [u].[Bio], [u].[CreatedAt], [u].[Email], [u].[EmailVerificationToken], [u].[EmailVerificationTokenExpiresAt], [u].[IsActive], [u].[IsEmailVerified], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiresAt], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Likes] AS [l]
+INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
+WHERE [l].[Id] = @__id_0
+[2025-06-10 12:39:14 INF] Fetched like: {"Id":21,"PostId":"6f6a1c55-e40d-4c9d-6166-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"}
+[2025-06-10 12:39:14 INF] Like fetched: {"Id":21,"PostId":"6f6a1c55-e40d-4c9d-6166-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"}
+[2025-06-10 12:39:14 INF] Executed action method BlogApp.Controllers.LikesController.GetLikeById (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 74.653ms.
+[2025-06-10 12:39:14 INF] Executing OkObjectResult, writing value of type 'BlogApp.Dtos.Response.LikeResponseDto'.
+[2025-06-10 12:39:14 INF] Executed action BlogApp.Controllers.LikesController.GetLikeById (BlogApp) in 80.7486ms
+[2025-06-10 12:39:14 INF] Executed endpoint 'BlogApp.Controllers.LikesController.GetLikeById (BlogApp)'
+[2025-06-10 12:39:14 INF] HTTP GET /api/likes/21 responded 200 in 93.1246 ms
+[2025-06-10 12:39:14 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/likes/21 - 200 null application/json; charset=utf-8 94.0045ms

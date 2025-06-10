@@ -1,6 +1,5 @@
 using BlogApp.Dtos.PagedFilters;
 using BlogApp.Entities;
-using BlogApp.Models.Entities;
 
 namespace BlogApp.Interfaces.Repositories;
 

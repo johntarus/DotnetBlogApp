@@ -5,7 +5,6 @@ using BlogApp.Interfaces.Repositories;
 using BlogApp.Interfaces.Services;
 using BlogApp.Models.Dtos;
 using BlogApp.Models.Entities;
-using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.Services;
 
