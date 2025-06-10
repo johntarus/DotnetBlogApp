@@ -8,55 +8,108 @@ using Microsoft.AspNetCore.Mvc;
 namespace BlogApp.Controllers;
 
 [Route("api/categories")]
-public class CategoryController(DatabaseContext context, ICategoryService categoryService) : ControllerBase
+public class CategoryController(ICategoryService categoryService, ILogger<CategoryController> logger) : ControllerBase
 {
     [Authorize]
     [HttpGet]
-    public async Task<IActionResult> GetCategories(CategoryPagedRequest request)
+    public async Task<IActionResult> GetCategories([FromQuery] CategoryPagedRequest request)
     {
-        if(request.PageNumber <= 0 || request.PageSize <= 0) return BadRequest("Page Number and Page Size must be greater than zero");
-        var categories = await categoryService.GetCategoriesAsync(request);
-        return Ok(categories);
+        logger.LogInformation("Fetching categories with PageNumber: {PageNumber}, PageSize: {PageSize}", 
+            request.PageNumber, request.PageSize);
+
+        if (request.PageNumber <= 0 || request.PageSize <= 0)
+        {
+            logger.LogWarning("Invalid pagination parameters: PageNumber={PageNumber}, PageSize={PageSize}", 
+                request.PageNumber, request.PageSize);
+            return BadRequest("Page Number and Page Size must be greater than zero");
+        }
+
+        try
+        {
+            var result = await categoryService.GetCategoriesAsync(request);
+
+            logger.LogInformation("Successfully retrieved {Count} categories", result.Items.Count);
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "An error occurred while fetching categories");
+            return StatusCode(500, "An error occurred while processing your request.");
+        }
     }
+
 
     
-    [HttpPost]
-    public async Task<IActionResult> CreateCategory(AddCategoryDto categoryDto)
+   [HttpPost]
+public async Task<IActionResult> CreateCategory(AddCategoryDto categoryDto)
+{
+    logger.LogInformation("Creating new category with name: {CategoryName}", categoryDto.Name);
+    
+    if(ModelState.IsValid == false)
     {
-        if(ModelState.IsValid == false)
-            return BadRequest(ModelState);
-        var category = await categoryService.AddCategoryAsync(categoryDto);
-        return Ok(category);
+        logger.LogWarning("Invalid model state for category creation. Errors: {@Errors}", 
+            ModelState.Values.SelectMany(v => v.Errors));
+        return BadRequest(ModelState);
     }
+    
+    var category = await categoryService.AddCategoryAsync(categoryDto);
+    logger.LogInformation("Successfully created category with ID: {CategoryId}", category.Id);
+    
+    return Ok(category);
+}
 
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetCategoryById(int id)
+[HttpGet("{id}")]
+public async Task<IActionResult> GetCategoryById(int id)
+{
+    logger.LogInformation("Fetching category with ID: {CategoryId}", id);
+    
+    var category = await categoryService.GetCategoryById(id);
+    if (category == null)
     {
-        var category = await categoryService.GetCategoryById(id);
-        if (category == null) return NotFound();
-        return Ok(category);
+        logger.LogWarning("Category with ID {CategoryId} not found", id);
+        return NotFound();
     }
+    
+    logger.LogDebug("Retrieved category: {@Category}", category);
+    return Ok(category);
+}
 
-    [HttpPatch("{id}")]
-    public async Task<IActionResult> UpdateCategory(int id, [FromBody] UpdateCategoryDto updateCategory)
+[HttpPatch("{id}")]
+public async Task<IActionResult> UpdateCategory(int id, [FromBody] UpdateCategoryDto updateCategory)
+{
+    logger.LogInformation("Updating category with ID: {CategoryId}", id);
+    
+    if(ModelState.IsValid == false)
     {
-        if(ModelState.IsValid == false) return BadRequest(ModelState);
-        var category = await categoryService.UpdateCategoryAsync(id, updateCategory);
-        if (category == null)
-        {
-            return NotFound();
-        }
-        return Ok(category);  
+        logger.LogWarning("Invalid model state for category update. Errors: {@Errors}", 
+            ModelState.Values.SelectMany(v => v.Errors));
+        return BadRequest(ModelState);
     }
+    
+    var category = await categoryService.UpdateCategoryAsync(id, updateCategory);
+    if (category == null)
+    {
+        logger.LogWarning("Category with ID {CategoryId} not found for update", id);
+        return NotFound();
+    }
+    
+    logger.LogInformation("Successfully updated category with ID: {CategoryId}", id);
+    return Ok(category);  
+}
 
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteCategory(int id)
+[HttpDelete("{id}")]
+public async Task<IActionResult> DeleteCategory(int id)
+{
+    logger.LogInformation("Deleting category with ID: {CategoryId}", id);
+    
+    var deleted = await categoryService.DeleteCategoryAsync(id);
+    if (deleted == false)
     {
-        var deleted = await categoryService.DeleteCategoryAsync(id);
-        if (deleted == false)
-        {
-            return NotFound();
-        }
-        return NoContent(); 
+        logger.LogWarning("Category with ID {CategoryId} not found for deletion", id);
+        return NotFound();
     }
+    
+    logger.LogInformation("Successfully deleted category with ID: {CategoryId}", id);
+    return NoContent(); 
+}
 }

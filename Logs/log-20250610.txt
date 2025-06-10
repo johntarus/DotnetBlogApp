@@ -1,0 +1,42 @@
+[2025-06-10 12:21:52 INF] User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-10 12:21:53 INF] Now listening on: http://localhost:5263
+[2025-06-10 12:21:53 INF] Application started. Press Ctrl+C to shut down.
+[2025-06-10 12:21:53 INF] Hosting environment: Development
+[2025-06-10 12:21:53 INF] Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-10 12:21:53 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-10 12:21:53 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 181.9082ms
+[2025-06-10 12:21:54 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-10 12:21:54 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 208.2903ms
+[2025-06-10 12:22:19 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/categories/5 - null null
+[2025-06-10 12:22:19 WRN] Failed to determine the https port for redirect.
+[2025-06-10 12:22:19 INF] Executing endpoint 'BlogApp.Controllers.CategoryController.GetCategoryById (BlogApp)'
+[2025-06-10 12:22:19 INF] Route matched with {action = "GetCategoryById", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoryById(Int32) on controller BlogApp.Controllers.CategoryController (BlogApp).
+[2025-06-10 12:22:19 INF] Executing action method BlogApp.Controllers.CategoryController.GetCategoryById (BlogApp) - Validation state: "Valid"
+[2025-06-10 12:22:19 INF] Fetching category with ID: 5
+[2025-06-10 12:22:21 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2025-06-10 12:22:22 INF] Executed DbCommand (96ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c1].[Id], [c1].[Name], [s0].[Id], [s0].[CategoryId], [s0].[Content], [s0].[CreatedAt], [s0].[Slug], [s0].[Title], [s0].[UpdatedAt], [s0].[UserId], [s0].[Id0], [s0].[Avatar], [s0].[Bio], [s0].[CreatedAt0], [s0].[Email], [s0].[EmailVerificationToken], [s0].[EmailVerificationTokenExpiresAt], [s0].[IsActive], [s0].[IsEmailVerified], [s0].[PasswordHash], [s0].[RefreshToken], [s0].[RefreshTokenExpiresAt], [s0].[Role], [s0].[UpdatedAt0], [s0].[Username], [s0].[PostsId], [s0].[TagsId], [s0].[Id1], [s0].[CreatedAt1], [s0].[Name], [s0].[UpdatedAt1], [s0].[Id2], [s0].[CreateAt], [s0].[PostId], [s0].[UserId0], [s0].[Id3], [s0].[Content0], [s0].[CreatedAt2], [s0].[IsEdited], [s0].[PostId0], [s0].[UpdatedAt2], [s0].[UserId1]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[Name]
+    FROM [Categories] AS [c]
+    WHERE [c].[Id] = @__id_0
+) AS [c1]
+LEFT JOIN (
+    SELECT [p].[Id], [p].[CategoryId], [p].[Content], [p].[CreatedAt], [p].[Slug], [p].[Title], [p].[UpdatedAt], [p].[UserId], [u].[Id] AS [Id0], [u].[Avatar], [u].[Bio], [u].[CreatedAt] AS [CreatedAt0], [u].[Email], [u].[EmailVerificationToken], [u].[EmailVerificationTokenExpiresAt], [u].[IsActive], [u].[IsEmailVerified], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiresAt], [u].[Role], [u].[UpdatedAt] AS [UpdatedAt0], [u].[Username], [s].[PostsId], [s].[TagsId], [s].[Id] AS [Id1], [s].[CreatedAt] AS [CreatedAt1], [s].[Name], [s].[UpdatedAt] AS [UpdatedAt1], [l].[Id] AS [Id2], [l].[CreateAt], [l].[PostId], [l].[UserId] AS [UserId0], [c0].[Id] AS [Id3], [c0].[Content] AS [Content0], [c0].[CreatedAt] AS [CreatedAt2], [c0].[IsEdited], [c0].[PostId] AS [PostId0], [c0].[UpdatedAt] AS [UpdatedAt2], [c0].[UserId] AS [UserId1]
+    FROM [Posts] AS [p]
+    INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
+    LEFT JOIN (
+        SELECT [p0].[PostsId], [p0].[TagsId], [t].[Id], [t].[CreatedAt], [t].[Name], [t].[UpdatedAt]
+        FROM [PostTags] AS [p0]
+        INNER JOIN [Tags] AS [t] ON [p0].[TagsId] = [t].[Id]
+    ) AS [s] ON [p].[Id] = [s].[PostsId]
+    LEFT JOIN [Likes] AS [l] ON [p].[Id] = [l].[PostId]
+    LEFT JOIN [Comments] AS [c0] ON [p].[Id] = [c0].[PostId]
+) AS [s0] ON [c1].[Id] = [s0].[CategoryId]
+ORDER BY [c1].[Id], [s0].[Id], [s0].[Id0], [s0].[PostsId], [s0].[TagsId], [s0].[Id1], [s0].[Id2]
+[2025-06-10 12:22:22 INF] Executed action method BlogApp.Controllers.CategoryController.GetCategoryById (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3037.4704ms.
+[2025-06-10 12:22:22 INF] Executing OkObjectResult, writing value of type 'CategoryResponseDto'.
+[2025-06-10 12:22:22 INF] Executed action BlogApp.Controllers.CategoryController.GetCategoryById (BlogApp) in 3628.7083ms
+[2025-06-10 12:22:22 INF] Executed endpoint 'BlogApp.Controllers.CategoryController.GetCategoryById (BlogApp)'
+[2025-06-10 12:22:22 INF] HTTP GET /api/categories/5 responded 200 in 3806.5924 ms
+[2025-06-10 12:22:22 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/categories/5 - 200 null application/json; charset=utf-8 3844.2554ms

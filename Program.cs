@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(BlogProfile));
 
+// Log.Logger = new LoggerConfiguration().MinimumLevel.Information()
+//     .WriteTo.File("Logs/logs.txt", rollingInterval: RollingInterval.Day)
+//     .CreateLogger();
+builder.Host.UseSerilog((context, configuration) =>
+    configuration.ReadFrom.Configuration(context.Configuration));
 var db = builder.Configuration.GetConnectionString("DefaultConnection");
 Console.WriteLine(db, "This is the dab data");
 builder.Services.AddDbContext<DatabaseContext>(options =>
@@ -82,6 +88,10 @@ c.AddSecurityRequirement(new()
     }
 });
 });
+// builder.Host.UseSerilog();
+// builder.Logging.AddConsole();
+// builder.Logging.AddDebug();
+// Log.Information("Application starting");
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
@@ -93,6 +103,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseMiddleware<ErrorHandlingMiddleware>();
