@@ -1,170 +1,163 @@
-[2025-06-10 12:21:52 INF] User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
-[2025-06-10 12:21:53 INF] Now listening on: http://localhost:5263
-[2025-06-10 12:21:53 INF] Application started. Press Ctrl+C to shut down.
-[2025-06-10 12:21:53 INF] Hosting environment: Development
-[2025-06-10 12:21:53 INF] Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
-[2025-06-10 12:21:53 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
-[2025-06-10 12:21:53 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 181.9082ms
-[2025-06-10 12:21:54 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
-[2025-06-10 12:21:54 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 208.2903ms
-[2025-06-10 12:22:19 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/categories/5 - null null
-[2025-06-10 12:22:19 WRN] Failed to determine the https port for redirect.
-[2025-06-10 12:22:19 INF] Executing endpoint 'BlogApp.Controllers.CategoryController.GetCategoryById (BlogApp)'
-[2025-06-10 12:22:19 INF] Route matched with {action = "GetCategoryById", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoryById(Int32) on controller BlogApp.Controllers.CategoryController (BlogApp).
-[2025-06-10 12:22:19 INF] Executing action method BlogApp.Controllers.CategoryController.GetCategoryById (BlogApp) - Validation state: "Valid"
-[2025-06-10 12:22:19 INF] Fetching category with ID: 5
-[2025-06-10 12:22:21 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
-[2025-06-10 12:22:22 INF] Executed DbCommand (96ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
-SELECT [c1].[Id], [c1].[Name], [s0].[Id], [s0].[CategoryId], [s0].[Content], [s0].[CreatedAt], [s0].[Slug], [s0].[Title], [s0].[UpdatedAt], [s0].[UserId], [s0].[Id0], [s0].[Avatar], [s0].[Bio], [s0].[CreatedAt0], [s0].[Email], [s0].[EmailVerificationToken], [s0].[EmailVerificationTokenExpiresAt], [s0].[IsActive], [s0].[IsEmailVerified], [s0].[PasswordHash], [s0].[RefreshToken], [s0].[RefreshTokenExpiresAt], [s0].[Role], [s0].[UpdatedAt0], [s0].[Username], [s0].[PostsId], [s0].[TagsId], [s0].[Id1], [s0].[CreatedAt1], [s0].[Name], [s0].[UpdatedAt1], [s0].[Id2], [s0].[CreateAt], [s0].[PostId], [s0].[UserId0], [s0].[Id3], [s0].[Content0], [s0].[CreatedAt2], [s0].[IsEdited], [s0].[PostId0], [s0].[UpdatedAt2], [s0].[UserId1]
+[2025-06-10 12:49:22 INF] User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-10 12:49:22 INF] Now listening on: http://localhost:5263
+[2025-06-10 12:49:22 INF] Application started. Press Ctrl+C to shut down.
+[2025-06-10 12:49:22 INF] Hosting environment: Development
+[2025-06-10 12:49:22 INF] Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-10 12:49:23 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-10 12:49:23 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 205.353ms
+[2025-06-10 12:49:23 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-10 12:49:24 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 193.2707ms
+[2025-06-10 12:49:32 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/posts - null null
+[2025-06-10 12:49:32 WRN] Failed to determine the https port for redirect.
+[2025-06-10 12:49:32 INF] Executing endpoint 'BlogApp.Controllers.PostController.GetAllPosts (BlogApp)'
+[2025-06-10 12:49:32 INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts(BlogApp.Dtos.PagedFilters.PostPagedRequest) on controller BlogApp.Controllers.PostController (BlogApp).
+[2025-06-10 12:49:33 INF] Executing action method BlogApp.Controllers.PostController.GetAllPosts (BlogApp) - Validation state: "Valid"
+[2025-06-10 12:49:33 INF] Fetching posts - Page 1, Size 5
+[2025-06-10 12:49:35 INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+[2025-06-10 12:49:35 WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 12:49:35 WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 12:49:35 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2025-06-10 12:49:35 INF] Executed DbCommand (23ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p0].[Id], [p0].[CategoryId], [p0].[Content], [p0].[CreatedAt], [p0].[Slug], [p0].[Title], [p0].[UpdatedAt], [p0].[UserId], [u].[Id], [u].[Avatar], [u].[Bio], [u].[CreatedAt], [u].[Email], [u].[EmailVerificationToken], [u].[EmailVerificationTokenExpiresAt], [u].[IsActive], [u].[IsEmailVerified], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiresAt], [u].[Role], [u].[UpdatedAt], [u].[Username], [c].[Id], [c].[Name], [c0].[Id], [c0].[Content], [c0].[CreatedAt], [c0].[IsEdited], [c0].[PostId], [c0].[UpdatedAt], [c0].[UserId], [l].[Id], [l].[CreateAt], [l].[PostId], [l].[UserId], [s].[PostsId], [s].[TagsId], [s].[Id], [s].[CreatedAt], [s].[Name], [s].[UpdatedAt]
 FROM (
-    SELECT TOP(1) [c].[Id], [c].[Name]
-    FROM [Categories] AS [c]
-    WHERE [c].[Id] = @__id_0
-) AS [c1]
+    SELECT [p].[Id], [p].[CategoryId], [p].[Content], [p].[CreatedAt], [p].[Slug], [p].[Title], [p].[UpdatedAt], [p].[UserId]
+    FROM [Posts] AS [p]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [p0]
+INNER JOIN [Users] AS [u] ON [p0].[UserId] = [u].[Id]
+INNER JOIN [Categories] AS [c] ON [p0].[CategoryId] = [c].[Id]
+LEFT JOIN [Comments] AS [c0] ON [p0].[Id] = [c0].[PostId]
+LEFT JOIN [Likes] AS [l] ON [p0].[Id] = [l].[PostId]
 LEFT JOIN (
-    SELECT [p].[Id], [p].[CategoryId], [p].[Content], [p].[CreatedAt], [p].[Slug], [p].[Title], [p].[UpdatedAt], [p].[UserId], [u].[Id] AS [Id0], [u].[Avatar], [u].[Bio], [u].[CreatedAt] AS [CreatedAt0], [u].[Email], [u].[EmailVerificationToken], [u].[EmailVerificationTokenExpiresAt], [u].[IsActive], [u].[IsEmailVerified], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiresAt], [u].[Role], [u].[UpdatedAt] AS [UpdatedAt0], [u].[Username], [s].[PostsId], [s].[TagsId], [s].[Id] AS [Id1], [s].[CreatedAt] AS [CreatedAt1], [s].[Name], [s].[UpdatedAt] AS [UpdatedAt1], [l].[Id] AS [Id2], [l].[CreateAt], [l].[PostId], [l].[UserId] AS [UserId0], [c0].[Id] AS [Id3], [c0].[Content] AS [Content0], [c0].[CreatedAt] AS [CreatedAt2], [c0].[IsEdited], [c0].[PostId] AS [PostId0], [c0].[UpdatedAt] AS [UpdatedAt2], [c0].[UserId] AS [UserId1]
+    SELECT [p1].[PostsId], [p1].[TagsId], [t].[Id], [t].[CreatedAt], [t].[Name], [t].[UpdatedAt]
+    FROM [PostTags] AS [p1]
+    INNER JOIN [Tags] AS [t] ON [p1].[TagsId] = [t].[Id]
+) AS [s] ON [p0].[Id] = [s].[PostsId]
+ORDER BY [p0].[Id], [u].[Id], [c].[Id], [c0].[Id], [l].[Id], [s].[PostsId], [s].[TagsId]
+[2025-06-10 12:49:36 INF] Executed action method BlogApp.Controllers.PostController.GetAllPosts (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3077.9001ms.
+[2025-06-10 12:49:36 INF] Executing OkObjectResult, writing value of type 'BlogApp.Entities.PaginatedList`1[[BlogApp.Models.Dtos.PostResponseDto, BlogApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2025-06-10 12:49:36 INF] Executed action BlogApp.Controllers.PostController.GetAllPosts (BlogApp) in 3747.9176ms
+[2025-06-10 12:49:36 INF] Executed endpoint 'BlogApp.Controllers.PostController.GetAllPosts (BlogApp)'
+[2025-06-10 12:49:36 INF] HTTP GET /api/posts responded 200 in 3930.6323 ms
+[2025-06-10 12:49:36 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/posts - 200 null application/json; charset=utf-8 3962.6403ms
+[2025-06-10 12:56:25 INF] Application is shutting down...
+[2025-06-10 12:56:29 INF] User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-10 12:56:29 INF] Now listening on: http://localhost:5263
+[2025-06-10 12:56:29 INF] Application started. Press Ctrl+C to shut down.
+[2025-06-10 12:56:29 INF] Hosting environment: Development
+[2025-06-10 12:56:29 INF] Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-10 12:56:30 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-10 12:56:30 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 203.248ms
+[2025-06-10 12:56:30 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-10 12:56:31 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 201.6316ms
+[2025-06-10 12:56:33 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/posts - null null
+[2025-06-10 12:56:33 WRN] Failed to determine the https port for redirect.
+[2025-06-10 12:56:33 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '6/10/2025 9:50:46 AM', Current time (UTC): '6/10/2025 9:56:33 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+[2025-06-10 12:56:33 INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '6/10/2025 9:50:46 AM', Current time (UTC): '6/10/2025 9:56:33 AM'.
+[2025-06-10 12:56:33 INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[2025-06-10 12:56:33 INF] AuthenticationScheme: Bearer was challenged.
+[2025-06-10 12:56:33 INF] HTTP GET /api/posts responded 401 in 146.6241 ms
+[2025-06-10 12:56:33 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/posts - 401 0 null 152.8868ms
+[2025-06-10 12:56:53 INF] Request starting HTTP/1.1 POST http://localhost:5263/api/users/refresh-token - application/json 640
+[2025-06-10 12:56:53 INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '6/10/2025 9:50:46 AM', Current time (UTC): '6/10/2025 9:56:53 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+[2025-06-10 12:56:53 INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '6/10/2025 9:50:46 AM', Current time (UTC): '6/10/2025 9:56:53 AM'.
+[2025-06-10 12:56:53 INF] Executing endpoint 'BlogApp.Controllers.UsersController.RefreshToken (BlogApp)'
+[2025-06-10 12:56:53 INF] Route matched with {action = "RefreshToken", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BlogApp.Dtos.Response.UserResponseDto]] RefreshToken(BlogApp.Dtos.Request.RefreshTokenRequestDto) on controller BlogApp.Controllers.UsersController (BlogApp).
+[2025-06-10 12:56:53 INF] Executing action method BlogApp.Controllers.UsersController.RefreshToken (BlogApp) - Validation state: "Valid"
+[2025-06-10 12:56:56 INF] Executed DbCommand (82ms) [Parameters=[@__p_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Avatar], [u].[Bio], [u].[CreatedAt], [u].[Email], [u].[EmailVerificationToken], [u].[EmailVerificationTokenExpiresAt], [u].[IsActive], [u].[IsEmailVerified], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiresAt], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+[2025-06-10 12:56:56 INF] Executed DbCommand (12ms) [Parameters=[@p14='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (Size = 8000) (DbType = Binary), @p9='?' (Size = 4000), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Avatar] = @p0, [Bio] = @p1, [CreatedAt] = @p2, [Email] = @p3, [EmailVerificationToken] = @p4, [EmailVerificationTokenExpiresAt] = @p5, [IsActive] = @p6, [IsEmailVerified] = @p7, [PasswordHash] = @p8, [RefreshToken] = @p9, [RefreshTokenExpiresAt] = @p10, [Role] = @p11, [UpdatedAt] = @p12, [Username] = @p13
+OUTPUT 1
+WHERE [Id] = @p14;
+[2025-06-10 12:56:56 INF] Executed action method BlogApp.Controllers.UsersController.RefreshToken (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2935.9498ms.
+[2025-06-10 12:56:56 INF] Executing OkObjectResult, writing value of type 'BlogApp.Dtos.Response.UserResponseDto'.
+[2025-06-10 12:56:56 INF] Executed action BlogApp.Controllers.UsersController.RefreshToken (BlogApp) in 3564.2922ms
+[2025-06-10 12:56:56 INF] Executed endpoint 'BlogApp.Controllers.UsersController.RefreshToken (BlogApp)'
+[2025-06-10 12:56:56 INF] HTTP POST /api/users/refresh-token responded 200 in 3622.8546 ms
+[2025-06-10 12:56:56 INF] Request finished HTTP/1.1 POST http://localhost:5263/api/users/refresh-token - 200 null application/json; charset=utf-8 3649.2954ms
+[2025-06-10 12:57:11 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/posts - null null
+[2025-06-10 12:57:11 INF] Executing endpoint 'BlogApp.Controllers.PostController.GetAllPosts (BlogApp)'
+[2025-06-10 12:57:11 INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts(BlogApp.Dtos.PagedFilters.PostPagedRequest) on controller BlogApp.Controllers.PostController (BlogApp).
+[2025-06-10 12:57:11 INF] Executing action method BlogApp.Controllers.PostController.GetAllPosts (BlogApp) - Validation state: "Valid"
+[2025-06-10 12:57:11 INF] Retrieving posts for user "50a22b64-7731-4357-b4b4-08dda5a9b977" with admin=true and request={"Id":null,"UserId":null,"CategoryId":null,"SearchQuery":null,"PageNumber":1,"PageSize":5}
+[2025-06-10 12:57:11 INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Posts] AS [p]
+[2025-06-10 12:57:11 WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 12:57:11 WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 12:57:11 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2025-06-10 12:57:11 INF] Executed DbCommand (22ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p0].[Id], [p0].[CategoryId], [p0].[Content], [p0].[CreatedAt], [p0].[Slug], [p0].[Title], [p0].[UpdatedAt], [p0].[UserId], [u].[Id], [u].[Avatar], [u].[Bio], [u].[CreatedAt], [u].[Email], [u].[EmailVerificationToken], [u].[EmailVerificationTokenExpiresAt], [u].[IsActive], [u].[IsEmailVerified], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiresAt], [u].[Role], [u].[UpdatedAt], [u].[Username], [c].[Id], [c].[Name], [c0].[Id], [c0].[Content], [c0].[CreatedAt], [c0].[IsEdited], [c0].[PostId], [c0].[UpdatedAt], [c0].[UserId], [l].[Id], [l].[CreateAt], [l].[PostId], [l].[UserId], [s].[PostsId], [s].[TagsId], [s].[Id], [s].[CreatedAt], [s].[Name], [s].[UpdatedAt]
+FROM (
+    SELECT [p].[Id], [p].[CategoryId], [p].[Content], [p].[CreatedAt], [p].[Slug], [p].[Title], [p].[UpdatedAt], [p].[UserId]
+    FROM [Posts] AS [p]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [p0]
+INNER JOIN [Users] AS [u] ON [p0].[UserId] = [u].[Id]
+INNER JOIN [Categories] AS [c] ON [p0].[CategoryId] = [c].[Id]
+LEFT JOIN [Comments] AS [c0] ON [p0].[Id] = [c0].[PostId]
+LEFT JOIN [Likes] AS [l] ON [p0].[Id] = [l].[PostId]
+LEFT JOIN (
+    SELECT [p1].[PostsId], [p1].[TagsId], [t].[Id], [t].[CreatedAt], [t].[Name], [t].[UpdatedAt]
+    FROM [PostTags] AS [p1]
+    INNER JOIN [Tags] AS [t] ON [p1].[TagsId] = [t].[Id]
+) AS [s] ON [p0].[Id] = [s].[PostsId]
+ORDER BY [p0].[Id], [u].[Id], [c].[Id], [c0].[Id], [l].[Id], [s].[PostsId], [s].[TagsId]
+[2025-06-10 12:57:12 INF] Returning posts: {"PageNumber":1,"PageSize":5,"TotalCount":8,"TotalPages":2,"Items":[{"Id":"4a276107-419e-4978-271a-08dda5b90cfe","Title":"AutoMapping Post second testing","Slug":"automapping-post-second-testing","Content":"AutoMapping Post second testing Content","CreatedAt":"2025-06-07T14:47:16.0379637","UpdatedAt":"0001-01-01T00:00:00","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CategoryId":3,"CategoryName":"Business","LikesCount":0,"CommentsCount":0,"Tags":["Life"]},{"Id":"911f8fd7-0ce2-4b91-6163-08dda738eeb9","Title":"Pagination testing","Slug":"pagination-testing","Content":"Pagination testing","CreatedAt":"2025-06-09T12:35:11.9651877","UpdatedAt":"0001-01-01T00:00:00","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CategoryId":5,"CategoryName":"DevOps","LikesCount":0,"CommentsCount":0,"Tags":["How-to"]},{"Id":"74c6a484-8903-4543-6164-08dda738eeb9","Title":"Global pandemic testing","Slug":"global-pandemic-testing","Content":"Global pandemic testing content","CreatedAt":"2025-06-09T12:35:40.6090163","UpdatedAt":"0001-01-01T00:00:00","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CategoryId":4,"CategoryName":"Fashion","LikesCount":0,"CommentsCount":0,"Tags":["Life"]},{"Id":"92619535-7ef5-4616-6165-08dda738eeb9","Title":"Global pandemic testing now","Slug":"global-pandemic-testing-now","Content":"Global pandemic testing now content","CreatedAt":"2025-06-09T12:35:52.32104","UpdatedAt":"0001-01-01T00:00:00","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CategoryId":4,"CategoryName":"Fashion","LikesCount":1,"CommentsCount":0,"Tags":["Life"]},{"Id":"6f6a1c55-e40d-4c9d-6166-08dda738eeb9","Title":"Global pandemic testing now is crazy","Slug":"global-pandemic-testing-now-is-crazy","Content":"Global pandemic testing now content","CreatedAt":"2025-06-09T12:36:02.3563181","UpdatedAt":"0001-01-01T00:00:00","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CategoryId":4,"CategoryName":"Fashion","LikesCount":1,"CommentsCount":0,"Tags":["Life"]}],"HasPreviousPage":false,"HasNextPage":true}
+[2025-06-10 12:57:12 INF] Fetched posts: {"PageNumber":1,"PageSize":5,"TotalCount":8,"TotalPages":2,"Items":[{"Id":"4a276107-419e-4978-271a-08dda5b90cfe","Title":"AutoMapping Post second testing","Slug":"automapping-post-second-testing","Content":"AutoMapping Post second testing Content","CreatedAt":"2025-06-07T14:47:16.0379637","UpdatedAt":"0001-01-01T00:00:00","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CategoryId":3,"CategoryName":"Business","LikesCount":0,"CommentsCount":0,"Tags":["Life"]},{"Id":"911f8fd7-0ce2-4b91-6163-08dda738eeb9","Title":"Pagination testing","Slug":"pagination-testing","Content":"Pagination testing","CreatedAt":"2025-06-09T12:35:11.9651877","UpdatedAt":"0001-01-01T00:00:00","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CategoryId":5,"CategoryName":"DevOps","LikesCount":0,"CommentsCount":0,"Tags":["How-to"]},{"Id":"74c6a484-8903-4543-6164-08dda738eeb9","Title":"Global pandemic testing","Slug":"global-pandemic-testing","Content":"Global pandemic testing content","CreatedAt":"2025-06-09T12:35:40.6090163","UpdatedAt":"0001-01-01T00:00:00","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CategoryId":4,"CategoryName":"Fashion","LikesCount":0,"CommentsCount":0,"Tags":["Life"]},{"Id":"92619535-7ef5-4616-6165-08dda738eeb9","Title":"Global pandemic testing now","Slug":"global-pandemic-testing-now","Content":"Global pandemic testing now content","CreatedAt":"2025-06-09T12:35:52.32104","UpdatedAt":"0001-01-01T00:00:00","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CategoryId":4,"CategoryName":"Fashion","LikesCount":1,"CommentsCount":0,"Tags":["Life"]},{"Id":"6f6a1c55-e40d-4c9d-6166-08dda738eeb9","Title":"Global pandemic testing now is crazy","Slug":"global-pandemic-testing-now-is-crazy","Content":"Global pandemic testing now content","CreatedAt":"2025-06-09T12:36:02.3563181","UpdatedAt":"0001-01-01T00:00:00","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CategoryId":4,"CategoryName":"Fashion","LikesCount":1,"CommentsCount":0,"Tags":["Life"]}],"HasPreviousPage":false,"HasNextPage":true}
+[2025-06-10 12:57:12 INF] Executed action method BlogApp.Controllers.PostController.GetAllPosts (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 460.2187ms.
+[2025-06-10 12:57:12 INF] Executing OkObjectResult, writing value of type 'BlogApp.Entities.PaginatedList`1[[BlogApp.Models.Dtos.PostResponseDto, BlogApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2025-06-10 12:57:12 INF] Executed action BlogApp.Controllers.PostController.GetAllPosts (BlogApp) in 482.3911ms
+[2025-06-10 12:57:12 INF] Executed endpoint 'BlogApp.Controllers.PostController.GetAllPosts (BlogApp)'
+[2025-06-10 12:57:12 INF] HTTP GET /api/posts responded 200 in 505.6404 ms
+[2025-06-10 12:57:12 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/posts - 200 null application/json; charset=utf-8 506.4948ms
+[2025-06-10 12:58:21 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/posts/4a276107-419e-4978-271a-08dda5b90cfe - null null
+[2025-06-10 12:58:21 INF] Executing endpoint 'BlogApp.Controllers.PostController.GetPostById (BlogApp)'
+[2025-06-10 12:58:21 INF] Route matched with {action = "GetPostById", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostById(System.Guid) on controller BlogApp.Controllers.PostController (BlogApp).
+[2025-06-10 12:58:21 INF] Executing action method BlogApp.Controllers.PostController.GetPostById (BlogApp) - Validation state: "Valid"
+[2025-06-10 12:58:21 INF] Fetching post "4a276107-419e-4978-271a-08dda5b90cfe" for user "50a22b64-7731-4357-b4b4-08dda5a9b977"
+[2025-06-10 12:58:21 INF] Fetching post with ID "4a276107-419e-4978-271a-08dda5b90cfe" for user "50a22b64-7731-4357-b4b4-08dda5a9b977" (Role: Admin)
+[2025-06-10 12:58:21 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2025-06-10 12:58:21 INF] Executed DbCommand (17ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CategoryId], [s].[Content], [s].[CreatedAt], [s].[Slug], [s].[Title], [s].[UpdatedAt], [s].[UserId], [s].[Id0], [s].[Avatar], [s].[Bio], [s].[CreatedAt0], [s].[Email], [s].[EmailVerificationToken], [s].[EmailVerificationTokenExpiresAt], [s].[IsActive], [s].[IsEmailVerified], [s].[PasswordHash], [s].[RefreshToken], [s].[RefreshTokenExpiresAt], [s].[Role], [s].[UpdatedAt0], [s].[Username], [s].[Id1], [s].[Name], [c0].[Id], [c0].[Content], [c0].[CreatedAt], [c0].[IsEdited], [c0].[PostId], [c0].[UpdatedAt], [c0].[UserId], [l].[Id], [l].[CreateAt], [l].[PostId], [l].[UserId], [s0].[PostsId], [s0].[TagsId], [s0].[Id], [s0].[CreatedAt], [s0].[Name], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[Content], [p].[CreatedAt], [p].[Slug], [p].[Title], [p].[UpdatedAt], [p].[UserId], [u].[Id] AS [Id0], [u].[Avatar], [u].[Bio], [u].[CreatedAt] AS [CreatedAt0], [u].[Email], [u].[EmailVerificationToken], [u].[EmailVerificationTokenExpiresAt], [u].[IsActive], [u].[IsEmailVerified], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiresAt], [u].[Role], [u].[UpdatedAt] AS [UpdatedAt0], [u].[Username], [c].[Id] AS [Id1], [c].[Name]
     FROM [Posts] AS [p]
     INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[Id]
-    LEFT JOIN (
-        SELECT [p0].[PostsId], [p0].[TagsId], [t].[Id], [t].[CreatedAt], [t].[Name], [t].[UpdatedAt]
-        FROM [PostTags] AS [p0]
-        INNER JOIN [Tags] AS [t] ON [p0].[TagsId] = [t].[Id]
-    ) AS [s] ON [p].[Id] = [s].[PostsId]
-    LEFT JOIN [Likes] AS [l] ON [p].[Id] = [l].[PostId]
-    LEFT JOIN [Comments] AS [c0] ON [p].[Id] = [c0].[PostId]
-) AS [s0] ON [c1].[Id] = [s0].[CategoryId]
-ORDER BY [c1].[Id], [s0].[Id], [s0].[Id0], [s0].[PostsId], [s0].[TagsId], [s0].[Id1], [s0].[Id2]
-[2025-06-10 12:22:22 INF] Executed action method BlogApp.Controllers.CategoryController.GetCategoryById (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3037.4704ms.
-[2025-06-10 12:22:22 INF] Executing OkObjectResult, writing value of type 'CategoryResponseDto'.
-[2025-06-10 12:22:22 INF] Executed action BlogApp.Controllers.CategoryController.GetCategoryById (BlogApp) in 3628.7083ms
-[2025-06-10 12:22:22 INF] Executed endpoint 'BlogApp.Controllers.CategoryController.GetCategoryById (BlogApp)'
-[2025-06-10 12:22:22 INF] HTTP GET /api/categories/5 responded 200 in 3806.5924 ms
-[2025-06-10 12:22:22 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/categories/5 - 200 null application/json; charset=utf-8 3844.2554ms
-[2025-06-10 12:31:50 INF] Application is shutting down...
-[2025-06-10 12:31:56 INF] User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
-[2025-06-10 12:31:56 INF] Now listening on: http://localhost:5263
-[2025-06-10 12:31:56 INF] Application started. Press Ctrl+C to shut down.
-[2025-06-10 12:31:56 INF] Hosting environment: Development
-[2025-06-10 12:31:56 INF] Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
-[2025-06-10 12:31:57 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
-[2025-06-10 12:31:57 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 198.2804ms
-[2025-06-10 12:31:58 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
-[2025-06-10 12:31:58 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 184.3436ms
-[2025-06-10 12:32:06 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/comments - null null
-[2025-06-10 12:32:06 WRN] Failed to determine the https port for redirect.
-[2025-06-10 12:32:06 INF] Executing endpoint 'BlogApp.Controllers.CommentController.GetComments (BlogApp)'
-[2025-06-10 12:32:06 INF] Route matched with {action = "GetComments", controller = "Comment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetComments(BlogApp.Dtos.PagedFilters.CommentPagedRequest) on controller BlogApp.Controllers.CommentController (BlogApp).
-[2025-06-10 12:32:06 INF] Executing action method BlogApp.Controllers.CommentController.GetComments (BlogApp) - Validation state: "Valid"
-[2025-06-10 12:32:06 INF] Fetching comments with PageNumber: 1, PageSize: 5
-[2025-06-10 12:32:06 INF] Service: Retrieving comments with PageNumber: 1, PageSize: 5
-[2025-06-10 12:32:09 INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
-SELECT COUNT(*)
-FROM [Comments] AS [c]
-[2025-06-10 12:32:09 WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
-[2025-06-10 12:32:09 WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
-[2025-06-10 12:32:09 INF] Executed DbCommand (37ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
-SELECT [c0].[Id], [c0].[Content], [c0].[CreatedAt], [c0].[IsEdited], [c0].[PostId], [c0].[UpdatedAt], [c0].[UserId], [p].[Id], [p].[CategoryId], [p].[Content], [p].[CreatedAt], [p].[Slug], [p].[Title], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[Avatar], [u].[Bio], [u].[CreatedAt], [u].[Email], [u].[EmailVerificationToken], [u].[EmailVerificationTokenExpiresAt], [u].[IsActive], [u].[IsEmailVerified], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiresAt], [u].[Role], [u].[UpdatedAt], [u].[Username]
-FROM (
-    SELECT [c].[Id], [c].[Content], [c].[CreatedAt], [c].[IsEdited], [c].[PostId], [c].[UpdatedAt], [c].[UserId]
-    FROM [Comments] AS [c]
-    ORDER BY (SELECT 1)
-    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
-) AS [c0]
-INNER JOIN [Posts] AS [p] ON [c0].[PostId] = [p].[Id]
-INNER JOIN [Users] AS [u] ON [c0].[UserId] = [u].[Id]
-[2025-06-10 12:32:09 INF] Service: Retrieved 5 comments
-[2025-06-10 12:32:09 INF] Successfully fetched 5 comments
-[2025-06-10 12:32:09 INF] Executed action method BlogApp.Controllers.CommentController.GetComments (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3138.0949ms.
-[2025-06-10 12:32:09 INF] Executing OkObjectResult, writing value of type 'BlogApp.Entities.PaginatedList`1[[BlogApp.Models.Dtos.CommentResponseDto, BlogApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
-[2025-06-10 12:32:10 INF] Executed action BlogApp.Controllers.CommentController.GetComments (BlogApp) in 3757.1663ms
-[2025-06-10 12:32:10 INF] Executed endpoint 'BlogApp.Controllers.CommentController.GetComments (BlogApp)'
-[2025-06-10 12:32:10 INF] HTTP GET /api/comments responded 200 in 3952.6574 ms
-[2025-06-10 12:32:10 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/comments - 200 null application/json; charset=utf-8 3997.8737ms
-[2025-06-10 12:32:28 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/comments?IsEdited=true - null null
-[2025-06-10 12:32:28 INF] Executing endpoint 'BlogApp.Controllers.CommentController.GetComments (BlogApp)'
-[2025-06-10 12:32:28 INF] Route matched with {action = "GetComments", controller = "Comment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetComments(BlogApp.Dtos.PagedFilters.CommentPagedRequest) on controller BlogApp.Controllers.CommentController (BlogApp).
-[2025-06-10 12:32:28 INF] Executing action method BlogApp.Controllers.CommentController.GetComments (BlogApp) - Validation state: "Valid"
-[2025-06-10 12:32:28 INF] Fetching comments with PageNumber: 1, PageSize: 5
-[2025-06-10 12:32:28 INF] Service: Retrieving comments with PageNumber: 1, PageSize: 5
-[2025-06-10 12:32:28 INF] Executed DbCommand (4ms) [Parameters=[@__request_IsEdited_Value_0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
-SELECT COUNT(*)
-FROM [Comments] AS [c]
-WHERE [c].[IsEdited] = @__request_IsEdited_Value_0
-[2025-06-10 12:32:28 WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
-[2025-06-10 12:32:28 WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
-[2025-06-10 12:32:28 INF] Executed DbCommand (8ms) [Parameters=[@__request_IsEdited_Value_0='?' (DbType = Boolean), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
-SELECT [c0].[Id], [c0].[Content], [c0].[CreatedAt], [c0].[IsEdited], [c0].[PostId], [c0].[UpdatedAt], [c0].[UserId], [p].[Id], [p].[CategoryId], [p].[Content], [p].[CreatedAt], [p].[Slug], [p].[Title], [p].[UpdatedAt], [p].[UserId], [u].[Id], [u].[Avatar], [u].[Bio], [u].[CreatedAt], [u].[Email], [u].[EmailVerificationToken], [u].[EmailVerificationTokenExpiresAt], [u].[IsActive], [u].[IsEmailVerified], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiresAt], [u].[Role], [u].[UpdatedAt], [u].[Username]
-FROM (
-    SELECT [c].[Id], [c].[Content], [c].[CreatedAt], [c].[IsEdited], [c].[PostId], [c].[UpdatedAt], [c].[UserId]
-    FROM [Comments] AS [c]
-    WHERE [c].[IsEdited] = @__request_IsEdited_Value_0
-    ORDER BY (SELECT 1)
-    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
-) AS [c0]
-INNER JOIN [Posts] AS [p] ON [c0].[PostId] = [p].[Id]
-INNER JOIN [Users] AS [u] ON [c0].[UserId] = [u].[Id]
-[2025-06-10 12:32:28 INF] Service: Retrieved 0 comments
-[2025-06-10 12:32:28 INF] Successfully fetched 0 comments
-[2025-06-10 12:32:28 INF] Executed action method BlogApp.Controllers.CommentController.GetComments (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 99.4037ms.
-[2025-06-10 12:32:28 INF] Executing OkObjectResult, writing value of type 'BlogApp.Entities.PaginatedList`1[[BlogApp.Models.Dtos.CommentResponseDto, BlogApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
-[2025-06-10 12:32:28 INF] Executed action BlogApp.Controllers.CommentController.GetComments (BlogApp) in 113.2483ms
-[2025-06-10 12:32:28 INF] Executed endpoint 'BlogApp.Controllers.CommentController.GetComments (BlogApp)'
-[2025-06-10 12:32:28 INF] HTTP GET /api/comments responded 200 in 119.2515 ms
-[2025-06-10 12:32:28 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/comments?IsEdited=true - 200 null application/json; charset=utf-8 119.9541ms
-[2025-06-10 12:38:12 INF] Application is shutting down...
-[2025-06-10 12:38:16 INF] User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
-[2025-06-10 12:38:17 INF] Now listening on: http://localhost:5263
-[2025-06-10 12:38:17 INF] Application started. Press Ctrl+C to shut down.
-[2025-06-10 12:38:17 INF] Hosting environment: Development
-[2025-06-10 12:38:17 INF] Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
-[2025-06-10 12:38:17 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
-[2025-06-10 12:38:17 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 205.5854ms
-[2025-06-10 12:38:18 INF] Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
-[2025-06-10 12:38:18 INF] Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 227.2047ms
-[2025-06-10 12:38:27 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/likes - null null
-[2025-06-10 12:38:27 WRN] Failed to determine the https port for redirect.
-[2025-06-10 12:38:27 INF] Executing endpoint 'BlogApp.Controllers.LikesController.GetLikes (BlogApp)'
-[2025-06-10 12:38:27 INF] Route matched with {action = "GetLikes", controller = "Likes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLikes(BlogApp.Dtos.PagedFilters.LikesPagedRequest) on controller BlogApp.Controllers.LikesController (BlogApp).
-[2025-06-10 12:38:27 INF] Executing action method BlogApp.Controllers.LikesController.GetLikes (BlogApp) - Validation state: "Valid"
-[2025-06-10 12:38:27 INF] Getting likes with request: {"PostId":null,"UserId":null,"SearchQuery":null,"PageNumber":1,"PageSize":5}
-[2025-06-10 12:38:27 INF] Fetching likes: {"PostId":null,"UserId":null,"SearchQuery":null,"PageNumber":1,"PageSize":5}
-[2025-06-10 12:38:30 INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
-SELECT COUNT(*)
-FROM [Likes] AS [l]
-[2025-06-10 12:38:30 INF] Executed DbCommand (25ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
-SELECT [l0].[Id], [l0].[CreateAt], [l0].[PostId], [l0].[UserId], [u].[Id], [u].[Avatar], [u].[Bio], [u].[CreatedAt], [u].[Email], [u].[EmailVerificationToken], [u].[EmailVerificationTokenExpiresAt], [u].[IsActive], [u].[IsEmailVerified], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiresAt], [u].[Role], [u].[UpdatedAt], [u].[Username]
-FROM (
-    SELECT [l].[Id], [l].[CreateAt], [l].[PostId], [l].[UserId]
-    FROM [Likes] AS [l]
-    ORDER BY [l].[Id] DESC
-    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
-) AS [l0]
-INNER JOIN [Users] AS [u] ON [l0].[UserId] = [u].[Id]
-ORDER BY [l0].[Id] DESC
-[2025-06-10 12:38:30 INF] Likes fetched: {"PageNumber":1,"PageSize":5,"TotalCount":5,"TotalPages":1,"Items":[{"Id":22,"PostId":"92619535-7ef5-4616-6165-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":21,"PostId":"6f6a1c55-e40d-4c9d-6166-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":20,"PostId":"7583ed5a-6958-403b-6167-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":19,"PostId":"c3a490e5-a6c7-4734-6168-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":18,"PostId":"805bc2ff-f817-468e-6169-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"}],"HasPreviousPage":false,"HasNextPage":false}
-[2025-06-10 12:38:30 INF] Likes fetched: {"PageNumber":1,"PageSize":5,"TotalCount":5,"TotalPages":1,"Items":[{"Id":22,"PostId":"92619535-7ef5-4616-6165-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":21,"PostId":"6f6a1c55-e40d-4c9d-6166-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":20,"PostId":"7583ed5a-6958-403b-6167-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":19,"PostId":"c3a490e5-a6c7-4734-6168-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"},{"Id":18,"PostId":"805bc2ff-f817-468e-6169-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"}],"HasPreviousPage":false,"HasNextPage":false}
-[2025-06-10 12:38:30 INF] Executed action method BlogApp.Controllers.LikesController.GetLikes (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2900.4801ms.
-[2025-06-10 12:38:30 INF] Executing OkObjectResult, writing value of type 'BlogApp.Entities.PaginatedList`1[[BlogApp.Dtos.Response.LikeResponseDto, BlogApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
-[2025-06-10 12:38:30 INF] Executed action BlogApp.Controllers.LikesController.GetLikes (BlogApp) in 3333.7744ms
-[2025-06-10 12:38:30 INF] Executed endpoint 'BlogApp.Controllers.LikesController.GetLikes (BlogApp)'
-[2025-06-10 12:38:30 INF] HTTP GET /api/likes responded 200 in 3508.8034 ms
-[2025-06-10 12:38:30 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/likes - 200 null application/json; charset=utf-8 3540.1987ms
-[2025-06-10 12:39:14 INF] Request starting HTTP/1.1 GET http://localhost:5263/api/likes/21 - null null
-[2025-06-10 12:39:14 INF] Executing endpoint 'BlogApp.Controllers.LikesController.GetLikeById (BlogApp)'
-[2025-06-10 12:39:14 INF] Route matched with {action = "GetLikeById", controller = "Likes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLikeById(Int32) on controller BlogApp.Controllers.LikesController (BlogApp).
-[2025-06-10 12:39:14 INF] Executing action method BlogApp.Controllers.LikesController.GetLikeById (BlogApp) - Validation state: "Valid"
-[2025-06-10 12:39:14 INF] Getting like by ID: 21
-[2025-06-10 12:39:14 INF] Fetching like by ID: 21
-[2025-06-10 12:39:14 INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
-SELECT TOP(1) [l].[Id], [l].[CreateAt], [l].[PostId], [l].[UserId], [u].[Id], [u].[Avatar], [u].[Bio], [u].[CreatedAt], [u].[Email], [u].[EmailVerificationToken], [u].[EmailVerificationTokenExpiresAt], [u].[IsActive], [u].[IsEmailVerified], [u].[PasswordHash], [u].[RefreshToken], [u].[RefreshTokenExpiresAt], [u].[Role], [u].[UpdatedAt], [u].[Username]
-FROM [Likes] AS [l]
-INNER JOIN [Users] AS [u] ON [l].[UserId] = [u].[Id]
-WHERE [l].[Id] = @__id_0
-[2025-06-10 12:39:14 INF] Fetched like: {"Id":21,"PostId":"6f6a1c55-e40d-4c9d-6166-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"}
-[2025-06-10 12:39:14 INF] Like fetched: {"Id":21,"PostId":"6f6a1c55-e40d-4c9d-6166-08dda738eeb9","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CreatedAt":"0001-01-01T00:00:00"}
-[2025-06-10 12:39:14 INF] Executed action method BlogApp.Controllers.LikesController.GetLikeById (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 74.653ms.
-[2025-06-10 12:39:14 INF] Executing OkObjectResult, writing value of type 'BlogApp.Dtos.Response.LikeResponseDto'.
-[2025-06-10 12:39:14 INF] Executed action BlogApp.Controllers.LikesController.GetLikeById (BlogApp) in 80.7486ms
-[2025-06-10 12:39:14 INF] Executed endpoint 'BlogApp.Controllers.LikesController.GetLikeById (BlogApp)'
-[2025-06-10 12:39:14 INF] HTTP GET /api/likes/21 responded 200 in 93.1246 ms
-[2025-06-10 12:39:14 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/likes/21 - 200 null application/json; charset=utf-8 94.0045ms
+    INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+    WHERE [p].[Id] = @__id_0
+) AS [s]
+LEFT JOIN [Comments] AS [c0] ON [s].[Id] = [c0].[PostId]
+LEFT JOIN [Likes] AS [l] ON [s].[Id] = [l].[PostId]
+LEFT JOIN (
+    SELECT [p0].[PostsId], [p0].[TagsId], [t].[Id], [t].[CreatedAt], [t].[Name], [t].[UpdatedAt]
+    FROM [PostTags] AS [p0]
+    INNER JOIN [Tags] AS [t] ON [p0].[TagsId] = [t].[Id]
+) AS [s0] ON [s].[Id] = [s0].[PostsId]
+ORDER BY [s].[Id], [s].[Id0], [s].[Id1], [c0].[Id], [l].[Id], [s0].[PostsId], [s0].[TagsId]
+[2025-06-10 12:58:21 INF] Returning post: {"Id":"4a276107-419e-4978-271a-08dda5b90cfe","Title":"AutoMapping Post second testing","Slug":"automapping-post-second-testing","Content":"AutoMapping Post second testing Content","CreatedAt":"2025-06-07T14:47:16.0379637","UpdatedAt":"0001-01-01T00:00:00","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CategoryId":3,"CategoryName":"Business","LikesCount":0,"CommentsCount":0,"Tags":["Life"]}
+[2025-06-10 12:58:21 INF] Fetched post: {"Id":"4a276107-419e-4978-271a-08dda5b90cfe","Title":"AutoMapping Post second testing","Slug":"automapping-post-second-testing","Content":"AutoMapping Post second testing Content","CreatedAt":"2025-06-07T14:47:16.0379637","UpdatedAt":"0001-01-01T00:00:00","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CategoryId":3,"CategoryName":"Business","LikesCount":0,"CommentsCount":0,"Tags":["Life"]}
+[2025-06-10 12:58:21 INF] Executed action method BlogApp.Controllers.PostController.GetPostById (BlogApp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 153.1937ms.
+[2025-06-10 12:58:21 INF] Executing OkObjectResult, writing value of type 'BlogApp.Models.Dtos.PostResponseDto'.
+[2025-06-10 12:58:21 INF] Executed action BlogApp.Controllers.PostController.GetPostById (BlogApp) in 156.9084ms
+[2025-06-10 12:58:21 INF] Executed endpoint 'BlogApp.Controllers.PostController.GetPostById (BlogApp)'
+[2025-06-10 12:58:21 INF] HTTP GET /api/posts/4a276107-419e-4978-271a-08dda5b90cfe responded 200 in 165.2457 ms
+[2025-06-10 12:58:21 INF] Request finished HTTP/1.1 GET http://localhost:5263/api/posts/4a276107-419e-4978-271a-08dda5b90cfe - 200 null application/json; charset=utf-8 165.8464ms

@@ -1,6 +1,6 @@
 using BlogApp.Entities;
-using Microsoft.EntityFrameworkCore;
 using BlogApp.Models.Entities;
+using Microsoft.EntityFrameworkCore;
 namespace BlogApp.Data;
 
 public class DatabaseContext : DbContext
