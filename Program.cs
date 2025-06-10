@@ -23,11 +23,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(BlogProfile));
 
-// Log.Logger = new LoggerConfiguration().MinimumLevel.Information()
-//     .WriteTo.File("Logs/logs.txt", rollingInterval: RollingInterval.Day)
-//     .CreateLogger();
 builder.Host.UseSerilog((context, configuration) =>
-    configuration.ReadFrom.Configuration(context.Configuration));
+    configuration.ReadFrom.Configuration(context.Configuration).Enrich.FromLogContext());
 var db = builder.Configuration.GetConnectionString("DefaultConnection");
 Console.WriteLine(db, "This is the dab data");
 builder.Services.AddDbContext<DatabaseContext>(options =>

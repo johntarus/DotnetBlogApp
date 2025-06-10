@@ -328,3 +328,50 @@ WHERE [Id] = @p14;
 [2025-06-10 13:16:15 INF] Executed endpoint 'BlogApp.Controllers.UsersController.RefreshToken (BlogApp)'
 [2025-06-10 13:16:15 INF] HTTP POST /api/users/refresh-token responded 200 in 92.1510 ms
 [2025-06-10 13:16:15 INF] Request finished HTTP/1.1 POST http://localhost:5263/api/users/refresh-token - 200 null application/json; charset=utf-8 92.6218ms
+[2025-06-10 13:31:17 DBG] Config reload token fired. Checking for changes...
+[2025-06-10 13:32:33 DBG] Config reload token fired. Checking for changes...
+[2025-06-10 13:32:33 DBG] Config reload token fired. Checking for changes...
+[2025-06-10 13:33:18 INF] Application is shutting down...
+[2025-06-10 13:33:18 DBG] Hosting stopping
+[2025-06-10 13:33:18 DBG] Hosting stopped
+[2025-06-10 13:34:31 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-10 13:34:32 INF] BlogApp.Controllers.TagController [GET] GetTags called with request: {"Id":null,"SearchQuery":null,"PageNumber":1,"PageSize":5}
+[2025-06-10 13:34:32 INF] BlogApp.Services.TagService Fetching all tags with request: {"Id":null,"SearchQuery":null,"PageNumber":1,"PageSize":5}
+[2025-06-10 13:34:34 WRN] Microsoft.EntityFrameworkCore.Query The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 13:34:34 WRN] Microsoft.EntityFrameworkCore.Query The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 13:34:35 INF] BlogApp.Services.TagService Fetched 5 tags
+[2025-06-10 13:34:35 INF] BlogApp.Controllers.TagController Returning 5 tags
+[2025-06-10 13:34:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/tags responded 200 in 3880.5184 ms
+[2025-06-10 13:34:50 INF] BlogApp.Controllers.TagController [GET] GetTags called with request: {"Id":null,"SearchQuery":null,"PageNumber":1,"PageSize":5}
+[2025-06-10 13:34:50 INF] BlogApp.Services.TagService Fetching all tags with request: {"Id":null,"SearchQuery":null,"PageNumber":1,"PageSize":5}
+[2025-06-10 13:34:50 INF] BlogApp.Services.TagService Fetched 5 tags
+[2025-06-10 13:34:50 INF] BlogApp.Controllers.TagController Returning 5 tags
+[2025-06-10 13:34:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/tags responded 200 in 75.6846 ms
+[2025-06-10 13:35:17 INF] BlogApp.Controllers.CategoryController Fetching category with ID: 5
+[2025-06-10 13:35:17 DBG] BlogApp.Services.CategoryService Service layer - Fetching category with ID: 5
+[2025-06-10 13:35:17 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2025-06-10 13:35:17 DBG] BlogApp.Services.CategoryService Service layer - Retrieved category data: {"Id":5,"Name":"DevOps","Posts":[{"Id":"911f8fd7-0ce2-4b91-6163-08dda738eeb9","Title":"Pagination testing","Slug":"pagination-testing","Content":"Pagination testing","CreatedAt":"2025-06-09T12:35:11.9651877","UpdatedAt":"0001-01-01T00:00:00.0000000","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CategoryId":5,"CategoryName":"DevOps","LikesCount":0,"CommentsCount":0,"Tags":["How-to"],"$type":"PostResponseDto"}],"$type":"CategoryResponseDto"}
+[2025-06-10 13:35:17 DBG] BlogApp.Controllers.CategoryController Retrieved category: {"Id":5,"Name":"DevOps","Posts":[{"Id":"911f8fd7-0ce2-4b91-6163-08dda738eeb9","Title":"Pagination testing","Slug":"pagination-testing","Content":"Pagination testing","CreatedAt":"2025-06-09T12:35:11.9651877","UpdatedAt":"0001-01-01T00:00:00.0000000","UserId":"50a22b64-7731-4357-b4b4-08dda5a9b977","Username":"tarus","CategoryId":5,"CategoryName":"DevOps","LikesCount":0,"CommentsCount":0,"Tags":["How-to"],"$type":"PostResponseDto"}],"$type":"CategoryResponseDto"}
+[2025-06-10 13:35:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories/5 responded 200 in 321.0993 ms
+[2025-06-10 13:35:38 INF] BlogApp.Controllers.CategoryController Fetching categories with PageNumber: 1, PageSize: 5
+[2025-06-10 13:35:38 INF] BlogApp.Services.CategoryService Service call: GetCategoriesAsync with PageNumber: 1, PageSize: 5
+[2025-06-10 13:35:38 WRN] Microsoft.EntityFrameworkCore.Query The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 13:35:38 WRN] Microsoft.EntityFrameworkCore.Query The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 13:35:38 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2025-06-10 13:35:38 INF] BlogApp.Services.CategoryService Mapping completed. Returning 1 categories
+[2025-06-10 13:35:38 INF] BlogApp.Controllers.CategoryController Successfully retrieved 1 categories
+[2025-06-10 13:35:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 200 in 168.4346 ms
+[2025-06-10 13:36:09 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-10 13:36:10 INF] BlogApp.Controllers.CategoryController Fetching categories with PageNumber: 1, PageSize: 5
+[2025-06-10 13:36:10 INF] BlogApp.Services.CategoryService Service call: GetCategoriesAsync with PageNumber: 1, PageSize: 5
+[2025-06-10 13:36:12 WRN] Microsoft.EntityFrameworkCore.Query The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 13:36:12 WRN] Microsoft.EntityFrameworkCore.Query The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-10 13:36:13 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2025-06-10 13:36:13 INF] BlogApp.Services.CategoryService Mapping completed. Returning 1 categories
+[2025-06-10 13:36:13 INF] BlogApp.Controllers.CategoryController Successfully retrieved 1 categories
+[2025-06-10 13:36:13 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 200 in 3887.9482 ms
+[2025-06-10 13:36:43 INF] BlogApp.Controllers.UsersController Login attempt for: tarus
+[2025-06-10 13:36:43 INF] BlogApp.Services.AuthService User attempting login: tarus
+[2025-06-10 13:36:44 INF] BlogApp.Services.AuthService Login successful for user: tarusjohn96@gmail.com
+[2025-06-10 13:36:44 INF] BlogApp.Controllers.UsersController Login successful for userId: "50a22b64-7731-4357-b4b4-08dda5a9b977"
+[2025-06-10 13:36:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /api/users/login responded 200 in 351.2688 ms
