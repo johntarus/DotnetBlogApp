@@ -4,7 +4,7 @@ namespace BlogApp.Config;
 
 public static class SwagggerConfig
 {
-    public static IServiceCollection AddAppSwagger(this IServiceCollection services)
+    public static void AddAppSwagger(this IServiceCollection services)
     {
         services.AddSwaggerGen(c =>
         {
@@ -28,6 +28,5 @@ public static class SwagggerConfig
                 }
             });
         });
-        return services;
     }
 }

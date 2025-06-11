@@ -410,3 +410,692 @@ System.ArgumentException: An item with the same key has already been added. Key:
 [2025-06-11 20:01:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
 [2025-06-11 20:01:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
 [2025-06-11 20:01:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 20:06:29 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 20:06:36 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 20:06:37 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 20:06:37 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-11 20:06:37 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 20:06:37 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:06:37 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:06:37 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 20:06:37 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 20:06:37 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 20:06:37 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 20:06:37 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 20:06:37 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 20:06:38 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1181.9566ms - 200
+[2025-06-11 20:06:38 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1198.563ms - 200
+[2025-06-11 20:06:39 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1772.4762ms - 200
+[2025-06-11 20:06:39 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1785.1059ms - 200
+[2025-06-11 20:06:39 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1684.2570 ms
+[2025-06-11 20:06:39 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 20:06:39 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 20:06:39 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 20:06:39 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 20:11:39 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 20:11:39 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:11:39 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:11:39 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 20:11:39 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 20:11:41 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1439.5506ms - 200
+[2025-06-11 20:11:41 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1440.7549ms - 200
+[2025-06-11 20:11:41 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1692.5666ms - 200
+[2025-06-11 20:11:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1691.2057 ms
+[2025-06-11 20:11:41 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1693.5734ms - 200
+[2025-06-11 20:11:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 20:11:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 20:11:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 20:11:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 20:16:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 20:16:41 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:16:41 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:16:41 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 20:16:41 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 20:16:43 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1578.1632ms - 200
+[2025-06-11 20:16:43 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1580.9861ms - 200
+[2025-06-11 20:16:43 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1830.8550 ms
+[2025-06-11 20:16:43 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1835.0484ms - 200
+[2025-06-11 20:16:43 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1836.9234ms - 200
+[2025-06-11 20:16:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 20:16:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 20:16:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 20:16:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 20:17:05 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 20:17:12 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 20:17:12 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 20:17:13 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-11 20:17:13 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 20:17:13 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:17:13 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:17:13 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 20:17:13 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 20:17:13 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 20:17:13 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 20:17:13 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 20:17:13 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 20:17:15 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1984.2525ms - 200
+[2025-06-11 20:17:15 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1996.9891ms - 200
+[2025-06-11 20:17:16 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 3145.4355ms - 200
+[2025-06-11 20:17:16 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3159.9837ms - 200
+[2025-06-11 20:17:16 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 3050.7425 ms
+[2025-06-11 20:17:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 20:17:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 20:17:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 20:17:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 20:18:06 INF] BlogApp.Controllers.UsersController Login attempt for: tarus
+[2025-06-11 20:18:06 INF] BlogApp.Services.AuthService User attempting login: tarus
+[2025-06-11 20:18:08 INF] BlogApp.Services.AuthService Login successful for user: tarusjohn96@gmail.com
+[2025-06-11 20:18:08 INF] BlogApp.Controllers.UsersController Login successful for userId: "50a22b64-7731-4357-b4b4-08dda5a9b977"
+[2025-06-11 20:18:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /api/users/login responded 200 in 1789.1770 ms
+[2025-06-11 20:22:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 20:22:16 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:22:16 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:22:16 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 20:22:16 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 20:22:18 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1855.2809ms - 200
+[2025-06-11 20:22:18 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1856.319ms - 200
+[2025-06-11 20:22:19 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 2342.9562 ms
+[2025-06-11 20:22:19 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2345.2237ms - 200
+[2025-06-11 20:22:19 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2347.9742ms - 200
+[2025-06-11 20:22:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 20:22:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 20:22:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 20:22:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 20:27:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 20:27:19 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:27:19 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:27:19 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 20:27:19 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 20:27:19 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 774.6ms - 200
+[2025-06-11 20:27:19 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 777.0509ms - 200
+[2025-06-11 20:27:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 831.7389 ms
+[2025-06-11 20:27:20 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 834.7337ms - 200
+[2025-06-11 20:27:20 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 836.7995ms - 200
+[2025-06-11 20:27:20 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 20:27:20 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 20:27:20 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 20:27:20 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 20:32:20 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 20:32:20 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:32:20 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:32:20 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 20:32:20 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 20:32:23 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 2954.1105ms - 200
+[2025-06-11 20:32:23 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 2956.6401ms - 200
+[2025-06-11 20:32:24 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 4023.8492 ms
+[2025-06-11 20:32:24 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 4027.2076ms - 200
+[2025-06-11 20:32:24 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 4029.2314ms - 200
+[2025-06-11 20:32:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 20:32:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 20:32:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 20:32:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 20:37:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 20:37:24 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:37:24 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:37:24 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 20:37:24 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 20:37:25 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 942.9215ms - 200
+[2025-06-11 20:37:25 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 943.5514ms - 200
+[2025-06-11 20:37:25 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 977.3241 ms
+[2025-06-11 20:37:25 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 978.4355ms - 200
+[2025-06-11 20:37:25 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 979.095ms - 200
+[2025-06-11 20:37:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 20:37:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 20:37:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 20:37:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 20:37:34 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 20:37:41 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 20:37:42 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 20:37:42 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-11 20:37:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 20:37:42 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:37:42 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:37:42 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 20:37:42 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 20:37:42 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 20:37:42 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 20:37:42 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 20:37:42 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 20:37:43 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 964.6453ms - 200
+[2025-06-11 20:37:43 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 979.2946ms - 200
+[2025-06-11 20:37:43 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1367.453ms - 200
+[2025-06-11 20:37:43 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1379.5096ms - 200
+[2025-06-11 20:37:43 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1287.9791 ms
+[2025-06-11 20:37:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 20:37:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 20:37:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 20:37:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 20:37:52 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 401 in 15.1038 ms
+[2025-06-11 20:38:13 INF] BlogApp.Controllers.CategoryController Fetching categories with PageNumber: 1, PageSize: 5
+[2025-06-11 20:38:13 INF] BlogApp.Services.CategoryService Service call: GetCategoriesAsync with PageNumber: 1, PageSize: 5
+[2025-06-11 20:38:14 WRN] Microsoft.EntityFrameworkCore.Query The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-11 20:38:14 WRN] Microsoft.EntityFrameworkCore.Query The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-11 20:38:15 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2025-06-11 20:38:15 INF] BlogApp.Services.CategoryService Mapping completed. Returning 5 categories
+[2025-06-11 20:38:15 INF] BlogApp.Controllers.CategoryController Successfully retrieved 5 categories
+[2025-06-11 20:38:15 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 200 in 2002.4476 ms
+[2025-06-11 20:42:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 20:42:44 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:42:44 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:42:44 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 20:42:44 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 20:42:45 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1230.6279ms - 200
+[2025-06-11 20:42:45 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1231.4415ms - 200
+[2025-06-11 20:42:45 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1308.1993 ms
+[2025-06-11 20:42:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1309.6364ms - 200
+[2025-06-11 20:42:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1310.48ms - 200
+[2025-06-11 20:42:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 20:42:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 20:42:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 20:42:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 20:43:14 INF] BlogApp.Controllers.CategoryController Fetching categories with PageNumber: 1, PageSize: 5
+[2025-06-11 20:43:14 INF] BlogApp.Services.CategoryService Service call: GetCategoriesAsync with PageNumber: 1, PageSize: 5
+[2025-06-11 20:43:14 INF] BlogApp.Services.CategoryService Mapping completed. Returning 5 categories
+[2025-06-11 20:43:14 INF] BlogApp.Controllers.CategoryController Successfully retrieved 5 categories
+[2025-06-11 20:43:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 200 in 108.0747 ms
+[2025-06-11 20:47:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 20:47:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:47:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:47:45 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 20:47:45 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 20:47:46 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1366.0607ms - 200
+[2025-06-11 20:47:46 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1367.9188ms - 200
+[2025-06-11 20:47:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1602.2768 ms
+[2025-06-11 20:47:47 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1604.9697ms - 200
+[2025-06-11 20:47:47 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1606.4886ms - 200
+[2025-06-11 20:47:47 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 20:47:47 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 20:47:47 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 20:47:47 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 20:52:47 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 20:52:47 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:52:47 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:52:47 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 20:52:47 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 20:52:48 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 970.6721ms - 200
+[2025-06-11 20:52:48 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 972.8657ms - 200
+[2025-06-11 20:52:48 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1091.4873 ms
+[2025-06-11 20:52:48 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1093.8266ms - 200
+[2025-06-11 20:52:48 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1095.034ms - 200
+[2025-06-11 20:52:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 20:52:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 20:52:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 20:52:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 20:57:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 20:57:48 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:57:48 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 20:57:48 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 20:57:48 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 20:57:49 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1542.0492ms - 200
+[2025-06-11 20:57:49 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1542.9905ms - 200
+[2025-06-11 20:57:49 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1666.8731 ms
+[2025-06-11 20:57:49 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1668.0513ms - 200
+[2025-06-11 20:57:49 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1668.8534ms - 200
+[2025-06-11 20:57:49 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 20:57:49 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 20:57:49 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 20:57:49 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:02:49 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:02:49 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:02:49 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:02:49 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:02:49 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:02:50 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1002.2269ms - 200
+[2025-06-11 21:02:51 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1005.4836ms - 200
+[2025-06-11 21:02:51 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1434.3584 ms
+[2025-06-11 21:02:51 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1436.9778ms - 200
+[2025-06-11 21:02:51 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1438.6144ms - 200
+[2025-06-11 21:02:51 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:02:51 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 21:02:51 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:02:51 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:07:51 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:07:51 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:07:51 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:07:51 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:07:51 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:07:53 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1668.8276ms - 200
+[2025-06-11 21:07:53 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1669.4538ms - 200
+[2025-06-11 21:07:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 2183.2555 ms
+[2025-06-11 21:07:53 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2184.3699ms - 200
+[2025-06-11 21:07:53 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2184.8737ms - 200
+[2025-06-11 21:07:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:07:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 21:07:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:07:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:12:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:12:53 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:12:53 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:12:53 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:12:53 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:12:54 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1355.4447ms - 200
+[2025-06-11 21:12:54 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1356.0323ms - 200
+[2025-06-11 21:12:55 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1696.2305 ms
+[2025-06-11 21:12:55 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1697.1327ms - 200
+[2025-06-11 21:12:55 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1698.0991ms - 200
+[2025-06-11 21:12:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:12:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 21:12:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:12:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:17:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:17:55 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:17:55 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:17:55 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:17:55 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:17:57 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1771.3445ms - 200
+[2025-06-11 21:17:57 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1772.1828ms - 200
+[2025-06-11 21:17:57 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 2167.6175 ms
+[2025-06-11 21:17:57 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2168.9328ms - 200
+[2025-06-11 21:17:57 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2169.8133ms - 200
+[2025-06-11 21:17:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:17:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 21:17:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:17:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:22:21 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 21:23:07 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 21:23:08 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 21:23:08 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-11 21:23:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:23:08 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:23:08 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:23:08 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 21:23:08 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 21:23:08 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 21:23:08 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:23:08 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:23:11 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 2565.4617ms - 200
+[2025-06-11 21:23:11 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 2588.4567ms - 200
+[2025-06-11 21:23:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 3650.7423ms - 200
+[2025-06-11 21:23:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3663.9636ms - 200
+[2025-06-11 21:23:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:23:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 21:23:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:23:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:23:16 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:23:16 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:23:17 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 882.5804ms - 200
+[2025-06-11 21:23:17 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 886.7923ms - 200
+[2025-06-11 21:23:28 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:23:28 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:28:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:28:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:28:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:28:12 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:28:12 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:28:13 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1116.6746ms - 200
+[2025-06-11 21:28:13 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1118.4902ms - 200
+[2025-06-11 21:28:13 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1189.252ms - 200
+[2025-06-11 21:28:13 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1190.8678ms - 200
+[2025-06-11 21:28:13 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:28:13 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 21:28:13 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:28:13 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:29:07 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:29:07 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:33:13 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:33:13 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:33:13 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:33:13 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:33:13 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:33:17 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 3623.7956ms - 200
+[2025-06-11 21:33:17 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 3625.65ms - 200
+[2025-06-11 21:33:18 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check Remote endpoint health check with status "Unhealthy" completed after 5010.4235ms with message 'Remote endpoint timed out.'
+[2025-06-11 21:33:18 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 5041.8971ms - 503
+[2025-06-11 21:33:18 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 5043.4184ms - 503
+[2025-06-11 21:33:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:33:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthCheckReportCollector already exists but on different state, updating the values.
+[2025-06-11 21:33:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:33:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:35:56 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 21:36:03 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 21:36:04 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 21:36:04 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-11 21:36:04 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:36:04 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:36:04 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:36:04 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 21:36:04 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 21:36:04 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 21:36:05 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:36:05 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:36:08 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 3446.2968ms - 200
+[2025-06-11 21:36:08 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 3461.2271ms - 200
+[2025-06-11 21:36:10 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 5294.4185ms - 200
+[2025-06-11 21:36:10 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 5306.3829ms - 200
+[2025-06-11 21:36:10 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:36:10 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 21:36:10 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:36:10 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:36:13 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:36:13 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:36:14 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1002.6159ms - 200
+[2025-06-11 21:36:14 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1005.121ms - 200
+[2025-06-11 21:36:25 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:36:25 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:36:56 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 21:37:27 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 21:37:28 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 21:37:28 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-11 21:37:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:37:28 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:37:28 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:37:28 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 21:37:28 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 21:37:28 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 21:37:28 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:37:28 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:37:30 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1030.9955ms - 200
+[2025-06-11 21:37:30 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1052.0392ms - 200
+[2025-06-11 21:37:30 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1506.5688ms - 200
+[2025-06-11 21:37:30 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1522.334ms - 200
+[2025-06-11 21:37:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:37:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 21:37:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:37:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:37:43 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:37:43 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:37:43 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 674.493ms - 200
+[2025-06-11 21:37:43 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 677.5521ms - 200
+[2025-06-11 21:38:10 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 21:38:10 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 153.8126 ms
+[2025-06-11 21:38:10 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 155.5833 ms
+[2025-06-11 21:38:10 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 153.0451 ms
+[2025-06-11 21:39:40 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 2.8208 ms
+[2025-06-11 21:39:40 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 0.0945 ms
+[2025-06-11 21:39:40 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 0.0773 ms
+[2025-06-11 21:39:57 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 21:39:59 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 21:40:00 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 21:40:00 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-11 21:40:00 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:40:00 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:40:00 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:40:00 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 21:40:00 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 21:40:00 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 21:40:00 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:40:00 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:40:02 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1630.819ms - 200
+[2025-06-11 21:40:02 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1644.5842ms - 200
+[2025-06-11 21:40:03 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2543.5899ms - 200
+[2025-06-11 21:40:03 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2556.7705ms - 200
+[2025-06-11 21:40:03 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:40:03 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 21:40:03 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:40:03 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:40:51 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 21:40:51 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /healthcheck-ui responded 404 in 36.2052 ms
+[2025-06-11 21:40:55 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /healthcheck-ui responded 404 in 1.1955 ms
+[2025-06-11 21:43:04 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 3.8601 ms
+[2025-06-11 21:43:04 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 1.4900 ms
+[2025-06-11 21:43:04 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 0.1117 ms
+[2025-06-11 21:43:07 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 0.0764 ms
+[2025-06-11 21:43:07 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 0.0798 ms
+[2025-06-11 21:43:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 1.4633 ms
+[2025-06-11 21:43:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 0.0875 ms
+[2025-06-11 21:43:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 0.5811 ms
+[2025-06-11 21:43:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 0.0797 ms
+[2025-06-11 21:43:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 0.0996 ms
+[2025-06-11 21:43:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 0.0873 ms
+[2025-06-11 21:43:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 0.0871 ms
+[2025-06-11 21:43:09 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 0.0992 ms
+[2025-06-11 21:43:09 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 0.4082 ms
+[2025-06-11 21:43:09 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 0.0430 ms
+[2025-06-11 21:43:09 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 0.0960 ms
+[2025-06-11 21:43:09 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 0.0764 ms
+[2025-06-11 21:43:09 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 0.0673 ms
+[2025-06-11 21:43:10 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 0.0558 ms
+[2025-06-11 21:43:10 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 0.0797 ms
+[2025-06-11 21:43:10 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 0.0754 ms
+[2025-06-11 21:43:10 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 0.0850 ms
+[2025-06-11 21:43:10 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 0.0399 ms
+[2025-06-11 21:43:10 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 0.0227 ms
+[2025-06-11 21:44:39 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 0.0813 ms
+[2025-06-11 21:44:39 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 0.0670 ms
+[2025-06-11 21:44:39 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 0.0597 ms
+[2025-06-11 21:44:53 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 21:44:56 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 21:44:57 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 21:44:57 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-11 21:44:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:44:58 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:44:58 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:44:58 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 21:44:58 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 21:44:58 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 21:44:58 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:44:58 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:44:59 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1765.9189ms - 200
+[2025-06-11 21:44:59 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1780.2514ms - 200
+[2025-06-11 21:45:00 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2678.6499ms - 200
+[2025-06-11 21:45:00 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2691.2063ms - 200
+[2025-06-11 21:45:00 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:45:00 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 21:45:01 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:45:01 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:45:04 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:45:04 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:45:05 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 813.5441ms - 200
+[2025-06-11 21:45:05 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 817.4027ms - 200
+[2025-06-11 21:45:14 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:45:15 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:45:23 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:45:23 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:45:24 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:45:24 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:45:24 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:45:28 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 21:45:28 ERR] BlogApp.Middlewares.ErrorHandlingMiddleware An error occurred while processing the request: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at BlogApp.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp/Middlewares/ErrorHandlingMiddleware.cs:line 24
+[2025-06-11 21:45:28 ERR] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 500 in 68.9233 ms
+[2025-06-11 21:45:44 INF] BlogApp.Controllers.UsersController Login attempt for: tarus
+[2025-06-11 21:45:44 INF] BlogApp.Services.AuthService User attempting login: tarus
+[2025-06-11 21:45:46 INF] BlogApp.Services.AuthService Login successful for user: tarusjohn96@gmail.com
+[2025-06-11 21:45:46 INF] BlogApp.Controllers.UsersController Login successful for userId: "50a22b64-7731-4357-b4b4-08dda5a9b977"
+[2025-06-11 21:45:46 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /api/users/login responded 200 in 1712.2798 ms
+[2025-06-11 21:46:03 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 21:46:06 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 21:46:07 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 21:46:07 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-11 21:46:07 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:46:07 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:46:07 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:46:07 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 21:46:07 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 21:46:07 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 21:46:07 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:46:07 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:46:10 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 2894.6202ms - 200
+[2025-06-11 21:46:10 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 2909.7621ms - 200
+[2025-06-11 21:46:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 4301.5387ms - 200
+[2025-06-11 21:46:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 4314.8527ms - 200
+[2025-06-11 21:46:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:46:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 21:46:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:46:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:46:18 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 21:46:18 ERR] BlogApp.Middlewares.ErrorHandlingMiddleware An error occurred while processing the request: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at BlogApp.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp/Middlewares/ErrorHandlingMiddleware.cs:line 24
+[2025-06-11 21:46:18 ERR] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 500 in 66.8371 ms
+[2025-06-11 21:46:38 INF] BlogApp.Controllers.UsersController Login attempt for: tarus
+[2025-06-11 21:46:38 INF] BlogApp.Services.AuthService User attempting login: tarus
+[2025-06-11 21:46:39 INF] BlogApp.Services.AuthService Login successful for user: tarusjohn96@gmail.com
+[2025-06-11 21:46:39 INF] BlogApp.Controllers.UsersController Login successful for userId: "50a22b64-7731-4357-b4b4-08dda5a9b977"
+[2025-06-11 21:46:39 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /api/users/login responded 200 in 1645.3117 ms
+[2025-06-11 21:46:58 ERR] BlogApp.Middlewares.ErrorHandlingMiddleware An error occurred while processing the request: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at BlogApp.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp/Middlewares/ErrorHandlingMiddleware.cs:line 24
+[2025-06-11 21:46:58 ERR] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 500 in 5.6413 ms
+[2025-06-11 21:48:44 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 21:48:47 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 21:48:48 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 21:48:49 WRN] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware The WebRootPath was not found: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp/wwwroot. Static files may be unavailable.
+[2025-06-11 21:48:49 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-11 21:48:49 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:48:49 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:48:49 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:48:49 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 21:48:49 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 21:48:49 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 21:48:49 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:48:49 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:48:50 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 929.7159ms - 200
+[2025-06-11 21:48:50 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 947.4606ms - 200
+[2025-06-11 21:48:50 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1282.9422ms - 200
+[2025-06-11 21:48:50 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1295.8892ms - 200
+[2025-06-11 21:48:50 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:48:50 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 21:48:50 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:48:50 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:48:56 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:48:56 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:48:57 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 690.8897ms - 200
+[2025-06-11 21:48:57 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 694.3788ms - 200
+[2025-06-11 21:49:05 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 21:49:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 41.6830 ms
+[2025-06-11 21:49:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 40.2412 ms
+[2025-06-11 21:49:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 45.8265 ms
+[2025-06-11 21:49:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 1.2189 ms
+[2025-06-11 21:49:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 1.3518 ms
+[2025-06-11 21:49:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 4.1414 ms
+[2025-06-11 21:49:23 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 21:49:26 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 21:49:27 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 21:49:27 WRN] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware The WebRootPath was not found: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp/wwwroot. Static files may be unavailable.
+[2025-06-11 21:49:27 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-11 21:49:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:49:27 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:49:27 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:49:27 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 21:49:27 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 21:49:27 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 21:49:27 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:49:27 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:49:29 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1446.1228ms - 200
+[2025-06-11 21:49:29 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1468.7743ms - 200
+[2025-06-11 21:49:30 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2369.2125ms - 200
+[2025-06-11 21:49:30 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2383.6261ms - 200
+[2025-06-11 21:49:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:49:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 21:49:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:49:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:49:33 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:49:33 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:49:45 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:49:46 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:49:48 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:49:48 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:49:51 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:50:50 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 21:50:53 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 21:50:54 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 21:50:55 WRN] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware The WebRootPath was not found: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp/wwwroot. Static files may be unavailable.
+[2025-06-11 21:50:55 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-11 21:50:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:50:55 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:50:55 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:50:55 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 21:50:55 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 21:50:55 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 21:50:55 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:50:55 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:50:56 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1184.848ms - 200
+[2025-06-11 21:50:56 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1204.8563ms - 200
+[2025-06-11 21:50:57 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1891.9994ms - 200
+[2025-06-11 21:50:57 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1905.1919ms - 200
+[2025-06-11 21:50:57 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:50:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:50:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 21:50:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:50:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:51:00 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 21:51:00 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /healthcheck-ui responded 404 in 42.7102 ms
+[2025-06-11 21:51:03 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /healthcheck-ui responded 404 in 1.3515 ms
+[2025-06-11 21:51:07 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 3.8145 ms
+[2025-06-11 21:51:07 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 4.6563 ms
+[2025-06-11 21:51:07 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 4.7019 ms
+[2025-06-11 21:51:09 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecksui-min.css responded 404 in 1.4703 ms
+[2025-06-11 21:51:09 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/vendors-dll.js responded 404 in 0.0991 ms
+[2025-06-11 21:51:09 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/ui/resources/healthchecks-bundle.js responded 404 in 0.0453 ms
+[2025-06-11 21:51:25 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 21:51:28 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 21:51:29 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 21:51:29 WRN] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware The WebRootPath was not found: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp/wwwroot. Static files may be unavailable.
+[2025-06-11 21:51:29 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-11 21:51:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:51:29 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:51:29 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:51:29 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 21:51:29 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 21:51:29 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 21:51:29 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:51:29 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:51:31 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1700.579ms - 200
+[2025-06-11 21:51:31 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1718.4183ms - 200
+[2025-06-11 21:51:31 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2353.232ms - 200
+[2025-06-11 21:51:31 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2367.4349ms - 200
+[2025-06-11 21:51:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:51:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 21:51:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:51:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:51:37 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:51:37 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:51:39 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1130.9705ms - 200
+[2025-06-11 21:51:39 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1134.4551ms - 200
+[2025-06-11 21:51:45 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:51:45 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 21:54:23 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 21:54:26 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 21:54:27 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 21:54:27 WRN] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware The WebRootPath was not found: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp/wwwroot. Static files may be unavailable.
+[2025-06-11 21:54:27 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-11 21:54:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 21:54:27 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:54:27 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-11 21:54:27 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 21:54:27 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 21:54:27 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 21:54:27 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-11 21:54:27 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-11 21:54:29 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1370.9992ms - 200
+[2025-06-11 21:54:29 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1390.7501ms - 200
+[2025-06-11 21:54:29 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1961.5036ms - 200
+[2025-06-11 21:54:29 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1975.3344ms - 200
+[2025-06-11 21:54:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 21:54:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 21:54:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 21:54:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 21:54:34 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 21:54:34 INF] BlogApp.Controllers.CategoryController Fetching categories with PageNumber: 1, PageSize: 5
+[2025-06-11 21:54:34 INF] BlogApp.Services.CategoryService Service call: GetCategoriesAsync with PageNumber: 1, PageSize: 5
+[2025-06-11 21:54:35 WRN] Microsoft.EntityFrameworkCore.Query The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-11 21:54:35 WRN] Microsoft.EntityFrameworkCore.Query The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-11 21:54:36 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2025-06-11 21:54:36 INF] BlogApp.Services.CategoryService Mapping completed. Returning 5 categories
+[2025-06-11 21:54:36 INF] BlogApp.Controllers.CategoryController Successfully retrieved 5 categories
+[2025-06-11 21:54:36 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 200 in 2173.4727 ms
+[2025-06-11 21:58:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/comments responded 401 in 15.4530 ms
+[2025-06-11 21:58:14 INF] BlogApp.Controllers.CommentController Fetching comments with PageNumber: 1, PageSize: 5
+[2025-06-11 21:58:14 INF] BlogApp.Services.CommentsService Service: Retrieving comments with PageNumber: 1, PageSize: 5
+[2025-06-11 21:58:14 WRN] Microsoft.EntityFrameworkCore.Query The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-11 21:58:14 WRN] Microsoft.EntityFrameworkCore.Query The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-11 21:58:14 INF] BlogApp.Services.CommentsService Service: Retrieved 5 comments
+[2025-06-11 21:58:14 INF] BlogApp.Controllers.CommentController Successfully fetched 5 comments
+[2025-06-11 21:58:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/comments responded 200 in 104.6664 ms
