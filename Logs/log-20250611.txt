@@ -212,3 +212,12 @@
 [2025-06-11 07:08:35 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
 [2025-06-11 07:08:35 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
 [2025-06-11 07:08:35 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 07:16:22 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 07:16:26 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 07:16:26 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 07:16:26 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 07:16:26 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 07:16:35 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 07:16:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET / responded 404 in 78.6068 ms
+[2025-06-11 07:16:43 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /health responded 200 in 17.8846 ms
+[2025-06-11 07:16:43 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /favicon.ico responded 404 in 4.4980 ms

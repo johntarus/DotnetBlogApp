@@ -85,10 +85,8 @@ c.AddSecurityRequirement(new()
     }
 });
 });
-// builder.Host.UseSerilog();
-// builder.Logging.AddConsole();
-// builder.Logging.AddDebug();
-// Log.Information("Application starting");
+
+builder.Services.AddHealthChecks();
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
@@ -100,6 +98,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.MapHealthChecks("health");
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 app.UseRouting();
