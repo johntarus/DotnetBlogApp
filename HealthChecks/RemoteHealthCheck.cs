@@ -14,7 +14,6 @@ public class RemoteHealthCheck(IHttpClientFactory httpClientFactory) : IHealthCh
         {
             var httpClient = httpClientFactory.CreateClient("healthCheck");
 
-            // Set a timeout specifically for the health check
             httpClient.Timeout = TimeSpan.FromSeconds(5);
 
             var response = await httpClient.GetAsync(RemoteHealthCheckUrl, cancellationToken);
