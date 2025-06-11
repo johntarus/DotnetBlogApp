@@ -1,5 +1,6 @@
 using System.Text;
 using BlogApp.AutoMapper;
+using BlogApp.Config;
 using BlogApp.Data;
 using BlogApp.HealthChecks;
 using BlogApp.Interfaces;
@@ -63,33 +64,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new() { Title = "BlogApp", Version = "v1" });
-    // Add JWT support to Swagger
-c.AddSecurityDefinition("Bearer", new()
-{
-    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
-    Name = "Authorization",
-    In = ParameterLocation.Header,
-    Type = SecuritySchemeType.ApiKey,
-    Scheme = "Bearer"   
-});
-c.AddSecurityRequirement(new()
-{
-    {
-        new()
-        {
-            Reference = new()
-            {
-                Type = ReferenceType.SecurityScheme,
-                Id = "Bearer"
-            }
-        },
-        Array.Empty<string>() // empty scopes is allowed because Swagger doesn't support scopes'
-    }
-});
-});
+builder.Services.AddAppSwagger();
 
 builder.Services.AddHealthChecks();
 builder.Services.AddAuthorization();
