@@ -1,0 +1,214 @@
+[2025-06-11 06:20:25 WRN] Microsoft.AspNetCore.Server.Kestrel As of ""2025-06-10T20:35:21.6654596+00:00"", the heartbeat has been running for ""00:00:01.5916894"" which is longer than ""00:00:01"". This could be caused by thread pool starvation.
+[2025-06-11 06:31:13 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 06:31:16 INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-11 06:31:16 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 06:31:16 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 06:31:16 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 06:31:16 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 06:31:17 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-11 06:31:17 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 282.8332ms
+[2025-06-11 06:31:18 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-11 06:31:18 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 282.8065ms
+[2025-06-11 06:33:01 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 06:33:04 INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-11 06:33:04 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 06:33:04 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 06:33:04 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 06:33:04 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 06:33:05 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-11 06:33:05 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 190.8657ms
+[2025-06-11 06:33:05 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-11 06:33:06 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 215.4588ms
+[2025-06-11 06:33:20 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 06:33:22 INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-11 06:33:22 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 06:33:22 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 06:33:22 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 06:33:22 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 06:33:23 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-11 06:33:23 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 189.0294ms
+[2025-06-11 06:33:24 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-11 06:33:24 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 191.6265ms
+[2025-06-11 06:33:38 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 06:33:40 INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-11 06:33:40 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 06:33:40 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 06:33:40 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 06:33:40 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 06:33:41 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-11 06:33:41 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 224.5285ms
+[2025-06-11 06:33:42 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-11 06:33:42 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 210.25ms
+[2025-06-11 06:34:00 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 06:34:03 INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-11 06:34:03 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 06:34:03 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 06:34:03 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 06:34:03 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 06:34:03 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-11 06:34:03 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 224.271ms
+[2025-06-11 06:34:04 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-11 06:34:04 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 194.2003ms
+[2025-06-11 06:39:18 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 06:39:19 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 401 in 140.4183 ms
+[2025-06-11 06:54:07 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 06:54:07 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 06:54:07 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 06:54:07 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 06:55:19 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 06:55:19 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 401 in 77.2093 ms
+[2025-06-11 06:56:29 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 06:56:32 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 06:56:32 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 06:56:32 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 06:56:32 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 06:57:11 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 06:57:13 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 06:57:13 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 06:57:13 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 06:57:13 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 06:57:50 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 06:58:49 INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-11 06:58:49 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 06:58:49 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 06:58:49 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 06:58:49 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 06:58:50 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-11 06:58:50 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 207.9657ms
+[2025-06-11 06:58:51 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-11 06:58:51 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 191.4943ms
+[2025-06-11 06:59:32 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 06:59:32 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting stopping
+[2025-06-11 06:59:32 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting stopped
+[2025-06-11 06:59:34 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting starting
+[2025-06-11 06:59:34 INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-11 06:59:34 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 06:59:34 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 06:59:34 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 06:59:34 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 06:59:34 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting started
+[2025-06-11 06:59:35 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-11 06:59:35 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 206.8173ms
+[2025-06-11 06:59:36 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-11 06:59:36 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 194.7268ms
+[2025-06-11 07:00:04 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 07:00:04 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting stopping
+[2025-06-11 07:00:04 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting stopped
+[2025-06-11 07:00:06 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting starting
+[2025-06-11 07:00:06 INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-11 07:00:06 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 07:00:06 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 07:00:06 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 07:00:06 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 07:00:06 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting started
+[2025-06-11 07:00:07 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-11 07:00:07 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 191.9684ms
+[2025-06-11 07:00:08 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-11 07:00:08 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 197.1289ms
+[2025-06-11 07:00:14 DBG] Microsoft.AspNetCore.Server.Kestrel Config reload token fired. Checking for changes...
+[2025-06-11 07:00:16 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 07:00:16 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting stopping
+[2025-06-11 07:00:16 DBG] Microsoft.AspNetCore.Server.Kestrel.Connections Connection id "0HND8JHQ3SKQ2" disconnecting.
+[2025-06-11 07:00:16 DBG] Microsoft.AspNetCore.Server.Kestrel.Connections Connection id "0HND8JHQ3SKQ3" disconnecting.
+[2025-06-11 07:00:16 DBG] Microsoft.AspNetCore.Server.Kestrel.Connections Connection id "0HND8JHQ3SKQ3" stopped.
+[2025-06-11 07:00:16 DBG] Microsoft.AspNetCore.Server.Kestrel.Connections Connection id "0HND8JHQ3SKQ2" stopped.
+[2025-06-11 07:00:16 DBG] Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets Connection id "0HND8JHQ3SKQ3" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2025-06-11 07:00:16 DBG] Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets Connection id "0HND8JHQ3SKQ2" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2025-06-11 07:00:16 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting stopped
+[2025-06-11 07:00:18 DBG] Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+[2025-06-11 07:00:19 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting starting
+[2025-06-11 07:00:19 INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository Reading data from file '/home/tarus/.aspnet/DataProtection-Keys/key-3b128ca9-e877-40f5-a939-ef7aa352114e.xml'.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager Found key {3b128ca9-e877-40f5-a939-ef7aa352114e}.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver Considering key {3b128ca9-e877-40f5-a939-ef7aa352114e} with expiration date 2025-07-27 07:51:45Z as default key.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.DataProtection.TypeForwardingActivator Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ManagedAuthenticatedEncryptorFactory Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider Using key {3b128ca9-e877-40f5-a939-ef7aa352114e} as the default key.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService Key ring with default key {3b128ca9-e877-40f5-a939-ef7aa352114e} was loaded during application startup.
+[2025-06-11 07:00:19 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.Hosting.Diagnostics Loaded hosting startup assembly BlogApp
+[2025-06-11 07:00:19 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 07:00:19 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 07:00:19 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 07:00:19 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting started
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets Connection id "0HND8JHTMOM3P" received FIN.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.Server.Kestrel.Connections Connection id "0HND8JHTMOM3P" accepted.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.Server.Kestrel.Connections Connection id "0HND8JHTMOM3P" started.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets Connection id "0HND8JHTMOM3P" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.Server.Kestrel.Connections Connection id "0HND8JHTMOM3P" disconnecting.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.Server.Kestrel.Connections Connection id "0HND8JHTMOM3P" stopped.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.Server.Kestrel.Connections Connection id "0HND8JHTMOM3Q" accepted.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.Server.Kestrel.Connections Connection id "0HND8JHTMOM3R" accepted.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.Server.Kestrel.Connections Connection id "0HND8JHTMOM3Q" started.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.Server.Kestrel.Connections Connection id "0HND8JHTMOM3R" started.
+[2025-06-11 07:00:19 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware Wildcard detected, all requests with hosts will be allowed.
+[2025-06-11 07:00:19 DBG] Microsoft.AspNetCore.Server.Kestrel.Connections Connection id "0HND8JHTMOM3Q" completed keep alive response.
+[2025-06-11 07:00:19 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 184.55ms
+[2025-06-11 07:00:20 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-11 07:00:20 DBG] Microsoft.AspNetCore.Server.Kestrel.Connections Connection id "0HND8JHTMOM3Q" completed keep alive response.
+[2025-06-11 07:00:20 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 183.6931ms
+[2025-06-11 07:00:36 DBG] Microsoft.AspNetCore.Server.Kestrel Config reload token fired. Checking for changes...
+[2025-06-11 07:00:39 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 07:00:39 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting stopping
+[2025-06-11 07:00:39 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting stopped
+[2025-06-11 07:00:42 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting starting
+[2025-06-11 07:00:42 INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-11 07:00:42 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 07:00:42 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 07:00:42 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 07:00:42 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 07:00:42 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting started
+[2025-06-11 07:00:43 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-11 07:00:43 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 182.8859ms
+[2025-06-11 07:00:43 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-11 07:00:44 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 208.7384ms
+[2025-06-11 07:00:56 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 07:00:56 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting stopping
+[2025-06-11 07:00:56 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting stopped
+[2025-06-11 07:00:58 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting starting
+[2025-06-11 07:00:58 INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-11 07:00:58 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 07:00:58 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 07:00:58 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 07:00:58 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 07:00:58 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting started
+[2025-06-11 07:00:59 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-11 07:00:59 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 189.3654ms
+[2025-06-11 07:01:00 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-11 07:01:00 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 215.0184ms
+[2025-06-11 07:01:24 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 07:01:24 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting stopping
+[2025-06-11 07:01:24 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting stopped
+[2025-06-11 07:01:26 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting starting
+[2025-06-11 07:01:26 INF] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager User profile is available. Using '/home/tarus/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2025-06-11 07:01:26 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 07:01:26 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 07:01:26 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 07:01:26 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 07:01:26 DBG] Microsoft.Extensions.Hosting.Internal.Host Hosting started
+[2025-06-11 07:01:27 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/index.html - null null
+[2025-06-11 07:01:27 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/index.html - 200 null text/html;charset=utf-8 188.8225ms
+[2025-06-11 07:01:28 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - null null
+[2025-06-11 07:01:28 INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5263/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 205.3231ms
+[2025-06-11 07:02:55 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-06-11 07:04:25.629 +03:00 [INF] Now listening on: http://localhost:5263
+2025-06-11 07:04:25.715 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 07:04:25.716 +03:00 [INF] Hosting environment: Development
+2025-06-11 07:04:25.716 +03:00 [INF] Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+2025-06-11 07:05:20.684 +03:00 [INF] Application is shutting down...
+[2025-06-11 07:07:34 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 07:07:34 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 07:07:34 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 07:07:34 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 07:08:15 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 07:08:18 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 07:08:18 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 07:08:18 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 07:08:18 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 07:08:32 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 07:08:35 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 07:08:35 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 07:08:35 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 07:08:35 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
