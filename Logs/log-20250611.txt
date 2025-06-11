@@ -221,3 +221,1028 @@
 [2025-06-11 07:16:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET / responded 404 in 78.6068 ms
 [2025-06-11 07:16:43 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /health responded 200 in 17.8846 ms
 [2025-06-11 07:16:43 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /favicon.ico responded 404 in 4.4980 ms
+[2025-06-11 08:06:34 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 08:06:41 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 08:06:42 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 08:06:42 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 08:06:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:06:43 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:06:43 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:06:43 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 08:06:43 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 08:06:43 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 08:06:43 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 08:06:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 908.7307 ms
+[2025-06-11 08:06:44 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1018.209ms - 200
+[2025-06-11 08:06:44 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1046.8147ms - 200
+[2025-06-11 08:06:44 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:06:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:06:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 08:06:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:06:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:06:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:06:54 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:06:54 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:06:54 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 15.2842 ms
+[2025-06-11 08:06:54 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 16.8892ms - 200
+[2025-06-11 08:06:54 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 18.7643ms - 200
+[2025-06-11 08:06:54 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:06:54 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:06:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:06:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:06:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:06:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:07:04 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:07:04 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:07:04 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:07:04 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 3.3093 ms
+[2025-06-11 08:07:04 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 4.6068ms - 200
+[2025-06-11 08:07:04 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 5.3213ms - 200
+[2025-06-11 08:07:04 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:07:04 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:07:04 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:07:04 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:07:04 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:07:04 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:07:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:07:14 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:07:14 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:07:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.7088 ms
+[2025-06-11 08:07:14 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.2525ms - 200
+[2025-06-11 08:07:14 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3.0601ms - 200
+[2025-06-11 08:07:14 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:07:14 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:07:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:07:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:07:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:07:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:07:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:07:24 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:07:24 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:07:24 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 7.8689 ms
+[2025-06-11 08:07:24 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 10.966ms - 200
+[2025-06-11 08:07:24 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 13.2194ms - 200
+[2025-06-11 08:07:24 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:07:24 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:07:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:07:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:07:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:07:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:07:34 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:07:34 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:07:34 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:07:34 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 4.7190 ms
+[2025-06-11 08:07:34 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 7.4445ms - 200
+[2025-06-11 08:07:34 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 9.9013ms - 200
+[2025-06-11 08:07:34 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:07:34 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:07:34 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:07:34 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:07:34 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:07:34 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:07:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:07:44 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:07:44 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:07:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 5.5512 ms
+[2025-06-11 08:07:44 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 6.9552ms - 200
+[2025-06-11 08:07:44 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 9.0142ms - 200
+[2025-06-11 08:07:44 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:07:44 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:07:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:07:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:07:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:07:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:07:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:07:54 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:07:54 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:07:54 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.3669 ms
+[2025-06-11 08:07:54 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1.9871ms - 200
+[2025-06-11 08:07:54 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.6683ms - 200
+[2025-06-11 08:07:54 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:07:54 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:07:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:07:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:07:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:07:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:08:04 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:08:04 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:08:04 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:08:04 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.5195 ms
+[2025-06-11 08:08:04 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1.998ms - 200
+[2025-06-11 08:08:04 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.8009ms - 200
+[2025-06-11 08:08:04 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:08:04 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:08:04 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:08:04 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:08:04 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:08:04 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:08:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 3.1290 ms
+[2025-06-11 08:08:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:08:14 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:08:14 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:08:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.6557 ms
+[2025-06-11 08:08:14 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.2748ms - 200
+[2025-06-11 08:08:14 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.6748ms - 200
+[2025-06-11 08:08:14 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:08:15 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:08:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:08:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:08:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:08:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:08:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 4.9886 ms
+[2025-06-11 08:08:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:08:25 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:08:25 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:08:25 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.6571 ms
+[2025-06-11 08:08:25 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.1853ms - 200
+[2025-06-11 08:08:25 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.8345ms - 200
+[2025-06-11 08:08:25 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:08:25 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:08:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:08:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:08:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:08:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:08:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:08:35 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:08:35 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:08:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.6423 ms
+[2025-06-11 08:08:35 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.2127ms - 200
+[2025-06-11 08:08:35 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.7418ms - 200
+[2025-06-11 08:08:35 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:08:35 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:08:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:08:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:08:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:08:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:08:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:08:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:08:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:08:45 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.2715 ms
+[2025-06-11 08:08:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 7.078ms - 200
+[2025-06-11 08:08:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 7.5687ms - 200
+[2025-06-11 08:08:45 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:08:45 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:08:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:08:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:08:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:08:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:08:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:08:55 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:08:55 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:08:55 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 3.6472 ms
+[2025-06-11 08:08:55 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 4.5623ms - 200
+[2025-06-11 08:08:55 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 6.1992ms - 200
+[2025-06-11 08:08:55 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:08:55 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:08:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:08:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:08:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:08:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:09:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:09:05 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:09:05 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:09:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.5863 ms
+[2025-06-11 08:09:05 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.0379ms - 200
+[2025-06-11 08:09:05 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.5617ms - 200
+[2025-06-11 08:09:05 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:09:05 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:09:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:09:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:09:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:09:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:09:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:09:15 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:09:15 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:09:15 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.4036 ms
+[2025-06-11 08:09:15 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.0673ms - 200
+[2025-06-11 08:09:15 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.9717ms - 200
+[2025-06-11 08:09:15 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:09:15 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:09:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:09:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:09:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:09:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:09:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:09:25 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:09:25 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:09:25 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.5075 ms
+[2025-06-11 08:09:25 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1.9039ms - 200
+[2025-06-11 08:09:25 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.3291ms - 200
+[2025-06-11 08:09:25 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:09:25 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:09:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:09:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:09:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:09:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:09:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:09:35 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:09:35 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:09:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.4660 ms
+[2025-06-11 08:09:35 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1.8844ms - 200
+[2025-06-11 08:09:35 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.405ms - 200
+[2025-06-11 08:09:35 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:09:35 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:09:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:09:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:09:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:09:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:09:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:09:45 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 08:09:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:09:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:09:45 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 5.2210 ms
+[2025-06-11 08:09:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 6.6193ms - 200
+[2025-06-11 08:09:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 9.3531ms - 200
+[2025-06-11 08:09:45 ERR] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector GetHealthReport threw an exception when trying to get report from /api/health configured with name feedback api.
+System.Text.Json.JsonException: 'H' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'H' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsyncCore[T](HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at HealthChecks.UI.Core.HostedService.HealthCheckReportCollector.GetHealthReportAsync(HealthCheckConfiguration configuration) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.UI/Core/HostedService/HealthCheckReportCollector.cs:line 149
+[2025-06-11 08:09:45 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-11 08:09:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:09:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:09:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:09:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:10:21 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 08:10:23 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 08:10:23 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 08:10:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:10:23 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:10:23 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:10:23 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 08:10:23 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 08:10:23 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 08:10:23 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 08:10:24 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1098.6837ms - 200
+[2025-06-11 08:10:24 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 982.6775 ms
+[2025-06-11 08:10:24 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1147.7738ms - 200
+[2025-06-11 08:10:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:10:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 08:10:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:10:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:10:34 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:10:34 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:10:34 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:10:34 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 11.4445 ms
+[2025-06-11 08:10:34 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 13.2648ms - 200
+[2025-06-11 08:10:35 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 15.2775ms - 200
+[2025-06-11 08:10:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:10:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:10:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:10:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:10:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:10:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:10:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:10:45 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 4.4624 ms
+[2025-06-11 08:10:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 5.9091ms - 200
+[2025-06-11 08:10:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 6.8877ms - 200
+[2025-06-11 08:10:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:10:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:10:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:10:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:10:45 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 2.1066 ms
+[2025-06-11 08:10:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:10:55 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:10:55 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:10:55 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.5458 ms
+[2025-06-11 08:10:55 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.0543ms - 200
+[2025-06-11 08:10:55 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.6184ms - 200
+[2025-06-11 08:10:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:10:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:10:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:10:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:11:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:11:05 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:11:05 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:11:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 2.7091 ms
+[2025-06-11 08:11:05 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 3.7359ms - 200
+[2025-06-11 08:11:05 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 5.0894ms - 200
+[2025-06-11 08:11:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:11:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:11:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:11:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:11:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:11:15 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:11:15 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:11:15 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.7261 ms
+[2025-06-11 08:11:15 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.318ms - 200
+[2025-06-11 08:11:15 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.9682ms - 200
+[2025-06-11 08:11:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:11:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:11:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:11:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:11:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:11:25 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:11:25 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:11:25 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.7789 ms
+[2025-06-11 08:11:25 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.3011ms - 200
+[2025-06-11 08:11:25 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3.0333ms - 200
+[2025-06-11 08:11:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:11:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:11:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:11:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:11:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:11:35 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:11:35 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:11:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.7375 ms
+[2025-06-11 08:11:35 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.2742ms - 200
+[2025-06-11 08:11:35 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.708ms - 200
+[2025-06-11 08:11:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:11:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:11:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:11:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:11:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:11:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:11:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:11:45 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 2.0067 ms
+[2025-06-11 08:11:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.9326ms - 200
+[2025-06-11 08:11:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3.3464ms - 200
+[2025-06-11 08:11:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:11:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:11:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:11:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:11:51 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:11:52 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:11:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:11:55 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:11:55 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:11:55 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.7099 ms
+[2025-06-11 08:11:55 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.2598ms - 200
+[2025-06-11 08:11:55 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.9593ms - 200
+[2025-06-11 08:11:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:11:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:11:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:11:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:11:58 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:11:58 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:12:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:12:05 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:12:05 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:12:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.4624 ms
+[2025-06-11 08:12:05 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1.8768ms - 200
+[2025-06-11 08:12:05 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.4404ms - 200
+[2025-06-11 08:12:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:12:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:12:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:12:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:12:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:12:15 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:12:15 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:12:15 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 5.2388 ms
+[2025-06-11 08:12:15 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 6.9858ms - 200
+[2025-06-11 08:12:15 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 8.7505ms - 200
+[2025-06-11 08:12:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:12:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:12:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:12:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:12:17 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:12:17 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:12:22 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:12:22 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:12:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:12:25 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:12:25 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:12:25 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.3294 ms
+[2025-06-11 08:12:25 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 6.983ms - 200
+[2025-06-11 08:12:25 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 7.6032ms - 200
+[2025-06-11 08:12:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:12:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:12:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:12:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:12:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:12:35 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:12:35 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:12:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.6686 ms
+[2025-06-11 08:12:35 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.2119ms - 200
+[2025-06-11 08:12:35 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.7985ms - 200
+[2025-06-11 08:12:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:12:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:12:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:12:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:12:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:12:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:12:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:12:45 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 2.0436 ms
+[2025-06-11 08:12:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.9166ms - 200
+[2025-06-11 08:12:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3.4735ms - 200
+[2025-06-11 08:12:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:12:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:12:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:12:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:12:45 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 08:12:49 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 08:12:50 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 08:12:50 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 08:12:50 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:12:50 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:12:50 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:12:50 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 08:12:50 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 08:12:50 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 08:12:50 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 08:12:51 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1042.2852ms - 200
+[2025-06-11 08:12:51 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 939.7097 ms
+[2025-06-11 08:12:51 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1072.6618ms - 200
+[2025-06-11 08:12:51 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:12:51 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 08:12:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:12:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:13:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:13:02 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:13:02 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:13:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 7.8409 ms
+[2025-06-11 08:13:02 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 9.5375ms - 200
+[2025-06-11 08:13:02 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 11.7995ms - 200
+[2025-06-11 08:13:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:13:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:13:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:13:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:13:10 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:13:11 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:13:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:13:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:13:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:13:12 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 3.4263 ms
+[2025-06-11 08:13:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 4.6169ms - 200
+[2025-06-11 08:13:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 5.532ms - 200
+[2025-06-11 08:13:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:13:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:13:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:13:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:13:12 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:13:12 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:13:13 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:13:13 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:13:14 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:13:14 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:13:14 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:13:18 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:13:18 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:13:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:13:22 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:13:22 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:13:22 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.5339 ms
+[2025-06-11 08:13:22 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.1993ms - 200
+[2025-06-11 08:13:22 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.7585ms - 200
+[2025-06-11 08:13:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:13:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:13:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:13:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:13:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:13:32 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:13:32 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:13:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.5578 ms
+[2025-06-11 08:13:32 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1.939ms - 200
+[2025-06-11 08:13:32 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.7083ms - 200
+[2025-06-11 08:13:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:13:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:13:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:13:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:13:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:13:42 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:13:42 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:13:42 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.7673 ms
+[2025-06-11 08:13:42 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.2408ms - 200
+[2025-06-11 08:13:42 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.8986ms - 200
+[2025-06-11 08:13:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:13:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:13:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:13:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:13:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:13:52 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:13:52 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:13:52 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.4802 ms
+[2025-06-11 08:13:52 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1.8168ms - 200
+[2025-06-11 08:13:52 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.3338ms - 200
+[2025-06-11 08:13:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:13:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:13:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:13:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:14:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:14:02 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:14:02 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:14:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.4922 ms
+[2025-06-11 08:14:02 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1.8465ms - 200
+[2025-06-11 08:14:02 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.3679ms - 200
+[2025-06-11 08:14:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:14:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:14:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:14:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:14:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:14:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:14:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:14:12 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.9620 ms
+[2025-06-11 08:14:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.4619ms - 200
+[2025-06-11 08:14:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.9711ms - 200
+[2025-06-11 08:14:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:14:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:14:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:14:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:14:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:14:22 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:14:22 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:14:22 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.8574 ms
+[2025-06-11 08:14:22 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.3218ms - 200
+[2025-06-11 08:14:22 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3.7982ms - 200
+[2025-06-11 08:14:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:14:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:14:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:14:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:14:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:14:32 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:14:32 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:14:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.7402 ms
+[2025-06-11 08:14:32 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.1982ms - 200
+[2025-06-11 08:14:32 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.7941ms - 200
+[2025-06-11 08:14:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:14:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:14:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:14:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:14:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:14:42 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:14:42 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:14:42 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 2.9746 ms
+[2025-06-11 08:14:42 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 3.9757ms - 200
+[2025-06-11 08:14:42 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 4.7389ms - 200
+[2025-06-11 08:14:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:14:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:14:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:14:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:14:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:14:52 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:14:52 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:14:52 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.4846 ms
+[2025-06-11 08:14:52 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 6.566ms - 200
+[2025-06-11 08:14:52 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 7.1756ms - 200
+[2025-06-11 08:14:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:14:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:14:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:14:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:15:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:15:02 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:15:02 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:15:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.4382 ms
+[2025-06-11 08:15:02 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.2433ms - 200
+[2025-06-11 08:15:02 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.758ms - 200
+[2025-06-11 08:15:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:15:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:15:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:15:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:15:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:15:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:15:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:15:12 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 5.5675 ms
+[2025-06-11 08:15:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 6.6931ms - 200
+[2025-06-11 08:15:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 9.1857ms - 200
+[2025-06-11 08:15:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:15:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:15:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:15:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:15:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:15:22 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:15:22 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:15:22 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.4324 ms
+[2025-06-11 08:15:22 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1.7186ms - 200
+[2025-06-11 08:15:22 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.2255ms - 200
+[2025-06-11 08:15:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:15:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:15:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:15:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:15:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:15:32 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:15:32 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:15:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 2.0640 ms
+[2025-06-11 08:15:32 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.5581ms - 200
+[2025-06-11 08:15:32 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3.1646ms - 200
+[2025-06-11 08:15:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:15:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:15:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:15:32 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:15:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:15:42 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:15:42 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:15:42 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 2.0927 ms
+[2025-06-11 08:15:42 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.4964ms - 200
+[2025-06-11 08:15:42 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.9563ms - 200
+[2025-06-11 08:15:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:15:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:15:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:15:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:15:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:15:52 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:15:52 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:15:52 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.7758 ms
+[2025-06-11 08:15:52 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.0795ms - 200
+[2025-06-11 08:15:52 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.6043ms - 200
+[2025-06-11 08:15:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:15:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:15:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:15:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:16:00 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-11 08:16:04 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-11 08:16:06 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-11 08:16:06 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5263
+[2025-06-11 08:16:06 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:16:06 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:16:06 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:16:06 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-11 08:16:06 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-11 08:16:06 INF] Microsoft.Hosting.Lifetime Content root path: /home/tarus/Desktop/personal/Playground/dotnet/DotnetBlogApp
+[2025-06-11 08:16:06 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-11 08:16:07 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1185.9283ms - 200
+[2025-06-11 08:16:07 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1068.9720 ms
+[2025-06-11 08:16:07 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1220.8948ms - 200
+[2025-06-11 08:16:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:16:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-11 08:16:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:16:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:16:15 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:16 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:16 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:16 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:16:18 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:16:18 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:16:18 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 8.6148 ms
+[2025-06-11 08:16:18 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 10.3184ms - 200
+[2025-06-11 08:16:18 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 12.3748ms - 200
+[2025-06-11 08:16:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:16:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:16:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:16:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:16:19 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:19 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:19 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:20 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:20 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:20 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:20 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:16:28 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:16:28 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:16:28 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 5.2408 ms
+[2025-06-11 08:16:28 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 6.5479ms - 200
+[2025-06-11 08:16:28 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 7.8565ms - 200
+[2025-06-11 08:16:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:16:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:16:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:16:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:16:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:16:38 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:16:38 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:16:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.4760 ms
+[2025-06-11 08:16:38 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1.9738ms - 200
+[2025-06-11 08:16:38 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.5726ms - 200
+[2025-06-11 08:16:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:16:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:16:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:16:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:16:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:16:48 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:16:48 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:16:48 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.8122 ms
+[2025-06-11 08:16:48 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.3989ms - 200
+[2025-06-11 08:16:48 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3.2138ms - 200
+[2025-06-11 08:16:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:16:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:16:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:16:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:16:53 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:54 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:55 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:55 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:16:58 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:16:58 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:16:58 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:16:58 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.5457 ms
+[2025-06-11 08:16:58 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1.9043ms - 200
+[2025-06-11 08:16:58 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.4105ms - 200
+[2025-06-11 08:16:58 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:16:58 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:16:58 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:16:58 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:17:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:17:08 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:17:08 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:17:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.6586 ms
+[2025-06-11 08:17:08 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.0079ms - 200
+[2025-06-11 08:17:08 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.4939ms - 200
+[2025-06-11 08:17:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:17:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:17:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:17:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:17:15 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:17:16 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:17:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:17:18 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:17:18 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:17:18 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.6453 ms
+[2025-06-11 08:17:18 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2.0073ms - 200
+[2025-06-11 08:17:18 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.4743ms - 200
+[2025-06-11 08:17:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:17:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:17:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:17:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:17:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:17:28 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:17:28 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:17:28 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 1.5882 ms
+[2025-06-11 08:17:28 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1.9531ms - 200
+[2025-06-11 08:17:28 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2.6089ms - 200
+[2025-06-11 08:17:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:17:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:17:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:17:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-11 08:17:29 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:17:30 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-06-11 08:17:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-11 08:17:38 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:17:38 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5263/api/health
+[2025-06-11 08:17:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/health responded 200 in 3.8517 ms
+[2025-06-11 08:17:38 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 4.8136ms - 200
+[2025-06-11 08:17:38 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 6.0939ms - 200
+[2025-06-11 08:17:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-11 08:17:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-11 08:17:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-11 08:17:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
