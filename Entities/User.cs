@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using BlogApp.Entities;
 
 namespace BlogApp.Models.Entities;
@@ -6,6 +7,7 @@ public class User
 {
     public Guid Id { get; set; }
     public required string Username { get; set; }
+    [EmailAddress]
     public required string Email { get; set; }
     public string? Bio { get; set; }
     public string? Avatar { get; set; }
