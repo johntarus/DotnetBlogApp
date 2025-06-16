@@ -26,10 +26,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\" />
-    </ItemGroup>
-
-    <ItemGroup>
+      <ProjectReference Include="..\src\BlogApp.API\BlogApp.API.csproj" />
       <ProjectReference Include="..\src\BlogApp.Core\BlogApp.Core.csproj" />
     </ItemGroup>
 
