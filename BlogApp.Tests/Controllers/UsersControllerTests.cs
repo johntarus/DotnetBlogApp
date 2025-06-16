@@ -1,5 +1,4 @@
 using System.Security.Claims;
-using System.Text.Json;
 using BlogApp.API.Controllers;
 using BlogApp.Core.Dtos.Request;
 using BlogApp.Core.Dtos.Response;
