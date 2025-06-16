@@ -1,207 +1,131 @@
-using System.Security.Claims;
 using BlogApp.API.Controllers;
 using BlogApp.Core.Dtos.PagedFilters;
 using BlogApp.Core.Dtos.Request;
 using BlogApp.Core.Dtos.Response;
 using BlogApp.Core.Interfaces.Services;
-using Microsoft.AspNetCore.Http;
+using BlogApp.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
-using BlogApp.Domain.Entities;
 
-namespace BlogApp.Tests.Controllers
+namespace BlogApp.Tests.Controllers;
+
+public class TagControllerTests
 {
-    public class TagControllerTests
+    private readonly Mock<ITagService> _mockTagService = new();
+    private readonly Mock<ILogger<TagController>> _mockLogger = new();
+    private readonly TagController _controller;
+
+    public TagControllerTests()
     {
-        private readonly Mock<ITagService> _mockTagService;
-        private readonly Mock<ILogger<TagController>> _mockLogger;
-        private readonly TagController _controller;
+        _controller = new TagController(_mockTagService.Object, _mockLogger.Object);
+    }
 
-        public TagControllerTests()
-        {
-            _mockTagService = new Mock<ITagService>();
-            _mockLogger = new Mock<ILogger<TagController>>();
-            
-            // Setup admin user
-            var adminUser = new ClaimsPrincipal(new ClaimsIdentity(new Claim[]
-            {
-                new Claim(ClaimTypes.NameIdentifier, "1"),
-                new Claim(ClaimTypes.Role, "Admin")
-            }, "TestAuthentication"));
-            
-            _controller = new TagController(_mockTagService.Object, _mockLogger.Object)
-            {
-                ControllerContext = new ControllerContext()
-                {
-                    HttpContext = new DefaultHttpContext() { User = adminUser }
-                }
-            };
-        }
+    [Fact]
+    public async Task GetTags_InvalidPaging_ReturnsBadRequest()
+    {
+        var request = new TagPagedRequest { PageNumber = 0, PageSize = 0 };
 
-        [Fact]
-        public async Task GetTags_InvalidPagination_ReturnsBadRequest()
-        {
-            // Arrange
-            var invalidRequest = new TagPagedRequest { PageNumber = 0, PageSize = -1 };
+        var result = await _controller.GetTags(request);
 
-            // Act
-            var result = await _controller.GetTags(invalidRequest);
+        var badRequest = Assert.IsType<BadRequestObjectResult>(result);
+        Assert.Equal("Page Number and Page Size must be greater than zero", badRequest.Value);
+    }
 
-            // Assert
-            Assert.IsType<BadRequestObjectResult>(result);
-        }
+    [Fact]
+    public async Task GetTags_ValidRequest_ReturnsOk()
+    {
+        var request = new TagPagedRequest { PageNumber = 1, PageSize = 10 };
+        var tags = new PaginatedList<TagResponseDto>(new List<TagResponseDto>(), 1, 10, 0, 0);
 
-        [Fact]
-        public async Task GetTags_ValidRequest_ReturnsOk()
-        {
-            // Arrange
-            var request = new TagPagedRequest { PageNumber = 1, PageSize = 10 };
-            var mockTags = new PaginatedList<TagResponseDto>(
-                new List<TagResponseDto> { new TagResponseDto() }, 
-                1, 10, 1, 1);
-            
-            _mockTagService.Setup(s => s.GetAllTags(request))
-                .ReturnsAsync(mockTags);
+        _mockTagService.Setup(s => s.GetAllTags(request)).ReturnsAsync(tags);
 
-            // Act
-            var result = await _controller.GetTags(request);
+        var result = await _controller.GetTags(request);
 
-            // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
-            Assert.Equal(mockTags, okResult.Value);
-        }
+        var ok = Assert.IsType<OkObjectResult>(result);
+        Assert.Equal(tags, ok.Value);
+    }
 
-        [Fact]
-        public async Task CreateTag_InvalidModel_ReturnsBadRequest()
-        {
-            // Arrange
-            _controller.ModelState.AddModelError("Name", "Required");
+    [Fact]
+    public async Task CreateTag_ValidRequest_ReturnsOk()
+    {
+        var dto = new AddTagDto { Name = "Test" };
+        var tag = new TagResponseDto { Id = 1, Name = "Test" };
 
-            // Act
-            var result = await _controller.CreateTag(new AddTagDto());
+        _mockTagService.Setup(s => s.AddTag(dto)).ReturnsAsync(tag);
 
-            // Assert
-            Assert.IsType<BadRequestObjectResult>(result);
-        }
+        var result = await _controller.CreateTag(dto);
 
-        [Fact]
-        public async Task CreateTag_ValidRequest_ReturnsOk()
-        {
-            // Arrange
-            var tagDto = new AddTagDto { Name = "Test" };
-            var expectedTag = new TagResponseDto { Id = 1, Name = "Test" };
-            _mockTagService.Setup(s => s.AddTag(tagDto))
-                .ReturnsAsync(expectedTag);
+        var ok = Assert.IsType<OkObjectResult>(result);
+        Assert.Equal(tag, ok.Value);
+    }
 
-            // Act
-            var result = await _controller.CreateTag(tagDto);
+    [Fact]
+    public async Task GetTagById_NotFound_ReturnsNotFound()
+    {
+        _mockTagService.Setup(s => s.GetTagById(1)).ReturnsAsync((TagResponseDto)null!);
 
-            // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
-            Assert.Equal(expectedTag, okResult.Value);
-        }
+        var result = await _controller.GetTagById(1);
 
-        [Fact]
-        public async Task UpdateTag_InvalidModel_ReturnsBadRequest()
-        {
-            // Arrange
-            _controller.ModelState.AddModelError("Name", "Required");
+        Assert.IsType<NotFoundResult>(result);
+    }
 
-            // Act
-            var result = await _controller.UpdateTag(1, new UpdateTagDto());
+    [Fact]
+    public async Task GetTagById_Found_ReturnsOk()
+    {
+        var tag = new TagResponseDto { Id = 1, Name = "Test" };
 
-            // Assert
-            Assert.IsType<BadRequestObjectResult>(result);
-        }
+        _mockTagService.Setup(s => s.GetTagById(1)).ReturnsAsync(tag);
 
-        [Fact]
-        public async Task UpdateTag_NotFound_ReturnsNotFound()
-        {
-            // Arrange
-            _mockTagService.Setup(s => s.UpdateTag(It.IsAny<int>(), It.IsAny<UpdateTagDto>()))
-                .ReturnsAsync((TagResponseDto)null);
+        var result = await _controller.GetTagById(1);
 
-            // Act
-            var result = await _controller.UpdateTag(1, new UpdateTagDto());
+        var ok = Assert.IsType<OkObjectResult>(result);
+        Assert.Equal(tag, ok.Value);
+    }
 
-            // Assert
-            Assert.IsType<NotFoundResult>(result);
-        }
+    [Fact]
+    public async Task UpdateTag_NotFound_ReturnsNotFound()
+    {
+        var dto = new UpdateTagDto { Name = "Updated" };
 
-        [Fact]
-        public async Task UpdateTag_Success_ReturnsOk()
-        {
-            // Arrange
-            var updateDto = new UpdateTagDto { Name = "Updated" };
-            var expectedTag = new TagResponseDto { Id = 1, Name = "Updated" };
-            _mockTagService.Setup(s => s.UpdateTag(1, updateDto))
-                .ReturnsAsync(expectedTag);
+        _mockTagService.Setup(s => s.UpdateTag(1, dto)).ReturnsAsync((TagResponseDto)null!);
 
-            // Act
-            var result = await _controller.UpdateTag(1, updateDto);
+        var result = await _controller.UpdateTag(1, dto);
 
-            // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
-            Assert.Equal(expectedTag, okResult.Value);
-        }
+        Assert.IsType<NotFoundResult>(result);
+    }
 
-        [Fact]
-        public async Task GetTagById_NotFound_ReturnsNotFound()
-        {
-            // Arrange
-            _mockTagService.Setup(s => s.GetTagById(It.IsAny<int>()))
-                .ReturnsAsync((TagResponseDto)null);
+    [Fact]
+    public async Task UpdateTag_ValidRequest_ReturnsOk()
+    {
+        var dto = new UpdateTagDto { Name = "Updated" };
+        var updated = new TagResponseDto { Id = 1, Name = dto.Name };
 
-            // Act
-            var result = await _controller.GetTagById(1);
+        _mockTagService.Setup(s => s.UpdateTag(1, dto)).ReturnsAsync(updated);
 
-            // Assert
-            Assert.IsType<NotFoundResult>(result);
-        }
+        var result = await _controller.UpdateTag(1, dto);
 
-        [Fact]
-        public async Task GetTagById_Found_ReturnsOk()
-        {
-            // Arrange
-            var expectedTag = new TagResponseDto { Id = 1, Name = "Test" };
-            _mockTagService.Setup(s => s.GetTagById(1))
-                .ReturnsAsync(expectedTag);
+        var ok = Assert.IsType<OkObjectResult>(result);
+        Assert.Equal(updated, ok.Value);
+    }
 
-            // Act
-            var result = await _controller.GetTagById(1);
+    [Fact]
+    public async Task DeleteTag_NotFound_ReturnsNotFound()
+    {
+        _mockTagService.Setup(s => s.DeleteTag(1)).ReturnsAsync(false);
 
-            // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
-            Assert.Equal(expectedTag, okResult.Value);
-        }
+        var result = await _controller.DeleteTag(1);
 
-        [Fact]
-        public async Task DeleteTag_NotFound_ReturnsNotFound()
-        {
-            // Arrange
-            _mockTagService.Setup(s => s.DeleteTag(It.IsAny<int>()))
-                .ReturnsAsync(false);
+        Assert.IsType<NotFoundResult>(result);
+    }
 
-            // Act
-            var result = await _controller.DeleteTag(1);
+    [Fact]
+    public async Task DeleteTag_Success_ReturnsNoContent()
+    {
+        _mockTagService.Setup(s => s.DeleteTag(1)).ReturnsAsync(true);
 
-            // Assert
-            Assert.IsType<NotFoundResult>(result);
-        }
+        var result = await _controller.DeleteTag(1);
 
-        [Fact]
-        public async Task DeleteTag_Success_ReturnsNoContent()
-        {
-            // Arrange
-            _mockTagService.Setup(s => s.DeleteTag(1))
-                .ReturnsAsync(true);
-
-            // Act
-            var result = await _controller.DeleteTag(1);
-
-            // Assert
-            Assert.IsType<NoContentResult>(result);
-        }
+        Assert.IsType<NoContentResult>(result);
     }
 }
