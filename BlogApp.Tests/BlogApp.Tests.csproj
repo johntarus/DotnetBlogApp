@@ -12,8 +12,10 @@
     <ItemGroup>
         <PackageReference Include="coverlet.collector" Version="6.0.0"/>
         <PackageReference Include="FluentAssertions" Version="8.3.0" />
+        <PackageReference Include="Microsoft.IdentityModel.Logging" Version="8.12.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0"/>
         <PackageReference Include="Moq" Version="4.20.72" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.12.0" />
         <PackageReference Include="xunit" Version="2.5.3"/>
         <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3"/>
     </ItemGroup>
@@ -33,6 +35,9 @@
     <ItemGroup>
       <Reference Include="AutoMapper">
         <HintPath>..\..\..\..\..\..\.nuget\packages\automapper\12.0.0\lib\netstandard2.1\AutoMapper.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.IdentityModel.Tokens">
+        <HintPath>..\..\..\..\..\..\.nuget\packages\microsoft.identitymodel.tokens\7.1.2\lib\net8.0\Microsoft.IdentityModel.Tokens.dll</HintPath>
       </Reference>
     </ItemGroup>
 
