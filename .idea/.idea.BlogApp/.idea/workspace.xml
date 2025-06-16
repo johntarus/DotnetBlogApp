@@ -10,7 +10,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5d642005-da3b-4e4e-954b-169ab213dc6e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlogApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlogApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlogApp.Tests/UnitTest1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BlogApp.Core/Utils/EmailTemplateUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/BlogApp.Core/Utils/EmailTemplateUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BlogApp.Domain/Entities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/BlogApp.Domain/Entities/User.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1749750549104</updated>
       <workItem from="1749750550489" duration="11716000" />
-      <workItem from="1750003184897" duration="9785000" />
+      <workItem from="1750003184897" duration="10659000" />
     </task>
     <servers />
   </component>

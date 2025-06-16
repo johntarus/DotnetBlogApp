@@ -2,7 +2,7 @@ namespace BlogApp.Core.Utils;
 
 public abstract class EmailTemplateUtils
 {
-    public static string GetVerificationEmailTemplate(string username, string verificationLink)
+    public static string GetVerificationEmailTemplate(string? username, string verificationLink)
     {
         return $@"
             <!DOCTYPE html>
