@@ -1,11 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <UserSecretsId>399b4c59-3b53-4345-9ecf-678676ff0f2a</UserSecretsId>
-    </PropertyGroup>
+        <UserSecretsId>9c065d80-ea91-4112-99fb-c871211ddc43</UserSecretsId>
+<!--        <UserSecretsId>399b4c59-3b53-4345-9ecf-678676ff0f2a</UserSecretsId>-->
+  </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="9.0.0" />
