@@ -1,0 +1,307 @@
+[2025-06-23 17:11:03 ERR] Microsoft.EntityFrameworkCore.Database.Command Failed executing DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+[2025-06-23 17:12:47 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-23 17:12:48 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-23 17:12:48 WRN] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware The WebRootPath was not found: /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API/wwwroot. Static files may be unavailable.
+[2025-06-23 17:12:48 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-23 17:12:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 17:12:48 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 17:12:48 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 17:12:48 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-23 17:12:48 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-23 17:12:48 INF] Microsoft.Hosting.Lifetime Content root path: /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API
+[2025-06-23 17:12:48 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 17:12:48 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 17:12:53 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check Remote endpoint health check with status "Unhealthy" completed after 5007.8174ms with message 'Remote endpoint timed out.'
+[2025-06-23 17:12:53 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 5098.7445ms - 503
+[2025-06-23 17:12:53 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 5111.4497ms - 503
+[2025-06-23 17:12:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 17:12:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-23 17:12:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 17:12:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 17:14:00 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-23 17:14:00 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 401 in 46.1299 ms
+[2025-06-23 17:17:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 17:17:53 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 17:17:53 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 17:17:53 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 17:17:53 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 17:17:55 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1723.2872ms - 200
+[2025-06-23 17:17:55 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1725.0847ms - 200
+[2025-06-23 17:17:56 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2517.8952ms - 200
+[2025-06-23 17:17:56 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2519.307ms - 200
+[2025-06-23 17:17:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 17:17:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthCheckReportCollector already exists but on different state, updating the values.
+[2025-06-23 17:17:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 17:17:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 18:51:59 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 18:51:59 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 18:51:59 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 18:51:59 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 18:51:59 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 18:52:02 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 3215.274ms - 200
+[2025-06-23 18:52:02 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 3217.2529ms - 200
+[2025-06-23 18:52:14 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 15022.4481ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15010; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCert)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:99b3347c-3d1b-4327-986b-294670499cd5
+Error Number:-2,State:0,Class:11
+[2025-06-23 18:52:14 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 15049.857ms - 503
+[2025-06-23 18:52:14 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 15051.4162ms - 503
+[2025-06-23 18:52:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 18:52:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthCheckReportCollector already exists but on different state, updating the values.
+[2025-06-23 18:52:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 18:52:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 18:57:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 18:57:14 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 18:57:14 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 18:57:14 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 18:57:14 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 18:57:15 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 770.6691ms - 200
+[2025-06-23 18:57:15 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 771.8703ms - 200
+[2025-06-23 18:57:29 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 15010.3665ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1; handshake=15003; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCert)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:e2ba3694-3a02-4a50-a90f-61a2db3b2638
+Error Number:-2,State:0,Class:11
+[2025-06-23 18:57:29 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 15040.7766ms - 503
+[2025-06-23 18:57:29 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 15043.5931ms - 503
+[2025-06-23 18:57:29 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-23 18:57:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 18:57:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 18:57:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 18:57:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 18:58:31 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-23 18:58:40 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-23 18:58:40 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-23 18:58:40 WRN] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware The WebRootPath was not found: /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API/wwwroot. Static files may be unavailable.
+[2025-06-23 18:58:40 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-23 18:58:40 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 18:58:40 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 18:58:40 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 18:58:40 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-23 18:58:40 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-23 18:58:40 INF] Microsoft.Hosting.Lifetime Content root path: /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API
+[2025-06-23 18:58:40 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 18:58:40 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 18:58:42 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1096.4843ms - 200
+[2025-06-23 18:58:42 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1103.382ms - 200
+[2025-06-23 18:58:56 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 15054.5978ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=18; handshake=14988; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCert)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:c19a8548-1226-4115-be5b-d2ea70fa785f
+Error Number:-2,State:0,Class:11
+[2025-06-23 18:58:56 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 15148.2922ms - 503
+[2025-06-23 18:58:56 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 15152.4137ms - 503
+[2025-06-23 18:58:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 18:58:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-23 18:58:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 18:58:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 19:01:23 INF] Microsoft.Hosting.Lifetime Application is shutting down...
+[2025-06-23 19:01:24 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-23 19:01:25 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-23 19:01:25 WRN] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware The WebRootPath was not found: /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API/wwwroot. Static files may be unavailable.
+[2025-06-23 19:01:25 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-23 19:01:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 19:01:25 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:01:25 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:01:25 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-23 19:01:25 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-23 19:01:25 INF] Microsoft.Hosting.Lifetime Content root path: /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API
+[2025-06-23 19:01:25 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 19:01:25 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 19:01:25 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 691.2524ms - 200
+[2025-06-23 19:01:25 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 695.5743ms - 200
+[2025-06-23 19:01:25 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 838.7358ms - 200
+[2025-06-23 19:01:25 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 842.892ms - 200
+[2025-06-23 19:01:26 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 19:01:26 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-23 19:01:26 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 19:01:26 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 19:02:24 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-23 19:02:24 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 401 in 58.7774 ms
+[2025-06-23 19:02:47 INF] BlogApp.API.Controllers.UsersController Login attempt for: tarus
+[2025-06-23 19:02:47 INF] BlogApp.Core.Services.AuthService User attempting login: tarus
+[2025-06-23 19:02:47 WRN] BlogApp.Core.Services.AuthService Invalid login attempt for tarus
+[2025-06-23 19:02:47 ERR] BlogApp.API.Middlewares.ErrorHandlingMiddleware An error occurred while processing the request: Invalid Credentials
+System.UnauthorizedAccessException: Invalid Credentials
+   at BlogApp.Core.Services.AuthService.LoginAsync(LoginRequestDto request) in /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.Core/Services/AuthService.cs:line 113
+   at BlogApp.API.Controllers.UsersController.Login(LoginRequestDto request) in /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API/Controllers/UsersController.cs:line 48
+   at lambda_method242(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at BlogApp.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API/Middlewares/ErrorHandlingMiddleware.cs:line 24
+[2025-06-23 19:02:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /api/users/login responded 401 in 376.4293 ms
+[2025-06-23 19:04:01 INF] BlogApp.API.Controllers.UsersController Registering new user: tarusjohn96@gmail.com
+[2025-06-23 19:04:01 INF] BlogApp.Core.Services.AuthService Registering new user: tarusjohn96@gmail.com
+[2025-06-23 19:04:01 INF] BlogApp.Core.Services.AuthService User created with ID: "03e4e4ec-578a-4f3c-cc83-08ddb26f91a8"
+[2025-06-23 19:04:01 INF] BlogApp.Core.Services.EmailService Sending email to tarusjohn96@gmail.com
+[2025-06-23 19:04:05 INF] BlogApp.Core.Services.EmailService Email sent successfully to tarusjohn96@gmail.com
+[2025-06-23 19:04:05 INF] BlogApp.Core.Services.AuthService Verification email sent to tarusjohn96@gmail.com
+[2025-06-23 19:04:05 INF] BlogApp.API.Controllers.UsersController User registered successfully: "03e4e4ec-578a-4f3c-cc83-08ddb26f91a8"
+[2025-06-23 19:04:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /api/users/register responded 200 in 4047.7057 ms
+[2025-06-23 19:06:26 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 19:06:26 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:06:26 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:06:26 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 19:06:26 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 19:06:27 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 866.1364ms - 200
+[2025-06-23 19:06:27 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 867.0349ms - 200
+[2025-06-23 19:06:27 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 944.256ms - 200
+[2025-06-23 19:06:27 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 945.0518ms - 200
+[2025-06-23 19:06:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 19:06:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 19:06:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 19:06:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 19:09:36 INF] BlogApp.API.Controllers.UsersController Login attempt for: tarus
+[2025-06-23 19:09:36 INF] BlogApp.Core.Services.AuthService User attempting login: tarus
+[2025-06-23 19:09:36 WRN] BlogApp.Core.Services.AuthService Login attempt with unverified email: tarusjohn96@gmail.com
+[2025-06-23 19:09:36 ERR] BlogApp.API.Middlewares.ErrorHandlingMiddleware An error occurred while processing the request: Email not verified. Please check your inbox.
+System.UnauthorizedAccessException: Email not verified. Please check your inbox.
+   at BlogApp.Core.Services.AuthService.LoginAsync(LoginRequestDto request) in /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.Core/Services/AuthService.cs:line 119
+   at BlogApp.API.Controllers.UsersController.Login(LoginRequestDto request) in /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API/Controllers/UsersController.cs:line 48
+   at lambda_method242(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at BlogApp.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API/Middlewares/ErrorHandlingMiddleware.cs:line 24
+[2025-06-23 19:09:36 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /api/users/login responded 401 in 107.0480 ms
+[2025-06-23 19:09:53 INF] BlogApp.API.Controllers.UsersController Verifying email: tarusjohn96@gmail.com with token: dc275902c15b4666b504d66a474acd398ddb26f91a853ec
+[2025-06-23 19:09:53 INF] BlogApp.Core.Services.AuthService Verifying email: tarusjohn96@gmail.com with token: dc275902c15b4666b504d66a474acd398ddb26f91a853ec
+[2025-06-23 19:09:53 INF] BlogApp.Core.Services.AuthService Email verified for user: tarusjohn96@gmail.com
+[2025-06-23 19:09:53 INF] BlogApp.API.Controllers.UsersController Email verified successfully: tarusjohn96@gmail.com
+[2025-06-23 19:09:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/users/verify-email responded 200 in 80.0900 ms
+[2025-06-23 19:10:19 INF] BlogApp.API.Controllers.UsersController Login attempt for: tarus
+[2025-06-23 19:10:19 INF] BlogApp.Core.Services.AuthService User attempting login: tarus
+[2025-06-23 19:10:19 INF] BlogApp.Core.Services.AuthService Login successful for user: tarusjohn96@gmail.com
+[2025-06-23 19:10:19 INF] BlogApp.API.Controllers.UsersController Login successful for userId: "03e4e4ec-578a-4f3c-cc83-08ddb26f91a8"
+[2025-06-23 19:10:19 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /api/users/login responded 200 in 32.9899 ms
+[2025-06-23 19:10:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 401 in 3.2898 ms
+[2025-06-23 19:11:08 INF] BlogApp.API.Controllers.CategoryController Fetching categories with PageNumber: 1, PageSize: 5
+[2025-06-23 19:11:08 INF] BlogApp.Core.Services.CategoryService Service call: GetCategoriesAsync with PageNumber: 1, PageSize: 5
+[2025-06-23 19:11:08 WRN] Microsoft.EntityFrameworkCore.Query The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-23 19:11:08 WRN] Microsoft.EntityFrameworkCore.Query The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[2025-06-23 19:11:08 WRN] Microsoft.EntityFrameworkCore.Query Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2025-06-23 19:11:08 INF] BlogApp.Core.Services.CategoryService Mapping completed. Returning 0 categories
+[2025-06-23 19:11:08 INF] BlogApp.API.Controllers.CategoryController Successfully retrieved 0 categories
+[2025-06-23 19:11:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 200 in 156.0114 ms
+[2025-06-23 19:11:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 19:11:27 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:11:27 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:11:27 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 19:11:27 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 19:11:27 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 812.72ms - 200
+[2025-06-23 19:11:27 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 815.0206ms - 200
+[2025-06-23 19:11:28 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 883.3483ms - 200
+[2025-06-23 19:11:28 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 884.6705ms - 200
+[2025-06-23 19:11:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 19:11:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 19:11:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 19:11:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 19:16:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 19:16:28 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:16:28 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:16:28 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 19:16:28 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 19:16:28 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 659.1305ms - 200
+[2025-06-23 19:16:28 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 661.5832ms - 200
+[2025-06-23 19:16:28 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 709.2333ms - 200
+[2025-06-23 19:16:28 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 710.4985ms - 200
+[2025-06-23 19:16:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 19:16:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 19:16:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 19:16:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 19:21:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 19:21:28 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:21:28 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:21:28 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 19:21:28 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 19:21:29 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 701.5624ms - 200
+[2025-06-23 19:21:29 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 702.65ms - 200
+[2025-06-23 19:21:29 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 728.0736ms - 200
+[2025-06-23 19:21:29 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 728.6941ms - 200
+[2025-06-23 19:21:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 19:21:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 19:21:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 19:21:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
