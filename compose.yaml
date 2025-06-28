@@ -1,0 +1,29 @@
+﻿services:
+  blogapp.api:
+    image: blogapp.api
+    build:
+      context: .
+      dockerfile: src/BlogApp.API/Dockerfile
+    depends_on:
+      - sqlserver
+    ports:
+      - "5001:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sql2022;Database=BlogApp;User Id=sa;Password=Passw0rd123;TrustServerCertificate=True;MultipleActiveResultSets=True
+      - Jwt__Key=YourSecureKeyAtLeast32CharactersLongSecurityKey@123!
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql2022
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Passw0rd123
+    volumes:
+      - sqlserverdata:/var/opt/mssql
+  
+volumes:
+  sqlserverdata:
+    
+

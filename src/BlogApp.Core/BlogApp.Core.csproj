@@ -7,37 +7,21 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Common\" />
+        <Folder Include="Common\" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\BlogApp.Domain\BlogApp.Domain.csproj" />
+        <ProjectReference Include="..\BlogApp.Domain\BlogApp.Domain.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <Reference Include="AutoMapper">
-        <HintPath>..\..\..\..\..\..\..\.nuget\packages\automapper\12.0.0\lib\netstandard2.1\AutoMapper.dll</HintPath>
-      </Reference>
-      <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
-        <HintPath>..\..\..\..\..\..\..\.nuget\packages\microsoft.extensions.configuration.abstractions\10.0.0-preview.5.25277.114\lib\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
-      </Reference>
-      <Reference Include="Microsoft.Extensions.Logging.Abstractions">
-        <HintPath>..\..\..\..\..\..\..\.nuget\packages\microsoft.extensions.logging.abstractions\10.0.0-preview.5.25277.114\lib\net8.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
-      </Reference>
-      <Reference Include="Microsoft.Extensions.Options">
-        <HintPath>..\..\..\..\..\..\..\.nuget\packages\microsoft.extensions.options\10.0.0-preview.5.25277.114\lib\net8.0\Microsoft.Extensions.Options.dll</HintPath>
-      </Reference>
-      <Reference Include="Microsoft.IdentityModel.Tokens">
-        <HintPath>..\..\..\..\..\..\..\.nuget\packages\microsoft.identitymodel.tokens\7.1.2\lib\net8.0\Microsoft.IdentityModel.Tokens.dll</HintPath>
-      </Reference>
-      <Reference Include="System.IdentityModel.Tokens.Jwt">
-        <HintPath>..\..\..\..\..\..\..\.nuget\packages\system.identitymodel.tokens.jwt\7.1.2\lib\net8.0\System.IdentityModel.Tokens.Jwt.dll</HintPath>
-      </Reference>
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.0" />
+        <PackageReference Include="AutoMapper" Version="12.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.0" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.1.2" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.1.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
     </ItemGroup>
 
 </Project>
