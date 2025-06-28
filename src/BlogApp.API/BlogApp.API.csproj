@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UserSecretsId>9c065d80-ea91-4112-99fb-c871211ddc43</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 <!--        <UserSecretsId>399b4c59-3b53-4345-9ecf-678676ff0f2a</UserSecretsId>-->
   </PropertyGroup>
 
@@ -38,6 +39,12 @@
     <ItemGroup>
       <ProjectReference Include="..\BlogApp.Core\BlogApp.Core.csproj" />
       <ProjectReference Include="..\BlogApp.Infrastructure\BlogApp.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
     </ItemGroup>
 
 </Project>

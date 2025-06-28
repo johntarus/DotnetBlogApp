@@ -305,3 +305,576 @@ System.UnauthorizedAccessException: Email not verified. Please check your inbox.
 [2025-06-23 19:21:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
 [2025-06-23 19:21:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
 [2025-06-23 19:21:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 19:26:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 19:26:29 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:26:29 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:26:29 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 19:26:29 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 19:26:30 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 699.0955ms - 200
+[2025-06-23 19:26:30 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 700.5461ms - 200
+[2025-06-23 19:26:30 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 745.4782ms - 200
+[2025-06-23 19:26:30 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 746.7677ms - 200
+[2025-06-23 19:26:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 19:26:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 19:26:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 19:26:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 19:31:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 19:31:30 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:31:30 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:31:30 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 19:31:30 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 19:31:35 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check Remote endpoint health check with status "Unhealthy" completed after 5006.502ms with message 'Remote endpoint timed out.'
+[2025-06-23 19:31:35 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 5026.3015ms - 503
+[2025-06-23 19:31:35 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 5027.1805ms - 503
+[2025-06-23 19:31:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 19:31:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthCheckReportCollector already exists but on different state, updating the values.
+[2025-06-23 19:31:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 19:31:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 19:36:35 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 19:36:35 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:36:35 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:36:35 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 19:36:35 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 19:36:36 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 691.9485ms - 200
+[2025-06-23 19:36:36 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 693.2742ms - 200
+[2025-06-23 19:36:36 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 777.6043ms - 200
+[2025-06-23 19:36:36 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 778.5381ms - 200
+[2025-06-23 19:36:36 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 19:36:36 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthCheckReportCollector already exists but on different state, updating the values.
+[2025-06-23 19:36:36 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 19:36:36 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 19:41:36 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 19:41:36 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:41:36 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:41:36 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 19:41:36 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 19:41:36 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 784.3536ms - 200
+[2025-06-23 19:41:36 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 785.8741ms - 200
+[2025-06-23 19:41:36 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 817.0356ms - 200
+[2025-06-23 19:41:36 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 818.2752ms - 200
+[2025-06-23 19:41:36 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 19:41:36 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 19:41:36 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 19:41:36 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 19:46:36 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 19:46:36 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:46:36 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:46:36 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 19:46:36 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 19:46:38 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1219.7731ms - 200
+[2025-06-23 19:46:38 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1220.5312ms - 200
+[2025-06-23 19:46:38 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1487.5805ms - 200
+[2025-06-23 19:46:38 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1488.0791ms - 200
+[2025-06-23 19:46:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 19:46:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 19:46:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 19:46:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 19:51:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 19:51:38 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:51:38 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:51:38 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 19:51:38 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 19:51:39 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 747.8284ms - 200
+[2025-06-23 19:51:39 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 748.6839ms - 200
+[2025-06-23 19:51:39 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 779.0405ms - 200
+[2025-06-23 19:51:39 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 779.5142ms - 200
+[2025-06-23 19:51:39 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 19:51:39 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 19:51:39 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 19:51:39 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 19:56:39 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 19:56:39 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:56:39 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 19:56:39 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 19:56:39 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 19:56:41 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 2014.0592ms - 200
+[2025-06-23 19:56:41 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 2015.0789ms - 200
+[2025-06-23 19:56:41 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2306.4029ms - 200
+[2025-06-23 19:56:41 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2308.0227ms - 200
+[2025-06-23 19:56:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 19:56:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 19:56:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 19:56:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 20:01:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 20:01:41 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:01:41 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:01:41 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 20:01:41 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 20:01:42 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 721.1879ms - 200
+[2025-06-23 20:01:42 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 722.7195ms - 200
+[2025-06-23 20:01:42 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 795.1117ms - 200
+[2025-06-23 20:01:42 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 796.9979ms - 200
+[2025-06-23 20:01:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 20:01:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 20:01:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 20:01:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 20:06:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 20:06:42 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:06:42 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:06:42 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 20:06:42 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 20:06:43 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1183.0145ms - 200
+[2025-06-23 20:06:43 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1185.5403ms - 200
+[2025-06-23 20:06:43 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1355.8655ms - 200
+[2025-06-23 20:06:43 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1357.1821ms - 200
+[2025-06-23 20:06:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 20:06:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 20:06:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 20:06:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 20:11:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 20:11:43 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:11:43 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:11:43 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 20:11:43 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 20:11:44 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 801.084ms - 200
+[2025-06-23 20:11:44 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 802.0877ms - 200
+[2025-06-23 20:11:44 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 882.5423ms - 200
+[2025-06-23 20:11:44 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 883.609ms - 200
+[2025-06-23 20:11:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 20:11:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 20:11:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 20:11:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 20:16:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 20:16:44 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:16:44 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:16:44 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 20:16:44 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 20:16:45 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1037.7517ms - 200
+[2025-06-23 20:16:45 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1039.5661ms - 200
+[2025-06-23 20:16:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1114.3197ms - 200
+[2025-06-23 20:16:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1119.9488ms - 200
+[2025-06-23 20:16:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 20:16:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 20:16:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 20:16:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 20:21:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 20:21:46 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:21:46 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:21:46 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 20:21:46 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 20:21:46 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 880.7112ms - 200
+[2025-06-23 20:21:46 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 885.5394ms - 200
+[2025-06-23 20:21:46 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 957.5217ms - 200
+[2025-06-23 20:21:46 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 958.5195ms - 200
+[2025-06-23 20:21:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 20:21:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 20:21:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 20:21:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 20:26:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 20:26:47 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:26:47 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:26:47 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 20:26:47 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 20:26:48 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1082.1921ms - 200
+[2025-06-23 20:26:48 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1084.0422ms - 200
+[2025-06-23 20:26:48 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1183.2857ms - 200
+[2025-06-23 20:26:48 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1184.4724ms - 200
+[2025-06-23 20:26:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 20:26:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 20:26:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 20:26:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 20:29:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 401 in 19.7779 ms
+[2025-06-23 20:31:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 20:31:48 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:31:48 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:31:48 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 20:31:48 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 20:31:53 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check Remote endpoint health check with status "Unhealthy" completed after 5013.9705ms with message 'Remote endpoint timed out.'
+[2025-06-23 20:31:53 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 5027.6275ms - 503
+[2025-06-23 20:31:53 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 5028.8172ms - 503
+[2025-06-23 20:31:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 20:31:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthCheckReportCollector already exists but on different state, updating the values.
+[2025-06-23 20:31:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 20:31:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 20:36:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 20:36:53 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:36:53 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:36:53 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 20:36:53 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 20:36:55 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 2313.4283ms - 200
+[2025-06-23 20:36:55 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 2315.4322ms - 200
+[2025-06-23 20:36:56 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2944.252ms - 200
+[2025-06-23 20:36:56 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2945.479ms - 200
+[2025-06-23 20:36:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 20:36:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthCheckReportCollector already exists but on different state, updating the values.
+[2025-06-23 20:36:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 20:36:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 20:41:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 20:41:56 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:41:56 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:41:56 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 20:41:56 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 20:41:57 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1393.7281ms - 200
+[2025-06-23 20:41:57 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1394.8515ms - 200
+[2025-06-23 20:41:58 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1886.6476ms - 200
+[2025-06-23 20:41:58 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1887.3959ms - 200
+[2025-06-23 20:41:58 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 20:41:58 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 20:41:58 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 20:41:58 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 20:46:58 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 20:46:58 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:46:58 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:46:58 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 20:46:58 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 20:47:00 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 2774.7364ms - 200
+[2025-06-23 20:47:00 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 2775.7836ms - 200
+[2025-06-23 20:47:01 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 3587.7212ms - 200
+[2025-06-23 20:47:01 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3589.3423ms - 200
+[2025-06-23 20:47:01 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 20:47:01 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 20:47:01 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 20:47:01 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 20:52:01 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 20:52:01 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:52:01 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:52:01 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 20:52:01 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 20:52:05 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 3753.5545ms - 200
+[2025-06-23 20:52:05 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 3754.0978ms - 200
+[2025-06-23 20:52:06 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check Remote endpoint health check with status "Unhealthy" completed after 5004.0756ms with message 'Remote endpoint timed out.'
+[2025-06-23 20:52:06 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 5008.9421ms - 503
+[2025-06-23 20:52:06 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 5009.4152ms - 503
+[2025-06-23 20:52:06 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 20:52:06 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthCheckReportCollector already exists but on different state, updating the values.
+[2025-06-23 20:52:06 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 20:52:06 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 20:57:06 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 20:57:06 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:57:06 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 20:57:06 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 20:57:06 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 20:57:09 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 2735.6288ms - 200
+[2025-06-23 20:57:09 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 2738.0958ms - 200
+[2025-06-23 20:57:10 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 3750.4082ms - 200
+[2025-06-23 20:57:10 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3751.707ms - 200
+[2025-06-23 20:57:10 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 20:57:10 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthCheckReportCollector already exists but on different state, updating the values.
+[2025-06-23 20:57:10 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 20:57:10 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 21:02:10 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 21:02:10 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:02:10 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:02:10 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 21:02:10 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 21:02:12 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1782.7329ms - 200
+[2025-06-23 21:02:12 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1783.5155ms - 200
+[2025-06-23 21:02:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2184.9849ms - 200
+[2025-06-23 21:02:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2186.3965ms - 200
+[2025-06-23 21:02:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 21:02:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 21:02:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 21:02:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 21:07:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 21:07:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:07:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:07:12 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 21:07:12 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 21:07:16 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 3713.4173ms - 200
+[2025-06-23 21:07:16 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 3714.4339ms - 200
+[2025-06-23 21:07:17 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check Remote endpoint health check with status "Unhealthy" completed after 5004.3089ms with message 'Remote endpoint timed out.'
+[2025-06-23 21:07:17 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 5013.2951ms - 503
+[2025-06-23 21:07:17 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 5014.2538ms - 503
+[2025-06-23 21:07:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 21:07:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthCheckReportCollector already exists but on different state, updating the values.
+[2025-06-23 21:07:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 21:07:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 21:12:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 21:12:17 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:12:17 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:12:17 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 21:12:17 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 21:12:20 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 3020.0955ms - 200
+[2025-06-23 21:12:20 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 3021.2721ms - 200
+[2025-06-23 21:12:22 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 4216.1907ms - 200
+[2025-06-23 21:12:22 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 4217.51ms - 200
+[2025-06-23 21:12:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 21:12:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthCheckReportCollector already exists but on different state, updating the values.
+[2025-06-23 21:12:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 21:12:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 21:17:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 21:17:22 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:17:22 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:17:22 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 21:17:22 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 21:17:23 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1155.877ms - 200
+[2025-06-23 21:17:23 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1157.7797ms - 200
+[2025-06-23 21:17:23 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1398.2387ms - 200
+[2025-06-23 21:17:23 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1399.6572ms - 200
+[2025-06-23 21:17:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 21:17:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 21:17:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 21:17:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 21:22:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 21:22:23 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:22:23 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:22:23 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 21:22:23 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 21:22:27 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 3823.7135ms - 200
+[2025-06-23 21:22:27 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 3824.859ms - 200
+[2025-06-23 21:22:28 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 4893.998ms - 200
+[2025-06-23 21:22:28 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 4896.991ms - 200
+[2025-06-23 21:22:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 21:22:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 21:22:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 21:22:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 21:27:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 21:27:28 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:27:28 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:27:28 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 21:27:28 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 21:27:29 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1418.2646ms - 200
+[2025-06-23 21:27:29 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1418.8262ms - 200
+[2025-06-23 21:27:30 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1611.1358ms - 200
+[2025-06-23 21:27:30 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1612.2365ms - 200
+[2025-06-23 21:27:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 21:27:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 21:27:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 21:27:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 21:40:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 21:40:56 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:40:56 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:40:56 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 21:40:56 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 21:40:59 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 2488.2588ms - 200
+[2025-06-23 21:40:59 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 2490.0835ms - 200
+[2025-06-23 21:40:59 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2968.2737ms - 200
+[2025-06-23 21:40:59 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2971.9075ms - 200
+[2025-06-23 21:40:59 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 21:40:59 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 21:40:59 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 21:40:59 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 21:45:59 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 21:45:59 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:45:59 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:45:59 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 21:45:59 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 21:46:02 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 2910.8779ms - 200
+[2025-06-23 21:46:02 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 2912.4689ms - 200
+[2025-06-23 21:46:02 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 3376.7221ms - 200
+[2025-06-23 21:46:02 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3378.2816ms - 200
+[2025-06-23 21:46:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 21:46:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 21:46:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 21:46:02 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 21:53:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 21:53:14 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:53:14 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:53:14 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 21:53:14 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 21:53:15 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1258.5584ms - 200
+[2025-06-23 21:53:15 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1259.7828ms - 200
+[2025-06-23 21:53:16 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1485.6793ms - 200
+[2025-06-23 21:53:16 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1486.8168ms - 200
+[2025-06-23 21:53:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 21:53:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 21:53:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 21:53:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 21:58:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 21:58:16 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:58:16 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 21:58:16 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 21:58:16 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 21:58:17 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1348.4718ms - 200
+[2025-06-23 21:58:17 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1349.9009ms - 200
+[2025-06-23 21:58:17 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1520.7717ms - 200
+[2025-06-23 21:58:17 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1522.0083ms - 200
+[2025-06-23 21:58:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 21:58:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 21:58:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 21:58:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 22:03:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 22:03:17 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:03:17 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:03:17 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 22:03:17 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 22:03:19 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1569.8955ms - 200
+[2025-06-23 22:03:19 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1572.0023ms - 200
+[2025-06-23 22:03:19 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1910.2963ms - 200
+[2025-06-23 22:03:19 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1911.9803ms - 200
+[2025-06-23 22:03:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 22:03:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 22:03:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 22:03:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 22:08:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 22:08:19 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:08:19 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:08:19 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 22:08:19 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 22:08:20 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 793.2353ms - 200
+[2025-06-23 22:08:20 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 793.8003ms - 200
+[2025-06-23 22:08:20 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 857.4271ms - 200
+[2025-06-23 22:08:20 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 859.1023ms - 200
+[2025-06-23 22:08:20 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 22:08:20 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 22:08:20 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 22:08:20 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 22:17:05 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 22:17:05 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:17:05 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:17:05 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 22:17:05 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 22:17:06 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1542.6992ms - 200
+[2025-06-23 22:17:06 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1544.3807ms - 200
+[2025-06-23 22:17:07 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2076.2161ms - 200
+[2025-06-23 22:17:07 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2077.3534ms - 200
+[2025-06-23 22:17:07 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 22:17:07 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 22:17:07 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 22:17:07 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 22:22:07 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 22:22:07 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:22:07 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:22:07 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 22:22:07 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 22:22:08 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1199.3719ms - 200
+[2025-06-23 22:22:08 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1200.5997ms - 200
+[2025-06-23 22:22:09 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1503.1965ms - 200
+[2025-06-23 22:22:09 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1504.147ms - 200
+[2025-06-23 22:22:09 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 22:22:09 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 22:22:09 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 22:22:09 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 22:27:09 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 22:27:09 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:27:09 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:27:09 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 22:27:09 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 22:27:10 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1653.6503ms - 200
+[2025-06-23 22:27:10 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1654.9589ms - 200
+[2025-06-23 22:27:11 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2168.4644ms - 200
+[2025-06-23 22:27:11 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2169.6677ms - 200
+[2025-06-23 22:27:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 22:27:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 22:27:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 22:27:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 22:32:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 22:32:11 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:32:11 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:32:11 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 22:32:11 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 22:32:13 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 2168.1831ms - 200
+[2025-06-23 22:32:13 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 2169.7147ms - 200
+[2025-06-23 22:32:13 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2585.2015ms - 200
+[2025-06-23 22:32:13 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2586.6268ms - 200
+[2025-06-23 22:32:13 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 22:32:13 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 22:32:13 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 22:32:13 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 22:37:13 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 22:37:13 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:37:13 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:37:13 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 22:37:13 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 22:37:16 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 2359.2543ms - 200
+[2025-06-23 22:37:16 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 2360.4494ms - 200
+[2025-06-23 22:37:17 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 3299.486ms - 200
+[2025-06-23 22:37:17 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3300.9715ms - 200
+[2025-06-23 22:37:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 22:37:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 22:37:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 22:37:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 22:42:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 22:42:17 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:42:17 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:42:17 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 22:42:17 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 22:42:20 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 3091.4713ms - 200
+[2025-06-23 22:42:20 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 3092.5577ms - 200
+[2025-06-23 22:42:21 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 4565.0174ms - 200
+[2025-06-23 22:42:21 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 4565.938ms - 200
+[2025-06-23 22:42:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 22:42:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 22:42:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 22:42:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 22:47:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 22:47:21 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:47:21 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:47:21 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 22:47:21 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 22:47:23 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1601.166ms - 200
+[2025-06-23 22:47:23 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1602.1849ms - 200
+[2025-06-23 22:47:23 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1982.3571ms - 200
+[2025-06-23 22:47:23 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1983.1896ms - 200
+[2025-06-23 22:47:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 22:47:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 22:47:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 22:47:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 22:52:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 22:52:23 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:52:23 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 22:52:23 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 22:52:23 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 22:52:24 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1030.0057ms - 200
+[2025-06-23 22:52:24 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1031.6087ms - 200
+[2025-06-23 22:52:24 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1191.5751ms - 200
+[2025-06-23 22:52:24 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1193.0851ms - 200
+[2025-06-23 22:52:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 22:52:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 22:52:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 22:52:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 23:24:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 23:24:16 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 23:24:16 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 23:24:16 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 23:24:16 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 23:24:17 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 770.3729ms - 200
+[2025-06-23 23:24:17 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 771.4345ms - 200
+[2025-06-23 23:24:17 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 809.6327ms - 200
+[2025-06-23 23:24:17 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 810.7395ms - 200
+[2025-06-23 23:24:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 23:24:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 23:24:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 23:24:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 23:29:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 23:29:17 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 23:29:17 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 23:29:17 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 23:29:17 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 23:29:18 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 762.4005ms - 200
+[2025-06-23 23:29:18 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 763.3001ms - 200
+[2025-06-23 23:29:18 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1196.2871ms - 200
+[2025-06-23 23:29:18 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1197.498ms - 200
+[2025-06-23 23:29:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 23:29:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 23:29:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 23:29:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 23:34:18 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 23:34:18 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 23:34:18 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 23:34:18 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 23:34:18 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 23:34:19 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 901.9267ms - 200
+[2025-06-23 23:34:19 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 903.2781ms - 200
+[2025-06-23 23:34:20 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1164.586ms - 200
+[2025-06-23 23:34:20 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1165.8845ms - 200
+[2025-06-23 23:34:20 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 23:34:20 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 23:34:20 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 23:34:20 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 23:39:20 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 23:39:20 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 23:39:20 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 23:39:20 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 23:39:20 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 23:39:20 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 889.1307ms - 200
+[2025-06-23 23:39:20 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 890.792ms - 200
+[2025-06-23 23:39:21 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 983.212ms - 200
+[2025-06-23 23:39:21 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 984.6603ms - 200
+[2025-06-23 23:39:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 23:39:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 23:39:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 23:39:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-23 23:44:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-23 23:44:21 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-23 23:44:21 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-23 23:44:21 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-23 23:44:21 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-23 23:44:22 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 947.1016ms - 200
+[2025-06-23 23:44:22 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 948.156ms - 200
+[2025-06-23 23:44:22 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1394.9138ms - 200
+[2025-06-23 23:44:22 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1396.3426ms - 200
+[2025-06-23 23:44:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-23 23:44:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-23 23:44:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-23 23:44:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.

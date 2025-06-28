@@ -1,0 +1,1071 @@
+[2025-06-27 10:57:51 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-27 10:57:51 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-27 10:57:51 WRN] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware The WebRootPath was not found: /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API/wwwroot. Static files may be unavailable.
+[2025-06-27 10:57:51 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-27 10:57:51 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 10:57:51 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 10:57:51 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 10:57:51 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-27 10:57:51 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-27 10:57:51 INF] Microsoft.Hosting.Lifetime Content root path: /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API
+[2025-06-27 10:57:51 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 10:57:51 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 10:57:51 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 147.1664ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:2b7dfaad-7471-482c-bbdb-e9a6d55e9b1c
+Error Number:18456,State:1,Class:14
+[2025-06-27 10:57:52 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 719.8326ms - 200
+[2025-06-27 10:57:52 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 724.4514ms - 200
+[2025-06-27 10:57:52 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 932.2281ms - 503
+[2025-06-27 10:57:52 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 936.9219ms - 503
+[2025-06-27 10:57:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 10:57:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-27 10:57:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 10:57:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 11:02:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 11:02:52 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 11:02:52 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 11:02:52 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 11:02:52 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 11:02:52 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 33.4103ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:c9647a9c-3581-4fb6-a649-ef3ae9c0e50c
+Error Number:18456,State:1,Class:14
+[2025-06-27 11:02:53 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 708.3463ms - 200
+[2025-06-27 11:02:53 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 709.3388ms - 200
+[2025-06-27 11:02:53 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 747.1092ms - 503
+[2025-06-27 11:02:53 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 747.6932ms - 503
+[2025-06-27 11:02:53 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-27 11:02:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 11:02:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 11:02:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 11:02:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 20:41:43 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-06-27 20:41:43 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-06-27 20:41:43 WRN] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware The WebRootPath was not found: /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API/wwwroot. Static files may be unavailable.
+[2025-06-27 20:41:43 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-06-27 20:41:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 20:41:43 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 20:41:43 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 20:41:43 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-27 20:41:43 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-27 20:41:43 INF] Microsoft.Hosting.Lifetime Content root path: /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API
+[2025-06-27 20:41:43 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 20:41:43 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 20:41:43 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 172.6031ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:e8ab63e7-6556-4b87-a4b5-e88272bfacb9
+Error Number:18456,State:1,Class:14
+[2025-06-27 20:41:44 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 709.1597ms - 200
+[2025-06-27 20:41:44 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 713.272ms - 200
+[2025-06-27 20:41:44 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 845.4122ms - 503
+[2025-06-27 20:41:44 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 849.8379ms - 503
+[2025-06-27 20:41:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 20:41:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-06-27 20:41:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 20:41:44 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 20:45:41 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-06-27 20:45:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /api/categories responded 401 in 39.2661 ms
+[2025-06-27 20:45:58 INF] BlogApp.API.Controllers.UsersController Login attempt for: tarus
+[2025-06-27 20:45:58 INF] BlogApp.Core.Services.AuthService User attempting login: tarus
+[2025-06-27 20:45:58 ERR] Microsoft.EntityFrameworkCore.Database.Connection An error occurred using the connection to database 'BlogApp' on server 'localhost,1433'.
+[2025-06-27 20:45:58 ERR] Microsoft.EntityFrameworkCore.Query An exception occurred while iterating over the results of a query for context type 'BlogApp.Infrastructure.Data.DatabaseContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:a5e230b8-902e-4f95-b845-7c0c78f42485
+Error Number:18456,State:1,Class:14
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:a5e230b8-902e-4f95-b845-7c0c78f42485
+Error Number:18456,State:1,Class:14
+[2025-06-27 20:45:58 ERR] BlogApp.API.Middlewares.ErrorHandlingMiddleware An error occurred while processing the request: Login failed for user 'sa'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at BlogApp.Infrastructure.Repositories.AuthRepository.GetByUsernameOrEmailAsync(String usernameOrEmail) in /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.Infrastructure/Repositories/AuthRepository.cs:line 28
+   at BlogApp.Core.Services.AuthService.LoginAsync(LoginRequestDto request) in /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.Core/Services/AuthService.cs:line 102
+   at BlogApp.API.Controllers.UsersController.Login(LoginRequestDto request) in /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API/Controllers/UsersController.cs:line 48
+   at lambda_method291(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at BlogApp.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API/Middlewares/ErrorHandlingMiddleware.cs:line 24
+ClientConnectionId:a5e230b8-902e-4f95-b845-7c0c78f42485
+Error Number:18456,State:1,Class:14
+[2025-06-27 20:45:58 ERR] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /api/users/login responded 500 in 418.2470 ms
+[2025-06-27 20:48:04 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 20:48:04 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 20:48:04 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 20:48:04 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 20:48:04 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 20:48:04 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 34.3681ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:cce64831-dfa2-4be0-aa6d-6b301858c9be
+Error Number:18456,State:1,Class:14
+[2025-06-27 20:48:07 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 3492.8142ms - 200
+[2025-06-27 20:48:07 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 3494.0624ms - 200
+[2025-06-27 20:48:08 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 4782.1382ms - 503
+[2025-06-27 20:48:08 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 4783.0403ms - 503
+[2025-06-27 20:48:08 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-27 20:48:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 20:48:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 20:48:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 20:48:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 20:53:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 20:53:08 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 20:53:08 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 20:53:09 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 20:53:09 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 20:53:09 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 40.419ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:997371a6-e0da-4584-9d5a-a4f4c8951b5b
+Error Number:18456,State:1,Class:14
+[2025-06-27 20:53:10 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1883.9882ms - 200
+[2025-06-27 20:53:10 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1884.9563ms - 200
+[2025-06-27 20:53:11 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2219.7535ms - 503
+[2025-06-27 20:53:11 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2220.7492ms - 503
+[2025-06-27 20:53:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 20:53:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 20:53:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 20:53:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 20:58:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 20:58:11 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 20:58:11 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 20:58:11 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 20:58:11 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 20:58:14 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 3000.9483ms - 200
+[2025-06-27 20:58:14 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 3002.0261ms - 200
+[2025-06-27 20:58:25 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 14607.155ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+[2025-06-27 20:58:25 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 14628.2465ms - 503
+[2025-06-27 20:58:25 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 14629.4337ms - 503
+[2025-06-27 20:58:25 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-27 20:58:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 20:58:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 20:58:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 20:58:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 21:33:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 21:33:17 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 21:33:17 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 21:33:17 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 21:33:17 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 21:33:18 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1710.2623ms - 200
+[2025-06-27 21:33:18 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1714.19ms - 200
+[2025-06-27 21:33:31 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 14582.4746ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+[2025-06-27 21:33:31 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 14614.5985ms - 503
+[2025-06-27 21:33:31 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 14615.6784ms - 503
+[2025-06-27 21:33:31 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 21:33:31 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 21:33:31 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 21:33:31 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 21:39:04 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 21:39:04 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 21:39:04 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 21:39:04 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 21:39:04 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 21:39:04 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 105.3305ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:aaba4ffc-68f3-42ea-93c2-0c4b5d60edec
+Error Number:18456,State:1,Class:14
+[2025-06-27 21:39:06 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 2097.2685ms - 200
+[2025-06-27 21:39:06 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 2099.0715ms - 200
+[2025-06-27 21:39:06 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2529.7597ms - 503
+[2025-06-27 21:39:06 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2530.7992ms - 503
+[2025-06-27 21:39:06 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-27 21:39:06 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 21:39:06 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 21:39:06 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 21:39:06 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 21:44:06 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 21:44:06 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 21:44:06 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 21:44:06 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 21:44:06 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 21:44:09 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 3035.705ms - 200
+[2025-06-27 21:44:09 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 3037.5473ms - 200
+[2025-06-27 21:44:21 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 14588.8933ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+[2025-06-27 21:44:21 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 14640.0189ms - 503
+[2025-06-27 21:44:21 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 14641.1704ms - 503
+[2025-06-27 21:44:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 21:44:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 21:44:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 21:44:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 21:49:21 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 21:49:21 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 21:49:21 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 21:49:21 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 21:49:21 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 21:49:21 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 27.5065ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:ca9760c6-cb3c-4f50-ab3f-796a1b984e57
+Error Number:18456,State:1,Class:14
+[2025-06-27 21:49:22 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1534.3331ms - 200
+[2025-06-27 21:49:22 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1534.9704ms - 200
+[2025-06-27 21:49:23 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1719.7135ms - 503
+[2025-06-27 21:49:23 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1720.2246ms - 503
+[2025-06-27 21:49:23 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-27 21:49:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 21:49:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 21:49:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 21:49:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 21:54:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 21:54:23 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 21:54:23 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 21:54:23 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 21:54:23 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 21:54:23 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 41.6701ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:1bd99eb8-36b3-4791-9849-47a8bd7cdb19
+Error Number:18456,State:1,Class:14
+[2025-06-27 21:54:24 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 997.8947ms - 200
+[2025-06-27 21:54:24 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 999.143ms - 200
+[2025-06-27 21:54:24 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1058.9879ms - 503
+[2025-06-27 21:54:24 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1060.4365ms - 503
+[2025-06-27 21:54:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 21:54:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 21:54:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 21:54:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 21:59:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 21:59:24 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 21:59:24 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 21:59:24 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 21:59:24 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 21:59:24 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 37.9867ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:745a412c-1fee-45e7-9123-f002430c6ce7
+Error Number:18456,State:1,Class:14
+[2025-06-27 21:59:27 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 3042.9735ms - 200
+[2025-06-27 21:59:27 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 3043.9271ms - 200
+[2025-06-27 21:59:28 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 4204.1717ms - 503
+[2025-06-27 21:59:28 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 4205.2465ms - 503
+[2025-06-27 21:59:28 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-27 21:59:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 21:59:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 21:59:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 21:59:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 22:16:22 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 22:16:22 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:16:22 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:16:22 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 22:16:22 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 22:16:22 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 49.4279ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:d6e2973b-a119-4a5f-9570-cc9b37a51a11
+Error Number:18456,State:1,Class:14
+[2025-06-27 22:16:23 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1128.5067ms - 200
+[2025-06-27 22:16:23 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1129.4001ms - 200
+[2025-06-27 22:16:23 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1340.5846ms - 503
+[2025-06-27 22:16:23 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1341.4237ms - 503
+[2025-06-27 22:16:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 22:16:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 22:16:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 22:16:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 22:21:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 22:21:23 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:21:23 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:21:23 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 22:21:23 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 22:21:23 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 73.4429ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:bffe8b33-a51b-450b-847f-bfb71b6e98d3
+Error Number:18456,State:1,Class:14
+[2025-06-27 22:21:24 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1094.2882ms - 200
+[2025-06-27 22:21:24 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1095.0623ms - 200
+[2025-06-27 22:21:24 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1269.1142ms - 503
+[2025-06-27 22:21:24 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1270.3836ms - 503
+[2025-06-27 22:21:24 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-27 22:21:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 22:21:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 22:21:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 22:21:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 22:26:24 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 22:26:24 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:26:24 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:26:24 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 22:26:24 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 22:26:24 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 36.5322ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:19c1ed73-55d1-43eb-bead-cc3baebf4039
+Error Number:18456,State:1,Class:14
+[2025-06-27 22:26:27 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 2718.7102ms - 200
+[2025-06-27 22:26:27 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 2719.9917ms - 200
+[2025-06-27 22:26:27 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 3094.5099ms - 503
+[2025-06-27 22:26:27 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3095.8923ms - 503
+[2025-06-27 22:26:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 22:26:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 22:26:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 22:26:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 22:31:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 22:31:27 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:31:27 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:31:27 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 22:31:27 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 22:31:27 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 53.5774ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:646aa97c-34e0-4878-9620-fa9652c8d02e
+Error Number:18456,State:1,Class:14
+[2025-06-27 22:31:28 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 695.6932ms - 200
+[2025-06-27 22:31:28 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 697.2005ms - 200
+[2025-06-27 22:31:28 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 808.3189ms - 503
+[2025-06-27 22:31:28 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 810.0054ms - 503
+[2025-06-27 22:31:28 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-27 22:31:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 22:31:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 22:31:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 22:31:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 22:36:28 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 22:36:28 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:36:28 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:36:28 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 22:36:28 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 22:36:29 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1125.1869ms - 200
+[2025-06-27 22:36:29 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1126.3957ms - 200
+[2025-06-27 22:36:43 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 14573.0222ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+[2025-06-27 22:36:43 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 14595.7233ms - 503
+[2025-06-27 22:36:43 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 14597.0935ms - 503
+[2025-06-27 22:36:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 22:36:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 22:36:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 22:36:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 22:41:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 22:41:43 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:41:43 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:41:43 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 22:41:43 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 22:41:44 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 975.7107ms - 200
+[2025-06-27 22:41:44 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 977.6425ms - 200
+[2025-06-27 22:41:57 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 14563.8588ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+[2025-06-27 22:41:57 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 14600.0954ms - 503
+[2025-06-27 22:41:57 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 14600.6386ms - 503
+[2025-06-27 22:41:57 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-27 22:41:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 22:41:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 22:41:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 22:41:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 22:46:58 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 22:46:58 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:46:58 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:46:58 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 22:46:58 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 22:46:58 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 822.3714ms - 200
+[2025-06-27 22:46:58 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 823.3482ms - 200
+[2025-06-27 22:47:12 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 14563.1486ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+[2025-06-27 22:47:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 14577.4007ms - 503
+[2025-06-27 22:47:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 14577.8997ms - 503
+[2025-06-27 22:47:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 22:47:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 22:47:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 22:47:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 22:52:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 22:52:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:52:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:52:12 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 22:52:12 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 22:52:12 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 33.937ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "BlogApp" requested by the login. The login failed.
+Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:bb2b1046-4ee9-4dd3-bff7-245e5f64b1f5
+Error Number:4060,State:1,Class:11
+[2025-06-27 22:52:13 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1269.0207ms - 200
+[2025-06-27 22:52:13 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1270.2758ms - 200
+[2025-06-27 22:52:14 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1988.4488ms - 503
+[2025-06-27 22:52:14 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1989.6071ms - 503
+[2025-06-27 22:52:14 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-27 22:52:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 22:52:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 22:52:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 22:52:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 22:57:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 22:57:14 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:57:14 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 22:57:14 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 22:57:14 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 22:57:15 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 756.0862ms - 200
+[2025-06-27 22:57:15 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 757.4552ms - 200
+[2025-06-27 22:57:15 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 882.7766ms - 200
+[2025-06-27 22:57:15 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 883.6593ms - 200
+[2025-06-27 22:57:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 22:57:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthCheckReportCollector already exists but on different state, updating the values.
+[2025-06-27 22:57:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 22:57:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 23:02:15 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 23:02:15 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:02:15 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:02:15 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 23:02:15 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 23:02:16 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 777.1794ms - 200
+[2025-06-27 23:02:16 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 778.4833ms - 200
+[2025-06-27 23:02:16 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1225.8972ms - 200
+[2025-06-27 23:02:16 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1226.8204ms - 200
+[2025-06-27 23:02:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 23:02:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 23:02:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 23:02:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 23:07:16 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 23:07:16 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:07:16 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:07:16 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 23:07:16 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 23:07:17 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 941.3787ms - 200
+[2025-06-27 23:07:17 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 943.2107ms - 200
+[2025-06-27 23:07:17 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1009.0101ms - 200
+[2025-06-27 23:07:17 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1010.512ms - 200
+[2025-06-27 23:07:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 23:07:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 23:07:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 23:07:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 23:12:17 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 23:12:17 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:12:17 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:12:17 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 23:12:17 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 23:12:18 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 777.493ms - 200
+[2025-06-27 23:12:18 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 778.0034ms - 200
+[2025-06-27 23:12:19 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1125.8889ms - 200
+[2025-06-27 23:12:19 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1126.7462ms - 200
+[2025-06-27 23:12:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 23:12:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 23:12:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 23:12:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 23:17:19 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 23:17:19 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:17:19 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:17:19 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 23:17:19 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 23:17:21 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 2606.4632ms - 200
+[2025-06-27 23:17:21 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 2607.8697ms - 200
+[2025-06-27 23:17:23 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 3980.7795ms - 200
+[2025-06-27 23:17:23 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 3981.8357ms - 200
+[2025-06-27 23:17:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 23:17:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 23:17:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 23:17:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 23:22:23 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 23:22:23 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:22:23 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:22:23 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 23:22:23 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 23:22:25 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1922.679ms - 200
+[2025-06-27 23:22:25 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1923.8691ms - 200
+[2025-06-27 23:22:25 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2250.755ms - 200
+[2025-06-27 23:22:25 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2251.6187ms - 200
+[2025-06-27 23:22:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 23:22:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 23:22:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 23:22:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 23:27:25 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 23:27:25 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:27:25 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:27:25 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 23:27:25 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 23:27:26 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 749.0452ms - 200
+[2025-06-27 23:27:26 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 749.9441ms - 200
+[2025-06-27 23:27:27 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1643.3162ms - 200
+[2025-06-27 23:27:27 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1643.8249ms - 200
+[2025-06-27 23:27:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 23:27:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 23:27:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 23:27:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 23:32:27 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 23:32:27 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:32:27 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:32:27 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 23:32:27 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 23:32:28 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 817.8649ms - 200
+[2025-06-27 23:32:28 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 819.3527ms - 200
+[2025-06-27 23:32:41 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 14573.0796ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+[2025-06-27 23:32:41 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 14593.3985ms - 503
+[2025-06-27 23:32:41 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 14595.0836ms - 503
+[2025-06-27 23:32:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 23:32:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthCheckReportCollector already exists but on different state, updating the values.
+[2025-06-27 23:32:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 23:32:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 23:37:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 23:37:41 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:37:41 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:37:41 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 23:37:41 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 23:37:41 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 57.294ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:267cdf39-e3f6-44b6-b0e7-08122b4b52e2
+Error Number:18456,State:1,Class:14
+[2025-06-27 23:37:43 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1793.1067ms - 200
+[2025-06-27 23:37:43 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1794.7117ms - 200
+[2025-06-27 23:37:43 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1837.7338ms - 503
+[2025-06-27 23:37:43 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1838.6308ms - 503
+[2025-06-27 23:37:43 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-27 23:37:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 23:37:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 23:37:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 23:37:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 23:42:43 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 23:42:43 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:42:43 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:42:43 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 23:42:43 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 23:42:43 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 44.2322ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:f0a261a0-7244-40ad-9498-24dc9dcdd32f
+Error Number:18456,State:1,Class:14
+[2025-06-27 23:42:44 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 874.9465ms - 200
+[2025-06-27 23:42:44 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 876.1172ms - 200
+[2025-06-27 23:42:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1324.1134ms - 503
+[2025-06-27 23:42:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1328.7637ms - 503
+[2025-06-27 23:42:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 23:42:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 23:42:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 23:42:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 23:47:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 23:47:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:47:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:47:45 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 23:47:45 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 23:47:45 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 71.5552ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:cc6bc1de-9de4-4f70-884a-f4e7314bd363
+Error Number:18456,State:1,Class:14
+[2025-06-27 23:47:45 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 678.0754ms - 200
+[2025-06-27 23:47:45 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 679.3424ms - 200
+[2025-06-27 23:47:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 730.3672ms - 503
+[2025-06-27 23:47:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 731.5038ms - 503
+[2025-06-27 23:47:45 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-27 23:47:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 23:47:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 23:47:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 23:47:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 23:52:45 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 23:52:45 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:52:45 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:52:45 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 23:52:45 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 23:52:45 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 53.3943ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:033feba0-b8a1-42f5-a084-3440af3f1bd5
+Error Number:18456,State:1,Class:14
+[2025-06-27 23:52:46 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 773.06ms - 200
+[2025-06-27 23:52:46 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 773.8372ms - 200
+[2025-06-27 23:52:46 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 831.3294ms - 503
+[2025-06-27 23:52:46 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 832.4878ms - 503
+[2025-06-27 23:52:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 23:52:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 23:52:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 23:52:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-06-27 23:57:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-06-27 23:57:46 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:57:46 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-06-27 23:57:46 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-06-27 23:57:46 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-06-27 23:57:46 ERR] Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService Health check SQL Server with status "Unhealthy" completed after 103.7742ms with message 'null'
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at HealthChecks.SqlServer.SqlServerHealthCheck.CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken) in /home/runner/work/AspNetCore.Diagnostics.HealthChecks/AspNetCore.Diagnostics.HealthChecks/src/HealthChecks.SqlServer/SqlServerHealthCheck.cs:line 28
+ClientConnectionId:e66e4546-1f48-4375-8cab-ee84491bfdd9
+Error Number:18456,State:1,Class:14
+[2025-06-27 23:57:47 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 868.6157ms - 200
+[2025-06-27 23:57:47 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 869.4395ms - 200
+[2025-06-27 23:57:47 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1125.7072ms - 503
+[2025-06-27 23:57:47 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1127.258ms - 503
+[2025-06-27 23:57:47 INF] HealthChecks.UI.Core.Notifications.WebHookFailureNotifier Notification is sent on same window time.
+[2025-06-27 23:57:47 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-06-27 23:57:47 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-06-27 23:57:47 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-06-27 23:57:47 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
