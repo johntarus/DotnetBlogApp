@@ -18,4 +18,4 @@ obj/
 /wwwroot/node_modules
 
 #Enviroment variables
-.env
+*.env
