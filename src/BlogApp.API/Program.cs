@@ -2,6 +2,8 @@ using BlogApp.API.Middlewares;
 using BlogApp.Infrastructure.Configurations;
 using BlogApp.Core.Common.Mapping;
 using BlogApp.Core.Utils;
+using BlogApp.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +30,15 @@ builder.Services
     .AddAppSwagger();
 
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var database = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
+    database.Database.Migrate(); // or use Migrate() for EF migrations
+}
+
+// using var scope = app.Services.CreateScope();
+// var context = scope.ServiceProvider.GetRequiredService<YourDbContext>();
+// context.Database.Migrate(); // Or context.Database.EnsureCreated();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

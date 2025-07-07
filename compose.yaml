@@ -4,26 +4,41 @@
     build:
       context: .
       dockerfile: src/BlogApp.API/Dockerfile
+    env_file:
+      - .env
     depends_on:
       - sqlserver
     ports:
       - "5001:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Server=sql2022;Database=BlogApp;User Id=sa;Password=Passw0rd123;TrustServerCertificate=True;MultipleActiveResultSets=True
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=BlogApp;User Id=sa;Password=Passw0rd123;TrustServerCertificate=True;MultipleActiveResultSets=True
       - Jwt__Key=YourSecureKeyAtLeast32CharactersLongSecurityKey@123!
+      - EmailSettings__SmtpServer=smtp.gmail.com
+      - EmailSettings__SmtpPort=587
+      - EmailSettings__SmtpSenderEmail=tarusjohn96@gmail.com
+      - EmailSettings__SmtpUsername=tarusjohn96@gmail.com
+      - EmailSettings__SmtpPassword=menbgzuhwzyznqfc
+
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: sql2022
+#    image: mcr.microsoft.com/azure-sql-edge:latest
+    platform: linux/amd64
     ports:
       - "1433:1433"
     environment:
       - ACCEPT_EULA=Y
       - MSSQL_SA_PASSWORD=Passw0rd123
+      - MSSQL_PID=Developer
     volumes:
       - sqlserverdata:/var/opt/mssql
-  
+#      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: [ "CMD", "/opt/mssql-tools/bin/sqlcmd", "-S", "localhost", "-U", "sa", "-P", "Passw0rd123", "-Q", "SELECT 1" ]
+      start_period: 60s  # Extra time for ARM initialization
+    
 volumes:
   sqlserverdata:
+
     
 
