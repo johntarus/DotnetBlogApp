@@ -15,6 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(BlogProfile));
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+DotNetEnv.Env.Load();
 builder.Services.AddAppAuthentication(builder.Configuration);
 builder.Services.AddCustomHealthChecks(builder.Configuration);
 builder.Host.ConfigureLogging();

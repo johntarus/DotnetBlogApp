@@ -11,18 +11,18 @@
     ports:
       - "5001:8080"
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=BlogApp;User Id=sa;Password=Passw0rd123;TrustServerCertificate=True;MultipleActiveResultSets=True
-      - Jwt__Key=YourSecureKeyAtLeast32CharactersLongSecurityKey@123!
-      - EmailSettings__SmtpServer=smtp.gmail.com
-      - EmailSettings__SmtpPort=587
-      - EmailSettings__SmtpSenderEmail=tarusjohn96@gmail.com
-      - EmailSettings__SmtpUsername=tarusjohn96@gmail.com
-      - EmailSettings__SmtpPassword=menbgzuhwzyznqfc
+      - ASPNETCORE_ENVIRONMENT=${ASPNETCORE_ENVIRONMENT}
+      - ConnectionStrings__DefaultConnection=${ConnectionStrings__DefaultConnection}
+      - Jwt__Key=${Jwt__Key}
+      - EmailSettings__SmtpServer=${EmailSettings__SmtpServer}
+      - EmailSettings__SmtpPort=${EmailSettings__SmtpPort}
+      - EmailSettings__SmtpSenderEmail=${EmailSettings__SmtpSenderEmail}
+      - EmailSettings__SmtpUsername=${EmailSettings__SmtpUsername}
+      - EmailSettings__SmtpPassword=${EmailSettings__SmtpPassword}
 
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
-#    image: mcr.microsoft.com/azure-sql-edge:latest
+    #    image: mcr.microsoft.com/azure-sql-edge:latest
     platform: linux/amd64
     ports:
       - "1433:1433"
@@ -32,13 +32,10 @@
       - MSSQL_PID=Developer
     volumes:
       - sqlserverdata:/var/opt/mssql
-#      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    #      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
       test: [ "CMD", "/opt/mssql-tools/bin/sqlcmd", "-S", "localhost", "-U", "sa", "-P", "Passw0rd123", "-Q", "SELECT 1" ]
       start_period: 60s  # Extra time for ARM initialization
-    
+
 volumes:
   sqlserverdata:
-
-    
-
