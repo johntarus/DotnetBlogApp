@@ -1,6 +1,7 @@
 ﻿services:
   blogapp.api:
     image: blogapp.api
+    platform: linux/amd64
     build:
       context: .
       dockerfile: src/BlogApp.API/Dockerfile
@@ -39,3 +40,10 @@
 
 volumes:
   sqlserverdata:
+    
+    
+#TODO
+## Add github actions or azure devops ci/cd
+## Use production environment and setup real db in azure not use development
+## Explore queues in sending emails
+## Add a readme file

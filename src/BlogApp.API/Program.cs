@@ -19,8 +19,8 @@ builder.Services.AddCustomHealthChecks(builder.Configuration);
 builder.Host.ConfigureLogging();
 builder.Services.AddAuthorization();
 
-var db = builder.Configuration.GetConnectionString("DefaultConnection");
-Console.WriteLine(db, "This is the dab data");
+// var db = builder.Configuration.GetConnectionString("DefaultConnection");
+// Console.WriteLine(db, "This is the dab data");
 
 builder.Services
     .AddAppDbContext(builder.Configuration)
@@ -29,6 +29,7 @@ builder.Services
     .AddAppSwagger();
 
 var app = builder.Build();
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 using (var scope = app.Services.CreateScope())
 {
     var database = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
