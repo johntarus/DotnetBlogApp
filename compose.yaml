@@ -48,7 +48,7 @@ volumes:
 ## Explore queues in sending emails
 ## Add a readme file
 ## Add seed data for database
-## Add Cors support
-## Add [Authorize] to top of each controller to authorize all the endpoints
-## Add ApiController to all the controllers to handle the model state and remove all the modelstates
+## Add Cors support -> Done ✔️
+## Add [Authorize] to top of each controller to authorize all the endpoints -> Done✔️
+## Add ApiController to all the controllers to handle the model state and remove all the modelstates -> Done ✔️
 ## Implement api versioning

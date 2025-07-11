@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCustomCors();
 builder.Services.AddAutoMapper(typeof(BlogProfile));
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 DotNetEnv.Env.Load();
@@ -49,6 +50,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCustomHealthChecks();
+app.UseCors("AllowClients");
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
