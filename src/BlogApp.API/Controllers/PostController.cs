@@ -47,13 +47,14 @@ public class PostController(IPostService postService, ILogger<PostController> lo
             return Unauthorized("Invalid user identification. Please sign in again.");
         }
 
-        logger.LogInformation("Creating post for user {UserId} with data: {PostDto}", userId, JsonSerializer.Serialize(postDto));
+        logger.LogInformation("Creating post for user {UserId} with data: {PostDto}", userId,
+            JsonSerializer.Serialize(postDto));
         var post = await postService.CreatePostAsync(postDto, userId);
         logger.LogInformation("Created post: {Post}", JsonSerializer.Serialize(post));
         return CreatedAtAction(nameof(GetPostById), new { id = post.Id }, post);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id:guid}")]
     public async Task<IActionResult> GetPostById(Guid id)
     {
         var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
@@ -70,7 +71,7 @@ public class PostController(IPostService postService, ILogger<PostController> lo
         return Ok(post);
     }
 
-    [HttpPatch("{id}")]
+    [HttpPatch("{id:guid}")]
     public async Task<IActionResult> UpdatePost(Guid id, UpdatePostDto updatePostDto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -79,13 +80,14 @@ public class PostController(IPostService postService, ILogger<PostController> lo
         var userId = Guid.Parse(userClaim?.Value);
         var role = User.FindFirst(ClaimTypes.Role)?.Value;
 
-        logger.LogInformation("Updating post {PostId} by user {UserId} with data: {UpdateDto}", id, userId, JsonSerializer.Serialize(updatePostDto));
+        logger.LogInformation("Updating post {PostId} by user {UserId} with data: {UpdateDto}", id, userId,
+            JsonSerializer.Serialize(updatePostDto));
         var post = await postService.UpdatePostAsync(id, updatePostDto, userId, role);
         logger.LogInformation("Updated post: {Post}", JsonSerializer.Serialize(post));
         return Ok(post);
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete("{id:guid}")]
     public async Task<IActionResult> DeleteBlog(Guid id)
     {
         var userClaim = User.FindFirst(ClaimTypes.NameIdentifier);

@@ -22,6 +22,7 @@ public class UsersController(IAuthService authService, ILogger<UsersController> 
             logger.LogWarning("Invalid model state during registration: {modelState}", ModelState);
             return BadRequest(ModelState);
         }
+
         logger.LogInformation("User registered successfully: {userId}", user.Id);
         return Ok(user);
     }
@@ -37,6 +38,7 @@ public class UsersController(IAuthService authService, ILogger<UsersController> 
             logger.LogWarning("Email verification failed for: {email}", email);
             return BadRequest("Invalid token");
         }
+
         logger.LogInformation("Email verified successfully: {email}", email);
         return Ok(new { message = "Email verified successfully" });
     }
@@ -51,6 +53,7 @@ public class UsersController(IAuthService authService, ILogger<UsersController> 
             logger.LogWarning("Invalid model state during login for: {usernameOrEmail}", request.UsernameOrEmail);
             return BadRequest(ModelState);
         }
+
         logger.LogInformation("Login successful for userId: {userId}", user.Id);
         return Ok(user);
     }
@@ -76,6 +79,7 @@ public class UsersController(IAuthService authService, ILogger<UsersController> 
             logger.LogWarning("Profile not found for userId: {userId}", userId);
             return NotFound();
         }
+
         logger.LogInformation("Profile retrieved for userId: {userId}", userId);
         return Ok(user);
     }
@@ -92,11 +96,13 @@ public class UsersController(IAuthService authService, ILogger<UsersController> 
             logger.LogWarning("Profile update failed. User not found with id: {id}", id);
             return NotFound();
         }
+
         if (ModelState.IsValid == false)
         {
             logger.LogWarning("Invalid model state during profile update for id: {id}", id);
             return BadRequest(ModelState);
         }
+
         logger.LogInformation("Profile updated successfully for id: {id}", id);
         return Ok(user);
     }

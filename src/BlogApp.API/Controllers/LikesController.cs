@@ -27,7 +27,7 @@ public class LikesController(ILikeService likeService, ILogger<LikesController> 
         return Ok(result);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id:int}")]
     public async Task<IActionResult> GetLikeById(int id)
     {
         logger.LogInformation("Getting like by ID: {Id}", id);

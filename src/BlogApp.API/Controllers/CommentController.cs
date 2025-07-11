@@ -16,7 +16,8 @@ public class CommentController : ControllerBase
     private readonly ICommentsService commentsService;
     private readonly ILogger<CommentController> logger;
 
-    public CommentController(DatabaseContext context, ICommentsService commentsService, ILogger<CommentController> logger)
+    public CommentController(DatabaseContext context, ICommentsService commentsService,
+        ILogger<CommentController> logger)
     {
         this.commentsService = commentsService;
         this.logger = logger;
@@ -25,11 +26,13 @@ public class CommentController : ControllerBase
     [HttpGet]
     public async Task<ActionResult> GetComments([FromQuery] CommentPagedRequest request)
     {
-        logger.LogInformation("Fetching comments with PageNumber: {PageNumber}, PageSize: {PageSize}", request.PageNumber, request.PageSize);
+        logger.LogInformation("Fetching comments with PageNumber: {PageNumber}, PageSize: {PageSize}",
+            request.PageNumber, request.PageSize);
 
         if (request.PageNumber < 1 || request.PageSize < 1)
         {
-            logger.LogWarning("Invalid pagination parameters: PageNumber={PageNumber}, PageSize={PageSize}", request.PageNumber, request.PageSize);
+            logger.LogWarning("Invalid pagination parameters: PageNumber={PageNumber}, PageSize={PageSize}",
+                request.PageNumber, request.PageSize);
             return BadRequest("Page number must be greater than or equal to 1");
         }
 
@@ -41,7 +44,8 @@ public class CommentController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<CommentResponseDto>> CreateComment([FromBody] CommentDto commentDto)
     {
-        logger.LogInformation("Creating comment for PostId: {PostId} by UserId: {UserId}", commentDto.PostId, commentDto.UserId);
+        logger.LogInformation("Creating comment for PostId: {PostId} by UserId: {UserId}", commentDto.PostId,
+            commentDto.UserId);
 
         if (!ModelState.IsValid)
         {
@@ -54,7 +58,7 @@ public class CommentController : ControllerBase
         return Ok(comment);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id:int}")]
     public async Task<ActionResult<CommentResponseDto>> GetCommentById(int id)
     {
         logger.LogInformation("Fetching comment by Id: {Id}", id);
@@ -70,7 +74,7 @@ public class CommentController : ControllerBase
         return Ok(comment);
     }
 
-    [HttpPatch("{id}")]
+    [HttpPatch("{id:int}")]
     public async Task<ActionResult<CommentResponseDto>> UpdateComment(int id, [FromBody] UpdateCommentDto request)
     {
         logger.LogInformation("Updating comment with Id: {Id}", id);
@@ -92,7 +96,7 @@ public class CommentController : ControllerBase
         return Ok(comment);
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete("{id:int}")]
     public async Task<ActionResult> DeleteComment(int id)
     {
         logger.LogInformation("Deleting comment with Id: {Id}", id);
