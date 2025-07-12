@@ -1,0 +1,64 @@
+name: Build, Test, Deploy .NET Web API to Azure
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+env: 
+  DOTNET_VERSION: '8.0.x'
+  AZURE_RESOURCE_GROUP: 'BlogAppResourceGroup'
+  AZURE_CONTAINER_REGISTRY: 'blogapi'
+  DOCKER_IMAGE: 'blogapp.api:latest'
+  AZURE_WEBAPP_NAME: 'blogapp-api'
+   
+jobs: 
+  build-test-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        
+      - name: setup .NET
+        uses: actions/setup-dotnet@v4
+        with: 
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+          
+      - name: Restore dependencies 
+        run: dotnet restore
+        
+      - name: Build solution
+        run: dotnet build --no-restore --configuration Release
+        
+      - name: Run tests
+        run: dotnet test --no-build --verbosity normal
+        
+      - name: Login to Azure
+        uses: azure/login@v1
+        with: 
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          
+      - name: Login to Azure ACR
+        run: az acr login --name ${{ env.AZURE_CONTAINER_REGISTRY }}
+        
+      - name: Build Docker image
+        run: docker built -t ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.DOCKER_IMAGE }}:${{ github.sha }} .
+        
+      - name: Push Docker image to ACR
+        run: docker push ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.DOCKER_IMAGE }}:${{ github.sha }}
+        
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with: 
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          images: ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.DOCKER_IMAGE }}:${{ github.sha }}
+          slot-name: 'Development'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          
+      - name: Verify deployment
+        run: |
+          sleep 15 # Wait for app to start
+          curl -sSf https://${{ secrets.AZURE_WEBAPP_NAME }}.azurewebsites.net/health
+          echo "Deployment verified!"
