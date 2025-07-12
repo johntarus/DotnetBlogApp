@@ -45,7 +45,7 @@ volumes:
 #TODO
 ## Add github actions or azure devops ci/cd
 ## Use production environment and setup real db in azure not use development
-## Explore queues in sending emails
+## Explore queues in sending emails Done ✔️
 ## Add a readme file
 ## Add seed data for database Done ✔️
 ## Add Cors support -> Done ✔️

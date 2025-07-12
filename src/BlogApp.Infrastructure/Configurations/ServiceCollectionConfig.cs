@@ -3,6 +3,7 @@ using BlogApp.Core.Interfaces.Services;
 using BlogApp.Core.Services;
 using BlogApp.Infrastructure.Data;
 using BlogApp.Infrastructure.Repositories;
+using Hangfire;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -36,7 +37,9 @@ public static class ServiceCollectionConfig
 
     public static IServiceCollection AddAppDbContext(this IServiceCollection services, IConfiguration configuration)
     {
-        return services.AddDbContext<DatabaseContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+        var connectionString = configuration.GetConnectionString("DefaultConnection");
+        services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connectionString));
+        services.AddHangfire(config => config.UseSqlServerStorage(connectionString));
+        return services;
     }
 }

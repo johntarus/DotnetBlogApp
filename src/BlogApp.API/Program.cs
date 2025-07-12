@@ -12,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddAppApiVersioning();
+builder.Services.AddHangfireServer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCustomCors();
 builder.Services.AddAutoMapper(typeof(BlogProfile));
@@ -24,9 +25,6 @@ builder.Services.AddAuthorization();
 
 // var db = builder.Configuration.GetConnectionString("DefaultConnection");
 // Console.WriteLine(db, "This is the dab data");
-builder.Services.AddHangfire(config => 
-    config.UseSqlServerStorage(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddHangfireServer();
 
 builder.Services
     .AddAppDbContext(builder.Configuration)
