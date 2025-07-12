@@ -9,7 +9,8 @@ namespace BlogApp.API.Controllers;
 
 [ApiController]
 [Authorize]
-[Route("api/tags")]
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/tags")]
 public class TagController(ITagService tagService, ILogger<TagController> logger) : Controller
 {
     [HttpGet]

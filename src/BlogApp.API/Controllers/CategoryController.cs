@@ -8,7 +8,8 @@ namespace BlogApp.API.Controllers;
 
 [ApiController]
 [Authorize]
-[Route("api/categories")]
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/categories")]
 public class CategoryController(ICategoryService categoryService, ILogger<CategoryController> logger) : ControllerBase
 {
     [HttpGet]

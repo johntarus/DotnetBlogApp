@@ -10,7 +10,8 @@ namespace BlogApp.API.Controllers;
 
 [ApiController]
 [Authorize]
-[Route("api/comments")]
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/comments")]
 public class CommentController : ControllerBase
 {
     private readonly ICommentsService commentsService;

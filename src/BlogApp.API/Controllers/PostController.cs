@@ -10,7 +10,8 @@ namespace BlogApp.API.Controllers;
 
 [ApiController]
 [Authorize]
-[Route("api/posts")]
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/posts")]
 public class PostController(IPostService postService, ILogger<PostController> logger) : ControllerBase
 {
     [HttpGet]

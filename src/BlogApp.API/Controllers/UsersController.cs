@@ -9,7 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace BlogApp.API.Controllers;
 
 [ApiController]
-[Route("api/users")]
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/users")]
 public class UsersController(IAuthService authService, ILogger<UsersController> logger) : ControllerBase
 {
     [HttpPost("register")]

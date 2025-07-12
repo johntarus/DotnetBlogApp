@@ -9,7 +9,8 @@ namespace BlogApp.API.Controllers;
 
 [ApiController]
 [Authorize]
-[Route("api/likes")]
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/likes")]
 public class LikesController(ILikeService likeService, ILogger<LikesController> logger) : ControllerBase
 {
     [HttpGet]
