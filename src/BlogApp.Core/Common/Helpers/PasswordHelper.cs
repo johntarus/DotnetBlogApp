@@ -1,17 +1,23 @@
+using System.Security.Cryptography;
+using System.Text;
+
 namespace BlogApp.Core.Common.Helpers;
 
-public class PasswordHelper
+public static class PasswordHelper
 {
-    public static byte[] HashPassword(string password)
+    public static (byte[] hash, byte[] salt) HashPassword(string password)
     {
-        using var sha256 = System.Security.Cryptography.SHA256.Create();
-        return sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+        using var hmac = new HMACSHA256();
+        return (
+            hash: hmac.ComputeHash(Encoding.UTF8.GetBytes(password)),
+            salt: hmac.Key
+        );
     }
 
-    public static bool VerifyPassword(string password, byte[] storedHash)
+    public static bool VerifyPassword(string password, byte[] storedHash, byte[] storedSalt)
     {
-        var computedHash = HashPassword(password);
+        using var hmac = new HMACSHA256(storedSalt);
+        var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
         return computedHash.SequenceEqual(storedHash);
     }
-
 }

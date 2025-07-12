@@ -6,17 +6,20 @@ namespace BlogApp.Tests.Helpers;
 public class PasswordHelperTests
 {
     [Fact]
-    public void HashPassword_ShouldReturnConsistentHash_ForSameInput()
+    public void HashPassword_ShouldReturnDifferentHashes_ForSameInput()
     {
         // Arrange
         var password = "MySecurePassword123!";
 
         // Act
-        var hash1 = PasswordHelper.HashPassword(password);
-        var hash2 = PasswordHelper.HashPassword(password);
+        var (hash1, salt1) = PasswordHelper.HashPassword(password);
+        var (hash2, salt2) = PasswordHelper.HashPassword(password);
 
         // Assert
-        hash1.Should().Equal(hash2); // Same input -> same hash
+        hash1.Should().NotEqual(hash2); // Different salt = different hash
+        salt1.Should().NotEqual(salt2); // Randomly generated
+        hash1.Length.Should().Be(32);   // SHA256 hash length
+        hash2.Length.Should().Be(32);
     }
 
     [Fact]
@@ -24,10 +27,10 @@ public class PasswordHelperTests
     {
         // Arrange
         var password = "MySecurePassword123!";
-        var hash = PasswordHelper.HashPassword(password);
+        var (hash, salt) = PasswordHelper.HashPassword(password);
 
         // Act
-        var result = PasswordHelper.VerifyPassword(password, hash);
+        var result = PasswordHelper.VerifyPassword(password, hash, salt);
 
         // Assert
         result.Should().BeTrue();
@@ -39,25 +42,25 @@ public class PasswordHelperTests
         // Arrange
         var originalPassword = "OriginalPassword!";
         var wrongPassword = "WrongPassword!";
-        var hash = PasswordHelper.HashPassword(originalPassword);
+        var (hash, salt) = PasswordHelper.HashPassword(originalPassword);
 
         // Act
-        var result = PasswordHelper.VerifyPassword(wrongPassword, hash);
+        var result = PasswordHelper.VerifyPassword(wrongPassword, hash, salt);
 
         // Assert
         result.Should().BeFalse();
     }
 
     [Fact]
-    public void HashPassword_ShouldReturnSameLength_ForAnyInput()
+    public void HashPassword_ShouldReturnCorrectLength_ForAnyInput()
     {
         // Arrange
         var password1 = "abc";
         var password2 = "a much longer password input just to test hash size consistency";
 
         // Act
-        var hash1 = PasswordHelper.HashPassword(password1);
-        var hash2 = PasswordHelper.HashPassword(password2);
+        var (hash1, _) = PasswordHelper.HashPassword(password1);
+        var (hash2, _) = PasswordHelper.HashPassword(password2);
 
         // Assert
         hash1.Length.Should().Be(32); // SHA256 always produces 32-byte hashes

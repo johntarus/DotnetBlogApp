@@ -1,4 +1,3 @@
-using System.Security.Claims;
 using AutoMapper;
 using BlogApp.Core.Common.Helpers;
 using BlogApp.Core.Dtos.Request;
@@ -9,7 +8,6 @@ using BlogApp.Core.Services;
 using BlogApp.Domain.Entities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Microsoft.IdentityModel.Tokens;
 using Moq;
 
 namespace BlogApp.Tests.Services
@@ -184,12 +182,14 @@ namespace BlogApp.Tests.Services
                 UsernameOrEmail = "test@example.com",
                 Password = "Password123!" 
             };
+            var (hash, salt) = PasswordHelper.HashPassword("Password123!");
             var user = new User 
             { 
                 Id = Guid.NewGuid(),
                 Email = "test@example.com",
                 Username = "testuser",
-                PasswordHash = PasswordHelper.HashPassword("Password123!"),
+                PasswordHash = hash,
+                PasswordSalt = salt, 
                 IsEmailVerified = true
             };
             var userResponse = new UserResponseDto 
@@ -223,10 +223,12 @@ namespace BlogApp.Tests.Services
                 UsernameOrEmail = "test@example.com",
                 Password = "WrongPassword" 
             };
+            var (hash, salt) = PasswordHelper.HashPassword("Password123!");
             var user = new User
             {
                 Email = "test@example.com",
-                PasswordHash = PasswordHelper.HashPassword("Password123!"),
+                PasswordHash = hash,
+                PasswordSalt = salt,  
                 Username = null
             };
 
@@ -246,10 +248,14 @@ namespace BlogApp.Tests.Services
                 UsernameOrEmail = "test@example.com",
                 Password = "Password123!" 
             };
+    
+            var (hash, salt) = PasswordHelper.HashPassword("Password123!");
+    
             var user = new User
             {
                 Email = "test@example.com",
-                PasswordHash = PasswordHelper.HashPassword("Password123!"),
+                PasswordHash = hash,
+                PasswordSalt = salt,  
                 IsEmailVerified = false,
                 Username = null
             };

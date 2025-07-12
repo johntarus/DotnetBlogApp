@@ -1,4 +1,4 @@
-using System.Text;
+using BlogApp.Core.Common.Helpers;
 using BlogApp.Core.Dtos.PagedFilters;
 using BlogApp.Domain.Entities;
 using BlogApp.Infrastructure.Data;
@@ -24,12 +24,15 @@ public class CategoryRepositoryTests
 
     private async Task SeedAsync()
     {
+        var (hash, salt) = PasswordHelper.HashPassword("secret");
+
         var user = new User
         {
             Id = Guid.NewGuid(),
             Username = "testuser",
-            PasswordHash = Encoding.UTF8.GetBytes("secret"),
-            Email = "testuser@gmail.com"
+            Email = "testuser@gmail.com",
+            PasswordHash = hash,
+            PasswordSalt = salt
         };
 
         var categories = new[]

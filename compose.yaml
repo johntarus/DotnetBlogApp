@@ -47,8 +47,8 @@ volumes:
 ## Use production environment and setup real db in azure not use development
 ## Explore queues in sending emails
 ## Add a readme file
-## Add seed data for database
+## Add seed data for database Done ✔️
 ## Add Cors support -> Done ✔️
 ## Add [Authorize] to top of each controller to authorize all the endpoints -> Done✔️
 ## Add ApiController to all the controllers to handle the model state and remove all the modelstates -> Done ✔️
-## Implement api versioning
+## Implement api versioning -> Done ✔️

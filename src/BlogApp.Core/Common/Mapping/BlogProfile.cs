@@ -38,8 +38,10 @@ public class BlogProfile : Profile
         
         //User Mapper
         CreateMap<RegisterRequestDto, User>()
-            .ForMember(dest => dest.PasswordHash,
-                opt => opt.MapFrom(src => PasswordHelper.HashPassword(src.Password)))
+            // .ForMember(dest => dest.PasswordHash, opt => opt.MapFrom(src => 
+            //     PasswordHelper.HashPassword(src.Password).hash))
+            // .ForMember(dest => dest.PasswordSalt, opt => opt.MapFrom(src => 
+            //     PasswordHelper.HashPassword(src.Password).salt))
             .ForMember(dest => dest.EmailVerificationToken,
                 opt => opt.MapFrom(src => EmailVerificationUtils.GenerateVerificationToken()))
             .ForMember(dest => dest.EmailVerificationTokenExpiresAt,

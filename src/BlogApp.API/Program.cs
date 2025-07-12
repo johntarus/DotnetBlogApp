@@ -31,11 +31,25 @@ builder.Services
     .AddAppSwagger();
 
 var app = builder.Build();
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 using (var scope = app.Services.CreateScope())
 {
-    var database = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
-    database.Database.Migrate(); // or use Migrate() for EF migrations
+    try 
+    {
+        var context = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
+        
+        Console.WriteLine("Applying migrations...");
+        context.Database.Migrate();
+        Console.WriteLine($"Database ready: {context.Database.CanConnect()}");
+        
+        Console.WriteLine("Seeding data...");
+        Seed.SeedData(scope.ServiceProvider);
+        Console.WriteLine("Seeding completed");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Startup error: {ex}");
+        throw;
+    }
 }
 
 // using var scope = app.Services.CreateScope();

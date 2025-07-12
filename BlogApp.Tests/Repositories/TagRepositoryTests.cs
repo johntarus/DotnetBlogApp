@@ -28,8 +28,9 @@ public class TagRepositoryTests
         {
             Id = Guid.NewGuid(),
             Username = "testuser",
+            Email = "testuser@gmail.com",
             PasswordHash = Encoding.UTF8.GetBytes("secret"),
-            Email = "testuser@gmail.com"
+            PasswordSalt = Encoding.UTF8.GetBytes("salted") // ✅ Fix: Required by EF Core
         };
 
         var tags = new[]

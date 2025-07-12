@@ -1,8 +1,8 @@
+using BlogApp.Core.Common.Helpers;
 using BlogApp.Domain.Entities;
 using BlogApp.Infrastructure.Data;
 using BlogApp.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System.Text;
 
 namespace BlogApp.Tests.Repositories;
 
@@ -23,12 +23,15 @@ public class AuthRepositoryTests
 
     private async Task SeedAsync()
     {
+        var (hash, salt) = PasswordHelper.HashPassword("secret");
+
         var user = new User
         {
             Id = Guid.NewGuid(),
             Username = "TestUser",
             Email = "test@example.com",
-            PasswordHash = Encoding.UTF8.GetBytes("secret")
+            PasswordHash = hash,
+            PasswordSalt = salt
         };
 
         await _context.Users.AddAsync(user);

@@ -4,6 +4,7 @@ using BlogApp.Infrastructure.Data;
 using BlogApp.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
+using Xunit;
 
 namespace BlogApp.Tests.Repositories
 {
@@ -29,6 +30,7 @@ namespace BlogApp.Tests.Repositories
                 Id = Guid.NewGuid(),
                 Username = "testuser",
                 PasswordHash = Encoding.UTF8.GetBytes("test-password"),
+                PasswordSalt = Encoding.UTF8.GetBytes("test-salt"), // Fixed
                 Email = "testuser@gmail.com"
             };
 
@@ -111,6 +113,7 @@ namespace BlogApp.Tests.Repositories
                 Id = Guid.NewGuid(),
                 Username = "newuser",
                 PasswordHash = Encoding.UTF8.GetBytes("pw"),
+                PasswordSalt = Encoding.UTF8.GetBytes("salt"), // Fixed
                 Email = "newuser@gmail.com"
             };
             var post = new Post

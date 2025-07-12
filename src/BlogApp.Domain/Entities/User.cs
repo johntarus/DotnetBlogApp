@@ -5,12 +5,15 @@ namespace BlogApp.Domain.Entities;
 public class User
 {
     public Guid Id { get; set; }
+    
+    [Required, StringLength(50, MinimumLength = 3)]
     public required string? Username { get; set; }
-    [EmailAddress]
+    [Required, EmailAddress]
     public required string Email { get; set; }
     public string? Bio { get; set; }
     public string? Avatar { get; set; }
     public byte[] PasswordHash { get; set; }
+    public byte[] PasswordSalt { get; set; }
     public bool IsActive { get; set; }
     public bool IsEmailVerified { get; set; }
     public string? EmailVerificationToken { get; set; }

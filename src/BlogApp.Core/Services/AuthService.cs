@@ -29,8 +29,11 @@ public class AuthService(
             logger.LogWarning("Email already exists: {email}", request.Email);
             throw new ApplicationException("Email already exists");
         }
+        var (hash, salt) = PasswordHelper.HashPassword(request.Password);
 
         var registerUser = mapper.Map<User>(request);
+        registerUser.PasswordHash = hash;
+        registerUser.PasswordSalt = salt;
         var user = await authRepository.CreateAsync(registerUser);
         logger.LogInformation("User created with ID: {userId}", user.Id);
 
@@ -107,7 +110,7 @@ public class AuthService(
             throw new ArgumentException("Username or Email and Password are required");
         }
 
-        if (user == null || !PasswordHelper.VerifyPassword(request.Password, user.PasswordHash))
+        if (user == null || !PasswordHelper.VerifyPassword(request.Password, user.PasswordHash, user.PasswordSalt))
         {
             logger.LogWarning("Invalid login attempt for {usernameOrEmail}", request.UsernameOrEmail);
             throw new UnauthorizedAccessException("Invalid Credentials");
