@@ -48,7 +48,7 @@ jobs:
         run: docker build -t ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.DOCKER_IMAGE }}:${{ github.sha }} -f src/BlogApp.API/Dockerfile .
         
       - name: Tag Docker image
-        run: docker tag ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.DOCKER_IMAGE }}:${{ github.sha }} ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.DOCKER_IMAGE }}:latest
+        run: docker tag ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.DOCKER_IMAGE }}:${{ github.sha }} ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.DOCKER_IMAGE }}:${{ github.sha }}
       
       - name: Push Docker image to ACR
         run: docker push ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.DOCKER_IMAGE }}:${{ github.sha }}
