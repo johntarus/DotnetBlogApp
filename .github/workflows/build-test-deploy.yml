@@ -45,7 +45,8 @@ jobs:
         
       - name: Build Docker image
         run: docker build -t ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.DOCKER_IMAGE }}:${{ github.sha }} .
-        
+        working-directory: src/BlogApp.API/Dockerfile      
+      
       - name: Push Docker image to ACR
         run: docker push ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.DOCKER_IMAGE }}:${{ github.sha }}
         
