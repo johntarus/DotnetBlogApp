@@ -12,7 +12,7 @@ env:
   AZURE_CONTAINER_REGISTRY: 'blogapi'
   DOCKER_IMAGE: 'blogapp.api'
   AZURE_WEBAPP_NAME: 'blog-app'
-  AZURE_WEBAPP_URL: 'https://blog-app-bmh0g7afaxc2a3gh.canadacentral-01.azurewebsites.net'
+  AZURE_WEBAPP_URL: https://blog-app-bmh0g7afaxc2a3gh.canadacentral-01.azurewebsites.net
 
 jobs: 
   build-test-deploy:
@@ -64,5 +64,5 @@ jobs:
       - name: Verify deployment
         run: |
           sleep 15 # Wait for app to start
-          curl -sSf ${{ env.AZURE_WEBAPP_NAME }}/health
+          curl -sSf ${{ env.AZURE_WEBAPP_URL }}/health
           echo "Deployment verified!!"
