@@ -3,6 +3,7 @@ using BlogApp.Infrastructure.Configurations;
 using BlogApp.Core.Common.Mapping;
 using BlogApp.Core.Utils;
 using BlogApp.Infrastructure.Data;
+using Hangfire;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -23,6 +24,9 @@ builder.Services.AddAuthorization();
 
 // var db = builder.Configuration.GetConnectionString("DefaultConnection");
 // Console.WriteLine(db, "This is the dab data");
+builder.Services.AddHangfire(config => 
+    config.UseSqlServerStorage(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddHangfireServer();
 
 builder.Services
     .AddAppDbContext(builder.Configuration)
@@ -31,30 +35,11 @@ builder.Services
     .AddAppSwagger();
 
 var app = builder.Build();
-using (var scope = app.Services.CreateScope())
-{
-    try 
-    {
-        var context = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
-        
-        Console.WriteLine("Applying migrations...");
-        context.Database.Migrate();
-        Console.WriteLine($"Database ready: {context.Database.CanConnect()}");
-        
-        Console.WriteLine("Seeding data...");
-        Seed.SeedData(scope.ServiceProvider);
-        Console.WriteLine("Seeding completed");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Startup error: {ex}");
-        throw;
-    }
-}
 
-// using var scope = app.Services.CreateScope();
-// var context = scope.ServiceProvider.GetRequiredService<YourDbContext>();
-// context.Database.Migrate(); // Or context.Database.EnsureCreated();
+using var scope = app.Services.CreateScope();
+var context = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
+context.Database.Migrate(); // Or context.Database.EnsureCreated();
+Seed.SeedData(scope.ServiceProvider);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -74,5 +59,6 @@ app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.UseHangfireDashboard("/hangfire", new DashboardOptions());
 
 app.Run();

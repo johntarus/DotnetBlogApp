@@ -7,6 +7,7 @@ using BlogApp.Core.Interfaces.Repositories;
 using BlogApp.Core.Interfaces.Services;
 using BlogApp.Core.Utils;
 using BlogApp.Domain.Entities;
+using Hangfire;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
@@ -19,6 +20,7 @@ public class AuthService(
     IEmailService emailService,
     ILogger<AuthService> logger,
     IMapper mapper
+    // IEmailQueueService emailQueueService
 ) : IAuthService
 {
     public async Task<UserResponseDto> RegisterAsync(RegisterRequestDto request)
@@ -37,12 +39,14 @@ public class AuthService(
         var user = await authRepository.CreateAsync(registerUser);
         logger.LogInformation("User created with ID: {userId}", user.Id);
 
-        await SendVerificationEmailAsync(user);
+        // await SendVerificationEmailAsync(user);
+        BackgroundJob.Enqueue(() => SendVerificationEmailAsync(user)); //Use hangfire queueing
 
         return mapper.Map<UserResponseDto>(user);
     }
 
-    private async Task SendVerificationEmailAsync(User user)
+    [AutomaticRetry(Attempts = 3)] //Retry 3 times if fails
+    public async Task SendVerificationEmailAsync(User user)
     {
         if (string.IsNullOrEmpty(user.Email))
         {
