@@ -58,7 +58,7 @@ jobs:
         with: 
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           images: ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.DOCKER_IMAGE }}:${{ github.sha }}
-          slot-name: 'Development'
+#          slot-name: 'Development'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           
       - name: Verify deployment
