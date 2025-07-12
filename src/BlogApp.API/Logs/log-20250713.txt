@@ -1,0 +1,690 @@
+[2025-07-13 00:00:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 19.8234 ms
+[2025-07-13 00:00:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 41.2666 ms
+[2025-07-13 00:00:07 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-13 00:00:07 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-13 00:00:07 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-13 00:00:07 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-13 00:00:07 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-13 00:00:08 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 803.74ms - 200
+[2025-07-13 00:00:08 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 804.6792ms - 200
+[2025-07-13 00:00:08 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1180.3928ms - 200
+[2025-07-13 00:00:08 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1181.6218ms - 200
+[2025-07-13 00:00:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-13 00:00:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-13 00:00:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-13 00:00:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-13 00:00:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.6131 ms
+[2025-07-13 00:00:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.9703 ms
+[2025-07-13 00:00:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.3777 ms
+[2025-07-13 00:00:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.4123 ms
+[2025-07-13 00:00:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.6684 ms
+[2025-07-13 00:00:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 30.0063 ms
+[2025-07-13 00:00:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.5205 ms
+[2025-07-13 00:00:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:00:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.3040 ms
+[2025-07-13 00:00:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.8394 ms
+[2025-07-13 00:00:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.7342 ms
+[2025-07-13 00:00:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.9852 ms
+[2025-07-13 00:00:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.6505 ms
+[2025-07-13 00:00:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.0049 ms
+[2025-07-13 00:00:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 30.8338 ms
+[2025-07-13 00:00:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 30.3548 ms
+[2025-07-13 00:00:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.6688 ms
+[2025-07-13 00:00:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.2171 ms
+[2025-07-13 00:00:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:00:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.1216 ms
+[2025-07-13 00:01:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.2848 ms
+[2025-07-13 00:01:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.0179 ms
+[2025-07-13 00:01:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.0870 ms
+[2025-07-13 00:01:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.2667 ms
+[2025-07-13 00:01:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.7941 ms
+[2025-07-13 00:01:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.1356 ms
+[2025-07-13 00:01:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.1200 ms
+[2025-07-13 00:01:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.2951 ms
+[2025-07-13 00:01:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.6545 ms
+[2025-07-13 00:01:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:01:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.5745 ms
+[2025-07-13 00:01:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.6301 ms
+[2025-07-13 00:01:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 31.7100 ms
+[2025-07-13 00:01:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.2659 ms
+[2025-07-13 00:01:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.5688 ms
+[2025-07-13 00:01:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.8300 ms
+[2025-07-13 00:01:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 41.5942 ms
+[2025-07-13 00:01:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.4614 ms
+[2025-07-13 00:01:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.7721 ms
+[2025-07-13 00:01:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.7328 ms
+[2025-07-13 00:01:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:01:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 27.6362 ms
+[2025-07-13 00:02:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.7959 ms
+[2025-07-13 00:02:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.4025 ms
+[2025-07-13 00:02:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.3635 ms
+[2025-07-13 00:02:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.1474 ms
+[2025-07-13 00:02:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.0752 ms
+[2025-07-13 00:02:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.9021 ms
+[2025-07-13 00:02:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.1399 ms
+[2025-07-13 00:02:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.0453 ms
+[2025-07-13 00:02:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.7024 ms
+[2025-07-13 00:02:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:02:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.2129 ms
+[2025-07-13 00:02:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.4756 ms
+[2025-07-13 00:02:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.2244 ms
+[2025-07-13 00:02:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.5915 ms
+[2025-07-13 00:02:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 36.6167 ms
+[2025-07-13 00:02:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.5881 ms
+[2025-07-13 00:02:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 9.6830 ms
+[2025-07-13 00:02:48 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-13 00:02:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.0831 ms
+[2025-07-13 00:02:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.3059 ms
+[2025-07-13 00:02:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 62.4203 ms
+[2025-07-13 00:02:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:02:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.4663 ms
+[2025-07-13 00:03:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 27.9261 ms
+[2025-07-13 00:03:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.3762 ms
+[2025-07-13 00:03:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.0059 ms
+[2025-07-13 00:03:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.7554 ms
+[2025-07-13 00:03:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.9703 ms
+[2025-07-13 00:03:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.3011 ms
+[2025-07-13 00:03:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.6733 ms
+[2025-07-13 00:03:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 36.9260 ms
+[2025-07-13 00:03:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.8030 ms
+[2025-07-13 00:03:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:03:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.6255 ms
+[2025-07-13 00:03:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.6378 ms
+[2025-07-13 00:03:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.4758 ms
+[2025-07-13 00:03:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.5588 ms
+[2025-07-13 00:03:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 19.2596 ms
+[2025-07-13 00:03:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.5068 ms
+[2025-07-13 00:03:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.1484 ms
+[2025-07-13 00:03:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.5097 ms
+[2025-07-13 00:03:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.2440 ms
+[2025-07-13 00:03:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.5811 ms
+[2025-07-13 00:03:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:04:00 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 97.4197 ms
+[2025-07-13 00:04:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 27.5792 ms
+[2025-07-13 00:04:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.7260 ms
+[2025-07-13 00:04:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.1210 ms
+[2025-07-13 00:04:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.0420 ms
+[2025-07-13 00:04:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.8121 ms
+[2025-07-13 00:04:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.8520 ms
+[2025-07-13 00:04:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.4415 ms
+[2025-07-13 00:04:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 19.2275 ms
+[2025-07-13 00:04:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.6385 ms
+[2025-07-13 00:04:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:04:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.7737 ms
+[2025-07-13 00:04:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 9.9262 ms
+[2025-07-13 00:04:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.2885 ms
+[2025-07-13 00:04:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.1344 ms
+[2025-07-13 00:04:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 32.9188 ms
+[2025-07-13 00:04:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.0275 ms
+[2025-07-13 00:04:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.4488 ms
+[2025-07-13 00:04:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.9455 ms
+[2025-07-13 00:04:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 64.1872 ms
+[2025-07-13 00:04:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.5339 ms
+[2025-07-13 00:04:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:04:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.5825 ms
+[2025-07-13 00:05:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.8853 ms
+[2025-07-13 00:05:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.3369 ms
+[2025-07-13 00:05:08 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-13 00:05:08 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-13 00:05:08 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-13 00:05:08 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-13 00:05:08 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-13 00:05:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.2887 ms
+[2025-07-13 00:05:09 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 860.7207ms - 200
+[2025-07-13 00:05:09 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 861.2831ms - 200
+[2025-07-13 00:05:09 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1069.7569ms - 200
+[2025-07-13 00:05:09 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1070.5707ms - 200
+[2025-07-13 00:05:09 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-13 00:05:09 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-13 00:05:09 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-13 00:05:09 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-13 00:05:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.5705 ms
+[2025-07-13 00:05:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 32.0225 ms
+[2025-07-13 00:05:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 31.1566 ms
+[2025-07-13 00:05:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.9064 ms
+[2025-07-13 00:05:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.1938 ms
+[2025-07-13 00:05:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.5915 ms
+[2025-07-13 00:05:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:05:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.9957 ms
+[2025-07-13 00:05:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.9900 ms
+[2025-07-13 00:05:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 19.6762 ms
+[2025-07-13 00:05:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.0378 ms
+[2025-07-13 00:05:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.0023 ms
+[2025-07-13 00:05:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.8820 ms
+[2025-07-13 00:05:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.0886 ms
+[2025-07-13 00:05:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.0609 ms
+[2025-07-13 00:05:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.7598 ms
+[2025-07-13 00:05:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.5214 ms
+[2025-07-13 00:05:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:05:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.8511 ms
+[2025-07-13 00:06:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.1612 ms
+[2025-07-13 00:06:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.5431 ms
+[2025-07-13 00:06:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.8083 ms
+[2025-07-13 00:06:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.1653 ms
+[2025-07-13 00:06:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.6774 ms
+[2025-07-13 00:06:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.8248 ms
+[2025-07-13 00:06:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.2212 ms
+[2025-07-13 00:06:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 9.2716 ms
+[2025-07-13 00:06:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.2287 ms
+[2025-07-13 00:06:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:06:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.9991 ms
+[2025-07-13 00:06:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.2154 ms
+[2025-07-13 00:06:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.6010 ms
+[2025-07-13 00:06:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.8818 ms
+[2025-07-13 00:06:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.8213 ms
+[2025-07-13 00:06:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.3737 ms
+[2025-07-13 00:06:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 32.9038 ms
+[2025-07-13 00:06:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.9422 ms
+[2025-07-13 00:06:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.7946 ms
+[2025-07-13 00:06:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 8.4055 ms
+[2025-07-13 00:06:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:06:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.1689 ms
+[2025-07-13 00:07:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 27.3413 ms
+[2025-07-13 00:07:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.6516 ms
+[2025-07-13 00:07:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.8406 ms
+[2025-07-13 00:07:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.0699 ms
+[2025-07-13 00:07:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.4612 ms
+[2025-07-13 00:07:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.0515 ms
+[2025-07-13 00:07:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.9118 ms
+[2025-07-13 00:07:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.0474 ms
+[2025-07-13 00:07:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.9455 ms
+[2025-07-13 00:07:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:07:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 27.7718 ms
+[2025-07-13 00:07:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.2296 ms
+[2025-07-13 00:07:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.1868 ms
+[2025-07-13 00:07:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 27.8052 ms
+[2025-07-13 00:07:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 19.4563 ms
+[2025-07-13 00:07:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.1255 ms
+[2025-07-13 00:07:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.1619 ms
+[2025-07-13 00:07:48 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-13 00:07:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.1640 ms
+[2025-07-13 00:07:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 56.9773 ms
+[2025-07-13 00:07:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.0962 ms
+[2025-07-13 00:07:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:07:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.7535 ms
+[2025-07-13 00:08:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.4040 ms
+[2025-07-13 00:08:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.4696 ms
+[2025-07-13 00:08:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.4805 ms
+[2025-07-13 00:08:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 45.9218 ms
+[2025-07-13 00:08:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.7376 ms
+[2025-07-13 00:08:18 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 36.5158 ms
+[2025-07-13 00:08:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.8788 ms
+[2025-07-13 00:08:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.0815 ms
+[2025-07-13 00:08:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.3053 ms
+[2025-07-13 00:08:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:08:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 31.6271 ms
+[2025-07-13 00:08:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.5195 ms
+[2025-07-13 00:08:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.2394 ms
+[2025-07-13 00:08:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 19.3908 ms
+[2025-07-13 00:08:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.7134 ms
+[2025-07-13 00:08:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.5165 ms
+[2025-07-13 00:08:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.2549 ms
+[2025-07-13 00:08:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.8280 ms
+[2025-07-13 00:08:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.0768 ms
+[2025-07-13 00:08:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 31.4142 ms
+[2025-07-13 00:08:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:08:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 53.3137 ms
+[2025-07-13 00:09:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.2983 ms
+[2025-07-13 00:09:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.2714 ms
+[2025-07-13 00:09:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.7079 ms
+[2025-07-13 00:09:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.6865 ms
+[2025-07-13 00:09:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.7846 ms
+[2025-07-13 00:09:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.5121 ms
+[2025-07-13 00:09:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.7377 ms
+[2025-07-13 00:09:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.4252 ms
+[2025-07-13 00:09:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.1107 ms
+[2025-07-13 00:09:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:09:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.3924 ms
+[2025-07-13 00:09:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.0233 ms
+[2025-07-13 00:09:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.6863 ms
+[2025-07-13 00:09:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.2141 ms
+[2025-07-13 00:09:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.3769 ms
+[2025-07-13 00:09:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.5185 ms
+[2025-07-13 00:09:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.6085 ms
+[2025-07-13 00:09:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.6078 ms
+[2025-07-13 00:09:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 8.6156 ms
+[2025-07-13 00:09:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.7953 ms
+[2025-07-13 00:09:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:09:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 30.4501 ms
+[2025-07-13 00:10:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.8230 ms
+[2025-07-13 00:10:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.7137 ms
+[2025-07-13 00:10:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.4819 ms
+[2025-07-13 00:10:09 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-13 00:10:09 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-13 00:10:09 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-13 00:10:09 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-13 00:10:09 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-13 00:10:10 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1131.0864ms - 200
+[2025-07-13 00:10:10 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1132.1851ms - 200
+[2025-07-13 00:10:10 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1159.7531ms - 200
+[2025-07-13 00:10:10 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1160.3944ms - 200
+[2025-07-13 00:10:10 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-13 00:10:10 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-13 00:10:10 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-13 00:10:10 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-13 00:10:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 19.7628 ms
+[2025-07-13 00:10:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.2354 ms
+[2025-07-13 00:10:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.5092 ms
+[2025-07-13 00:10:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.9166 ms
+[2025-07-13 00:10:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.7714 ms
+[2025-07-13 00:10:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.5402 ms
+[2025-07-13 00:10:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:10:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.6798 ms
+[2025-07-13 00:10:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.8147 ms
+[2025-07-13 00:10:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.3745 ms
+[2025-07-13 00:10:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.2497 ms
+[2025-07-13 00:10:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.6079 ms
+[2025-07-13 00:10:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.3403 ms
+[2025-07-13 00:10:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.0029 ms
+[2025-07-13 00:10:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.3958 ms
+[2025-07-13 00:10:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.7404 ms
+[2025-07-13 00:10:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.2923 ms
+[2025-07-13 00:10:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:10:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.6550 ms
+[2025-07-13 00:11:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.1543 ms
+[2025-07-13 00:11:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 35.9389 ms
+[2025-07-13 00:11:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.1078 ms
+[2025-07-13 00:11:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 40.9745 ms
+[2025-07-13 00:11:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.1057 ms
+[2025-07-13 00:11:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.4364 ms
+[2025-07-13 00:11:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.9578 ms
+[2025-07-13 00:11:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.5058 ms
+[2025-07-13 00:11:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.7972 ms
+[2025-07-13 00:11:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:11:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.7006 ms
+[2025-07-13 00:11:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 27.2569 ms
+[2025-07-13 00:11:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.1426 ms
+[2025-07-13 00:11:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.6113 ms
+[2025-07-13 00:11:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.9234 ms
+[2025-07-13 00:11:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 32.7657 ms
+[2025-07-13 00:11:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.0918 ms
+[2025-07-13 00:11:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.0875 ms
+[2025-07-13 00:11:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.3638 ms
+[2025-07-13 00:11:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.3875 ms
+[2025-07-13 00:11:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:11:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.2605 ms
+[2025-07-13 00:12:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.4379 ms
+[2025-07-13 00:12:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.5285 ms
+[2025-07-13 00:12:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.1301 ms
+[2025-07-13 00:12:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.9510 ms
+[2025-07-13 00:12:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.2626 ms
+[2025-07-13 00:12:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.7036 ms
+[2025-07-13 00:12:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 30.3018 ms
+[2025-07-13 00:12:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 9.3774 ms
+[2025-07-13 00:12:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.5673 ms
+[2025-07-13 00:12:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:12:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.0778 ms
+[2025-07-13 00:12:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.0558 ms
+[2025-07-13 00:12:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.8946 ms
+[2025-07-13 00:12:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.4005 ms
+[2025-07-13 00:12:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 19.8155 ms
+[2025-07-13 00:12:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.9231 ms
+[2025-07-13 00:12:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.3133 ms
+[2025-07-13 00:12:48 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-13 00:12:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.8804 ms
+[2025-07-13 00:12:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.0378 ms
+[2025-07-13 00:12:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.8382 ms
+[2025-07-13 00:12:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:12:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 30.8154 ms
+[2025-07-13 00:13:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.4835 ms
+[2025-07-13 00:13:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.4818 ms
+[2025-07-13 00:13:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.0348 ms
+[2025-07-13 00:13:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.5222 ms
+[2025-07-13 00:13:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.4640 ms
+[2025-07-13 00:13:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.8169 ms
+[2025-07-13 00:13:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.2280 ms
+[2025-07-13 00:13:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 9.7169 ms
+[2025-07-13 00:13:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 19.8652 ms
+[2025-07-13 00:13:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:13:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.1370 ms
+[2025-07-13 00:13:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.8401 ms
+[2025-07-13 00:13:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.2221 ms
+[2025-07-13 00:13:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.1283 ms
+[2025-07-13 00:13:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.0205 ms
+[2025-07-13 00:13:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 32.5357 ms
+[2025-07-13 00:13:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 27.4206 ms
+[2025-07-13 00:13:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 30.0710 ms
+[2025-07-13 00:13:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.3237 ms
+[2025-07-13 00:13:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.5240 ms
+[2025-07-13 00:13:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:13:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 27.8662 ms
+[2025-07-13 00:14:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 41.4477 ms
+[2025-07-13 00:14:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.0200 ms
+[2025-07-13 00:14:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.3567 ms
+[2025-07-13 00:14:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.6800 ms
+[2025-07-13 00:14:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.8449 ms
+[2025-07-13 00:14:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.1236 ms
+[2025-07-13 00:14:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.6695 ms
+[2025-07-13 00:14:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.8815 ms
+[2025-07-13 00:14:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.9342 ms
+[2025-07-13 00:14:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:14:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.0639 ms
+[2025-07-13 00:14:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.3675 ms
+[2025-07-13 00:14:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.0121 ms
+[2025-07-13 00:14:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.4948 ms
+[2025-07-13 00:14:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.0275 ms
+[2025-07-13 00:14:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.4418 ms
+[2025-07-13 00:14:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.8423 ms
+[2025-07-13 00:14:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.7659 ms
+[2025-07-13 00:14:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.9328 ms
+[2025-07-13 00:14:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.3995 ms
+[2025-07-13 00:14:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:14:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.7633 ms
+[2025-07-13 00:15:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.0263 ms
+[2025-07-13 00:15:06 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 34.3085 ms
+[2025-07-13 00:15:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.5904 ms
+[2025-07-13 00:15:10 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-13 00:15:10 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-13 00:15:10 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-13 00:15:10 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-13 00:15:10 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-13 00:15:11 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 710.0207ms - 200
+[2025-07-13 00:15:11 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 710.6641ms - 200
+[2025-07-13 00:15:11 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 746.8691ms - 200
+[2025-07-13 00:15:11 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 747.211ms - 200
+[2025-07-13 00:15:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-13 00:15:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-13 00:15:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-13 00:15:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-13 00:15:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.1574 ms
+[2025-07-13 00:15:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.5015 ms
+[2025-07-13 00:15:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.9417 ms
+[2025-07-13 00:15:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.3115 ms
+[2025-07-13 00:15:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.6033 ms
+[2025-07-13 00:15:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.3668 ms
+[2025-07-13 00:15:27 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:15:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.5055 ms
+[2025-07-13 00:15:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.0550 ms
+[2025-07-13 00:15:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 46.3891 ms
+[2025-07-13 00:15:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 39.2083 ms
+[2025-07-13 00:15:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.9185 ms
+[2025-07-13 00:15:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.7144 ms
+[2025-07-13 00:15:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.8176 ms
+[2025-07-13 00:15:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 32.8848 ms
+[2025-07-13 00:15:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.8253 ms
+[2025-07-13 00:15:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.7473 ms
+[2025-07-13 00:15:57 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:15:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 19.5735 ms
+[2025-07-13 00:16:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.0818 ms
+[2025-07-13 00:16:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.3525 ms
+[2025-07-13 00:16:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.5868 ms
+[2025-07-13 00:16:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 41.2799 ms
+[2025-07-13 00:16:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 37.4223 ms
+[2025-07-13 00:16:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.2912 ms
+[2025-07-13 00:16:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.6125 ms
+[2025-07-13 00:16:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.6951 ms
+[2025-07-13 00:16:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.6535 ms
+[2025-07-13 00:16:28 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:16:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 9.7588 ms
+[2025-07-13 00:16:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.1177 ms
+[2025-07-13 00:16:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.7490 ms
+[2025-07-13 00:16:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.9954 ms
+[2025-07-13 00:16:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.9449 ms
+[2025-07-13 00:16:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.7129 ms
+[2025-07-13 00:16:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 38.3943 ms
+[2025-07-13 00:16:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 44.1358 ms
+[2025-07-13 00:16:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.3130 ms
+[2025-07-13 00:16:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.0524 ms
+[2025-07-13 00:16:58 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:16:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 42.9485 ms
+[2025-07-13 00:17:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.0995 ms
+[2025-07-13 00:17:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.2018 ms
+[2025-07-13 00:17:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 27.2084 ms
+[2025-07-13 00:17:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.7229 ms
+[2025-07-13 00:17:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.8140 ms
+[2025-07-13 00:17:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.5761 ms
+[2025-07-13 00:17:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.1610 ms
+[2025-07-13 00:17:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.6012 ms
+[2025-07-13 00:17:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.0828 ms
+[2025-07-13 00:17:28 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:17:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.6595 ms
+[2025-07-13 00:17:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.0553 ms
+[2025-07-13 00:17:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 32.2332 ms
+[2025-07-13 00:17:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.8675 ms
+[2025-07-13 00:17:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.4135 ms
+[2025-07-13 00:17:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.0087 ms
+[2025-07-13 00:17:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.3878 ms
+[2025-07-13 00:17:48 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-13 00:17:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.7114 ms
+[2025-07-13 00:17:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.3835 ms
+[2025-07-13 00:17:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.2513 ms
+[2025-07-13 00:17:58 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:17:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 19.7045 ms
+[2025-07-13 00:18:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.0472 ms
+[2025-07-13 00:18:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 7.7285 ms
+[2025-07-13 00:18:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.6968 ms
+[2025-07-13 00:18:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.4860 ms
+[2025-07-13 00:18:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.0317 ms
+[2025-07-13 00:18:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.0047 ms
+[2025-07-13 00:18:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.8598 ms
+[2025-07-13 00:18:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 27.0177 ms
+[2025-07-13 00:18:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.4083 ms
+[2025-07-13 00:18:28 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:18:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.9170 ms
+[2025-07-13 00:18:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.9447 ms
+[2025-07-13 00:18:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.8557 ms
+[2025-07-13 00:18:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.8545 ms
+[2025-07-13 00:18:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.9785 ms
+[2025-07-13 00:18:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.4858 ms
+[2025-07-13 00:18:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.5378 ms
+[2025-07-13 00:18:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.3003 ms
+[2025-07-13 00:18:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.1694 ms
+[2025-07-13 00:18:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.9295 ms
+[2025-07-13 00:18:58 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:18:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.6298 ms
+[2025-07-13 00:19:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 43.5200 ms
+[2025-07-13 00:19:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.0355 ms
+[2025-07-13 00:19:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.8240 ms
+[2025-07-13 00:19:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.8506 ms
+[2025-07-13 00:19:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.5594 ms
+[2025-07-13 00:19:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.3198 ms
+[2025-07-13 00:19:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.5970 ms
+[2025-07-13 00:19:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.1519 ms
+[2025-07-13 00:19:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.4201 ms
+[2025-07-13 00:19:28 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:19:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.7050 ms
+[2025-07-13 00:19:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.0285 ms
+[2025-07-13 00:19:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.2943 ms
+[2025-07-13 00:19:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.3435 ms
+[2025-07-13 00:19:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.2955 ms
+[2025-07-13 00:19:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.2703 ms
+[2025-07-13 00:19:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.3631 ms
+[2025-07-13 00:19:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.4429 ms
+[2025-07-13 00:19:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.4761 ms
+[2025-07-13 00:19:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.2172 ms
+[2025-07-13 00:19:58 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:19:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.4238 ms
+[2025-07-13 00:20:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.7440 ms
+[2025-07-13 00:20:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.6698 ms
+[2025-07-13 00:20:09 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 43.5984 ms
+[2025-07-13 00:20:11 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-13 00:20:11 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-13 00:20:11 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-13 00:20:11 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-13 00:20:11 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-13 00:20:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.1831 ms
+[2025-07-13 00:20:12 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 714.1469ms - 200
+[2025-07-13 00:20:12 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 714.8026ms - 200
+[2025-07-13 00:20:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1081.9687ms - 200
+[2025-07-13 00:20:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1083.6273ms - 200
+[2025-07-13 00:20:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-13 00:20:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-13 00:20:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-13 00:20:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-13 00:20:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.4911 ms
+[2025-07-13 00:20:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.3975 ms
+[2025-07-13 00:20:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.3130 ms
+[2025-07-13 00:20:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.4691 ms
+[2025-07-13 00:20:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.8048 ms
+[2025-07-13 00:20:28 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:20:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.9334 ms
+[2025-07-13 00:20:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.9007 ms
+[2025-07-13 00:20:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.8146 ms
+[2025-07-13 00:20:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.6421 ms
+[2025-07-13 00:20:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.2507 ms
+[2025-07-13 00:20:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.7252 ms
+[2025-07-13 00:20:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.9930 ms
+[2025-07-13 00:20:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.2485 ms
+[2025-07-13 00:20:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.2845 ms
+[2025-07-13 00:20:57 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 64.5566 ms
+[2025-07-13 00:20:58 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:20:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.8925 ms
+[2025-07-13 00:21:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.9622 ms
+[2025-07-13 00:21:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.8773 ms
+[2025-07-13 00:21:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.2002 ms
+[2025-07-13 00:21:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.2589 ms
+[2025-07-13 00:21:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.7971 ms
+[2025-07-13 00:21:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.5078 ms
+[2025-07-13 00:21:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 32.4883 ms
+[2025-07-13 00:21:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.8774 ms
+[2025-07-13 00:21:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.1781 ms
+[2025-07-13 00:21:28 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:21:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.0960 ms
+[2025-07-13 00:21:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.3973 ms
+[2025-07-13 00:21:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.3052 ms
+[2025-07-13 00:21:39 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 35.1931 ms
+[2025-07-13 00:21:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.7769 ms
+[2025-07-13 00:21:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 28.6240 ms
+[2025-07-13 00:21:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.5543 ms
+[2025-07-13 00:21:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.1541 ms
+[2025-07-13 00:21:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.9120 ms
+[2025-07-13 00:21:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.4144 ms
+[2025-07-13 00:21:58 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:21:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.1665 ms
+[2025-07-13 00:22:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.5493 ms
+[2025-07-13 00:22:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.9394 ms
+[2025-07-13 00:22:09 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 31.2113 ms
+[2025-07-13 00:22:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.1026 ms
+[2025-07-13 00:22:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.9138 ms
+[2025-07-13 00:22:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.2152 ms
+[2025-07-13 00:22:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.0424 ms
+[2025-07-13 00:22:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.4730 ms
+[2025-07-13 00:22:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.5601 ms
+[2025-07-13 00:22:28 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:22:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.0862 ms
+[2025-07-13 00:22:33 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 49.4712 ms
+[2025-07-13 00:22:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.5785 ms
+[2025-07-13 00:22:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.2817 ms
+[2025-07-13 00:22:42 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 40.6553 ms
+[2025-07-13 00:22:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.5334 ms
+[2025-07-13 00:22:47 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'AggregatedCounter' table...
+[2025-07-13 00:22:47 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Job' table...
+[2025-07-13 00:22:47 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'List' table...
+[2025-07-13 00:22:47 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Set' table...
+[2025-07-13 00:22:47 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Hash' table...
+[2025-07-13 00:22:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.0796 ms
+[2025-07-13 00:22:48 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-13 00:22:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 32.7635 ms
+[2025-07-13 00:22:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 34.6833 ms
+[2025-07-13 00:22:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.5425 ms
+[2025-07-13 00:22:58 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:22:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.2958 ms
+[2025-07-13 00:23:03 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 36.5017 ms
+[2025-07-13 00:23:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.8682 ms
+[2025-07-13 00:23:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.6244 ms
+[2025-07-13 00:23:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.5278 ms
+[2025-07-13 00:23:15 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 34.8535 ms
+[2025-07-13 00:23:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.0112 ms
+[2025-07-13 00:23:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.1659 ms
+[2025-07-13 00:23:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 31.2630 ms
+[2025-07-13 00:23:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.1943 ms
+[2025-07-13 00:23:28 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:23:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.1637 ms
+[2025-07-13 00:23:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.6928 ms
+[2025-07-13 00:23:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 30.6960 ms
+[2025-07-13 00:23:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.8825 ms
+[2025-07-13 00:23:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 31.1738 ms
+[2025-07-13 00:23:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.1230 ms
+[2025-07-13 00:23:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.0103 ms
+[2025-07-13 00:23:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.3261 ms
+[2025-07-13 00:23:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.6380 ms
+[2025-07-13 00:23:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.8098 ms
+[2025-07-13 00:23:58 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:23:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.4517 ms
+[2025-07-13 00:24:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 32.1965 ms
+[2025-07-13 00:24:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.4619 ms
+[2025-07-13 00:24:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 27.7029 ms
+[2025-07-13 00:24:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 9.7144 ms
+[2025-07-13 00:24:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 26.2488 ms
+[2025-07-13 00:24:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.3183 ms
+[2025-07-13 00:24:21 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 29.4098 ms
+[2025-07-13 00:24:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 31.3299 ms
+[2025-07-13 00:24:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.1408 ms
+[2025-07-13 00:24:28 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:24:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.8700 ms
+[2025-07-13 00:24:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 9.3425 ms
+[2025-07-13 00:24:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.8863 ms
+[2025-07-13 00:24:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.3031 ms
+[2025-07-13 00:24:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 10.8001 ms
+[2025-07-13 00:24:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.0861 ms
+[2025-07-13 00:24:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.3436 ms
+[2025-07-13 00:24:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.3890 ms
+[2025-07-13 00:24:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.6600 ms
+[2025-07-13 00:24:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.4383 ms
+[2025-07-13 00:24:58 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:24:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 14.9829 ms
+[2025-07-13 00:25:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.1203 ms
+[2025-07-13 00:25:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 25.5198 ms
+[2025-07-13 00:25:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.9240 ms
+[2025-07-13 00:25:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.7800 ms
+[2025-07-13 00:25:12 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-13 00:25:12 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-13 00:25:12 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-13 00:25:12 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-13 00:25:12 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-13 00:25:14 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1294.7605ms - 200
+[2025-07-13 00:25:14 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1295.932ms - 200
+[2025-07-13 00:25:14 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1324.4526ms - 200
+[2025-07-13 00:25:14 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1325.3316ms - 200
+[2025-07-13 00:25:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-13 00:25:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-13 00:25:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-13 00:25:14 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-13 00:25:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.2869 ms
+[2025-07-13 00:25:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.0663 ms
+[2025-07-13 00:25:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 24.8289 ms
+[2025-07-13 00:25:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.1854 ms
+[2025-07-13 00:25:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 9.2180 ms
+[2025-07-13 00:25:28 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:25:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.7180 ms
+[2025-07-13 00:25:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.2518 ms
+[2025-07-13 00:25:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 17.6536 ms
+[2025-07-13 00:25:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.2663 ms
+[2025-07-13 00:25:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.6161 ms
+[2025-07-13 00:25:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.0589 ms
+[2025-07-13 00:25:48 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 22.0213 ms
+[2025-07-13 00:25:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.6628 ms
+[2025-07-13 00:25:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.9998 ms
+[2025-07-13 00:25:57 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.0044 ms
+[2025-07-13 00:25:58 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:25:59 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.2481 ms
+[2025-07-13 00:26:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.7161 ms
+[2025-07-13 00:26:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.0190 ms
+[2025-07-13 00:26:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 13.6541 ms
+[2025-07-13 00:26:12 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 41.9041 ms
+[2025-07-13 00:26:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 16.2587 ms
+[2025-07-13 00:26:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.5879 ms
+[2025-07-13 00:26:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.2436 ms
+[2025-07-13 00:26:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.3266 ms
+[2025-07-13 00:26:26 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 8.9779 ms
+[2025-07-13 00:26:28 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:26:29 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 21.7643 ms
+[2025-07-13 00:26:32 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.8832 ms
+[2025-07-13 00:26:35 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.8052 ms
+[2025-07-13 00:26:38 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.6745 ms
+[2025-07-13 00:26:41 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.5007 ms
+[2025-07-13 00:26:44 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 19.1327 ms
+[2025-07-13 00:26:47 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 27.4424 ms
+[2025-07-13 00:26:50 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.8182 ms
+[2025-07-13 00:26:53 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 11.3781 ms
+[2025-07-13 00:26:56 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 9.6121 ms
+[2025-07-13 00:26:58 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:87617:d0c37534 heartbeat successfully sent
+[2025-07-13 00:27:00 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 65.0461 ms
+[2025-07-13 00:27:02 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.0116 ms
+[2025-07-13 00:27:05 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 12.7418 ms
+[2025-07-13 00:27:08 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.1613 ms
+[2025-07-13 00:27:11 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 18.3367 ms
+[2025-07-13 00:27:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 15.8901 ms
+[2025-07-13 00:27:17 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.0769 ms
+[2025-07-13 00:27:20 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 23.8151 ms
+[2025-07-13 00:27:23 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP POST /hangfire/stats responded 200 in 20.6348 ms

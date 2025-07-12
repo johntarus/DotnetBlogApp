@@ -47,6 +47,7 @@ if (app.Environment.IsDevelopment())
     app.UseHealthChecksUI();
 }
 
+app.MapGet("/health", () => Results.Ok("Healthy"));
 app.UseCustomHealthChecks();
 app.UseCors("AllowClients");
 app.UseSerilogRequestLogging();
