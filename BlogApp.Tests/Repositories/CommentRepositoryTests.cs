@@ -29,6 +29,7 @@ public class CommentRepositoryTests
             Id = Guid.NewGuid(),
             Username = "testuser",
             PasswordHash = Encoding.UTF8.GetBytes("secret"),
+            PasswordSalt = Encoding.UTF8.GetBytes("salted"),
             Email = "testuser@gmail.com"
         };
 

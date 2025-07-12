@@ -19,7 +19,8 @@ public class AuthService(
     IConfiguration config,
     IEmailService emailService,
     ILogger<AuthService> logger,
-    IMapper mapper
+    IMapper mapper,
+    IBackgroundJobClient backgroundJobClient
     // IEmailQueueService emailQueueService
 ) : IAuthService
 {
@@ -40,7 +41,7 @@ public class AuthService(
         logger.LogInformation("User created with ID: {userId}", user.Id);
 
         // await SendVerificationEmailAsync(user);
-        BackgroundJob.Enqueue(() => SendVerificationEmailAsync(user)); //Use hangfire queueing
+        backgroundJobClient.Enqueue(() => SendVerificationEmailAsync(user)); //Use hangfire queueing
 
         return mapper.Map<UserResponseDto>(user);
     }
