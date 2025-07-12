@@ -63,5 +63,5 @@ jobs:
       - name: Verify deployment
         run: |
           sleep 15 # Wait for app to start
-          curl -sSf https://${{ secrets.AZURE_WEBAPP_NAME }}.azurewebsites.net/health
-          echo "Deployment verified!"
+          curl -sSf https://${{ env.AZURE_WEBAPP_NAME }}.azurewebsites.net/health
+          echo "Deployment verified!!"
