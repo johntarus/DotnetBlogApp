@@ -6,13 +6,14 @@ on:
       - main
       - develop
 
-env: 
+env:
   DOTNET_VERSION: '8.0.x'
   AZURE_RESOURCE_GROUP: 'BlogAppResourceGroup'
   AZURE_CONTAINER_REGISTRY: 'blogapi'
   DOCKER_IMAGE: 'blogapp.api'
   AZURE_WEBAPP_NAME: 'blog-app'
-   
+  AZURE_WEBAPP_URL: https://blog-app-bmh0g7afaxc2a3gh.canadacentral-01.azurewebsites.net
+
 jobs: 
   build-test-deploy:
     runs-on: ubuntu-latest
@@ -63,5 +64,5 @@ jobs:
       - name: Verify deployment
         run: |
           sleep 15 # Wait for app to start
-          curl -sSf https://${{ env.AZURE_WEBAPP_NAME }}.azurewebsites.net/health
+          curl -sSf ${{ env.AZURE_WEBAPP_NAME }}/health
           echo "Deployment verified!!"
