@@ -10,7 +10,7 @@ env:
   DOTNET_VERSION: '8.0.x'
   AZURE_RESOURCE_GROUP: 'BlogAppResourceGroup'
   AZURE_CONTAINER_REGISTRY: 'blogapi'
-  DOCKER_IMAGE: 'blogapp.api:latest'
+  DOCKER_IMAGE: 'blogapp.api'
   AZURE_WEBAPP_NAME: 'blogapp-api'
    
 jobs: 
