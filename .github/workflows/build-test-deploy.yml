@@ -48,19 +48,28 @@ jobs:
         
       - name: Build Docker image
 #        working-directory: src/BlogApp.API      
-        run: docker build -t ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.DOCKER_IMAGE }}:${{ github.sha }} -f src/BlogApp.API/Dockerfile .
+        run: docker build -t ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.DOCKER_IMAGE }} -f src/BlogApp.API/Dockerfile .
         
       - name: Tag Docker image
-        run: docker tag ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.DOCKER_IMAGE }}:${{ github.sha }} ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.DOCKER_IMAGE }}:${{ github.sha }}
+        run: docker tag ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.DOCKER_IMAGE }} ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.DOCKER_IMAGE }}:latest
       
       - name: Push Docker image to ACR
-        run: docker push ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.DOCKER_IMAGE }}:${{ github.sha }}
+        run: docker push ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.DOCKER_IMAGE }}:latest
+        
+      - name: Deploy Config
+        run: |
+          az webapp config appsettings set \
+            --name ${{ env.AZURE_WEBAPP_NAME }} \
+            --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+            --settings \
+              ConnectionStrings__DefaultConnection="${{ secrets.SQL_CONNECTION_STRING }}" \
+              Jwt__Key="${{ secrets.JWT_SECRET }}"
         
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with: 
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          images: ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.DOCKER_IMAGE }}:${{ github.sha }}
+          images: ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.DOCKER_IMAGE }}:latest
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           
       - name: Verify deployment

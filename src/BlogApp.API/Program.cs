@@ -22,9 +22,6 @@ builder.Services.AddAppAuthentication(builder.Configuration);
 builder.Services.AddCustomHealthChecks(builder.Configuration);
 builder.Host.ConfigureLogging();
 builder.Services.AddAuthorization();
-
-builder.WebHost.UseUrls("http://+:8080");
-
 // var db = builder.Configuration.GetConnectionString("DefaultConnection");
 // Console.WriteLine(db, "This is the dab data");
 
@@ -49,7 +46,6 @@ if (app.Environment.IsDevelopment())
     app.UseHealthChecksUI();
 }
 
-app.MapGet("/health", () => Results.Ok("Healthy"));
 app.UseCustomHealthChecks();
 app.UseCors("AllowClients");
 app.UseSerilogRequestLogging();
