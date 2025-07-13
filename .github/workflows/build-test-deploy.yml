@@ -75,5 +75,5 @@ jobs:
       - name: Verify deployment
         run: |
           sleep 15 # Wait for app to start
-          curl -sSf ${{ env.AZURE_WEBAPP_URL }}/health
+          curl -sSf ${{ env.AZURE_WEBAPP_URL }}/swagger/index.html
           echo "Deployment verified!!"
