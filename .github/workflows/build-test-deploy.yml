@@ -62,7 +62,7 @@ jobs:
             --name ${{ env.AZURE_WEBAPP_NAME }} \
             --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
             --settings \
-              ConnectionStrings__DefaultConnection="${{ secrets.SQL_CONNECTION_STRING }}" \
+              ConnectionStrings__DefaultConnection="${{ secrets.CONNECTIONSTRINGS__DEFAULTCONNECTION }}" \
               Jwt__Key="${{ secrets.JWT_SECRET }}"
         
       - name: Deploy to Azure Web App
