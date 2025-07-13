@@ -11,7 +11,7 @@ env:
   AZURE_RESOURCE_GROUP: 'BlogAppResourceGroup'
   AZURE_CONTAINER_REGISTRY: 'blogapi'
   DOCKER_IMAGE: 'blogapp.api'
-  AZURE_WEBAPP_NAME: 'blog-app'
+  AZURE_WEBAPP_NAME: 'blogapi'
   AZURE_WEBAPP_URL: https://blog-app-bmh0g7afaxc2a3gh.canadacentral-01.azurewebsites.net
 
 jobs: 
