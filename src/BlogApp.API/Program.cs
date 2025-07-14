@@ -57,5 +57,13 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 app.UseHangfireDashboard("/hangfire", new DashboardOptions());
+app.MapGet("/health", () => {
+    try {
+        return Results.Ok("Healthy");
+    }
+    catch (Exception ex) {
+        return Results.Problem(ex.Message);
+    }
+});
 
 app.Run();
