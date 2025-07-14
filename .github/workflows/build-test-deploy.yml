@@ -11,6 +11,9 @@ env:
   AZURE_RESOURCE_GROUP: 'BlogAppResourceGroup'
   AZURE_CONTAINER_REGISTRY: 'blogapi'
   DOCKER_IMAGE: 'blogapp.api'
+  SQL_USERNAME: 'user'
+  SQL_PASSWORD: 'Password@123'
+  AZURE_SQL_DB: 'BlogAppDb'
   AZURE_SQL_SERVER: 'blogapp-db-server'
   AZURE_WEBAPP_NAME: 'blogapi'
   AZURE_WEBAPP_URL: https://blogapi-c7dndnh2g8djgqfd.westus2-01.azurewebsites.net
@@ -75,6 +78,14 @@ jobs:
             --settings \
               ConnectionStrings__DefaultConnection="${{ secrets.CONNECTIONSTRINGS__DEFAULTCONNECTION }}" \
               Jwt__Key="${{ secrets.JWT_SECRET }}"
+          
+      - name: Test DB Connection
+        run: |
+          sqlcmd -S "${AZURE_SQL_SERVER}.database.windows.net" \
+                 -U "${{ secrets.SQL_USERNAME }}" \
+                 -P "${{ env.SQL_PASSWORD }}" \
+                 -d "${{ env.AZURE_SQL_DB }}" \
+                 -Q "SELECT 1"
         
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
@@ -85,6 +96,6 @@ jobs:
           
       - name: Verify deployment
         run: |
-          sleep 15 # Wait for app to start
+          sleep 40 # Wait for app to start
           curl -sSf ${{ env.AZURE_WEBAPP_URL }}/swagger/index.html
           echo "Deployment verified!!"
