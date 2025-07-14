@@ -2619,3 +2619,45 @@ System.UnauthorizedAccessException: Email not verified. Please check your inbox.
 [2025-07-14 11:00:24 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:23521:b3608d30 heartbeat successfully sent
 [2025-07-14 11:00:54 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:23521:b3608d30 heartbeat successfully sent
 [2025-07-14 11:01:24 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:23521:b3608d30 heartbeat successfully sent
+[2025-07-14 11:01:55 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:23521:b3608d30 heartbeat successfully sent
+[2025-07-14 11:02:25 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:23521:b3608d30 heartbeat successfully sent
+[2025-07-14 11:02:27 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-14 11:02:29 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-14 11:02:29 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-14 11:02:29 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-14 11:02:29 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-14 11:02:29 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-14 11:02:30 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 717.9317ms - 200
+[2025-07-14 11:02:30 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 718.687ms - 200
+[2025-07-14 11:02:30 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 762.031ms - 200
+[2025-07-14 11:02:30 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 763.4417ms - 200
+[2025-07-14 11:02:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-14 11:02:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-14 11:02:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-14 11:02:30 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-14 11:03:30 WRN] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:23521:b3608d30 encountered an exception while sending heartbeat
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2965
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 656
+   at Hangfire.SqlServer.SqlServerConnection.<>c.<Heartbeat>b__23_0(SqlServerStorage storage, DbConnection connection, String serverId) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 550
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[TContext,TResult](DbConnection dedicatedConnection, Func`4 func, TContext context) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 287
+   at Hangfire.Server.ServerHeartbeatProcess.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\ServerHeartbeatProcess.cs:line 42
+ClientConnectionId:1b09379a-743b-456c-bba7-57774558d996
+Error Number:-2,State:0,Class:11
+[2025-07-14 11:04:02 INF] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:23521:b3608d30 is now able to continue sending heartbeats
+[2025-07-14 11:04:32 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:23521:b3608d30 heartbeat successfully sent
+[2025-07-14 11:05:03 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:23521:b3608d30 heartbeat successfully sent
+[2025-07-14 11:05:33 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:23521:b3608d30 heartbeat successfully sent
+[2025-07-14 11:06:03 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:23521:b3608d30 heartbeat successfully sent
+[2025-07-14 11:06:33 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:23521:b3608d30 heartbeat successfully sent
