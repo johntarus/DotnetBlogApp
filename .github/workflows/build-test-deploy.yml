@@ -83,9 +83,9 @@ jobs:
           images: ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.DOCKER_IMAGE }}:latest
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           
-      - name: Verify Deployment
+      - name: Verify deployment
         run: |
           sleep 30  # Wait longer for app to initialize
-          curl -v -sSf https://${{ env.AZURE_WEBAPP_URL }}/health || echo "Health check failed"
-          curl -v -sSf https://${{ env.AZURE_WEBAPP_URL }}/hangfire || echo "Hangfire dashboard unavailable"
-        continue-on-error: true
+          curl -v -sSf ${{ env.AZURE_WEBAPP_URL }}/health || echo "Health check failed"
+          curl -v -sSf ${{ env.AZURE_WEBAPP_URL }}/hangfire || echo "Hangfire dashboard unavailable"
+      
