@@ -11,7 +11,7 @@ env:
   AZURE_RESOURCE_GROUP: 'BlogAppResourceGroup'
   AZURE_CONTAINER_REGISTRY: 'blogapi'
   DOCKER_IMAGE: 'blogapp.api'
-  AZURE_SQL_SERVER: 'BlogAppDb'
+  AZURE_SQL_SERVER: 'blogapp-db-server'
   AZURE_WEBAPP_NAME: 'blogapi'
   AZURE_WEBAPP_URL: https://blogapi-c7dndnh2g8djgqfd.westus2-01.azurewebsites.net
 
