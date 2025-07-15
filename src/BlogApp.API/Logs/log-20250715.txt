@@ -982,3 +982,584 @@
 [2025-07-15 21:17:30 INF] Hangfire.Server.BackgroundServerProcess Server taruss-macbook-pro:10563:580592c2 successfully reported itself as stopped in 11.8311 ms
 [2025-07-15 21:17:30 INF] Hangfire.Server.BackgroundServerProcess Server taruss-macbook-pro:10563:580592c2 has been stopped in total 902.9286 ms
 [2025-07-15 21:17:30 DBG] Hangfire.Processing.BackgroundExecution Execution loop BackgroundServerProcess:7c836fb9 stopped in 903.0139 ms
+[2025-07-15 22:07:37 INF] Hangfire.SqlServer.SqlServerObjectsInstaller Start installing Hangfire SQL objects...
+[2025-07-15 22:07:38 INF] Hangfire.SqlServer.SqlServerObjectsInstaller Hangfire SQL objects installed.
+[2025-07-15 22:07:38 INF] Hangfire.BackgroundJobServer Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@BlogApp'
+[2025-07-15 22:07:38 INF] Hangfire.BackgroundJobServer Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+[2025-07-15 22:07:38 INF] Hangfire.BackgroundJobServer Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop BackgroundServerProcess:034552fb has started in 1.7901 ms
+[2025-07-15 22:07:38 INF] Hangfire.Server.BackgroundServerProcess Server taruss-macbook-pro:13355:c68cf573 successfully announced in 67.9484 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop ServerHeartbeatProcess:ec07089d has started in 0.6927 ms
+[2025-07-15 22:07:38 INF] Hangfire.Server.BackgroundServerProcess Server taruss-macbook-pro:13355:c68cf573 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop ServerWatchdog:8d9d9525 has started in 0.1232 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop ServerJobCancellationWatcher:ee97c92c has started in 0.2228 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop SqlServerHeartbeatProcess:72fb20cf has started in 0.2987 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop ExpirationManager:38fd52a5 has started in 0.2154 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop CountersAggregator:13dfd2d9 has started in 0.1834 ms
+[2025-07-15 22:07:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:1121ae76 has started in 0.3065 ms
+[2025-07-15 22:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'AggregatedCounter' table...
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:680d2937 has started in 0.7359 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:0d8ad3b1 has started in 0.8465 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:4c275145 has started in 1.2421 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:3eecbb52 has started in 1.5669 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:750dd9c1 has started in 2.0512 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:f163206a has started in 2.6047 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:0c4a5196 has started in 2.9327 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:8fa16230 has started in 3.1177 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:360c9c9a has started in 3.2852 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:e3762422 has started in 3.4305 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:03cadac7 has started in 3.5235 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:c4f7d985 has started in 3.6042 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:8b0ca4c4 has started in 3.7395 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:8f1b896a has started in 3.8119 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:c359e889 has started in 3.9061 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:afcc55e6 has started in 4.0575 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:6f625cdb has started in 4.2711 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:0dc78c91 has started in 4.3386 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:f9c012dc has started in 4.6607 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop DelayedJobScheduler:9327e46d has started in 0.1945 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop RecurringJobScheduler:9dc84326 has started in 0.1665 ms
+[2025-07-15 22:07:38 INF] Hangfire.Server.BackgroundServerProcess Server taruss-macbook-pro:13355:c68cf573 all the dispatchers started
+[2025-07-15 22:07:38 INF] Hangfire.Server.ServerWatchdog 1 servers were removed due to timeout
+[2025-07-15 22:07:38 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Initializing UI Database
+[2025-07-15 22:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Job' table...
+[2025-07-15 22:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'List' table...
+[2025-07-15 22:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Set' table...
+[2025-07-15 22:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Hash' table...
+[2025-07-15 22:07:38 INF] HealthChecks.UI.Core.HostedService.UIInitializationHostedService Saving healthchecks configuration to database
+[2025-07-15 22:07:38 WRN] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware The WebRootPath was not found: /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API/wwwroot. Static files may be unavailable.
+[2025-07-15 22:07:38 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5001
+[2025-07-15 22:07:38 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-15 22:07:38 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:07:38 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:07:38 INF] Hangfire.BackgroundJobServer Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@BlogApp'
+[2025-07-15 22:07:38 INF] Hangfire.BackgroundJobServer Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+[2025-07-15 22:07:38 INF] Hangfire.BackgroundJobServer Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop BackgroundServerProcess:a6e40c94 has started in 0.8381 ms
+[2025-07-15 22:07:38 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-07-15 22:07:38 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-07-15 22:07:38 INF] Microsoft.Hosting.Lifetime Content root path: /Users/tarus/Desktop/personal/playground/dotnet/DotnetBlogApp/src/BlogApp.API
+[2025-07-15 22:07:38 INF] Hangfire.Server.BackgroundServerProcess Server taruss-macbook-pro:13355:ef6c6ad2 successfully announced in 4.2412 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop ServerHeartbeatProcess:acbf0560 has started in 0.2197 ms
+[2025-07-15 22:07:38 INF] Hangfire.Server.BackgroundServerProcess Server taruss-macbook-pro:13355:ef6c6ad2 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop ServerWatchdog:604201ca has started in 0.1566 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop ServerJobCancellationWatcher:c8d6e234 has started in 0.1767 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop SqlServerHeartbeatProcess:8a8f82f5 has started in 0.2079 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop ExpirationManager:0d68b6f3 has started in 0.1825 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop CountersAggregator:881a6140 has started in 0.1112 ms
+[2025-07-15 22:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'AggregatedCounter' table...
+[2025-07-15 22:07:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:25501684 has started in 0.2047 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:1ba2e23b has started in 0.2733 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:5e8e14aa has started in 0.6832 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:a202b08b has started in 0.791 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:9309b23b has started in 1.3159 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:768b30d8 has started in 1.4409 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:ae5b7c55 has started in 2.0161 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:b66e3c41 has started in 2.1939 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:ceb24635 has started in 2.7137 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:bc74c28c has started in 3.1519 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:72b49719 has started in 3.4566 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:250a8107 has started in 3.6409 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:5001b2cf has started in 4.015 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:cb46250e has started in 4.3259 ms
+[2025-07-15 22:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Job' table...
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:ad8f4297 has started in 4.7269 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:8e13823a has started in 5.1515 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:7b8cf75c has started in 5.4841 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:dda0cd48 has started in 5.5938 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:5c4d604f has started in 6.0694 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop Worker:d37b560b has started in 6.5425 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop DelayedJobScheduler:8ccf142a has started in 0.2407 ms
+[2025-07-15 22:07:38 DBG] Hangfire.Processing.BackgroundExecution Execution loop RecurringJobScheduler:85d3b144 has started in 0.1784 ms
+[2025-07-15 22:07:38 INF] Hangfire.Server.BackgroundServerProcess Server taruss-macbook-pro:13355:ef6c6ad2 all the dispatchers started
+[2025-07-15 22:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'List' table...
+[2025-07-15 22:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Set' table...
+[2025-07-15 22:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Hash' table...
+[2025-07-15 22:07:38 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-15 22:07:38 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-15 22:07:39 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1290.5466ms - 200
+[2025-07-15 22:07:39 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1293.8887ms - 200
+[2025-07-15 22:07:40 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1709.1546ms - 200
+[2025-07-15 22:07:40 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1713.8292ms - 200
+[2025-07-15 22:07:40 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-15 22:07:40 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector Creating a new HealthReport history.
+[2025-07-15 22:07:40 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-15 22:07:40 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-15 22:07:55 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-07-15 22:07:55 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-07-15 22:08:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:08:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:08:12 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-07-15 22:08:12 WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+[2025-07-15 22:08:12 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /health responded 200 in 41.4319 ms
+[2025-07-15 22:08:14 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /healthcheck-u responded 404 in 4.1598 ms
+[2025-07-15 22:08:24 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-07-15 22:08:24 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-07-15 22:08:27 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-07-15 22:08:28 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-07-15 22:08:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:08:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:08:46 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-07-15 22:08:47 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-07-15 22:09:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:09:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:09:36 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-07-15 22:09:37 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-07-15 22:09:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:09:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:10:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:10:08 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-07-15 22:10:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:10:09 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-07-15 22:10:13 DBG] HealthChecks.UI.Middleware.UIApiEndpointMiddleware Executing api middleware for client ::1, remaining slots: 0
+[2025-07-15 22:10:13 INF] Serilog.AspNetCore.RequestLoggingMiddleware HTTP GET /health responded 200 in 8.3240 ms
+[2025-07-15 22:10:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:10:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:11:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:11:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:11:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:11:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:12:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:12:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:12:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:12:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:12:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:12:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:12:40 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-15 22:12:40 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:12:40 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:12:40 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-15 22:12:40 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-15 22:12:40 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 870.3207ms - 200
+[2025-07-15 22:12:40 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 878.8819ms - 200
+[2025-07-15 22:12:41 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 987.9455ms - 200
+[2025-07-15 22:12:41 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 988.8079ms - 200
+[2025-07-15 22:12:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-15 22:12:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-15 22:12:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-15 22:12:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-15 22:13:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:13:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:13:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:13:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:14:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:14:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:14:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:14:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:15:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:15:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:15:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:15:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:16:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:16:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:16:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:16:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:17:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:17:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:17:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:17:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:17:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:17:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:17:41 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-15 22:17:41 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:17:41 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:17:41 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-15 22:17:41 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-15 22:17:41 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 828.1228ms - 200
+[2025-07-15 22:17:41 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 830.9374ms - 200
+[2025-07-15 22:17:42 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 998.0785ms - 200
+[2025-07-15 22:17:42 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1015.2239ms - 200
+[2025-07-15 22:17:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-15 22:17:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-15 22:17:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-15 22:17:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-15 22:18:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:18:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:18:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:18:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:19:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:19:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:19:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:19:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:20:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:20:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:20:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:20:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:21:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:21:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:21:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:21:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:22:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:22:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:22:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:22:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:22:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:22:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:22:42 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-15 22:22:42 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:22:42 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:22:42 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-15 22:22:42 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-15 22:22:45 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 3049.0236ms - 200
+[2025-07-15 22:22:45 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 3049.9296ms - 200
+[2025-07-15 22:22:46 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 4384.4379ms - 200
+[2025-07-15 22:22:46 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 4390.906ms - 200
+[2025-07-15 22:22:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-15 22:22:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-15 22:22:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-15 22:22:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-15 22:23:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:23:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:23:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:23:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:24:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:24:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:24:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:24:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:25:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:25:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:25:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:25:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:26:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:26:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:26:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:26:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:27:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:27:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:27:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:27:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:27:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:27:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:27:46 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-15 22:27:46 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:27:46 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:27:46 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-15 22:27:46 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-15 22:27:47 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1020.5392ms - 200
+[2025-07-15 22:27:47 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1021.1357ms - 200
+[2025-07-15 22:27:48 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1451.6288ms - 200
+[2025-07-15 22:27:48 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1452.299ms - 200
+[2025-07-15 22:27:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-15 22:27:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-15 22:27:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-15 22:27:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-15 22:28:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:28:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:28:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:28:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:29:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:29:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:29:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:29:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:30:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:30:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:30:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:30:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:31:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:31:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:31:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:31:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:32:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:32:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:32:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:32:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:32:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:32:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:32:47 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-15 22:32:47 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:32:47 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:32:47 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-15 22:32:47 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-15 22:32:48 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 844.9776ms - 200
+[2025-07-15 22:32:48 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 846.404ms - 200
+[2025-07-15 22:32:48 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 896.6784ms - 200
+[2025-07-15 22:32:48 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 897.7632ms - 200
+[2025-07-15 22:32:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-15 22:32:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-15 22:32:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-15 22:32:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-15 22:33:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:33:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:33:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:33:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:34:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:34:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:34:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:34:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:35:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:35:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:35:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:35:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:36:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:36:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:36:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:36:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:37:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:37:08 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:37:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'AggregatedCounter' table...
+[2025-07-15 22:37:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Job' table...
+[2025-07-15 22:37:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'List' table...
+[2025-07-15 22:37:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Set' table...
+[2025-07-15 22:37:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Hash' table...
+[2025-07-15 22:37:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:37:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'AggregatedCounter' table...
+[2025-07-15 22:37:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Job' table...
+[2025-07-15 22:37:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'List' table...
+[2025-07-15 22:37:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Set' table...
+[2025-07-15 22:37:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Hash' table...
+[2025-07-15 22:37:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:37:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:37:38 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:37:48 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-15 22:37:48 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:37:48 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:37:48 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-15 22:37:48 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-15 22:37:49 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 762.4029ms - 200
+[2025-07-15 22:37:49 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 763.9333ms - 200
+[2025-07-15 22:37:49 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 804.553ms - 200
+[2025-07-15 22:37:49 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 805.4845ms - 200
+[2025-07-15 22:37:49 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-15 22:37:49 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-15 22:37:49 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-15 22:37:49 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-15 22:38:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:38:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:38:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:38:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:39:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:39:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:39:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:39:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:40:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:40:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:40:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:40:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:41:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:41:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:41:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:41:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:42:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:42:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:42:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:42:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:42:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:42:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:42:49 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-15 22:42:49 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:42:49 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:42:49 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-15 22:42:49 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-15 22:42:51 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 1852.8313ms - 200
+[2025-07-15 22:42:51 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 1853.8044ms - 200
+[2025-07-15 22:42:52 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 2308.0868ms - 200
+[2025-07-15 22:42:52 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 2309.1813ms - 200
+[2025-07-15 22:42:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-15 22:42:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-15 22:42:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-15 22:42:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-15 22:43:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:43:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:43:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:43:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:44:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:44:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:44:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:44:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:45:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:45:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:45:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:45:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:46:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:46:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:46:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:46:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:47:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:47:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:47:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:47:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:47:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:47:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:47:52 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-15 22:47:52 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:47:52 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:47:52 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-15 22:47:52 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-15 22:47:53 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 988.5079ms - 200
+[2025-07-15 22:47:53 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 989.603ms - 200
+[2025-07-15 22:47:53 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1067.1843ms - 200
+[2025-07-15 22:47:53 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1114.4331ms - 200
+[2025-07-15 22:47:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-15 22:47:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-15 22:47:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-15 22:47:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-15 22:48:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:48:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:48:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:48:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:49:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:49:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:49:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:49:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:50:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:50:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:50:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:50:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:51:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:51:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:51:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:51:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:52:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:52:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:52:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:52:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:52:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:52:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:52:53 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-15 22:52:53 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:52:53 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:52:53 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-15 22:52:53 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-15 22:52:54 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 868.1642ms - 200
+[2025-07-15 22:52:54 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 868.9127ms - 200
+[2025-07-15 22:52:54 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 944.9462ms - 200
+[2025-07-15 22:52:54 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 946.3165ms - 200
+[2025-07-15 22:52:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-15 22:52:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-15 22:52:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-15 22:52:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-15 22:53:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:53:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:53:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:53:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:54:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:54:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:54:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:54:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:55:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:55:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:55:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:55:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:56:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:56:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:56:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:56:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:57:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:57:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:57:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:57:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 22:57:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:57:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:57:54 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-15 22:57:54 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:57:54 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-15 22:57:54 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-15 22:57:54 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-15 22:57:54 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 710.5347ms - 200
+[2025-07-15 22:57:54 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 714.2281ms - 200
+[2025-07-15 22:57:55 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 808.2412ms - 200
+[2025-07-15 22:57:55 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 809.6514ms - 200
+[2025-07-15 22:57:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-15 22:57:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-15 22:57:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-15 22:57:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-15 22:58:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:58:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:58:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:58:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:59:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 22:59:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:59:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 22:59:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:00:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:00:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:00:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:00:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:01:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:01:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:01:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:01:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:02:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:02:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:02:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 23:02:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 23:02:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:02:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:02:55 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-15 23:02:55 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-15 23:02:55 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-15 23:02:55 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-15 23:02:55 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-15 23:02:56 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 946.4606ms - 200
+[2025-07-15 23:02:56 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 947.909ms - 200
+[2025-07-15 23:02:56 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1402.4303ms - 200
+[2025-07-15 23:02:56 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1404.9945ms - 200
+[2025-07-15 23:02:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-15 23:02:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-15 23:02:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-15 23:02:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-15 23:03:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:03:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:03:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:03:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:04:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:04:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:04:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:04:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:05:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:05:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:05:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:05:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:06:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:06:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:06:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:06:39 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:07:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:07:09 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'AggregatedCounter' table...
+[2025-07-15 23:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Job' table...
+[2025-07-15 23:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'List' table...
+[2025-07-15 23:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Set' table...
+[2025-07-15 23:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Hash' table...
+[2025-07-15 23:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'AggregatedCounter' table...
+[2025-07-15 23:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Job' table...
+[2025-07-15 23:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'List' table...
+[2025-07-15 23:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Set' table...
+[2025-07-15 23:07:38 DBG] Hangfire.SqlServer.ExpirationManager Removing outdated records from the 'Hash' table...
+[2025-07-15 23:07:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 23:07:38 DBG] Hangfire.SqlServer.CountersAggregator Aggregating records in 'Counter' table...
+[2025-07-15 23:07:40 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:07:40 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:07:56 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService Executing HealthCheck collector HostedService.
+[2025-07-15 23:07:56 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler Start processing HTTP request GET http://localhost:5001/api/health
+[2025-07-15 23:07:56 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Sending HTTP request GET http://localhost:5001/api/health
+[2025-07-15 23:07:56 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler Start processing HTTP request GET https://www.google.com/
+[2025-07-15 23:07:56 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Sending HTTP request GET https://www.google.com/
+[2025-07-15 23:07:57 INF] System.Net.Http.HttpClient.healthCheck.ClientHandler Received HTTP response headers after 876.5025ms - 200
+[2025-07-15 23:07:57 INF] System.Net.Http.HttpClient.healthCheck.LogicalHandler End processing HTTP request after 878.1303ms - 200
+[2025-07-15 23:07:57 INF] System.Net.Http.HttpClient.health-checks.ClientHandler Received HTTP response headers after 1186.5916ms - 200
+[2025-07-15 23:07:57 INF] System.Net.Http.HttpClient.health-checks.LogicalHandler End processing HTTP request after 1188.419ms - 200
+[2025-07-15 23:07:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector - health report execution history saved.
+[2025-07-15 23:07:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReport history already exists and is in the same state, updating the values.
+[2025-07-15 23:07:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckReportCollector HealthReportCollector has completed.
+[2025-07-15 23:07:57 DBG] HealthChecks.UI.Core.HostedService.HealthCheckCollectorHostedService HealthCheck collector HostedService executed successfully.
+[2025-07-15 23:08:10 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:08:10 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:08:40 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:08:40 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:09:10 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:09:10 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:09:40 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent
+[2025-07-15 23:09:40 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:10:10 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:ef6c6ad2 heartbeat successfully sent
+[2025-07-15 23:10:10 DBG] Hangfire.Server.ServerHeartbeatProcess Server taruss-macbook-pro:13355:c68cf573 heartbeat successfully sent

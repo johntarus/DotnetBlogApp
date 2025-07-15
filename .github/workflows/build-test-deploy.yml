@@ -76,5 +76,5 @@ jobs:
         run: |
           sleep 30  # Wait for app to initialize
           curl -v -sSf ${{ secrets.AZURE_WEBAPP_URL }}/health || echo "Health check failed"
-          curl -v -sSf ${{ env.AZURE_WEBAPP_URL }}/hangfire || echo "Hangfire dashboard unavailable"
+          curl -v -sSf ${{ secrets.AZURE_WEBAPP_URL }}/hangfire || echo "Hangfire dashboard unavailable"
       
