@@ -43,7 +43,7 @@ volumes:
     
     
 #TODO
-## Add github actions or azure devops ci/cd
+## Add github actions or azure devops ci/cd Done ✔️
 ## Use production environment and setup real db in azure not use development -> Done ✔️
 ## Explore queues in sending emails Done ✔️
 ## Add a readme file
@@ -52,6 +52,6 @@ volumes:
 ## Add [Authorize] to top of each controller to authorize all the endpoints -> Done✔️
 ## Add ApiController to all the controllers to handle the model state and remove all the modelstates -> Done ✔️
 ## Implement api versioning -> Done ✔️
-## Remove user file from the root folder
-## Move AZURE_WEBAPP_URL to github actions secrets
+## Remove user file from the root folder Done ✔️
+## Move AZURE_WEBAPP_URL to github actions secrets Done ✔️
 ## Update hangfire endpoint in azure deployed app to work

@@ -4,6 +4,7 @@ using BlogApp.Core.Common.Mapping;
 using BlogApp.Core.Utils;
 using BlogApp.Infrastructure.Data;
 using Hangfire;
+using Hangfire.Dashboard;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -56,7 +57,10 @@ app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
-app.UseHangfireDashboard("/hangfire", new DashboardOptions());
+app.UseHangfireDashboard("/hangfire", new DashboardOptions
+{
+    Authorization = new[] { new AllowAllDashboardAuthorizationFilter() }
+});
 app.MapGet("/health", () => {
     try {
         return Results.Ok("Healthy");

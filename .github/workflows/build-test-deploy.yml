@@ -1,4 +1,4 @@
-name: Build, Test, Deploy .NET Web API to Azure
+name: Build, Test, Deploy .NET Blog API to Azure
 
 on:
   push:
@@ -13,7 +13,6 @@ env:
   DOCKER_IMAGE: 'blogapp.api'
   AZURE_SQL_SERVER: 'blogapp-db-server'
   AZURE_WEBAPP_NAME: 'blogapi'
-#  AZURE_WEBAPP_URL: https://blogapi-c7dndnh2g8djgqfd.westus2-01.azurewebsites.net
 
 jobs: 
   build-test-deploy:
@@ -56,16 +55,6 @@ jobs:
       
       - name: Push Docker image to ACR
         run: docker push ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.DOCKER_IMAGE }}:latest
-        
-#      - name: Allow GitHub Runner IP
-#        run: |
-#          RUNNER_IP=$(curl -s https://api.ipify.org)
-#          az sql server firewall-rule create \
-#            --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
-#            --server ${{ env.AZURE_SQL_SERVER }} \
-#            --name "GHActions-$(date +%s)" \
-#            --start-ip-address "$RUNNER_IP" \
-#            --end-ip-address "$RUNNER_IP"
         
       - name: Deploy Config
         run: |
