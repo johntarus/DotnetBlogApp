@@ -61,6 +61,7 @@ app.UseHangfireDashboard("/hangfire", new DashboardOptions
 {
     Authorization = new[] { new AllowAllDashboardAuthorizationFilter() }
 });
+
 app.MapGet("/health", () => {
     try {
         return Results.Ok("Healthy");
