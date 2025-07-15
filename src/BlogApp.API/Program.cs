@@ -56,12 +56,12 @@ app.UseRouting();
 app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
-app.MapControllers();
 app.UseHangfireDashboard("/hangfire", new DashboardOptions
 {
     Authorization = new[] { new AllowAllDashboardAuthorizationFilter() }
 });
 
+app.MapControllers();
 app.MapGet("/health", () => {
     try {
         return Results.Ok("Healthy");
