@@ -1,10 +1,10 @@
-# BlogApp
+# 📝 BlogApp API (.NET 8)
 
-A comprehensive blog application built with .NET 8, implementing modern software architecture patterns and best practices.
-<img width="3024" height="7638" alt="image" src="https://github.com/user-attachments/assets/54c35011-6212-479c-9d8c-8d26a02309cb" />
+A production-ready, scalable ASP.NET Core Web API for blogging — following clean architecture with EF Core, background job processing, JWT auth, CI/CD, Docker containerization, and Azure deployment.
 
 ## 📝 Table of Contents
 
+* [Swagger UI](#-swagger)
 * [🌟 Features](#-features)
 * [🛠️ Prerequisites](#️-prerequisites)
 * [🚀 Setup & Installation](#-setup--installation)
@@ -16,6 +16,11 @@ A comprehensive blog application built with .NET 8, implementing modern software
 * [📝 API Documentation](#-api-documentation)
 * [🔍 Monitoring & Logging](#-monitoring--logging)
 * [🐛 Troubleshooting](#-troubleshooting)
+
+### 🧭 Swagger UI
+- API comes with Swagger/OpenAPI support for testing and documentation.
+  
+![Swagger UI Screenshot](https://github.com/user-attachments/assets/54c35011-6212-479c-9d8c-8d26a02309cb)
 
 ## 🌟 Features
 
