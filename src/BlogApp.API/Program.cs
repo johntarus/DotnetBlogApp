@@ -50,6 +50,7 @@ if (app.Environment.IsDevelopment())
 app.UseCustomHealthChecks();
 app.UseCors("AllowClients");
 app.UseSerilogRequestLogging();
+app.UseHangfireServer();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();

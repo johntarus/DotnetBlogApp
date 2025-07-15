@@ -10,7 +10,7 @@
     depends_on:
       - sqlserver
     ports:
-      - "5001:8080"
+      - "5001:80"
     environment:
       - ASPNETCORE_ENVIRONMENT=${ASPNETCORE_ENVIRONMENT}
       - ConnectionStrings__DefaultConnection=${ConnectionStrings__DefaultConnection}
