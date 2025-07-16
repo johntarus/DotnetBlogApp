@@ -388,4 +388,3 @@ For support, email tarusjohn96@gmail.com or create an issue in this repository.
 ---
 
 **Built with ❤️ using .NET 8**
-dont change anything, maybe critical updates, just make the table of contents work, its not working currently
