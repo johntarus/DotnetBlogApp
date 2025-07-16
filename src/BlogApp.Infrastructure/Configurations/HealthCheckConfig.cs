@@ -12,7 +12,6 @@ public static class HealthCheckConfig
 {
     public static void AddCustomHealthChecks(this IServiceCollection services, IConfiguration configuration)
     {
-        // Add basic health checks
         services.AddHealthChecks()
             .AddSqlServer(
                 configuration.GetConnectionString("DefaultConnection"),
@@ -34,13 +33,13 @@ public static class HealthCheckConfig
             opt.SetEvaluationTimeInSeconds(300);
             opt.MaximumHistoryEntriesPerEndpoint(60);
             opt.SetApiMaxActiveRequests(1);
-            opt.AddHealthCheckEndpoint("BlogApp API", "/api/health");
+            opt.AddHealthCheckEndpoint("BlogApp API", "/health");
         }).AddInMemoryStorage();
     }
 
     public static IApplicationBuilder UseCustomHealthChecks(this IApplicationBuilder app)
     {
-        app.UseHealthChecks("/api/health", new HealthCheckOptions
+        app.UseHealthChecks("/health", new HealthCheckOptions
         {
             Predicate = _ => true,
             ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
