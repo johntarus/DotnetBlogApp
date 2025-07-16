@@ -13,14 +13,13 @@ namespace BlogApp.Tests.Controllers
     public class CategoryControllerTests
     {
         private readonly Mock<ICategoryService> _mockCategoryService;
-        private readonly Mock<ILogger<CategoryController>> _mockLogger;
         private readonly CategoryController _controller;
 
         public CategoryControllerTests()
         {
             _mockCategoryService = new Mock<ICategoryService>();
-            _mockLogger = new Mock<ILogger<CategoryController>>();
-            _controller = new CategoryController(_mockCategoryService.Object, _mockLogger.Object);
+            var mockLogger = new Mock<ILogger<CategoryController>>();
+            _controller = new CategoryController(_mockCategoryService.Object, mockLogger.Object);
         }
 
         [Fact]
