@@ -4,7 +4,6 @@ using BlogApp.Core.Common.Mapping;
 using BlogApp.Core.Utils;
 using BlogApp.Infrastructure.Data;
 using Hangfire;
-using Hangfire.Dashboard;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -50,7 +49,6 @@ if (app.Environment.IsDevelopment())
 app.UseCustomHealthChecks();
 app.UseCors("AllowClients");
 app.UseSerilogRequestLogging();
-app.UseHangfireServer();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
