@@ -232,6 +232,7 @@ dotnet test --collect:"XPlat Code Coverage"
 Health check endpoints:
 - `/health` - Overall application health
 - `/healthcheck-ui` - Health check ui dashboard
+- `/hangfire` - Hangfire dashboard
 
 ## 🔧 Configuration
 
