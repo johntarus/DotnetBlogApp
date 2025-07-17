@@ -1,68 +1,20 @@
-# 📝 BlogApp API (.NET 8)
+## BlogApp API (.NET 8)
+### Key Features
+- JWT Authentication
 
-A production-ready, scalable ASP.NET Core Web API for blogging — following clean architecture with EF Core, background job processing, JWT auth, CI/CD, Docker containerization, and Azure deployment.
+- Email Verification
 
-## 📝 Table of Contents
+- Background Job Processing
 
-* [Swagger UI](#-swagger)
-* [🌟 Features](#-features)
-* [🛠️ Prerequisites](#️-prerequisites)
-* [🚀 Setup & Installation](#-setup--installation)
-* [🏗️ Project Structure](#️-project-structure)
-* [🔧 Configuration](#-configuration)
-* [▶️ Running the Application](#️-running-the-application)
-* [🧪 Testing](#-testing)
-* [🚀 Deployment](#-deployment)
-* [📝 API Documentation](#-api-documentation)
-* [🔍 Monitoring & Logging](#-monitoring--logging)
-* [🐛 Troubleshooting](#-troubleshooting)
+- API Versioning
 
-### 🧭 Swagger UI
-- API comes with Swagger/OpenAPI support for testing and documentation.
+- Docker Support
 
-![Swagger UI Screenshot](https://github.com/user-attachments/assets/54c35011-6212-479c-9d8c-8d26a02309cb)
+- Health Monitoring
 
-## 🌟 Features
+- Automated Testing
 
-### Core Architecture
-- **3-Tier Architecture** (Presentation, Business Logic, Data Access)
-- **Repository Pattern** with EF Core
-- **Clean Code** principles implementation
-
-### Technical Components
-- **Entity Framework Core** for database operations
-- **AutoMapper** for DTO mapping
-- **Hangfire** for background jobs (email queueing)
-- **xUnit** for unit & integration testing
-- **Swagger** with API documentation
-- **API Versioning** (v1, v2 support)
-
-### Security & Auth
-- **JWT Authentication**
-- **Email Verification**
-- **.NET User Secrets** for sensitive configs
-- Role-based authorization
-
-### Operational Excellence
-- **Serilog** for structured logging
-- **Health Checks** (database & app health)
-- Global **Error Handling**
-- **Filtering & Pagination** support
-
-### Deployment
-- **Docker** containerization (API + DB)
-- **GitHub Actions CI/CD**
-- **Azure Deployment** (ACR, Azure SQL, Monitoring)
-
-## 🛠️ Prerequisites
-
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-- [Docker Desktop](https://www.docker.com/products/docker-desktop)
-- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) (for deployment)
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) or [SQL Server Express](https://www.microsoft.com/en-us/sql-server/sql-server-editions-express)
-- [Postman](https://www.postman.com/downloads/) (for API testing)
-
-## 🚀 Setup & Installation
+### Setup & Installation
 
 ### Installation
 
@@ -86,66 +38,10 @@ A production-ready, scalable ASP.NET Core Web API for blogging — following cle
    dotnet user-secrets set "EmailSettings:SmtpPassword" "your-app-password"
    ```
 
-3. **Update database**
-   ```bash
-   dotnet ef database update -p src/BlogApp.Infrastructure -s src/BlogApp.API
-   ```
-
-4. **Run the application**
+3. **Run the application**
    ```bash
    dotnet run --project src/BlogApp.API
    ```
-
-The API will be available at `https://localhost:5001` and Swagger UI at `https://localhost:5001/swagger`
-
-## 🏗️ Project Structure
-
-```
-DotnetBlogApp/
-├── .github/
-│   └── workflows/
-│       └── build-test-deploy.yml    # CI/CD Pipeline
-├── src/
-│   ├── BlogApp.API/                 # Presentation Layer (Web API)
-│   ├── BlogApp.Core/                # Business Logic Layer
-│   ├── BlogApp.Domain/              # Domain Models & Entities
-│   └── BlogApp.Infrastructure/      # Data Access Layer
-├── BlogApp.Tests/                   # Unit & Integration Tests
-│   ├── Controllers/                 # API Controller Tests
-│   ├── Helpers/                     # Test Helper Classes
-│   ├── Repositories/                # Repository Tests
-│   ├── Services/                    # Service Layer Tests
-│   └── Utils/                       # Utility Tests
-├── .dockerignore                    # Docker ignore file
-├── .gitignore                       # Git ignore file
-├── .env.example                     # Environment variables template
-├── BlogApp.sln                      # Solution file
-├── compose.yaml                     # Docker Compose configuration
-├── init.sql                         # Database initialization script
-└── BlogApp.sln.DotSettings.user     # User settings
-```
-
-## ▶️ Running the Application
-
-### Development Mode
-
-```bash
-# Run the API
-dotnet run --project src/BlogApp.API
-
-# Run with hot reload
-dotnet watch run --project src/BlogApp.API
-```
-
-### Production Mode
-
-```bash
-# Build the application
-dotnet build -c Release
-
-# Run the published app
-dotnet run -c Release --project src/BlogApp.API
-```
 
 The API will be available at:
 - **HTTPS**: `https://localhost:5001`
@@ -153,7 +49,7 @@ The API will be available at:
 - **Swagger UI**: `https://localhost:5001/swagger`
 - **Hangfire Dashboard**: `https://localhost:5001/hangfire`
 
-## 🐳 Docker Setup
+### Docker Setup
 
 ### Using Docker Compose
 
@@ -173,84 +69,12 @@ This will start:
 - SQL Server on `localhost:1433`
 - Hangfire Dashboard on `https://localhost:5001/hangfire`
 
-### Manual Docker Commands
-
-1. **Build the image**
-   ```bash
-   docker build -t blogapp .
-   ```
-
-2. **Run SQL Server container**
-   ```bash
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=YourPassword123!" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
-   ```
-
-3. **Run the application**
-   ```bash
-   docker run -p 5001:80 blogapp
-   ```
-
-## 🧪 Testing
-
-The project includes comprehensive tests organized by layers:
-
-### Run All Tests
+### Testing
 ```bash
 dotnet test
 ```
 
-### Run Specific Test Categories
-```bash
-# Controller tests
-dotnet test --filter "Category=Controllers"
-
-# Service tests  
-dotnet test --filter "Category=Services"
-
-# Repository tests
-dotnet test --filter "Category=Repositories"
-
-# Helper/Utility tests
-dotnet test --filter "Category=Helpers"
-```
-
-### Run Tests with Coverage
-```bash
-dotnet test --collect:"XPlat Code Coverage"
-```
-
-### Test Structure
-- **Controllers/**: API endpoint testing
-- **Services/**: Business logic testing
-- **Repositories/**: Data access testing
-- **Helpers/**: Utility and helper class testing
-- **Utils/**: General utility testing
-
-## 📊 Health Checks
-<img width="1512" height="425" alt="image" src="https://github.com/user-attachments/assets/6b66f41f-d106-4a83-952d-855b7057ced5" />
-
-Health check endpoints:
-- `/health` - Overall application health
-- `/healthcheck-ui` - Health check ui dashboard
-- `/hangfire` - Hangfire dashboard
-
-## 🔧 Configuration
-
-### Environment Variables
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `ASPNETCORE_ENVIRONMENT` | Environment name | `Development` |
-| `ConnectionStrings__DefaultConnection` | Database connection string | - |
-| `JwtSettings__Key` | JWT signing key | - |
-| `JwtSettings__Issuer` | JWT issuer | `BlogApp` |
-| `JwtSettings__Audience` | JWT audience | `BlogApp` |
-| `EmailSettings__SmtpServer` | SMTP server | - |
-| `EmailSettings__SmtpPort` | SMTP port | `587` |
-| `EmailSettings__SmtpUsername` | SMTP username | - |
-| `EmailSettings__SmtpPassword` | SMTP password | - |
-
-## 🚀 Deployment
+### Deployment
 
 ### Azure Deployment
 
@@ -294,98 +118,6 @@ Set up the following secrets in your GitHub repository:
 - `AZURE_REGISTRY_PASSWORD`
 - `AZURE_WEBAPP_URL`
 
-## 📝 API Documentation
-
-### Blog Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/v1/posts` | Get all posts (with pagination) |
-| GET | `/api/v1/posts/{id}` | Get post by ID |
-| POST | `/api/v1/posts` | Create new post |
-| PUT | `/api/v1/posts/{id}` | Update post |
-| DELETE | `/api/v1/posts/{id}` | Delete post |
-
-### Query Parameters
-
-- `PageNumber` - Page number (default: 1)
-- `PageSize` - Items per page (default: 10)
-- `SearchQuery` - Search term
-- `UserId` - UserId
-
-## 🔍 Monitoring & Logging
-
-### Logging
-
-The application uses Serilog for structured logging with the following sinks:
-- Console
-- File
-
-### Hangfire Dashboard
-
-Monitor background jobs at `/hangfire` (requires authentication)
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-#### Database Connection Issues
-```bash
-# Check SQL Server is running
-docker ps
-
-# Reset database
-dotnet ef database drop -p src/BlogApp.Infrastructure -s src/BlogApp.API
-dotnet ef database update -p src/BlogApp.Infrastructure -s src/BlogApp.API
-```
-
-#### Port Already in Use
-```bash
-# Find process using port 5001
-netstat -ano | findstr :5001
-
-# Kill the process (replace PID with actual process ID)
-taskkill /PID <PID> /F
-```
-
-#### Docker Issues
-```bash
-# Clean up Docker
-docker system prune -a
-
-# Rebuild containers
-docker-compose down
-docker-compose up --build
-```
-
-#### User Secrets Not Found
-```bash
-# Reinitialize user secrets
-dotnet user-secrets clear --project src/BlogApp.API
-dotnet user-secrets init --project src/BlogApp.API
-# Then re-add all secrets
-```
-
-### Logs Location
-- **Development**: Console output
-- **Production**: `/app/logs/` (in Docker container)
-- **Hangfire**: Available in Hangfire dashboard
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [.NET Documentation](https://docs.microsoft.com/en-us/dotnet/)
-- [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
-- [Hangfire](https://www.hangfire.io/)
-- [Serilog](https://serilog.net/)
-
-## 📞 Support
+### Support
 
 For support, email tarusjohn96@gmail.com or create an issue in this repository.
-
----
-
-**Built with ❤️ using .NET 8**
