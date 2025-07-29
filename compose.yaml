@@ -40,3 +40,10 @@
 
 volumes:
   sqlserverdata:
+    
+#TODO
+## Remove modelstate checks on the controllers since we are already using the ApiController attribute
+## and also the order of operations is wrong
+## Remove the secrets settings in the readme file since we already have seeded users for testing
+  
+ 
